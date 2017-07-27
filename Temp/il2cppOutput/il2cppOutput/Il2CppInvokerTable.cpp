@@ -230,6 +230,7 @@
 #include "UnityEngine_UnityEngine_RaycastHit2D4063908774.h"
 #include "UnityEngine_UnityEngine_UIVertex1204258818.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPoint3436811567.h"
+#include "AssemblyU2DCSharp_placeBox_MCFace2283549208.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARCamera4198559457.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPlaneAnchor1439520888.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARMatrix4100931615.h"
@@ -10026,6 +10027,20 @@ void* RuntimeInvoker_Boolean_t3825574718_ARPoint_t3436811567_Int64_t909078037_Il
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
+void* RuntimeInvoker_MCFace_t2283549208_RaycastHit_t87180320 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef int32_t (*Func)(void* obj, RaycastHit_t87180320  p1, const MethodInfo* method);
+	int32_t ret = ((Func)method->methodPointer)(obj, *((RaycastHit_t87180320 *)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Vector3_t2243707580  (*Func)(void* obj, int32_t p1, const MethodInfo* method);
+	Vector3_t2243707580  ret = ((Func)method->methodPointer)(obj, *((int32_t*)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
 void* RuntimeInvoker_Void_t1841601450_UnityARCamera_t4198559457 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, UnityARCamera_t4198559457  p1, const MethodInfo* method);
@@ -10870,13 +10885,6 @@ void* RuntimeInvoker_Boolean_t3825574718_DirectionU26_t743901654_Int32_t20718774
 {
 	typedef bool (*Func)(void* obj, int32_t* p1, int32_t p2, const MethodInfo* method);
 	bool ret = ((Func)method->methodPointer)(obj, (int32_t*)args[0], *((int32_t*)args[1]), method);
-	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
-}
-
-void* RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef Vector3_t2243707580  (*Func)(void* obj, int32_t p1, const MethodInfo* method);
-	Vector3_t2243707580  ret = ((Func)method->methodPointer)(obj, *((int32_t*)args[0]), method);
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
@@ -13603,7 +13611,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t2986189219 (const MethodInfo* meth
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1775] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1776] = 
 {
 	RuntimeInvoker_Void_t1841601450,
 	RuntimeInvoker_Boolean_t3825574718_Il2CppObject,
@@ -14869,6 +14877,8 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1775] =
 	RuntimeInvoker_Void_t1841601450_UIVertex_t1204258818,
 	RuntimeInvoker_Void_t1841601450_Il2CppObject_Color32_t874517518_Int32_t2071877448_Int32_t2071877448_Single_t2076509932_Single_t2076509932,
 	RuntimeInvoker_Boolean_t3825574718_ARPoint_t3436811567_Int64_t909078037_Il2CppObject,
+	RuntimeInvoker_MCFace_t2283549208_RaycastHit_t87180320,
+	RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448,
 	RuntimeInvoker_Void_t1841601450_UnityARCamera_t4198559457,
 	RuntimeInvoker_Void_t1841601450_ARPlaneAnchor_t1439520888,
 	RuntimeInvoker_Il2CppObject_Vector4_t2243707581,
@@ -14990,7 +15000,6 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1775] =
 	RuntimeInvoker_UIVertex_t1204258818_Int32_t2071877448,
 	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_UIVertex_t1204258818,
 	RuntimeInvoker_Boolean_t3825574718_DirectionU26_t743901654_Int32_t2071877448,
-	RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448,
 	RuntimeInvoker_Color32_t874517518_Int32_t2071877448,
 	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Vector3_t2243707580,
 	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Color32_t874517518,

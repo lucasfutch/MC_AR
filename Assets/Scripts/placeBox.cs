@@ -10,9 +10,30 @@ public class placeBox : MonoBehaviour {
 	public GameObject boxPrefab;
 	public float createHeight;
 
-	private MaterialPropertyBlock props;
-	private float totalHeight;
+	public Animator animator;
 
+	private MaterialPropertyBlock props;
+
+	public enum Selected {Pickaxe, Block, Null};
+	public static Selected currentSelectedOG;
+
+	private Vector3 originalVec;
+
+	public float timeToAnimate;
+	private float timeElapsed;
+	private bool animationCheck, animationStarted;
+
+	public enum MCFace
+	{
+		None,
+		Up,
+		Down,
+		East,
+		West,
+		North,
+		South
+	}
+		
 	// Use this for initialization
 	void Start () {
 		props = new MaterialPropertyBlock ();
@@ -47,7 +68,19 @@ public class placeBox : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.touchCount > 0 )
+
+		if (timeElapsed < timeToAnimate && animationStarted) {
+			timeElapsed += Time.deltaTime;
+		}
+		else if (timeElapsed > timeToAnimate && animationStarted) {
+			animationStarted = false;
+			animator.ResetTrigger ("clickWIndow");
+			timeElapsed = 0;
+		}
+
+			
+
+		if (Input.touchCount > 0 && currentSelectedOG == Selected.Block)
 		{
 			var touch = Input.GetTouch(0);
 			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
@@ -58,61 +91,126 @@ public class placeBox : MonoBehaviour {
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					Debug.Log ("Detected a Box");
-				}
+					//}
 
-				//Debug.Log ("Making a box");
-				if (raycastHit.collider.CompareTag ("placedBox")) {
-					Debug.Log ("Placing Box on top of another box");
+					MCFace boxSideHit = GetHitFace (raycastHit);
+					Vector3 boxSideHitVec = getFaceVec (boxSideHit);
+					
+					if (raycastHit.collider.CompareTag ("placedBox")) {
+						Debug.Log ("Placing Box on top of another box");
+						float xPos = raycastHit.collider.gameObject.transform.position.x;
+						float yPos = raycastHit.collider.gameObject.transform.position.y;
+						float zPos = raycastHit.collider.gameObject.transform.position.z;
 
-					float xPos = raycastHit.collider.gameObject.transform.position.x;
-					float yPos = raycastHit.collider.gameObject.transform.position.y;
-					float zPos = raycastHit.collider.gameObject.transform.position.z;
-					CreateBox (new Vector3 (xPos, yPos + createHeight*2, zPos));
+						originalVec = new Vector3 (xPos, yPos, zPos);
 
-				}
-				/////////////////////////
+						//Vector3 originalVec = new Vector3 (xPos, yPos + createHeight, zPos);
+						Vector3 boxPosition = originalVec + boxSideHitVec;
+						CreateBox (boxPosition);
 
-				var screenPosition = Camera.main.ScreenToViewportPoint(touch.position);
-				ARPoint point = new ARPoint {
-					x = screenPosition.x,
-					y = screenPosition.y
-				};
+					}
+					/////////////////////////
 
-				List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, 
-					ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent);
-				if (hitResults.Count > 0) {
-					foreach (var hitResult in hitResults) {
-						Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+					var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
+					ARPoint point = new ARPoint {
+						x = screenPosition.x,
+						y = screenPosition.y
+					};
 
-//						Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-//						RaycastHit raycastHit;
-//
-//						if (Physics.Raycast (raycast, out raycastHit)) {
-//							Debug.Log ("Detected a Box");
-//						}
-//
-//						//Debug.Log ("Making a box");
-//						if (raycastHit.collider.CompareTag ("placedBox")) {
-//							Debug.Log ("Placing Box on top of another box");
-//								
-//							float xPos = raycastHit.collider.gameObject.transform.position.x;
-//							float yPos = raycastHit.collider.gameObject.transform.position.y;
-//							float zPos = raycastHit.collider.gameObject.transform.position.z;
-//							CreateBox (new Vector3 (xPos, yPos + createHeight*2, zPos));
-//
-//						}
-//						else {
+					List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, 
+						                                  ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent);
+					if (hitResults.Count > 0) {
+						foreach (var hitResult in hitResults) {
+							Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
 							Debug.Log ("Placing a Box Normally");
 							CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
-						//}
-
-						break;
+							break;
+						}
 					}
 				}
-
 			}
 		}
 
+		if (Input.touchCount > 0 && currentSelectedOG == Selected.Pickaxe)
+		{
+			var touch = Input.GetTouch(0);
+			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
+			{
+				animator.SetTrigger ("clickWindow");
+				animationStarted = true;
+
+				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
+				RaycastHit raycastHit;
+
+				if (Physics.Raycast (raycast, out raycastHit)) {
+					Debug.Log ("Detected a Box");
+					if (raycastHit.collider.CompareTag ("placedBox")) {
+						Debug.Log ("Destroying Box");
+
+						Destroy (raycastHit.collider.gameObject);
+
+					}
+				}
+			}
+
+		}
+
+	}
+
+	public MCFace GetHitFace(RaycastHit hit)
+	{
+		Vector3 incomingVec = hit.normal - Vector3.up;
+
+		if (incomingVec == new Vector3 (0, -1, -1)) {
+			Debug.Log ("SOUTH");
+			return MCFace.South;
+		}
+
+		if (incomingVec == new Vector3 (0, -1, 1)) {
+			Debug.Log ("NORTH");
+			return MCFace.North;
+		}
+
+		if (incomingVec == new Vector3 (0, 0, 0)) {
+			Debug.Log ("UP");
+			return MCFace.Up;
+		}
+
+		if (incomingVec == new Vector3 (0, -2, 0)) {// from 1,1,1
+			Debug.Log ("DOWN");
+			return MCFace.Down;
+		}
+
+		if (incomingVec == new Vector3 (-1, -1, 0)) {
+			Debug.Log ("WEST");
+			return MCFace.West;
+		}
+
+		if (incomingVec == new Vector3 (1, -1, 0)) {
+			Debug.Log ("EAST");
+			return MCFace.East;
+		}
+
+		return MCFace.None;
+	}
+
+	public Vector3 getFaceVec (MCFace side) 
+	{
+		switch (side) {
+		case MCFace.Up:
+			return new Vector3 (0, 0.1f, 0);
+		case MCFace.Down:
+			return new Vector3 (0, -0.1f, 0);
+		case MCFace.East:
+			return new Vector3 (0.1f, 0, 0);
+		case MCFace.West:
+			return new Vector3(-0.1f, 0, 0);
+		case MCFace.North:
+			return new Vector3(0, 0, 0.1f);
+		case MCFace.South:
+			return new Vector3(0, 0, -0.1f);
+		}
+		return new Vector3(0, 0, 0);
 	}
 
 }

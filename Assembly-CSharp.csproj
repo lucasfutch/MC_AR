@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\UIBehavior.cs" />
+     <Compile Include="Assets\Scripts\destroyBlock.cs" />
      <Compile Include="Assets\Scripts\placeBox.cs" />
      <Compile Include="Assets\_Scenes\ARKit\ARKitRemote\ARKitRemoteConnection.cs" />
      <Compile Include="Assets\_Scenes\ARKit\ARKitRemote\ConnectToEditor.cs" />
@@ -108,7 +110,6 @@
      <Compile Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Utility\UnityARMatrixOps.cs" />
      <Compile Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Utility\UnityARUtility.cs" />
      <Compile Include="Assets\_Scenes\ARKit\UnityARAmbient.cs" />
-     <Compile Include="Assets\destroyBlock.cs" />
      <None Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\_Scenes\ARKit\ARKitRemote\ARKITREMOTE.txt" />
      <None Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Shaders\MobileARShadow.shader" />

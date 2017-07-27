@@ -11334,8 +11334,7 @@ extern "C" void ColorSliderImage_ColorChanged_m3679980033 ();
 extern "C" void ColorSliderImage_HSVChanged_m1936863288 ();
 extern "C" void ColorSliderImage_RegenerateTexture_m1461909699 ();
 extern "C" void destroyBlock__ctor_m1799017826 ();
-extern "C" void destroyBlock_Start_m647940402 ();
-extern "C" void destroyBlock_Update_m3667144913 ();
+extern "C" void destroyBlock_RemoveBlock_m3334831003 ();
 extern "C" void DontDestroyOnLoad__ctor_m1942765255 ();
 extern "C" void DontDestroyOnLoad_Start_m839902491 ();
 extern "C" void DontDestroyOnLoad_Update_m3048973460 ();
@@ -11375,6 +11374,8 @@ extern "C" void placeBox_Start_m3816714073 ();
 extern "C" void placeBox_HitTestWithResultType_m1060757642 ();
 extern "C" void placeBox_CreateBox_m3746128977 ();
 extern "C" void placeBox_Update_m3632811618 ();
+extern "C" void placeBox_GetHitFace_m2361387267 ();
+extern "C" void placeBox_getFaceVec_m3891390246 ();
 extern "C" void PointCloudParticleExample__ctor_m249742788 ();
 extern "C" void PointCloudParticleExample_Start_m1736319872 ();
 extern "C" void PointCloudParticleExample_ARFrameUpdated_m1855536526 ();
@@ -11474,6 +11475,11 @@ extern "C" void ConnectToEditor_EditorDisconnected_m2790294606 ();
 extern "C" void ConnectToEditor_SendToEditor_m1831653951 ();
 extern "C" void ConnectToEditor_SendToEditor_m798148974 ();
 extern "C" void ConnectToEditor_DisconnectFromEditor_m246882822 ();
+extern "C" void UIBehavior__ctor_m3682521951 ();
+extern "C" void UIBehavior_Start_m3961636531 ();
+extern "C" void UIBehavior_ResetButtons_m1738521039 ();
+extern "C" void UIBehavior_PickaxeButtonSelected_m1977985717 ();
+extern "C" void UIBehavior_BlockButtonSelected_m35656853 ();
 extern "C" void UnityARAmbient__ctor_m3700524047 ();
 extern "C" void UnityARAmbient_Start_m303369171 ();
 extern "C" void UnityARAmbient_Update_m2066148092 ();
@@ -11705,7 +11711,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11691] = 
+extern const Il2CppMethodPointer g_MethodPointers[11697] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -23027,8 +23033,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11691] =
 	ColorSliderImage_HSVChanged_m1936863288,
 	ColorSliderImage_RegenerateTexture_m1461909699,
 	destroyBlock__ctor_m1799017826,
-	destroyBlock_Start_m647940402,
-	destroyBlock_Update_m3667144913,
+	destroyBlock_RemoveBlock_m3334831003,
 	DontDestroyOnLoad__ctor_m1942765255,
 	DontDestroyOnLoad_Start_m839902491,
 	DontDestroyOnLoad_Update_m3048973460,
@@ -23068,6 +23073,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11691] =
 	placeBox_HitTestWithResultType_m1060757642,
 	placeBox_CreateBox_m3746128977,
 	placeBox_Update_m3632811618,
+	placeBox_GetHitFace_m2361387267,
+	placeBox_getFaceVec_m3891390246,
 	PointCloudParticleExample__ctor_m249742788,
 	PointCloudParticleExample_Start_m1736319872,
 	PointCloudParticleExample_ARFrameUpdated_m1855536526,
@@ -23167,6 +23174,11 @@ extern const Il2CppMethodPointer g_MethodPointers[11691] =
 	ConnectToEditor_SendToEditor_m1831653951,
 	ConnectToEditor_SendToEditor_m798148974,
 	ConnectToEditor_DisconnectFromEditor_m246882822,
+	UIBehavior__ctor_m3682521951,
+	UIBehavior_Start_m3961636531,
+	UIBehavior_ResetButtons_m1738521039,
+	UIBehavior_PickaxeButtonSelected_m1977985717,
+	UIBehavior_BlockButtonSelected_m35656853,
 	UnityARAmbient__ctor_m3700524047,
 	UnityARAmbient_Start_m303369171,
 	UnityARAmbient_Update_m2066148092,

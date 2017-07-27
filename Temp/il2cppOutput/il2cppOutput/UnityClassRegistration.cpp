@@ -116,7 +116,7 @@ class WindZone;
 namespace UI { class CanvasRenderer; } template <> void RegisterClass<UI::CanvasRenderer>();
 class Collider; template <> void RegisterClass<Collider>();
 class BoxCollider; template <> void RegisterClass<BoxCollider>();
-class CapsuleCollider; template <> void RegisterClass<CapsuleCollider>();
+class CapsuleCollider; 
 class CharacterController; 
 class MeshCollider; template <> void RegisterClass<MeshCollider>();
 class SphereCollider; 
@@ -174,16 +174,16 @@ class LightProbes;
 class Material; template <> void RegisterClass<Material>();
 class ProceduralMaterial; 
 class Mesh; template <> void RegisterClass<Mesh>();
-class Motion; 
-class AnimationClip; 
+class Motion; template <> void RegisterClass<Motion>();
+class AnimationClip; template <> void RegisterClass<AnimationClip>();
 class PreviewAnimationClip; 
 class NavMeshData; 
 class OcclusionCullingData; 
 class PhysicMaterial; template <> void RegisterClass<PhysicMaterial>();
 class PhysicsMaterial2D; 
 class PreloadData; template <> void RegisterClass<PreloadData>();
-class RuntimeAnimatorController; 
-class AnimatorController; 
+class RuntimeAnimatorController; template <> void RegisterClass<RuntimeAnimatorController>();
+class AnimatorController; template <> void RegisterClass<AnimatorController>();
 class AnimatorOverrideController; 
 class SampleClip; template <> void RegisterClass<SampleClip>();
 class AudioClip; template <> void RegisterClass<AudioClip>();
@@ -248,7 +248,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 68 non stripped classes
+	//Total: 71 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>();
 	//1. Unity::Component
@@ -371,19 +371,25 @@ RegisterBuiltinTypes();
 	RegisterClass<Rigidbody>();
 	//60. BoxCollider
 	RegisterClass<BoxCollider>();
-	//61. AudioListener
+	//61. AnimationClip
+	RegisterClass<AnimationClip>();
+	//62. Motion
+	RegisterClass<Motion>();
+	//63. AudioListener
 	RegisterClass<AudioListener>();
-	//62. AudioBehaviour
+	//64. AudioBehaviour
 	RegisterClass<AudioBehaviour>();
-	//63. RenderSettings
+	//65. AnimatorController
+	RegisterClass<AnimatorController>();
+	//66. RuntimeAnimatorController
+	RegisterClass<RuntimeAnimatorController>();
+	//67. RenderSettings
 	RegisterClass<RenderSettings>();
-	//64. FlareLayer
+	//68. FlareLayer
 	RegisterClass<FlareLayer>();
-	//65. PhysicMaterial
+	//69. PhysicMaterial
 	RegisterClass<PhysicMaterial>();
-	//66. CapsuleCollider
-	RegisterClass<CapsuleCollider>();
-	//67. LightmapSettings
+	//70. LightmapSettings
 	RegisterClass<LightmapSettings>();
 
 }

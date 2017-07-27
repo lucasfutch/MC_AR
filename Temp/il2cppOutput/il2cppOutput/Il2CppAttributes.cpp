@@ -23075,12 +23075,12 @@ static void ColorSliderImage_t376502149_CustomAttributesCacheGenerator(CustomAtt
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[0];
-		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(RawImage_t2749640213_0_0_0_var), NULL);
+		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[0];
+		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
 	}
 	{
-		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[1];
-		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
+		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[1];
+		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(RawImage_t2749640213_0_0_0_var), NULL);
 	}
 }
 static void HexColorField_t4192118964_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -23105,12 +23105,12 @@ static void SVBoxSlider_t1173082351_CustomAttributesCacheGenerator(CustomAttribu
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[0];
-		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
+		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[0];
+		RequireComponent__ctor_m2072403951(tmp, il2cpp_codegen_type_get_object(BoxSlider_t1871650694_0_0_0_var), il2cpp_codegen_type_get_object(RawImage_t2749640213_0_0_0_var), NULL);
 	}
 	{
-		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[1];
-		RequireComponent__ctor_m2072403951(tmp, il2cpp_codegen_type_get_object(BoxSlider_t1871650694_0_0_0_var), il2cpp_codegen_type_get_object(RawImage_t2749640213_0_0_0_var), NULL);
+		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[1];
+		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
 	}
 }
 static void BoxSlider_t1871650694_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -23122,12 +23122,12 @@ static void BoxSlider_t1871650694_CustomAttributesCacheGenerator(CustomAttribute
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[0];
-		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(RectTransform_t3349966182_0_0_0_var), NULL);
+		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[0];
+		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("UI/BoxSlider"), 35LL, NULL);
 	}
 	{
-		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[1];
-		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("UI/BoxSlider"), 35LL, NULL);
+		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[1];
+		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(RectTransform_t3349966182_0_0_0_var), NULL);
 	}
 }
 static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_HandleRect(CustomAttributesCache* cache)
@@ -23140,12 +23140,12 @@ static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_HandleRect(Cu
 static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_MinValue(CustomAttributesCache* cache)
 {
 	{
-		SpaceAttribute_t952253354 * tmp = (SpaceAttribute_t952253354 *)cache->attributes[0];
-		SpaceAttribute__ctor_m1444406696(tmp, 6.0f, NULL);
+		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[0];
+		SerializeField__ctor_m994129777(tmp, NULL);
 	}
 	{
-		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[1];
-		SerializeField__ctor_m994129777(tmp, NULL);
+		SpaceAttribute_t952253354 * tmp = (SpaceAttribute_t952253354 *)cache->attributes[1];
+		SpaceAttribute__ctor_m1444406696(tmp, 6.0f, NULL);
 	}
 }
 static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_MaxValue(CustomAttributesCache* cache)
@@ -23179,12 +23179,12 @@ static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_ValueY(Custom
 static void BoxSlider_t1871650694_CustomAttributesCacheGenerator_m_OnValueChanged(CustomAttributesCache* cache)
 {
 	{
-		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[0];
-		SerializeField__ctor_m994129777(tmp, NULL);
+		SpaceAttribute_t952253354 * tmp = (SpaceAttribute_t952253354 *)cache->attributes[0];
+		SpaceAttribute__ctor_m1444406696(tmp, 6.0f, NULL);
 	}
 	{
-		SpaceAttribute_t952253354 * tmp = (SpaceAttribute_t952253354 *)cache->attributes[1];
-		SpaceAttribute__ctor_m1444406696(tmp, 6.0f, NULL);
+		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[1];
+		SerializeField__ctor_m994129777(tmp, NULL);
 	}
 }
 static void ParticlePainter_t1073897267_CustomAttributesCacheGenerator_ParticlePainter_U3CStartU3Em__0_m3078015875(CustomAttributesCache* cache)
@@ -23204,12 +23204,12 @@ static void ARHitTestResultType_t3616749745_CustomAttributesCacheGenerator(Custo
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARFrameUpdatedEvent(CustomAttributesCache* cache)
 {
 	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 }
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARAnchorAddedEvent(CustomAttributesCache* cache)
@@ -23226,12 +23226,12 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARAnchorUpdatedEvent(CustomAttributesCache* cache)
 {
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 }
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARAnchorRemovedEvent(CustomAttributesCache* cache)
@@ -23248,12 +23248,12 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARUserAnchorAddedEvent(CustomAttributesCache* cache)
 {
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 }
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARUserAnchorUpdatedEvent(CustomAttributesCache* cache)
@@ -23270,12 +23270,12 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARUserAnchorRemovedEvent(CustomAttributesCache* cache)
 {
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 }
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessionFailedEvent(CustomAttributesCache* cache)
@@ -23292,17 +23292,6 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessionInterruptedEvent(CustomAttributesCache* cache)
 {
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
-	}
-	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
-	}
-}
-static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessioninterruptionEndedEvent(CustomAttributesCache* cache)
-{
-	{
 		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
 		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
@@ -23311,7 +23300,7 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 }
-static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessionTrackingChangedEvent(CustomAttributesCache* cache)
+static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessioninterruptionEndedEvent(CustomAttributesCache* cache)
 {
 	{
 		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
@@ -23320,6 +23309,17 @@ static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGener
 	{
 		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
 		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+	}
+}
+static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_ARSessionTrackingChangedEvent(CustomAttributesCache* cache)
+{
+	{
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+	}
+	{
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 }
 static void UnityARSessionNativeInterface_t1130867170_CustomAttributesCacheGenerator_U3CU3Ef__mgU24cache0(CustomAttributesCache* cache)
