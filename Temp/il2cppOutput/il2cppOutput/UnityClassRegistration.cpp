@@ -142,7 +142,7 @@ class BillboardRenderer;
 class LineRenderer; 
 class MeshRenderer; template <> void RegisterClass<MeshRenderer>();
 class ParticleRenderer; 
-class ParticleSystemRenderer; 
+class ParticleSystemRenderer; template <> void RegisterClass<ParticleSystemRenderer>();
 class SkinnedMeshRenderer; 
 class SpriteRenderer; 
 class TrailRenderer; 
@@ -164,7 +164,7 @@ class AudioMixerGroup;
 class AudioMixerGroupController; 
 class AudioMixerSnapshot; 
 class AudioMixerSnapshotController; 
-class Avatar; 
+class Avatar; template <> void RegisterClass<Avatar>();
 class AvatarMask; 
 class BillboardAsset; 
 class ComputeShader; 
@@ -172,7 +172,7 @@ class Flare;
 namespace TextRendering { class Font; } template <> void RegisterClass<TextRendering::Font>();
 class LightProbes; 
 class Material; template <> void RegisterClass<Material>();
-class ProceduralMaterial; 
+class ProceduralMaterial; template <> void RegisterClass<ProceduralMaterial>();
 class Mesh; template <> void RegisterClass<Mesh>();
 class Motion; template <> void RegisterClass<Motion>();
 class AnimationClip; template <> void RegisterClass<AnimationClip>();
@@ -191,7 +191,7 @@ class Shader; template <> void RegisterClass<Shader>();
 class ShaderVariantCollection; 
 class SpeedTreeWindAsset; 
 class Sprite; template <> void RegisterClass<Sprite>();
-class SubstanceArchive; 
+class SubstanceArchive; template <> void RegisterClass<SubstanceArchive>();
 class TerrainData; 
 class TextAsset; template <> void RegisterClass<TextAsset>();
 class CGProgram; 
@@ -202,7 +202,7 @@ class MovieTexture;
 class WebCamTexture; 
 class CubemapArray; 
 class LowerResBlitTexture; template <> void RegisterClass<LowerResBlitTexture>();
-class ProceduralTexture; 
+class ProceduralTexture; template <> void RegisterClass<ProceduralTexture>();
 class RenderTexture; template <> void RegisterClass<RenderTexture>();
 class CustomRenderTexture; 
 class SparseTexture; 
@@ -248,7 +248,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 71 non stripped classes
+	//Total: 76 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>();
 	//1. Unity::Component
@@ -379,17 +379,27 @@ RegisterBuiltinTypes();
 	RegisterClass<AudioListener>();
 	//64. AudioBehaviour
 	RegisterClass<AudioBehaviour>();
-	//65. AnimatorController
+	//65. Avatar
+	RegisterClass<Avatar>();
+	//66. AnimatorController
 	RegisterClass<AnimatorController>();
-	//66. RuntimeAnimatorController
+	//67. RuntimeAnimatorController
 	RegisterClass<RuntimeAnimatorController>();
-	//67. RenderSettings
+	//68. RenderSettings
 	RegisterClass<RenderSettings>();
-	//68. FlareLayer
+	//69. FlareLayer
 	RegisterClass<FlareLayer>();
-	//69. PhysicMaterial
+	//70. PhysicMaterial
 	RegisterClass<PhysicMaterial>();
-	//70. LightmapSettings
+	//71. LightmapSettings
 	RegisterClass<LightmapSettings>();
+	//72. SubstanceArchive
+	RegisterClass<SubstanceArchive>();
+	//73. ProceduralMaterial
+	RegisterClass<ProceduralMaterial>();
+	//74. ProceduralTexture
+	RegisterClass<ProceduralTexture>();
+	//75. ParticleSystemRenderer
+	RegisterClass<ParticleSystemRenderer>();
 
 }

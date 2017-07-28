@@ -116,9 +116,9 @@
 #include "mscorlib_System_Collections_Generic_List_1_Enumera1147558386.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_Particle250075699.h"
 #include "AssemblyU2DCSharp_placeBox3405830008.h"
+#include "AssemblyU2DCSharp_placeBox_Selected3327221688.h"
 #include "AssemblyU2DCSharp_placeBox_MCFace2283549208.h"
 #include "UnityEngine_UnityEngine_Animator69676727.h"
-#include "AssemblyU2DCSharp_placeBox_Selected3327221688.h"
 #include "AssemblyU2DCSharp_PointCloudParticleExample986756623.h"
 #include "AssemblyU2DCSharp_SVBoxSlider1173082351.h"
 #include "AssemblyU2DCSharp_UnityEngine_UI_BoxSlider1871650694.h"
@@ -670,12 +670,12 @@ extern Il2CppClass* Single_t2076509932_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1415053652;
 extern Il2CppCodeGenString* _stringLiteral1537444060;
 extern const uint32_t placeBox_HitTestWithResultType_m1060757642_MetadataUsageId;
-extern const uint32_t placeBox_CreateBox_m3746128977_MetadataUsageId;
 extern Il2CppClass* placeBox_t3405830008_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral474790090;
+extern const MethodInfo* GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var;
+extern const uint32_t placeBox_CreateBox_m3746128977_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral474748842;
 extern Il2CppCodeGenString* _stringLiteral3883458782;
 extern Il2CppCodeGenString* _stringLiteral1678126972;
-extern Il2CppCodeGenString* _stringLiteral474748842;
 extern const uint32_t placeBox_Update_m3632811618_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral970460097;
 extern Il2CppCodeGenString* _stringLiteral970445095;
@@ -804,6 +804,10 @@ extern Il2CppCodeGenString* _stringLiteral9326697;
 extern const uint32_t UIBehavior_PickaxeButtonSelected_m1977985717_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral982033065;
 extern const uint32_t UIBehavior_BlockButtonSelected_m35656853_MetadataUsageId;
+extern const uint32_t UIBehavior_Block1ButtonSelected_m1667972602_MetadataUsageId;
+extern const uint32_t UIBehavior_Block2ButtonSelected_m3055615739_MetadataUsageId;
+extern const uint32_t UIBehavior_Block3ButtonSelected_m3482058876_MetadataUsageId;
+extern const uint32_t UIBehavior_Block4ButtonSelected_m2804056181_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisLight_t494725636_m2604108526_MethodInfo_var;
 extern const uint32_t UnityARAmbient_Start_m303369171_MetadataUsageId;
 extern Il2CppClass* Marshal_t785896760_il2cpp_TypeInfo_var;
@@ -1980,6 +1984,10 @@ extern "C"  void Particle_set_startSize_m2457836830 (Particle_t250075699 * __thi
 extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t3394631041 * __this, ParticleU5BU5D_t574222242* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
 extern "C"  void Transform_set_rotation_m3411284563 (Transform_t3275118058 * __this, Quaternion_t4030073918  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.ParticleSystem>()
+#define GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(__this, method) ((  ParticleSystem_t3394631041 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared)(__this, method)
+// System.Void UnityEngine.ParticleSystem::set_enableEmission(System.Boolean)
+extern "C"  void ParticleSystem_set_enableEmission_m1222323446 (ParticleSystem_t3394631041 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Time::get_deltaTime()
 extern "C"  float Time_get_deltaTime_m2233168104 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::ResetTrigger(System.String)
@@ -7420,7 +7428,7 @@ extern "C"  void placeBox_Start_m3816714073 (placeBox_t3405830008 * __this, cons
 	{
 		MaterialPropertyBlock_t3303648957 * L_0 = (MaterialPropertyBlock_t3303648957 *)il2cpp_codegen_object_new(MaterialPropertyBlock_t3303648957_il2cpp_TypeInfo_var);
 		MaterialPropertyBlock__ctor_m4079790842(L_0, /*hidden argument*/NULL);
-		__this->set_props_6(L_0);
+		__this->set_props_10(L_0);
 		return;
 	}
 }
@@ -7577,41 +7585,125 @@ extern "C"  void placeBox_CreateBox_m3746128977 (placeBox_t3405830008 * __this, 
 		il2cpp_codegen_initialize_method (placeBox_CreateBox_m3746128977_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	GameObject_t1756533147 * V_0 = NULL;
+	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	MeshRenderer_t1268241104 * V_4 = NULL;
+	MeshRenderer_t1268241104 * V_3 = NULL;
 	{
-		GameObject_t1756533147 * L_0 = __this->get_boxPrefab_3();
-		Vector3_t2243707580  L_1 = ___atPosition0;
-		Quaternion_t4030073918  L_2 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_0 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
+		if ((!(((uint32_t)L_0) == ((uint32_t)3))))
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_1 = __this->get_block1Prefab_4();
+		Vector3_t2243707580  L_2 = ___atPosition0;
+		Quaternion_t4030073918  L_3 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
-		V_0 = L_3;
-		float L_4 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_1 = L_4;
-		float L_5 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_2 = L_5;
-		float L_6 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_3 = L_6;
-		MaterialPropertyBlock_t3303648957 * L_7 = __this->get_props_6();
-		float L_8 = V_1;
-		float L_9 = V_2;
-		float L_10 = V_3;
-		Color_t2020392075  L_11;
-		memset(&L_11, 0, sizeof(L_11));
-		Color__ctor_m3811852957(&L_11, L_8, L_9, L_10, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		MaterialPropertyBlock_SetColor_m1647596275(L_7, _stringLiteral3342124747, L_11, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_12 = V_0;
+		GameObject_t1756533147 * L_4 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_1, L_2, L_3, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_8(L_4);
+		GameObject_t1756533147 * L_5 = __this->get_boxGO_8();
+		NullCheck(L_5);
+		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_6);
+		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
+		goto IL_013b;
+	}
+
+IL_0038:
+	{
+		int32_t L_7 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
+		if ((!(((uint32_t)L_7) == ((uint32_t)4))))
+		{
+			goto IL_0070;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_8 = __this->get_block2Prefab_5();
+		Vector3_t2243707580  L_9 = ___atPosition0;
+		Quaternion_t4030073918  L_10 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_11 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_8, L_9, L_10, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_8(L_11);
+		GameObject_t1756533147 * L_12 = __this->get_boxGO_8();
 		NullCheck(L_12);
-		MeshRenderer_t1268241104 * L_13 = GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632(L_12, /*hidden argument*/GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632_MethodInfo_var);
-		V_4 = L_13;
-		MeshRenderer_t1268241104 * L_14 = V_4;
-		MaterialPropertyBlock_t3303648957 * L_15 = __this->get_props_6();
-		NullCheck(L_14);
-		Renderer_SetPropertyBlock_m1151988246(L_14, L_15, /*hidden argument*/NULL);
+		ParticleSystem_t3394631041 * L_13 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_12, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_13);
+		ParticleSystem_set_enableEmission_m1222323446(L_13, (bool)0, /*hidden argument*/NULL);
+		goto IL_013b;
+	}
+
+IL_0070:
+	{
+		int32_t L_14 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
+		if ((!(((uint32_t)L_14) == ((uint32_t)5))))
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_15 = __this->get_block3Prefab_6();
+		Vector3_t2243707580  L_16 = ___atPosition0;
+		Quaternion_t4030073918  L_17 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_18 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_8(L_18);
+		GameObject_t1756533147 * L_19 = __this->get_boxGO_8();
+		NullCheck(L_19);
+		ParticleSystem_t3394631041 * L_20 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_19, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_20);
+		ParticleSystem_set_enableEmission_m1222323446(L_20, (bool)0, /*hidden argument*/NULL);
+		goto IL_013b;
+	}
+
+IL_00a8:
+	{
+		int32_t L_21 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
+		if ((!(((uint32_t)L_21) == ((uint32_t)6))))
+		{
+			goto IL_013b;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_22 = __this->get_boxPrefab_3();
+		Vector3_t2243707580  L_23 = ___atPosition0;
+		Quaternion_t4030073918  L_24 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_25 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_22, L_23, L_24, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_8(L_25);
+		GameObject_t1756533147 * L_26 = __this->get_boxGO_8();
+		NullCheck(L_26);
+		ParticleSystem_t3394631041 * L_27 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_26, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_27);
+		ParticleSystem_set_enableEmission_m1222323446(L_27, (bool)0, /*hidden argument*/NULL);
+		float L_28 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_28;
+		float L_29 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_1 = L_29;
+		float L_30 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_2 = L_30;
+		MaterialPropertyBlock_t3303648957 * L_31 = __this->get_props_10();
+		float L_32 = V_0;
+		float L_33 = V_1;
+		float L_34 = V_2;
+		Color_t2020392075  L_35;
+		memset(&L_35, 0, sizeof(L_35));
+		Color__ctor_m3811852957(&L_35, L_32, L_33, L_34, /*hidden argument*/NULL);
+		NullCheck(L_31);
+		MaterialPropertyBlock_SetColor_m1647596275(L_31, _stringLiteral3342124747, L_35, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_36 = __this->get_boxGO_8();
+		NullCheck(L_36);
+		MeshRenderer_t1268241104 * L_37 = GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632(L_36, /*hidden argument*/GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632_MethodInfo_var);
+		V_3 = L_37;
+		MeshRenderer_t1268241104 * L_38 = V_3;
+		MaterialPropertyBlock_t3303648957 * L_39 = __this->get_props_10();
+		NullCheck(L_38);
+		Renderer_SetPropertyBlock_m1151988246(L_38, L_39, /*hidden argument*/NULL);
+	}
+
+IL_013b:
+	{
 		return;
 	}
 }
@@ -7670,65 +7762,65 @@ extern "C"  void placeBox_Update_m3632811618 (placeBox_t3405830008 * __this, con
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		float L_0 = __this->get_timeElapsed_10();
-		float L_1 = __this->get_timeToAnimate_9();
+		float L_0 = __this->get_timeElapsed_15();
+		float L_1 = __this->get_timeToAnimate_14();
 		if ((!(((float)L_0) < ((float)L_1))))
 		{
 			goto IL_0033;
 		}
 	}
 	{
-		bool L_2 = __this->get_animationStarted_12();
+		bool L_2 = __this->get_animationStarted_17();
 		if (!L_2)
 		{
 			goto IL_0033;
 		}
 	}
 	{
-		float L_3 = __this->get_timeElapsed_10();
+		float L_3 = __this->get_timeElapsed_15();
 		float L_4 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_timeElapsed_10(((float)((float)L_3+(float)L_4)));
+		__this->set_timeElapsed_15(((float)((float)L_3+(float)L_4)));
 		goto IL_0071;
 	}
 
 IL_0033:
 	{
-		float L_5 = __this->get_timeElapsed_10();
-		float L_6 = __this->get_timeToAnimate_9();
+		float L_5 = __this->get_timeElapsed_15();
+		float L_6 = __this->get_timeToAnimate_14();
 		if ((!(((float)L_5) > ((float)L_6))))
 		{
 			goto IL_0071;
 		}
 	}
 	{
-		bool L_7 = __this->get_animationStarted_12();
+		bool L_7 = __this->get_animationStarted_17();
 		if (!L_7)
 		{
 			goto IL_0071;
 		}
 	}
 	{
-		__this->set_animationStarted_12((bool)0);
-		Animator_t69676727 * L_8 = __this->get_animator_5();
+		__this->set_animationStarted_17((bool)0);
+		Animator_t69676727 * L_8 = __this->get_animator_9();
 		NullCheck(L_8);
-		Animator_ResetTrigger_m865269317(L_8, _stringLiteral474790090, /*hidden argument*/NULL);
-		__this->set_timeElapsed_10((0.0f));
+		Animator_ResetTrigger_m865269317(L_8, _stringLiteral474748842, /*hidden argument*/NULL);
+		__this->set_timeElapsed_15((0.0f));
 	}
 
 IL_0071:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
 		int32_t L_9 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_9) <= ((int32_t)0)))
+		if ((!(((uint32_t)L_9) == ((uint32_t)1))))
 		{
-			goto IL_026e;
+			goto IL_0273;
 		}
 	}
 	{
-		int32_t L_10 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_7();
+		int32_t L_10 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_12();
 		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
 		{
-			goto IL_026e;
+			goto IL_0273;
 		}
 	}
 	{
@@ -7738,7 +7830,7 @@ IL_0071:
 		int32_t L_12 = Touch_get_phase_m196706494((&V_0), /*hidden argument*/NULL);
 		if (L_12)
 		{
-			goto IL_026e;
+			goto IL_0273;
 		}
 	}
 	{
@@ -7748,7 +7840,7 @@ IL_0071:
 		bool L_14 = EventSystem_IsPointerOverGameObject_m2415000115(L_13, 0, /*hidden argument*/NULL);
 		if (L_14)
 		{
-			goto IL_026e;
+			goto IL_0273;
 		}
 	}
 	{
@@ -7762,12 +7854,16 @@ IL_0071:
 		bool L_20 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_19, (&V_2), /*hidden argument*/NULL);
 		if (!L_20)
 		{
-			goto IL_026e;
+			goto IL_00d8;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2103682082, /*hidden argument*/NULL);
+	}
+
+IL_00d8:
+	{
 		RaycastHit_t87180320  L_21 = V_2;
 		int32_t L_22 = placeBox_GetHitFace_m2361387267(__this, L_21, /*hidden argument*/NULL);
 		V_3 = L_22;
@@ -7779,7 +7875,7 @@ IL_0071:
 		bool L_26 = Component_CompareTag_m3443292365(L_25, _stringLiteral439316528, /*hidden argument*/NULL);
 		if (!L_26)
 		{
-			goto IL_0194;
+			goto IL_0199;
 		}
 	}
 	{
@@ -7821,16 +7917,17 @@ IL_0071:
 		Vector3_t2243707580  L_45;
 		memset(&L_45, 0, sizeof(L_45));
 		Vector3__ctor_m2638739322(&L_45, L_42, L_43, L_44, /*hidden argument*/NULL);
-		__this->set_originalVec_8(L_45);
-		Vector3_t2243707580  L_46 = __this->get_originalVec_8();
+		__this->set_originalVec_13(L_45);
+		Vector3_t2243707580  L_46 = __this->get_originalVec_13();
 		Vector3_t2243707580  L_47 = V_4;
 		Vector3_t2243707580  L_48 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_46, L_47, /*hidden argument*/NULL);
 		V_11 = L_48;
 		Vector3_t2243707580  L_49 = V_11;
 		placeBox_CreateBox_m3746128977(__this, L_49, /*hidden argument*/NULL);
+		goto IL_0273;
 	}
 
-IL_0194:
+IL_0199:
 	{
 		Camera_t189460977 * L_50 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Vector2_t2243707579  L_51 = Touch_get_position_m2079703643((&V_0), /*hidden argument*/NULL);
@@ -7856,7 +7953,7 @@ IL_0194:
 		int32_t L_61 = List_1_get_Count_m323201712(L_60, /*hidden argument*/List_1_get_Count_m323201712_MethodInfo_var);
 		if ((((int32_t)L_61) <= ((int32_t)0)))
 		{
-			goto IL_026e;
+			goto IL_0273;
 		}
 	}
 	{
@@ -7866,14 +7963,14 @@ IL_0194:
 		V_17 = L_63;
 	}
 
-IL_01fd:
+IL_0202:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_024f;
+			goto IL_0254;
 		}
 
-IL_0202:
+IL_0207:
 		{
 			ARHitTestResult_t3275513025  L_64 = Enumerator_get_Current_m3080821509((&V_17), /*hidden argument*/Enumerator_get_Current_m3080821509_MethodInfo_var);
 			V_16 = L_64;
@@ -7884,60 +7981,60 @@ IL_0202:
 			Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1678126972, /*hidden argument*/NULL);
 			float L_67 = (&V_18)->get_x_1();
 			float L_68 = (&V_18)->get_y_2();
-			float L_69 = __this->get_createHeight_4();
+			float L_69 = __this->get_createHeight_7();
 			float L_70 = (&V_18)->get_z_3();
 			Vector3_t2243707580  L_71;
 			memset(&L_71, 0, sizeof(L_71));
 			Vector3__ctor_m2638739322(&L_71, L_67, ((float)((float)L_68+(float)L_69)), L_70, /*hidden argument*/NULL);
 			placeBox_CreateBox_m3746128977(__this, L_71, /*hidden argument*/NULL);
-			goto IL_025b;
+			goto IL_0260;
 		}
 
-IL_024f:
+IL_0254:
 		{
 			bool L_72 = Enumerator_MoveNext_m3860421825((&V_17), /*hidden argument*/Enumerator_MoveNext_m3860421825_MethodInfo_var);
 			if (L_72)
 			{
-				goto IL_0202;
+				goto IL_0207;
 			}
 		}
 
-IL_025b:
+IL_0260:
 		{
-			IL2CPP_LEAVE(0x26E, FINALLY_0260);
+			IL2CPP_LEAVE(0x273, FINALLY_0265);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_0260;
+		goto FINALLY_0265;
 	}
 
-FINALLY_0260:
+FINALLY_0265:
 	{ // begin finally (depth: 1)
 		Enumerator_Dispose_m3109677227((&V_17), /*hidden argument*/Enumerator_Dispose_m3109677227_MethodInfo_var);
-		IL2CPP_END_FINALLY(608)
+		IL2CPP_END_FINALLY(613)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(608)
+	IL2CPP_CLEANUP(613)
 	{
-		IL2CPP_JUMP_TBL(0x26E, IL_026e)
+		IL2CPP_JUMP_TBL(0x273, IL_0273)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
 	}
 
-IL_026e:
+IL_0273:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
 		int32_t L_73 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((((int32_t)L_73) <= ((int32_t)0)))
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
-		int32_t L_74 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_7();
+		int32_t L_74 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_12();
 		if (L_74)
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
@@ -7947,7 +8044,7 @@ IL_026e:
 		int32_t L_76 = Touch_get_phase_m196706494((&V_19), /*hidden argument*/NULL);
 		if (L_76)
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
@@ -7957,49 +8054,56 @@ IL_026e:
 		bool L_78 = EventSystem_IsPointerOverGameObject_m2415000115(L_77, 0, /*hidden argument*/NULL);
 		if (L_78)
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
-		Animator_t69676727 * L_79 = __this->get_animator_5();
+		Camera_t189460977 * L_79 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector2_t2243707579  L_80 = Touch_get_position_m2079703643((&V_19), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_81 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_80, /*hidden argument*/NULL);
 		NullCheck(L_79);
-		Animator_SetTrigger_m3418492570(L_79, _stringLiteral474748842, /*hidden argument*/NULL);
-		__this->set_animationStarted_12((bool)1);
-		Camera_t189460977 * L_80 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_81 = Touch_get_position_m2079703643((&V_19), /*hidden argument*/NULL);
-		Vector3_t2243707580  L_82 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_81, /*hidden argument*/NULL);
-		NullCheck(L_80);
-		Ray_t2469606224  L_83 = Camera_ScreenPointToRay_m614889538(L_80, L_82, /*hidden argument*/NULL);
-		V_20 = L_83;
-		Ray_t2469606224  L_84 = V_20;
-		bool L_85 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_84, (&V_21), /*hidden argument*/NULL);
-		if (!L_85)
+		Ray_t2469606224  L_82 = Camera_ScreenPointToRay_m614889538(L_79, L_81, /*hidden argument*/NULL);
+		V_20 = L_82;
+		Ray_t2469606224  L_83 = V_20;
+		bool L_84 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_83, (&V_21), /*hidden argument*/NULL);
+		if (!L_84)
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2103682082, /*hidden argument*/NULL);
-		Collider_t3497673348 * L_86 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
-		NullCheck(L_86);
-		bool L_87 = Component_CompareTag_m3443292365(L_86, _stringLiteral439316528, /*hidden argument*/NULL);
-		if (!L_87)
+		Collider_t3497673348 * L_85 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
+		NullCheck(L_85);
+		bool L_86 = Component_CompareTag_m3443292365(L_85, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_86)
 		{
-			goto IL_031f;
+			goto IL_033b;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1945171491, /*hidden argument*/NULL);
+		__this->set_animationStarted_17((bool)1);
+		Animator_t69676727 * L_87 = __this->get_animator_9();
+		NullCheck(L_87);
+		Animator_SetTrigger_m3418492570(L_87, _stringLiteral474748842, /*hidden argument*/NULL);
 		Collider_t3497673348 * L_88 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
 		NullCheck(L_88);
 		GameObject_t1756533147 * L_89 = Component_get_gameObject_m3105766835(L_88, /*hidden argument*/NULL);
+		NullCheck(L_89);
+		ParticleSystem_t3394631041 * L_90 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_89, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_90);
+		ParticleSystem_set_enableEmission_m1222323446(L_90, (bool)1, /*hidden argument*/NULL);
+		Collider_t3497673348 * L_91 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
+		NullCheck(L_91);
+		GameObject_t1756533147 * L_92 = Component_get_gameObject_m3105766835(L_91, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		Object_Destroy_m4145850038(NULL /*static, unused*/, L_89, /*hidden argument*/NULL);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_92, /*hidden argument*/NULL);
 	}
 
-IL_031f:
+IL_033b:
 	{
 		return;
 	}
@@ -11314,7 +11418,7 @@ extern "C"  void UIBehavior__ctor_m3682521951 (UIBehavior_t1836955822 * __this, 
 		Vector3_t2243707580  L_0;
 		memset(&L_0, 0, sizeof(L_0));
 		Vector3__ctor_m2638739322(&L_0, (0.0f), (20.0f), (0.0f), /*hidden argument*/NULL);
-		__this->set_biggerButton_7(L_0);
+		__this->set_biggerButton_15(L_0);
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -11332,8 +11436,20 @@ extern "C"  void UIBehavior_Start_m3961636531 (UIBehavior_t1836955822 * __this, 
 		GameObject_t1756533147 * L_0 = __this->get_PickAxeParent_4();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_6(2);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_7(1);
+		GameObject_t1756533147 * L_1 = __this->get_Block1Parent_5();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block2Parent_6();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block3Parent_7();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(1);
 		return;
 	}
 }
@@ -11382,7 +11498,7 @@ IL_0011:
 			Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
 			V_2 = L_5;
 			float L_6 = (&V_2)->get_y_2();
-			if ((!(((float)L_6) > ((float)(75.0f)))))
+			if ((!(((float)L_6) > ((float)(80.0f)))))
 			{
 				goto IL_004c;
 			}
@@ -11394,7 +11510,7 @@ IL_0035:
 			Transform_t3275118058 * L_8 = L_7;
 			NullCheck(L_8);
 			Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
-			Vector3_t2243707580  L_10 = __this->get_biggerButton_7();
+			Vector3_t2243707580  L_10 = __this->get_biggerButton_15();
 			Vector3_t2243707580  L_11 = Vector3_op_Subtraction_m2407545601(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
 			NullCheck(L_8);
 			Transform_set_position_m2469242620(L_8, L_11, /*hidden argument*/NULL);
@@ -11454,6 +11570,18 @@ IL_006f:
 
 IL_0070:
 	{
+		GameObject_t1756533147 * L_17 = __this->get_item1_10();
+		NullCheck(L_17);
+		GameObject_SetActive_m2887581199(L_17, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_18 = __this->get_item2_11();
+		NullCheck(L_18);
+		GameObject_SetActive_m2887581199(L_18, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_19 = __this->get_item3_12();
+		NullCheck(L_19);
+		GameObject_SetActive_m2887581199(L_19, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_20 = __this->get_item4_13();
+		NullCheck(L_20);
+		GameObject_SetActive_m2887581199(L_20, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -11470,30 +11598,53 @@ extern "C"  void UIBehavior_PickaxeButtonSelected_m1977985717 (UIBehavior_t18369
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral9326697, /*hidden argument*/NULL);
 		UIBehavior_ResetButtons_m1738521039(__this, /*hidden argument*/NULL);
-		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_6();
+		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_14();
 		if (!L_0)
 		{
-			goto IL_0036;
+			goto IL_0089;
 		}
 	}
 	{
-		Transform_t3275118058 * L_1 = __this->get_Pickaxe_3();
-		Transform_t3275118058 * L_2 = L_1;
+		GameObject_t1756533147 * L_1 = __this->get_Block1Parent_5();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block2Parent_6();
 		NullCheck(L_2);
-		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_4 = __this->get_biggerButton_7();
-		Vector3_t2243707580  L_5 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		Transform_set_position_m2469242620(L_2, L_5, /*hidden argument*/NULL);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block3Parent_7();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_5 = __this->get_Pickaxe_3();
+		Transform_t3275118058 * L_6 = L_5;
+		NullCheck(L_6);
+		Vector3_t2243707580  L_7 = Transform_get_position_m1104419803(L_6, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_8 = __this->get_biggerButton_15();
+		Vector3_t2243707580  L_9 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		Transform_set_position_m2469242620(L_6, L_9, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_PickAxeParent_4();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)1, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(0);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(0);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_12(0);
+		goto IL_00a1;
 	}
 
-IL_0036:
+IL_0089:
 	{
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_6(0);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_7(0);
-		GameObject_t1756533147 * L_6 = __this->get_PickAxeParent_4();
-		NullCheck(L_6);
-		GameObject_SetActive_m2887581199(L_6, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_PickAxeParent_4();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(2);
+	}
+
+IL_00a1:
+	{
 		return;
 	}
 }
@@ -11510,10 +11661,10 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral982033065, /*hidden argument*/NULL);
 		UIBehavior_ResetButtons_m1738521039(__this, /*hidden argument*/NULL);
-		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_6();
+		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_14();
 		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
-			goto IL_0037;
+			goto IL_00b4;
 		}
 	}
 	{
@@ -11521,19 +11672,238 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		Transform_t3275118058 * L_2 = L_1;
 		NullCheck(L_2);
 		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_4 = __this->get_biggerButton_7();
+		Vector3_t2243707580  L_4 = __this->get_biggerButton_15();
 		Vector3_t2243707580  L_5 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		Transform_set_position_m2469242620(L_2, L_5, /*hidden argument*/NULL);
-	}
-
-IL_0037:
-	{
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_6(1);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_7(1);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(1);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_12(1);
 		GameObject_t1756533147 * L_6 = __this->get_PickAxeParent_4();
 		NullCheck(L_6);
 		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_Block1Parent_5();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_Block2Parent_6();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_Block3Parent_7();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_Block4Parent_8();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		goto IL_00c0;
+	}
+
+IL_00b4:
+	{
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(2);
+	}
+
+IL_00c0:
+	{
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::Block1ButtonSelected()
+extern "C"  void UIBehavior_Block1ButtonSelected_m1667972602 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_Block1ButtonSelected_m1667972602_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(3);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(3);
+		GameObject_t1756533147 * L_4 = __this->get_Block1Parent_5();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_Block1Parent_5();
+		NullCheck(L_5);
+		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_6);
+		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::Block2ButtonSelected()
+extern "C"  void UIBehavior_Block2ButtonSelected_m3055615739 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_Block2ButtonSelected_m3055615739_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(4);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(4);
+		GameObject_t1756533147 * L_4 = __this->get_Block2Parent_6();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_Block2Parent_6();
+		NullCheck(L_5);
+		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_6);
+		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::Block3ButtonSelected()
+extern "C"  void UIBehavior_Block3ButtonSelected_m3482058876 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_Block3ButtonSelected_m3482058876_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(5);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(5);
+		GameObject_t1756533147 * L_4 = __this->get_Block3Parent_7();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_Block3Parent_7();
+		NullCheck(L_5);
+		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_6);
+		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::Block4ButtonSelected()
+extern "C"  void UIBehavior_Block4ButtonSelected_m2804056181 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_Block4ButtonSelected_m2804056181_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(6);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(6);
+		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_Block4Parent_8();
+		NullCheck(L_5);
+		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		NullCheck(L_6);
+		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }

@@ -377,6 +377,7 @@ UnityEngine.Object::FindObjectsOfType
 UnityEngine.Object::FindObjectsOfTypeIncludingAssets
 UnityEngine.Object::FindSceneObjectsOfType
 UnityEngine.ParticleSystem::SetParticles
+UnityEngine.ParticleSystem/EmissionModule::SetEnabled
 UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast
 UnityEngine.Physics::INTERNAL_CALL_Internal_RaycastTest
 UnityEngine.Physics::INTERNAL_CALL_RaycastAll

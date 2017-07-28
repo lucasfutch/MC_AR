@@ -9078,7 +9078,12 @@ extern "C" void Object_FindObjectOfType_m2330404063 ();
 extern "C" void Object_op_Equality_m3764089466 ();
 extern "C" void Object_op_Inequality_m2402264703 ();
 extern "C" void Object__cctor_m2991092887 ();
+extern "C" void ParticleSystem_set_enableEmission_m1222323446 ();
+extern "C" void ParticleSystem_get_emission_m3968992617 ();
 extern "C" void ParticleSystem_SetParticles_m3035584975 ();
+extern "C" void EmissionModule__ctor_m1076689768_AdjustorThunk ();
+extern "C" void EmissionModule_set_enabled_m4266189783_AdjustorThunk ();
+extern "C" void EmissionModule_SetEnabled_m1102718738 ();
 extern "C" void IteratorDelegate__ctor_m3692393942 ();
 extern "C" void IteratorDelegate_Invoke_m3389138368 ();
 extern "C" void IteratorDelegate_BeginInvoke_m1741046139 ();
@@ -11480,6 +11485,10 @@ extern "C" void UIBehavior_Start_m3961636531 ();
 extern "C" void UIBehavior_ResetButtons_m1738521039 ();
 extern "C" void UIBehavior_PickaxeButtonSelected_m1977985717 ();
 extern "C" void UIBehavior_BlockButtonSelected_m35656853 ();
+extern "C" void UIBehavior_Block1ButtonSelected_m1667972602 ();
+extern "C" void UIBehavior_Block2ButtonSelected_m3055615739 ();
+extern "C" void UIBehavior_Block3ButtonSelected_m3482058876 ();
+extern "C" void UIBehavior_Block4ButtonSelected_m2804056181 ();
 extern "C" void UnityARAmbient__ctor_m3700524047 ();
 extern "C" void UnityARAmbient_Start_m303369171 ();
 extern "C" void UnityARAmbient_Update_m2066148092 ();
@@ -11711,7 +11720,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11697] = 
+extern const Il2CppMethodPointer g_MethodPointers[11706] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -20777,7 +20786,12 @@ extern const Il2CppMethodPointer g_MethodPointers[11697] =
 	Object_op_Equality_m3764089466,
 	Object_op_Inequality_m2402264703,
 	Object__cctor_m2991092887,
+	ParticleSystem_set_enableEmission_m1222323446,
+	ParticleSystem_get_emission_m3968992617,
 	ParticleSystem_SetParticles_m3035584975,
+	EmissionModule__ctor_m1076689768_AdjustorThunk,
+	EmissionModule_set_enabled_m4266189783_AdjustorThunk,
+	EmissionModule_SetEnabled_m1102718738,
 	IteratorDelegate__ctor_m3692393942,
 	IteratorDelegate_Invoke_m3389138368,
 	IteratorDelegate_BeginInvoke_m1741046139,
@@ -23179,6 +23193,10 @@ extern const Il2CppMethodPointer g_MethodPointers[11697] =
 	UIBehavior_ResetButtons_m1738521039,
 	UIBehavior_PickaxeButtonSelected_m1977985717,
 	UIBehavior_BlockButtonSelected_m35656853,
+	UIBehavior_Block1ButtonSelected_m1667972602,
+	UIBehavior_Block2ButtonSelected_m3055615739,
+	UIBehavior_Block3ButtonSelected_m3482058876,
+	UIBehavior_Block4ButtonSelected_m2804056181,
 	UnityARAmbient__ctor_m3700524047,
 	UnityARAmbient_Start_m303369171,
 	UnityARAmbient_Update_m2066148092,

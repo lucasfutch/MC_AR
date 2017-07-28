@@ -16,6 +16,7 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
 #include "UnityEngine_UnityEngine_Rendering_CameraEvent2007842675.h"
 #include "UnityEngine_UnityEngine_Rendering_ColorWriteMask926634530.h"
 #include "UnityEngine_UnityEngine_Rendering_CommandBuffer1204166949.h"
@@ -28,7 +29,6 @@
 #include "UnityEngine_UnityEngine_Material193706927.h"
 #include "mscorlib_System_Int322071877448.h"
 #include "UnityEngine_UnityEngine_Rendering_CompareFunction457874581.h"
-#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
 #include "mscorlib_System_String2029220233.h"
 #include "UnityEngine_UnityEngine_Rendering_StencilOp2936374925.h"
 #include "UnityEngine_UnityEngine_RenderMode4280533217.h"
@@ -193,7 +193,6 @@
 #include "UnityEngine_UnityEngine_WaitForEndOfFrame1785723201.h"
 #include "UnityEngine_UnityEngine_YieldInstruction3462875981.h"
 #include "UnityEngine_UnityEngine_WaitForFixedUpdate3968615785.h"
-#include "UnityEngine_UnityEngine_WaitForSeconds3839502067.h"
 
 // UnityEngine.Rendering.CommandBuffer
 struct CommandBuffer_t1204166949;
@@ -413,8 +412,6 @@ struct WaitForEndOfFrame_t1785723201;
 struct YieldInstruction_t3462875981;
 // UnityEngine.WaitForFixedUpdate
 struct WaitForFixedUpdate_t3968615785;
-// UnityEngine.WaitForSeconds
-struct WaitForSeconds_t3839502067;
 extern Il2CppClass* IntPtr_t_il2cpp_TypeInfo_var;
 extern const uint32_t CommandBuffer__ctor_m3893953450_MetadataUsageId;
 extern const uint32_t CommandBuffer_Dispose_m952026238_MetadataUsageId;
@@ -15060,46 +15057,6 @@ extern "C"  void WaitForFixedUpdate__ctor_m3781413380 (WaitForFixedUpdate_t39686
 {
 	{
 		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
-{
-	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
-}
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_back(const WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled, WaitForSeconds_t3839502067& unmarshaled)
-{
-	float unmarshaled_m_Seconds_temp_0 = 0.0f;
-	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
-	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_cleanup(WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
-{
-}
-// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_com(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_com& marshaled)
-{
-	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
-}
-extern "C" void WaitForSeconds_t3839502067_marshal_com_back(const WaitForSeconds_t3839502067_marshaled_com& marshaled, WaitForSeconds_t3839502067& unmarshaled)
-{
-	float unmarshaled_m_Seconds_temp_0 = 0.0f;
-	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
-	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_com_cleanup(WaitForSeconds_t3839502067_marshaled_com& marshaled)
-{
-}
-// System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
-extern "C"  void WaitForSeconds__ctor_m1990515539 (WaitForSeconds_t3839502067 * __this, float ___seconds0, const MethodInfo* method)
-{
-	{
-		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
-		float L_0 = ___seconds0;
-		__this->set_m_Seconds_0(L_0);
 		return;
 	}
 }

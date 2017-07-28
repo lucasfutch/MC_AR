@@ -164,6 +164,7 @@
 #include "UnityEngine_UnityEngine_Networking_PlayerConnectio1861374374.h"
 #include "UnityEngine_UnityEngine_OperatingSystemFamily1896948788.h"
 #include "UnityEngine_UnityEngine_ParticleSystem3394631041.h"
+#include "UnityEngine_UnityEngine_ParticleSystem_EmissionMod2748003162.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_Particle250075699.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_IteratorDel2419492168.h"
 #include "UnityEngine_UnityEngine_Physics634932869.h"
@@ -191,7 +192,6 @@
 #include "UnityEngine_UnityEngine_RemoteSettings392466225.h"
 #include "UnityEngine_UnityEngine_RemoteSettings_UpdatedEven3033456180.h"
 #include "UnityEngine_UnityEngine_Renderer257310565.h"
-#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
 
 // UnityEngine.Font
 struct Font_t4239498691;
@@ -2330,6 +2330,14 @@ extern "C"  Object_t1021602117 * Object_Instantiate_m2489341053 (Il2CppObject * 
 extern "C"  Object_t1021602117 * Object_Internal_CloneSingleWithParent_m665572246 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * ___data0, Transform_t3275118058 * ___parent1, bool ___worldPositionStays2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
 extern "C"  ObjectU5BU5D_t4217747464* Object_FindObjectsOfType_m2121813744 (Il2CppObject * __this /* static, unused */, Type_t * ___type0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.ParticleSystem/EmissionModule UnityEngine.ParticleSystem::get_emission()
+extern "C"  EmissionModule_t2748003162  ParticleSystem_get_emission_m3968992617 (ParticleSystem_t3394631041 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled(System.Boolean)
+extern "C"  void EmissionModule_set_enabled_m4266189783 (EmissionModule_t2748003162 * __this, bool ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void EmissionModule__ctor_m1076689768 (EmissionModule_t2748003162 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
+extern "C"  void EmissionModule_SetEnabled_m1102718738 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, bool ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.ParticleSystem/IteratorDelegate::Invoke(UnityEngine.ParticleSystem)
 extern "C"  bool IteratorDelegate_Invoke_m3389138368 (IteratorDelegate_t2419492168 * __this, ParticleSystem_t3394631041 * ___ps0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.ParticleSystem/Particle::set_position(UnityEngine.Vector3)
@@ -20327,6 +20335,38 @@ extern "C"  void Object__cctor_m2991092887 (Il2CppObject * __this /* static, unu
 		return;
 	}
 }
+// System.Void UnityEngine.ParticleSystem::set_enableEmission(System.Boolean)
+extern "C"  void ParticleSystem_set_enableEmission_m1222323446 (ParticleSystem_t3394631041 * __this, bool ___value0, const MethodInfo* method)
+{
+	EmissionModule_t2748003162  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		EmissionModule_t2748003162  L_0 = ParticleSystem_get_emission_m3968992617(__this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		bool L_1 = ___value0;
+		EmissionModule_set_enabled_m4266189783((&V_0), L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.ParticleSystem/EmissionModule UnityEngine.ParticleSystem::get_emission()
+extern "C"  EmissionModule_t2748003162  ParticleSystem_get_emission_m3968992617 (ParticleSystem_t3394631041 * __this, const MethodInfo* method)
+{
+	EmissionModule_t2748003162  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		EmissionModule_t2748003162  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		EmissionModule__ctor_m1076689768(&L_0, __this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		EmissionModule_t2748003162  L_1 = V_0;
+		return L_1;
+	}
+}
 // System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32)
 extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t3394631041 * __this, ParticleU5BU5D_t574222242* ___particles0, int32_t ___size1, const MethodInfo* method)
 {
@@ -20335,6 +20375,74 @@ extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t339463
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (ParticleSystem_SetParticles_m3035584975_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32)");
 	_il2cpp_icall_func(__this, ___particles0, ___size1);
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke(const EmissionModule_t2748003162& unmarshaled, EmissionModule_t2748003162_marshaled_pinvoke& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_back(const EmissionModule_t2748003162_marshaled_pinvoke& marshaled, EmissionModule_t2748003162& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_cleanup(EmissionModule_t2748003162_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_com(const EmissionModule_t2748003162& unmarshaled, EmissionModule_t2748003162_marshaled_com& marshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+extern "C" void EmissionModule_t2748003162_marshal_com_back(const EmissionModule_t2748003162_marshaled_com& marshaled, EmissionModule_t2748003162& unmarshaled)
+{
+	Il2CppCodeGenException* ___m_ParticleSystem_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'm_ParticleSystem' of type 'EmissionModule': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___m_ParticleSystem_0Exception);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.ParticleSystem/EmissionModule
+extern "C" void EmissionModule_t2748003162_marshal_com_cleanup(EmissionModule_t2748003162_marshaled_com& marshaled)
+{
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::.ctor(UnityEngine.ParticleSystem)
+extern "C"  void EmissionModule__ctor_m1076689768 (EmissionModule_t2748003162 * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	{
+		ParticleSystem_t3394631041 * L_0 = ___particleSystem0;
+		__this->set_m_ParticleSystem_0(L_0);
+		return;
+	}
+}
+extern "C"  void EmissionModule__ctor_m1076689768_AdjustorThunk (Il2CppObject * __this, ParticleSystem_t3394631041 * ___particleSystem0, const MethodInfo* method)
+{
+	EmissionModule_t2748003162 * _thisAdjusted = reinterpret_cast<EmissionModule_t2748003162 *>(__this + 1);
+	EmissionModule__ctor_m1076689768(_thisAdjusted, ___particleSystem0, method);
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled(System.Boolean)
+extern "C"  void EmissionModule_set_enabled_m4266189783 (EmissionModule_t2748003162 * __this, bool ___value0, const MethodInfo* method)
+{
+	{
+		ParticleSystem_t3394631041 * L_0 = __this->get_m_ParticleSystem_0();
+		bool L_1 = ___value0;
+		EmissionModule_SetEnabled_m1102718738(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+extern "C"  void EmissionModule_set_enabled_m4266189783_AdjustorThunk (Il2CppObject * __this, bool ___value0, const MethodInfo* method)
+{
+	EmissionModule_t2748003162 * _thisAdjusted = reinterpret_cast<EmissionModule_t2748003162 *>(__this + 1);
+	EmissionModule_set_enabled_m4266189783(_thisAdjusted, ___value0, method);
+}
+// System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
+extern "C"  void EmissionModule_SetEnabled_m1102718738 (Il2CppObject * __this /* static, unused */, ParticleSystem_t3394631041 * ___system0, bool ___value1, const MethodInfo* method)
+{
+	typedef void (*EmissionModule_SetEnabled_m1102718738_ftn) (ParticleSystem_t3394631041 *, bool);
+	static EmissionModule_SetEnabled_m1102718738_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (EmissionModule_SetEnabled_m1102718738_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)");
+	_il2cpp_icall_func(___system0, ___value1);
 }
 // System.Void UnityEngine.ParticleSystem/IteratorDelegate::.ctor(System.Object,System.IntPtr)
 extern "C"  void IteratorDelegate__ctor_m3692393942 (IteratorDelegate_t2419492168 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)

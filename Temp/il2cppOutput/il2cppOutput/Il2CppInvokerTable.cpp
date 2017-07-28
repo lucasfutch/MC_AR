@@ -162,6 +162,7 @@
 #include "UnityEngine_UnityEngine_iOS_CalendarUnit4134400622.h"
 #include "UnityEngine_UnityEngine_iOS_CalendarIdentifier259698391.h"
 #include "UnityEngine_UnityEngine_SceneManagement_Scene1684909666.h"
+#include "UnityEngine_UnityEngine_ParticleSystem_EmissionMod2748003162.h"
 #include "UnityEngine_UnityEngine_Color32874517518.h"
 #include "UnityEngine_UnityEngine_RaycastHit87180320.h"
 #include "UnityEngine_UnityEngine_AnimatorStateInfo2577870592.h"
@@ -7773,6 +7774,13 @@ void* RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Single_t2076509932_Singl
 	return NULL;
 }
 
+void* RuntimeInvoker_EmissionModule_t2748003162 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef EmissionModule_t2748003162  (*Func)(void* obj, const MethodInfo* method);
+	EmissionModule_t2748003162  ret = ((Func)method->methodPointer)(obj, method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
 void* RuntimeInvoker_Void_t1841601450_Color32_t874517518 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, Color32_t874517518  p1, const MethodInfo* method);
@@ -13611,7 +13619,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t2986189219 (const MethodInfo* meth
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1776] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1777] = 
 {
 	RuntimeInvoker_Void_t1841601450,
 	RuntimeInvoker_Boolean_t3825574718_Il2CppObject,
@@ -14555,6 +14563,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1776] =
 	RuntimeInvoker_Void_t1841601450_QuaternionU26_t4187826802,
 	RuntimeInvoker_Matrix4x4_t2933234003,
 	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Single_t2076509932_Single_t2076509932,
+	RuntimeInvoker_EmissionModule_t2748003162,
 	RuntimeInvoker_Void_t1841601450_Color32_t874517518,
 	RuntimeInvoker_Boolean_t3825574718_Vector3_t2243707580_Vector3_t2243707580_Single_t2076509932_Int32_t2071877448,
 	RuntimeInvoker_Boolean_t3825574718_Vector3_t2243707580_Vector3_t2243707580_Single_t2076509932,

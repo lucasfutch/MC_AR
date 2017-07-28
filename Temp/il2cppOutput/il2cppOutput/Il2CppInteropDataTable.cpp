@@ -234,6 +234,10 @@ extern "C" void Object_t1021602117_marshal_pinvoke(void* managedStructure, void*
 extern "C" void Object_t1021602117_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void Object_t1021602117_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const Il2CppType Object_t1021602117_0_0_0;
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void EmissionModule_t2748003162_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType EmissionModule_t2748003162_0_0_0;
 extern "C" void RaycastHit_t87180320_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
 extern "C" void RaycastHit_t87180320_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void RaycastHit_t87180320_marshal_pinvoke_cleanup(void* marshaledStructure);
@@ -394,7 +398,7 @@ extern "C" void DelegatePInvokeWrapper_internal_ARUserAnchorRemoved_t4166385952(
 extern const Il2CppType internal_ARUserAnchorRemoved_t4166385952_0_0_0;
 extern "C" void DelegatePInvokeWrapper_internal_ARUserAnchorUpdated_t1661963345();
 extern const Il2CppType internal_ARUserAnchorUpdated_t1661963345_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[115] = 
+extern Il2CppInteropData g_Il2CppInteropData[116] = 
 {
 	{ NULL, Context_t2636657155_marshal_pinvoke, Context_t2636657155_marshal_pinvoke_back, Context_t2636657155_marshal_pinvoke_cleanup, NULL, NULL, &Context_t2636657155_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t169451053_marshal_pinvoke, Escape_t169451053_marshal_pinvoke_back, Escape_t169451053_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t169451053_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -461,6 +465,7 @@ extern Il2CppInteropData g_Il2CppInteropData[115] =
 	{ NULL, GUIStyleState_t3801000545_marshal_pinvoke, GUIStyleState_t3801000545_marshal_pinvoke_back, GUIStyleState_t3801000545_marshal_pinvoke_cleanup, NULL, NULL, &GUIStyleState_t3801000545_0_0_0 } /* UnityEngine.GUIStyleState */,
 	{ NULL, HumanBone_t1529896151_marshal_pinvoke, HumanBone_t1529896151_marshal_pinvoke_back, HumanBone_t1529896151_marshal_pinvoke_cleanup, NULL, NULL, &HumanBone_t1529896151_0_0_0 } /* UnityEngine.HumanBone */,
 	{ NULL, Object_t1021602117_marshal_pinvoke, Object_t1021602117_marshal_pinvoke_back, Object_t1021602117_marshal_pinvoke_cleanup, NULL, NULL, &Object_t1021602117_0_0_0 } /* UnityEngine.Object */,
+	{ NULL, EmissionModule_t2748003162_marshal_pinvoke, EmissionModule_t2748003162_marshal_pinvoke_back, EmissionModule_t2748003162_marshal_pinvoke_cleanup, NULL, NULL, &EmissionModule_t2748003162_0_0_0 } /* UnityEngine.ParticleSystem/EmissionModule */,
 	{ NULL, RaycastHit_t87180320_marshal_pinvoke, RaycastHit_t87180320_marshal_pinvoke_back, RaycastHit_t87180320_marshal_pinvoke_cleanup, NULL, NULL, &RaycastHit_t87180320_0_0_0 } /* UnityEngine.RaycastHit */,
 	{ NULL, RaycastHit2D_t4063908774_marshal_pinvoke, RaycastHit2D_t4063908774_marshal_pinvoke_back, RaycastHit2D_t4063908774_marshal_pinvoke_cleanup, NULL, NULL, &RaycastHit2D_t4063908774_0_0_0 } /* UnityEngine.RaycastHit2D */,
 	{ NULL, RectOffset_t3387826427_marshal_pinvoke, RectOffset_t3387826427_marshal_pinvoke_back, RectOffset_t3387826427_marshal_pinvoke_cleanup, NULL, NULL, &RectOffset_t3387826427_0_0_0 } /* UnityEngine.RectOffset */,

@@ -1692,6 +1692,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.ParticleSystem
 
+	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
+
+		//System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
+		void Register_UnityEngine_ParticleSystem_EmissionModule_SetEnabled();
+		Register_UnityEngine_ParticleSystem_EmissionModule_SetEnabled();
+
+	//End Registrations for type : UnityEngine.ParticleSystem/EmissionModule
+
 	//Start Registrations for type : UnityEngine.Physics
 
 		//System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)

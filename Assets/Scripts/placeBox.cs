@@ -7,15 +7,19 @@ using UnityEngine.EventSystems;
 public class placeBox : MonoBehaviour {
 
 	public Transform m_HitTransform;
-	public GameObject boxPrefab;
+	public GameObject boxPrefab, block1Prefab, block2Prefab, block3Prefab;
 	public float createHeight;
+
+	private GameObject boxGO;
 
 	public Animator animator;
 
 	private MaterialPropertyBlock props;
 
-	public enum Selected {Pickaxe, Block, Null};
+	public enum Selected {Pickaxe, Block, Null, Block1, Block2, Block3, Block4};
 	public static Selected currentSelectedOG;
+	public static Selected currentSelectionIsABlock;
+
 
 	private Vector3 originalVec;
 
@@ -54,16 +58,32 @@ public class placeBox : MonoBehaviour {
 	}
 
 	void CreateBox(Vector3 atPosition) {
-		GameObject boxGO = Instantiate (boxPrefab, atPosition, Quaternion.identity);
 
-		float r = Random.Range(0.0f, 1.0f);
-		float g = Random.Range(0.0f, 1.0f);
-		float b = Random.Range(0.0f, 1.0f);
+		if (currentSelectedOG == Selected.Block1) {
+			boxGO = Instantiate (block1Prefab, atPosition, Quaternion.identity);
+			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
 
-		props.SetColor("_InstanceColor", new Color(r, g, b));
+		} else if (currentSelectedOG == Selected.Block2) {
+			boxGO = Instantiate (block2Prefab, atPosition, Quaternion.identity);
+			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
 
-		MeshRenderer renderer = boxGO.GetComponent<MeshRenderer>();
-		renderer.SetPropertyBlock(props);
+		} else if (currentSelectedOG == Selected.Block3) {
+			boxGO = Instantiate (block3Prefab, atPosition, Quaternion.identity);
+			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+
+		} else if (currentSelectedOG == Selected.Block4) {
+			boxGO = Instantiate (boxPrefab, atPosition, Quaternion.identity);
+			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+
+			float r = Random.Range (0.0f, 1.0f);
+			float g = Random.Range (0.0f, 1.0f);
+			float b = Random.Range (0.0f, 1.0f);
+
+			props.SetColor ("_InstanceColor", new Color (r, g, b));
+
+			MeshRenderer renderer = boxGO.GetComponent<MeshRenderer> ();
+			renderer.SetPropertyBlock (props);
+		}
 	}
 
 	// Update is called once per frame
@@ -74,13 +94,13 @@ public class placeBox : MonoBehaviour {
 		}
 		else if (timeElapsed > timeToAnimate && animationStarted) {
 			animationStarted = false;
-			animator.ResetTrigger ("clickWIndow");
-			timeElapsed = 0;
+			animator.ResetTrigger ("clickWindow");
+			timeElapsed = 0.0f;
 		}
 
 			
 
-		if (Input.touchCount > 0 && currentSelectedOG == Selected.Block)
+		if ((Input.touchCount == 1) && (currentSelectionIsABlock == Selected.Block))
 		{
 			var touch = Input.GetTouch(0);
 			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
@@ -91,24 +111,24 @@ public class placeBox : MonoBehaviour {
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					Debug.Log ("Detected a Box");
-					//}
+				}
 
 					MCFace boxSideHit = GetHitFace (raycastHit);
 					Vector3 boxSideHitVec = getFaceVec (boxSideHit);
 					
-					if (raycastHit.collider.CompareTag ("placedBox")) {
-						Debug.Log ("Placing Box on top of another box");
-						float xPos = raycastHit.collider.gameObject.transform.position.x;
-						float yPos = raycastHit.collider.gameObject.transform.position.y;
-						float zPos = raycastHit.collider.gameObject.transform.position.z;
+				if (raycastHit.collider.CompareTag ("placedBox")) {
+					Debug.Log ("Placing Box on top of another box");
+					float xPos = raycastHit.collider.gameObject.transform.position.x;
+					float yPos = raycastHit.collider.gameObject.transform.position.y;
+					float zPos = raycastHit.collider.gameObject.transform.position.z;
 
-						originalVec = new Vector3 (xPos, yPos, zPos);
+					originalVec = new Vector3 (xPos, yPos, zPos);
 
-						//Vector3 originalVec = new Vector3 (xPos, yPos + createHeight, zPos);
-						Vector3 boxPosition = originalVec + boxSideHitVec;
-						CreateBox (boxPosition);
+					//Vector3 originalVec = new Vector3 (xPos, yPos + createHeight, zPos);
+					Vector3 boxPosition = originalVec + boxSideHitVec;
+					CreateBox (boxPosition);
 
-					}
+				} else {
 					/////////////////////////
 
 					var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
@@ -118,7 +138,7 @@ public class placeBox : MonoBehaviour {
 					};
 
 					List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, 
-						                                  ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent);
+						                                   ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent);
 					if (hitResults.Count > 0) {
 						foreach (var hitResult in hitResults) {
 							Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
@@ -127,17 +147,17 @@ public class placeBox : MonoBehaviour {
 							break;
 						}
 					}
-				}
+				}//
 			}
 		}
 
-		if (Input.touchCount > 0 && currentSelectedOG == Selected.Pickaxe)
+		if (Input.touchCount > 0 && currentSelectionIsABlock == Selected.Pickaxe)
 		{
 			var touch = Input.GetTouch(0);
 			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
 			{
-				animator.SetTrigger ("clickWindow");
-				animationStarted = true;
+				
+
 
 				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
 				RaycastHit raycastHit;
@@ -146,7 +166,9 @@ public class placeBox : MonoBehaviour {
 					Debug.Log ("Detected a Box");
 					if (raycastHit.collider.CompareTag ("placedBox")) {
 						Debug.Log ("Destroying Box");
-
+						animationStarted = true;
+						animator.SetTrigger ("clickWindow");
+						raycastHit.collider.gameObject.GetComponent<ParticleSystem> ().enableEmission = true;
 						Destroy (raycastHit.collider.gameObject);
 
 					}

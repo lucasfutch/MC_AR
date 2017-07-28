@@ -16,14 +16,15 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
-#include "UnityEngine_UnityEngine_WaitForSecondsRealtime2105307154.h"
+#include "UnityEngine_UnityEngine_WaitForSeconds3839502067.h"
 #include "mscorlib_System_Void1841601450.h"
 #include "mscorlib_System_Single2076509932.h"
+#include "UnityEngine_UnityEngine_YieldInstruction3462875981.h"
+#include "UnityEngine_UnityEngine_WaitForSecondsRealtime2105307154.h"
 #include "UnityEngine_UnityEngine_CustomYieldInstruction1786092740.h"
 #include "mscorlib_System_Boolean3825574718.h"
 #include "UnityEngine_UnityEngine_WritableAttribute3715198420.h"
 #include "mscorlib_System_Attribute542643598.h"
-#include "UnityEngine_UnityEngine_YieldInstruction3462875981.h"
 #include "mscorlib_System_Object2689449295.h"
 #include "UnityEngine_UnityEngineInternal_GenericStack3718539591.h"
 #include "mscorlib_System_Collections_Stack1043988394.h"
@@ -43,6 +44,10 @@
 #include "mscorlib_System_Int322071877448.h"
 #include "System_System_Text_RegularExpressions_Regex1803876613.h"
 
+// UnityEngine.WaitForSeconds
+struct WaitForSeconds_t3839502067;
+// UnityEngine.YieldInstruction
+struct YieldInstruction_t3462875981;
 // UnityEngine.WaitForSecondsRealtime
 struct WaitForSecondsRealtime_t2105307154;
 // UnityEngine.CustomYieldInstruction
@@ -51,8 +56,6 @@ struct CustomYieldInstruction_t1786092740;
 struct WritableAttribute_t3715198420;
 // System.Attribute
 struct Attribute_t542643598;
-// UnityEngine.YieldInstruction
-struct YieldInstruction_t3462875981;
 // System.Object
 struct Il2CppObject;
 // UnityEngineInternal.GenericStack
@@ -87,6 +90,8 @@ extern const uint32_t WebRequestUtils__cctor_m893658947_MetadataUsageId;
 
 
 
+// System.Void UnityEngine.YieldInstruction::.ctor()
+extern "C"  void YieldInstruction__ctor_m2014522928 (YieldInstruction_t3462875981 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.CustomYieldInstruction::.ctor()
 extern "C"  void CustomYieldInstruction__ctor_m1721050687 (CustomYieldInstruction_t1786092740 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Time::get_realtimeSinceStartup()
@@ -122,6 +127,46 @@ extern "C"  void Regex__ctor_m1229307206 (Regex_t1803876613 * __this, String_t* 
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
+extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
+{
+	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
+}
+extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_back(const WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled, WaitForSeconds_t3839502067& unmarshaled)
+{
+	float unmarshaled_m_Seconds_temp_0 = 0.0f;
+	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
+	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
+extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_cleanup(WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
+extern "C" void WaitForSeconds_t3839502067_marshal_com(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_com& marshaled)
+{
+	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
+}
+extern "C" void WaitForSeconds_t3839502067_marshal_com_back(const WaitForSeconds_t3839502067_marshaled_com& marshaled, WaitForSeconds_t3839502067& unmarshaled)
+{
+	float unmarshaled_m_Seconds_temp_0 = 0.0f;
+	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
+	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
+extern "C" void WaitForSeconds_t3839502067_marshal_com_cleanup(WaitForSeconds_t3839502067_marshaled_com& marshaled)
+{
+}
+// System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
+extern "C"  void WaitForSeconds__ctor_m1990515539 (WaitForSeconds_t3839502067 * __this, float ___seconds0, const MethodInfo* method)
+{
+	{
+		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
+		float L_0 = ___seconds0;
+		__this->set_m_Seconds_0(L_0);
+		return;
+	}
+}
 // System.Void UnityEngine.WaitForSecondsRealtime::.ctor(System.Single)
 extern "C"  void WaitForSecondsRealtime__ctor_m1734539010 (WaitForSecondsRealtime_t2105307154 * __this, float ___time0, const MethodInfo* method)
 {
