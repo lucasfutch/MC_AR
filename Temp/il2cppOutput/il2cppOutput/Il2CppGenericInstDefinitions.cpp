@@ -1562,6 +1562,9 @@ extern const Il2CppGenericInst GenInst_UnityARVideo_t2351297253_0_0_0 = { 1, Gen
 extern const Il2CppType MeshRenderer_t1268241104_0_0_0;
 static const Il2CppType* GenInst_MeshRenderer_t1268241104_0_0_0_Types[] = { &MeshRenderer_t1268241104_0_0_0 };
 extern const Il2CppGenericInst GenInst_MeshRenderer_t1268241104_0_0_0 = { 1, GenInst_MeshRenderer_t1268241104_0_0_0_Types };
+extern const Il2CppType AudioSource_t1135106623_0_0_0;
+static const Il2CppType* GenInst_AudioSource_t1135106623_0_0_0_Types[] = { &AudioSource_t1135106623_0_0_0 };
+extern const Il2CppGenericInst GenInst_AudioSource_t1135106623_0_0_0 = { 1, GenInst_AudioSource_t1135106623_0_0_0_Types };
 extern const Il2CppType BoxSlider_t1871650694_0_0_0;
 static const Il2CppType* GenInst_BoxSlider_t1871650694_0_0_0_Types[] = { &BoxSlider_t1871650694_0_0_0 };
 extern const Il2CppGenericInst GenInst_BoxSlider_t1871650694_0_0_0 = { 1, GenInst_BoxSlider_t1871650694_0_0_0_Types };
@@ -1621,7 +1624,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t38854645_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[564] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[565] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Int32_t2071877448_0_0_0,
@@ -2160,6 +2163,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[564] =
 	&GenInst_Animator_t69676727_0_0_0,
 	&GenInst_UnityARVideo_t2351297253_0_0_0,
 	&GenInst_MeshRenderer_t1268241104_0_0_0,
+	&GenInst_AudioSource_t1135106623_0_0_0,
 	&GenInst_BoxSlider_t1871650694_0_0_0,
 	&GenInst_UnityARUserAnchorComponent_t3596724887_0_0_0,
 	&GenInst_Light_t494725636_0_0_0,

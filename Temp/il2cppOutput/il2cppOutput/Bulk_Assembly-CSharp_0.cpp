@@ -116,9 +116,11 @@
 #include "mscorlib_System_Collections_Generic_List_1_Enumera1147558386.h"
 #include "UnityEngine_UnityEngine_ParticleSystem_Particle250075699.h"
 #include "AssemblyU2DCSharp_placeBox3405830008.h"
+#include "UnityEngine_UnityEngine_AudioSource1135106623.h"
 #include "AssemblyU2DCSharp_placeBox_Selected3327221688.h"
 #include "AssemblyU2DCSharp_placeBox_MCFace2283549208.h"
 #include "UnityEngine_UnityEngine_Animator69676727.h"
+#include "UnityEngine_UnityEngine_Gyroscope1705362817.h"
 #include "AssemblyU2DCSharp_PointCloudParticleExample986756623.h"
 #include "AssemblyU2DCSharp_SVBoxSlider1173082351.h"
 #include "AssemblyU2DCSharp_UnityEngine_UI_BoxSlider1871650694.h"
@@ -358,8 +360,12 @@ struct List_1_t2058570427;
 struct ParticleU5BU5D_t574222242;
 // placeBox
 struct placeBox_t3405830008;
+// UnityEngine.AudioSource
+struct AudioSource_t1135106623;
 // UnityEngine.Animator
 struct Animator_t69676727;
+// UnityEngine.Gyroscope
+struct Gyroscope_t1705362817;
 // PointCloudParticleExample
 struct PointCloudParticleExample_t986756623;
 // SVBoxSlider
@@ -671,7 +677,7 @@ extern Il2CppCodeGenString* _stringLiteral1415053652;
 extern Il2CppCodeGenString* _stringLiteral1537444060;
 extern const uint32_t placeBox_HitTestWithResultType_m1060757642_MetadataUsageId;
 extern Il2CppClass* placeBox_t3405830008_il2cpp_TypeInfo_var;
-extern const MethodInfo* GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var;
 extern const uint32_t placeBox_CreateBox_m3746128977_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral474748842;
 extern Il2CppCodeGenString* _stringLiteral3883458782;
@@ -684,6 +690,7 @@ extern Il2CppCodeGenString* _stringLiteral3014345930;
 extern Il2CppCodeGenString* _stringLiteral775949413;
 extern Il2CppCodeGenString* _stringLiteral1696829091;
 extern const uint32_t placeBox_GetHitFace_m2361387267_MetadataUsageId;
+extern const uint32_t placeBox_GyroModifyCamera_m1259280059_MetadataUsageId;
 extern const MethodInfo* PointCloudParticleExample_ARFrameUpdated_m1855536526_MethodInfo_var;
 extern const uint32_t PointCloudParticleExample_Start_m1736319872_MetadataUsageId;
 extern const uint32_t PointCloudParticleExample_Update_m633725559_MetadataUsageId;
@@ -804,10 +811,14 @@ extern Il2CppCodeGenString* _stringLiteral9326697;
 extern const uint32_t UIBehavior_PickaxeButtonSelected_m1977985717_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral982033065;
 extern const uint32_t UIBehavior_BlockButtonSelected_m35656853_MetadataUsageId;
-extern const uint32_t UIBehavior_Block1ButtonSelected_m1667972602_MetadataUsageId;
-extern const uint32_t UIBehavior_Block2ButtonSelected_m3055615739_MetadataUsageId;
-extern const uint32_t UIBehavior_Block3ButtonSelected_m3482058876_MetadataUsageId;
-extern const uint32_t UIBehavior_Block4ButtonSelected_m2804056181_MetadataUsageId;
+extern const uint32_t UIBehavior_WoodButtonSelected_m3159001403_MetadataUsageId;
+extern const uint32_t UIBehavior_BrickButtonSelected_m219890625_MetadataUsageId;
+extern const uint32_t UIBehavior_TorchButtonSelected_m15403372_MetadataUsageId;
+extern const uint32_t UIBehavior_RandColorButtonSelected_m2117408904_MetadataUsageId;
+extern const uint32_t UIBehavior_WaterButtonSelected_m3584439321_MetadataUsageId;
+extern const uint32_t UIBehavior_StalactiteButtonSelected_m2475937376_MetadataUsageId;
+extern const uint32_t UIBehavior_TreeButtonSelected_m3273234026_MetadataUsageId;
+extern const uint32_t UIBehavior_SandButtonSelected_m508511696_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisLight_t494725636_m2604108526_MethodInfo_var;
 extern const uint32_t UnityARAmbient_Start_m303369171_MetadataUsageId;
 extern Il2CppClass* Marshal_t785896760_il2cpp_TypeInfo_var;
@@ -1984,10 +1995,10 @@ extern "C"  void Particle_set_startSize_m2457836830 (Particle_t250075699 * __thi
 extern "C"  void ParticleSystem_SetParticles_m3035584975 (ParticleSystem_t3394631041 * __this, ParticleU5BU5D_t574222242* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
 extern "C"  void Transform_set_rotation_m3411284563 (Transform_t3275118058 * __this, Quaternion_t4030073918  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.ParticleSystem>()
-#define GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(__this, method) ((  ParticleSystem_t3394631041 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared)(__this, method)
-// System.Void UnityEngine.ParticleSystem::set_enableEmission(System.Boolean)
-extern "C"  void ParticleSystem_set_enableEmission_m1222323446 (ParticleSystem_t3394631041 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.AudioSource>()
+#define GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(__this, method) ((  AudioSource_t1135106623 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared)(__this, method)
+// System.Void UnityEngine.AudioSource::Play()
+extern "C"  void AudioSource_Play_m353744792 (AudioSource_t1135106623 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Time::get_deltaTime()
 extern "C"  float Time_get_deltaTime_m2233168104 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::ResetTrigger(System.String)
@@ -1998,6 +2009,10 @@ extern "C"  int32_t placeBox_GetHitFace_m2361387267 (placeBox_t3405830008 * __th
 extern "C"  Vector3_t2243707580  placeBox_getFaceVec_m3891390246 (placeBox_t3405830008 * __this, int32_t ___side0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void placeBox::CreateBox(UnityEngine.Vector3)
 extern "C"  void placeBox_CreateBox_m3746128977 (placeBox_t3405830008 * __this, Vector3_t2243707580  ___atPosition0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Gyroscope UnityEngine.Input::get_gyro()
+extern "C"  Gyroscope_t1705362817 * Input_get_gyro_m4027090408 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Quaternion UnityEngine.Gyroscope::get_attitude()
+extern "C"  Quaternion_t4030073918  Gyroscope_get_attitude_m3665233473 (Gyroscope_t1705362817 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 extern "C"  void Animator_SetTrigger_m3418492570 (Animator_t69676727 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.RaycastHit::get_normal()
@@ -2008,6 +2023,10 @@ extern "C"  Vector3_t2243707580  Vector3_get_up_m2725403797 (Il2CppObject * __th
 extern "C"  Vector3_t2243707580  Vector3_op_Subtraction_m2407545601 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Vector3::op_Equality(UnityEngine.Vector3,UnityEngine.Vector3)
 extern "C"  bool Vector3_op_Equality_m305888255 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Quaternion placeBox::GyroToUnity(UnityEngine.Quaternion)
+extern "C"  Quaternion_t4030073918  placeBox_GyroToUnity_m2606940261 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___q0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
+extern "C"  void Quaternion__ctor_m3196903881 (Quaternion_t4030073918 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Mathf::Min(System.Int32,System.Int32)
 extern "C"  int32_t Mathf_Min_m2906823867 (Il2CppObject * __this /* static, unused */, int32_t p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.BoxSlider>()
@@ -7428,7 +7447,7 @@ extern "C"  void placeBox_Start_m3816714073 (placeBox_t3405830008 * __this, cons
 	{
 		MaterialPropertyBlock_t3303648957 * L_0 = (MaterialPropertyBlock_t3303648957 *)il2cpp_codegen_object_new(MaterialPropertyBlock_t3303648957_il2cpp_TypeInfo_var);
 		MaterialPropertyBlock__ctor_m4079790842(L_0, /*hidden argument*/NULL);
-		__this->set_props_10(L_0);
+		__this->set_props_19(L_0);
 		return;
 	}
 }
@@ -7590,119 +7609,178 @@ extern "C"  void placeBox_CreateBox_m3746128977 (placeBox_t3405830008 * __this, 
 	float V_2 = 0.0f;
 	MeshRenderer_t1268241104 * V_3 = NULL;
 	{
-		int32_t L_0 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
-		if ((!(((uint32_t)L_0) == ((uint32_t)3))))
+		GameObject_t1756533147 * L_0 = __this->get_placeObjectSound_13();
+		NullCheck(L_0);
+		AudioSource_t1135106623 * L_1 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_0, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
+		__this->set_audioPlace_15(L_1);
+		AudioSource_t1135106623 * L_2 = __this->get_audioPlace_15();
+		NullCheck(L_2);
+		AudioSource_Play_m353744792(L_2, /*hidden argument*/NULL);
+		int32_t L_3 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_3) == ((uint32_t)3))))
 		{
-			goto IL_0038;
+			goto IL_0043;
 		}
 	}
 	{
-		GameObject_t1756533147 * L_1 = __this->get_block1Prefab_4();
-		Vector3_t2243707580  L_2 = ___atPosition0;
-		Quaternion_t4030073918  L_3 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_woodPrefab_4();
+		Vector3_t2243707580  L_5 = ___atPosition0;
+		Quaternion_t4030073918  L_6 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_4 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_1, L_2, L_3, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
-		__this->set_boxGO_8(L_4);
-		GameObject_t1756533147 * L_5 = __this->get_boxGO_8();
-		NullCheck(L_5);
-		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
-		NullCheck(L_6);
-		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
-		goto IL_013b;
+		GameObject_t1756533147 * L_7 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_4, L_5, L_6, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_7);
+		goto IL_01b1;
 	}
 
-IL_0038:
+IL_0043:
 	{
-		int32_t L_7 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
-		if ((!(((uint32_t)L_7) == ((uint32_t)4))))
+		int32_t L_8 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_8) == ((uint32_t)4))))
 		{
-			goto IL_0070;
+			goto IL_006a;
 		}
 	}
 	{
-		GameObject_t1756533147 * L_8 = __this->get_block2Prefab_5();
-		Vector3_t2243707580  L_9 = ___atPosition0;
-		Quaternion_t4030073918  L_10 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_brickPrefab_5();
+		Vector3_t2243707580  L_10 = ___atPosition0;
+		Quaternion_t4030073918  L_11 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_11 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_8, L_9, L_10, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
-		__this->set_boxGO_8(L_11);
-		GameObject_t1756533147 * L_12 = __this->get_boxGO_8();
-		NullCheck(L_12);
-		ParticleSystem_t3394631041 * L_13 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_12, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
-		NullCheck(L_13);
-		ParticleSystem_set_enableEmission_m1222323446(L_13, (bool)0, /*hidden argument*/NULL);
-		goto IL_013b;
+		GameObject_t1756533147 * L_12 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_12);
+		goto IL_01b1;
 	}
 
-IL_0070:
+IL_006a:
 	{
-		int32_t L_14 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
-		if ((!(((uint32_t)L_14) == ((uint32_t)5))))
+		int32_t L_13 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_13) == ((uint32_t)5))))
 		{
-			goto IL_00a8;
+			goto IL_0091;
 		}
 	}
 	{
-		GameObject_t1756533147 * L_15 = __this->get_block3Prefab_6();
-		Vector3_t2243707580  L_16 = ___atPosition0;
-		Quaternion_t4030073918  L_17 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_torchPrefab_6();
+		Vector3_t2243707580  L_15 = ___atPosition0;
+		Quaternion_t4030073918  L_16 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_18 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
-		__this->set_boxGO_8(L_18);
-		GameObject_t1756533147 * L_19 = __this->get_boxGO_8();
-		NullCheck(L_19);
-		ParticleSystem_t3394631041 * L_20 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_19, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
-		NullCheck(L_20);
-		ParticleSystem_set_enableEmission_m1222323446(L_20, (bool)0, /*hidden argument*/NULL);
-		goto IL_013b;
+		GameObject_t1756533147 * L_17 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_17);
+		goto IL_01b1;
 	}
 
-IL_00a8:
+IL_0091:
 	{
-		int32_t L_21 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_11();
-		if ((!(((uint32_t)L_21) == ((uint32_t)6))))
+		int32_t L_18 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_18) == ((uint32_t)6))))
 		{
-			goto IL_013b;
+			goto IL_0118;
 		}
 	}
 	{
-		GameObject_t1756533147 * L_22 = __this->get_boxPrefab_3();
-		Vector3_t2243707580  L_23 = ___atPosition0;
-		Quaternion_t4030073918  L_24 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_19 = __this->get_randColorPrefab_3();
+		Vector3_t2243707580  L_20 = ___atPosition0;
+		Quaternion_t4030073918  L_21 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_25 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_22, L_23, L_24, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
-		__this->set_boxGO_8(L_25);
-		GameObject_t1756533147 * L_26 = __this->get_boxGO_8();
+		GameObject_t1756533147 * L_22 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_22);
+		float L_23 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_23;
+		float L_24 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_1 = L_24;
+		float L_25 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_2 = L_25;
+		MaterialPropertyBlock_t3303648957 * L_26 = __this->get_props_19();
+		float L_27 = V_0;
+		float L_28 = V_1;
+		float L_29 = V_2;
+		Color_t2020392075  L_30;
+		memset(&L_30, 0, sizeof(L_30));
+		Color__ctor_m3811852957(&L_30, L_27, L_28, L_29, /*hidden argument*/NULL);
 		NullCheck(L_26);
-		ParticleSystem_t3394631041 * L_27 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_26, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
-		NullCheck(L_27);
-		ParticleSystem_set_enableEmission_m1222323446(L_27, (bool)0, /*hidden argument*/NULL);
-		float L_28 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_0 = L_28;
-		float L_29 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_1 = L_29;
-		float L_30 = Random_Range_m2884721203(NULL /*static, unused*/, (0.0f), (1.0f), /*hidden argument*/NULL);
-		V_2 = L_30;
-		MaterialPropertyBlock_t3303648957 * L_31 = __this->get_props_10();
-		float L_32 = V_0;
-		float L_33 = V_1;
-		float L_34 = V_2;
-		Color_t2020392075  L_35;
-		memset(&L_35, 0, sizeof(L_35));
-		Color__ctor_m3811852957(&L_35, L_32, L_33, L_34, /*hidden argument*/NULL);
+		MaterialPropertyBlock_SetColor_m1647596275(L_26, _stringLiteral3342124747, L_30, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_31 = __this->get_boxGO_17();
 		NullCheck(L_31);
-		MaterialPropertyBlock_SetColor_m1647596275(L_31, _stringLiteral3342124747, L_35, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_36 = __this->get_boxGO_8();
-		NullCheck(L_36);
-		MeshRenderer_t1268241104 * L_37 = GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632(L_36, /*hidden argument*/GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632_MethodInfo_var);
-		V_3 = L_37;
-		MeshRenderer_t1268241104 * L_38 = V_3;
-		MaterialPropertyBlock_t3303648957 * L_39 = __this->get_props_10();
-		NullCheck(L_38);
-		Renderer_SetPropertyBlock_m1151988246(L_38, L_39, /*hidden argument*/NULL);
+		MeshRenderer_t1268241104 * L_32 = GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632(L_31, /*hidden argument*/GameObject_GetComponent_TisMeshRenderer_t1268241104_m3528968632_MethodInfo_var);
+		V_3 = L_32;
+		MeshRenderer_t1268241104 * L_33 = V_3;
+		MaterialPropertyBlock_t3303648957 * L_34 = __this->get_props_19();
+		NullCheck(L_33);
+		Renderer_SetPropertyBlock_m1151988246(L_33, L_34, /*hidden argument*/NULL);
+		goto IL_01b1;
 	}
 
-IL_013b:
+IL_0118:
+	{
+		int32_t L_35 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_35) == ((uint32_t)7))))
+		{
+			goto IL_013f;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_36 = __this->get_waterPrefab_7();
+		Vector3_t2243707580  L_37 = ___atPosition0;
+		Quaternion_t4030073918  L_38 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_39 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_36, L_37, L_38, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_39);
+		goto IL_01b1;
+	}
+
+IL_013f:
+	{
+		int32_t L_40 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_40) == ((uint32_t)8))))
+		{
+			goto IL_0166;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_41 = __this->get_stalactitePrefab_8();
+		Vector3_t2243707580  L_42 = ___atPosition0;
+		Quaternion_t4030073918  L_43 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_44 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_41, L_42, L_43, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_44);
+		goto IL_01b1;
+	}
+
+IL_0166:
+	{
+		int32_t L_45 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_45) == ((uint32_t)((int32_t)9)))))
+		{
+			goto IL_018e;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_46 = __this->get_treePrefab_9();
+		Vector3_t2243707580  L_47 = ___atPosition0;
+		Quaternion_t4030073918  L_48 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_49 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_46, L_47, L_48, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_49);
+		goto IL_01b1;
+	}
+
+IL_018e:
+	{
+		int32_t L_50 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+		if ((!(((uint32_t)L_50) == ((uint32_t)((int32_t)10)))))
+		{
+			goto IL_01b1;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_51 = __this->get_sandPrefab_10();
+		Vector3_t2243707580  L_52 = ___atPosition0;
+		Quaternion_t4030073918  L_53 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_54 = Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_51, L_52, L_53, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		__this->set_boxGO_17(L_54);
+	}
+
+IL_01b1:
 	{
 		return;
 	}
@@ -7749,12 +7827,23 @@ extern "C"  void placeBox_Update_m3632811618 (placeBox_t3405830008 * __this, con
 	memset(&V_17, 0, sizeof(V_17));
 	Vector3_t2243707580  V_18;
 	memset(&V_18, 0, sizeof(V_18));
-	Touch_t407273883  V_19;
+	Quaternion_t4030073918  V_19;
 	memset(&V_19, 0, sizeof(V_19));
-	Ray_t2469606224  V_20;
+	Touch_t407273883  V_20;
 	memset(&V_20, 0, sizeof(V_20));
-	RaycastHit_t87180320  V_21;
+	Ray_t2469606224  V_21;
 	memset(&V_21, 0, sizeof(V_21));
+	RaycastHit_t87180320  V_22;
+	memset(&V_22, 0, sizeof(V_22));
+	float V_23 = 0.0f;
+	Vector3_t2243707580  V_24;
+	memset(&V_24, 0, sizeof(V_24));
+	float V_25 = 0.0f;
+	Vector3_t2243707580  V_26;
+	memset(&V_26, 0, sizeof(V_26));
+	float V_27 = 0.0f;
+	Vector3_t2243707580  V_28;
+	memset(&V_28, 0, sizeof(V_28));
 	Exception_t1927440687 * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
 	Exception_t1927440687 * __exception_local = 0;
@@ -7762,49 +7851,49 @@ extern "C"  void placeBox_Update_m3632811618 (placeBox_t3405830008 * __this, con
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		float L_0 = __this->get_timeElapsed_15();
-		float L_1 = __this->get_timeToAnimate_14();
+		float L_0 = __this->get_timeElapsed_24();
+		float L_1 = __this->get_timeToAnimate_23();
 		if ((!(((float)L_0) < ((float)L_1))))
 		{
 			goto IL_0033;
 		}
 	}
 	{
-		bool L_2 = __this->get_animationStarted_17();
+		bool L_2 = __this->get_animationStarted_26();
 		if (!L_2)
 		{
 			goto IL_0033;
 		}
 	}
 	{
-		float L_3 = __this->get_timeElapsed_15();
+		float L_3 = __this->get_timeElapsed_24();
 		float L_4 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_timeElapsed_15(((float)((float)L_3+(float)L_4)));
+		__this->set_timeElapsed_24(((float)((float)L_3+(float)L_4)));
 		goto IL_0071;
 	}
 
 IL_0033:
 	{
-		float L_5 = __this->get_timeElapsed_15();
-		float L_6 = __this->get_timeToAnimate_14();
+		float L_5 = __this->get_timeElapsed_24();
+		float L_6 = __this->get_timeToAnimate_23();
 		if ((!(((float)L_5) > ((float)L_6))))
 		{
 			goto IL_0071;
 		}
 	}
 	{
-		bool L_7 = __this->get_animationStarted_17();
+		bool L_7 = __this->get_animationStarted_26();
 		if (!L_7)
 		{
 			goto IL_0071;
 		}
 	}
 	{
-		__this->set_animationStarted_17((bool)0);
-		Animator_t69676727 * L_8 = __this->get_animator_9();
+		__this->set_animationStarted_26((bool)0);
+		Animator_t69676727 * L_8 = __this->get_animator_18();
 		NullCheck(L_8);
 		Animator_ResetTrigger_m865269317(L_8, _stringLiteral474748842, /*hidden argument*/NULL);
-		__this->set_timeElapsed_15((0.0f));
+		__this->set_timeElapsed_24((0.0f));
 	}
 
 IL_0071:
@@ -7813,14 +7902,14 @@ IL_0071:
 		int32_t L_9 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_9) == ((uint32_t)1))))
 		{
-			goto IL_0273;
+			goto IL_02cd;
 		}
 	}
 	{
-		int32_t L_10 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_12();
+		int32_t L_10 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_21();
 		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
 		{
-			goto IL_0273;
+			goto IL_02cd;
 		}
 	}
 	{
@@ -7830,7 +7919,7 @@ IL_0071:
 		int32_t L_12 = Touch_get_phase_m196706494((&V_0), /*hidden argument*/NULL);
 		if (L_12)
 		{
-			goto IL_0273;
+			goto IL_02cd;
 		}
 	}
 	{
@@ -7840,7 +7929,7 @@ IL_0071:
 		bool L_14 = EventSystem_IsPointerOverGameObject_m2415000115(L_13, 0, /*hidden argument*/NULL);
 		if (L_14)
 		{
-			goto IL_0273;
+			goto IL_02cd;
 		}
 	}
 	{
@@ -7917,14 +8006,14 @@ IL_00d8:
 		Vector3_t2243707580  L_45;
 		memset(&L_45, 0, sizeof(L_45));
 		Vector3__ctor_m2638739322(&L_45, L_42, L_43, L_44, /*hidden argument*/NULL);
-		__this->set_originalVec_13(L_45);
-		Vector3_t2243707580  L_46 = __this->get_originalVec_13();
+		__this->set_originalVec_22(L_45);
+		Vector3_t2243707580  L_46 = __this->get_originalVec_22();
 		Vector3_t2243707580  L_47 = V_4;
 		Vector3_t2243707580  L_48 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_46, L_47, /*hidden argument*/NULL);
 		V_11 = L_48;
 		Vector3_t2243707580  L_49 = V_11;
 		placeBox_CreateBox_m3746128977(__this, L_49, /*hidden argument*/NULL);
-		goto IL_0273;
+		goto IL_02cd;
 	}
 
 IL_0199:
@@ -7953,7 +8042,7 @@ IL_0199:
 		int32_t L_61 = List_1_get_Count_m323201712(L_60, /*hidden argument*/List_1_get_Count_m323201712_MethodInfo_var);
 		if ((((int32_t)L_61) <= ((int32_t)0)))
 		{
-			goto IL_0273;
+			goto IL_02cd;
 		}
 	}
 	{
@@ -7967,7 +8056,7 @@ IL_0202:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_0254;
+			goto IL_02ae;
 		}
 
 IL_0207:
@@ -7979,131 +8068,205 @@ IL_0207:
 			V_18 = L_66;
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 			Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1678126972, /*hidden argument*/NULL);
-			float L_67 = (&V_18)->get_x_1();
-			float L_68 = (&V_18)->get_y_2();
-			float L_69 = __this->get_createHeight_7();
-			float L_70 = (&V_18)->get_z_3();
-			Vector3_t2243707580  L_71;
-			memset(&L_71, 0, sizeof(L_71));
-			Vector3__ctor_m2638739322(&L_71, L_67, ((float)((float)L_68+(float)L_69)), L_70, /*hidden argument*/NULL);
-			placeBox_CreateBox_m3746128977(__this, L_71, /*hidden argument*/NULL);
-			goto IL_0260;
+			int32_t L_67 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+			if ((!(((uint32_t)L_67) == ((uint32_t)8))))
+			{
+				goto IL_0282;
+			}
 		}
 
-IL_0254:
+IL_0233:
 		{
-			bool L_72 = Enumerator_MoveNext_m3860421825((&V_17), /*hidden argument*/Enumerator_MoveNext_m3860421825_MethodInfo_var);
-			if (L_72)
+			IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+			Gyroscope_t1705362817 * L_68 = Input_get_gyro_m4027090408(NULL /*static, unused*/, /*hidden argument*/NULL);
+			NullCheck(L_68);
+			Quaternion_t4030073918  L_69 = Gyroscope_get_attitude_m3665233473(L_68, /*hidden argument*/NULL);
+			V_19 = L_69;
+			float L_70 = (&V_19)->get_x_0();
+			if ((!(((double)(((double)((double)L_70)))) > ((double)(0.3)))))
+			{
+				goto IL_0282;
+			}
+		}
+
+IL_0255:
+		{
+			float L_71 = (&V_18)->get_x_1();
+			float L_72 = (&V_18)->get_y_2();
+			float L_73 = __this->get_createHeight_14();
+			float L_74 = (&V_18)->get_z_3();
+			Vector3_t2243707580  L_75;
+			memset(&L_75, 0, sizeof(L_75));
+			Vector3__ctor_m2638739322(&L_75, L_71, ((float)((float)L_72-(float)((float)((float)L_73*(float)(2.0f))))), L_74, /*hidden argument*/NULL);
+			placeBox_CreateBox_m3746128977(__this, L_75, /*hidden argument*/NULL);
+		}
+
+IL_0282:
+		{
+			float L_76 = (&V_18)->get_x_1();
+			float L_77 = (&V_18)->get_y_2();
+			float L_78 = __this->get_createHeight_14();
+			float L_79 = (&V_18)->get_z_3();
+			Vector3_t2243707580  L_80;
+			memset(&L_80, 0, sizeof(L_80));
+			Vector3__ctor_m2638739322(&L_80, L_76, ((float)((float)L_77+(float)L_78)), L_79, /*hidden argument*/NULL);
+			placeBox_CreateBox_m3746128977(__this, L_80, /*hidden argument*/NULL);
+			goto IL_02ba;
+		}
+
+IL_02ae:
+		{
+			bool L_81 = Enumerator_MoveNext_m3860421825((&V_17), /*hidden argument*/Enumerator_MoveNext_m3860421825_MethodInfo_var);
+			if (L_81)
 			{
 				goto IL_0207;
 			}
 		}
 
-IL_0260:
+IL_02ba:
 		{
-			IL2CPP_LEAVE(0x273, FINALLY_0265);
+			IL2CPP_LEAVE(0x2CD, FINALLY_02bf);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_0265;
+		goto FINALLY_02bf;
 	}
 
-FINALLY_0265:
+FINALLY_02bf:
 	{ // begin finally (depth: 1)
 		Enumerator_Dispose_m3109677227((&V_17), /*hidden argument*/Enumerator_Dispose_m3109677227_MethodInfo_var);
-		IL2CPP_END_FINALLY(613)
+		IL2CPP_END_FINALLY(703)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(613)
+	IL2CPP_CLEANUP(703)
 	{
-		IL2CPP_JUMP_TBL(0x273, IL_0273)
+		IL2CPP_JUMP_TBL(0x2CD, IL_02cd)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
 	}
 
-IL_0273:
+IL_02cd:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		int32_t L_73 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_73) <= ((int32_t)0)))
+		int32_t L_82 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_82) <= ((int32_t)0)))
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
-		int32_t L_74 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_12();
-		if (L_74)
+		int32_t L_83 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_21();
+		if (L_83)
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		Touch_t407273883  L_75 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
-		V_19 = L_75;
-		int32_t L_76 = Touch_get_phase_m196706494((&V_19), /*hidden argument*/NULL);
-		if (L_76)
+		Touch_t407273883  L_84 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_20 = L_84;
+		int32_t L_85 = Touch_get_phase_m196706494((&V_20), /*hidden argument*/NULL);
+		if (L_85)
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t3466835263_il2cpp_TypeInfo_var);
-		EventSystem_t3466835263 * L_77 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_77);
-		bool L_78 = EventSystem_IsPointerOverGameObject_m2415000115(L_77, 0, /*hidden argument*/NULL);
-		if (L_78)
+		EventSystem_t3466835263 * L_86 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_86);
+		bool L_87 = EventSystem_IsPointerOverGameObject_m2415000115(L_86, 0, /*hidden argument*/NULL);
+		if (L_87)
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
-		Camera_t189460977 * L_79 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2243707579  L_80 = Touch_get_position_m2079703643((&V_19), /*hidden argument*/NULL);
-		Vector3_t2243707580  L_81 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_80, /*hidden argument*/NULL);
-		NullCheck(L_79);
-		Ray_t2469606224  L_82 = Camera_ScreenPointToRay_m614889538(L_79, L_81, /*hidden argument*/NULL);
-		V_20 = L_82;
-		Ray_t2469606224  L_83 = V_20;
-		bool L_84 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_83, (&V_21), /*hidden argument*/NULL);
-		if (!L_84)
+		Camera_t189460977 * L_88 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector2_t2243707579  L_89 = Touch_get_position_m2079703643((&V_20), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_90 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_89, /*hidden argument*/NULL);
+		NullCheck(L_88);
+		Ray_t2469606224  L_91 = Camera_ScreenPointToRay_m614889538(L_88, L_90, /*hidden argument*/NULL);
+		V_21 = L_91;
+		Ray_t2469606224  L_92 = V_21;
+		bool L_93 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_92, (&V_22), /*hidden argument*/NULL);
+		if (!L_93)
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2103682082, /*hidden argument*/NULL);
-		Collider_t3497673348 * L_85 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
-		NullCheck(L_85);
-		bool L_86 = Component_CompareTag_m3443292365(L_85, _stringLiteral439316528, /*hidden argument*/NULL);
-		if (!L_86)
+		Collider_t3497673348 * L_94 = RaycastHit_get_collider_m301198172((&V_22), /*hidden argument*/NULL);
+		NullCheck(L_94);
+		bool L_95 = Component_CompareTag_m3443292365(L_94, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_95)
 		{
-			goto IL_033b;
+			goto IL_041b;
 		}
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1945171491, /*hidden argument*/NULL);
-		__this->set_animationStarted_17((bool)1);
-		Animator_t69676727 * L_87 = __this->get_animator_9();
-		NullCheck(L_87);
-		Animator_SetTrigger_m3418492570(L_87, _stringLiteral474748842, /*hidden argument*/NULL);
-		Collider_t3497673348 * L_88 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
-		NullCheck(L_88);
-		GameObject_t1756533147 * L_89 = Component_get_gameObject_m3105766835(L_88, /*hidden argument*/NULL);
-		NullCheck(L_89);
-		ParticleSystem_t3394631041 * L_90 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_89, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
-		NullCheck(L_90);
-		ParticleSystem_set_enableEmission_m1222323446(L_90, (bool)1, /*hidden argument*/NULL);
-		Collider_t3497673348 * L_91 = RaycastHit_get_collider_m301198172((&V_21), /*hidden argument*/NULL);
-		NullCheck(L_91);
-		GameObject_t1756533147 * L_92 = Component_get_gameObject_m3105766835(L_91, /*hidden argument*/NULL);
+		Collider_t3497673348 * L_96 = RaycastHit_get_collider_m301198172((&V_22), /*hidden argument*/NULL);
+		NullCheck(L_96);
+		GameObject_t1756533147 * L_97 = Component_get_gameObject_m3105766835(L_96, /*hidden argument*/NULL);
+		NullCheck(L_97);
+		Transform_t3275118058 * L_98 = GameObject_get_transform_m909382139(L_97, /*hidden argument*/NULL);
+		NullCheck(L_98);
+		Vector3_t2243707580  L_99 = Transform_get_position_m1104419803(L_98, /*hidden argument*/NULL);
+		V_24 = L_99;
+		float L_100 = (&V_24)->get_x_1();
+		V_23 = L_100;
+		Collider_t3497673348 * L_101 = RaycastHit_get_collider_m301198172((&V_22), /*hidden argument*/NULL);
+		NullCheck(L_101);
+		GameObject_t1756533147 * L_102 = Component_get_gameObject_m3105766835(L_101, /*hidden argument*/NULL);
+		NullCheck(L_102);
+		Transform_t3275118058 * L_103 = GameObject_get_transform_m909382139(L_102, /*hidden argument*/NULL);
+		NullCheck(L_103);
+		Vector3_t2243707580  L_104 = Transform_get_position_m1104419803(L_103, /*hidden argument*/NULL);
+		V_26 = L_104;
+		float L_105 = (&V_26)->get_y_2();
+		V_25 = L_105;
+		Collider_t3497673348 * L_106 = RaycastHit_get_collider_m301198172((&V_22), /*hidden argument*/NULL);
+		NullCheck(L_106);
+		GameObject_t1756533147 * L_107 = Component_get_gameObject_m3105766835(L_106, /*hidden argument*/NULL);
+		NullCheck(L_107);
+		Transform_t3275118058 * L_108 = GameObject_get_transform_m909382139(L_107, /*hidden argument*/NULL);
+		NullCheck(L_108);
+		Vector3_t2243707580  L_109 = Transform_get_position_m1104419803(L_108, /*hidden argument*/NULL);
+		V_28 = L_109;
+		float L_110 = (&V_28)->get_z_3();
+		V_27 = L_110;
+		float L_111 = V_23;
+		float L_112 = V_25;
+		float L_113 = V_27;
+		Vector3_t2243707580  L_114;
+		memset(&L_114, 0, sizeof(L_114));
+		Vector3__ctor_m2638739322(&L_114, L_111, L_112, L_113, /*hidden argument*/NULL);
+		__this->set_originalVec_22(L_114);
+		__this->set_animationStarted_26((bool)1);
+		Animator_t69676727 * L_115 = __this->get_animator_18();
+		NullCheck(L_115);
+		Animator_SetTrigger_m3418492570(L_115, _stringLiteral474748842, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_116 = __this->get_explosion_11();
+		Vector3_t2243707580  L_117 = __this->get_originalVec_22();
+		Quaternion_t4030073918  L_118 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		Object_Destroy_m4145850038(NULL /*static, unused*/, L_92, /*hidden argument*/NULL);
+		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_116, L_117, L_118, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		GameObject_t1756533147 * L_119 = __this->get_PickAxeSound_12();
+		NullCheck(L_119);
+		AudioSource_t1135106623 * L_120 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_119, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
+		__this->set_audioDestroy_16(L_120);
+		AudioSource_t1135106623 * L_121 = __this->get_audioDestroy_16();
+		NullCheck(L_121);
+		AudioSource_Play_m353744792(L_121, /*hidden argument*/NULL);
+		Collider_t3497673348 * L_122 = RaycastHit_get_collider_m301198172((&V_22), /*hidden argument*/NULL);
+		NullCheck(L_122);
+		GameObject_t1756533147 * L_123 = Component_get_gameObject_m3105766835(L_122, /*hidden argument*/NULL);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_123, /*hidden argument*/NULL);
 	}
 
-IL_033b:
+IL_041b:
 	{
 		return;
 	}
@@ -8326,6 +8489,41 @@ IL_00a3:
 		memset(&L_7, 0, sizeof(L_7));
 		Vector3__ctor_m2638739322(&L_7, (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
 		return L_7;
+	}
+}
+// System.Void placeBox::GyroModifyCamera()
+extern "C"  void placeBox_GyroModifyCamera_m1259280059 (placeBox_t3405830008 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (placeBox_GyroModifyCamera_m1259280059_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Transform_t3275118058 * L_0 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Gyroscope_t1705362817 * L_1 = Input_get_gyro_m4027090408(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		Quaternion_t4030073918  L_2 = Gyroscope_get_attitude_m3665233473(L_1, /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_3 = placeBox_GyroToUnity_m2606940261(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		Transform_set_rotation_m3411284563(L_0, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Quaternion placeBox::GyroToUnity(UnityEngine.Quaternion)
+extern "C"  Quaternion_t4030073918  placeBox_GyroToUnity_m2606940261 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___q0, const MethodInfo* method)
+{
+	{
+		float L_0 = (&___q0)->get_x_0();
+		float L_1 = (&___q0)->get_y_1();
+		float L_2 = (&___q0)->get_z_2();
+		float L_3 = (&___q0)->get_w_3();
+		Quaternion_t4030073918  L_4;
+		memset(&L_4, 0, sizeof(L_4));
+		Quaternion__ctor_m3196903881(&L_4, L_0, L_1, ((-L_2)), ((-L_3)), /*hidden argument*/NULL);
+		return L_4;
 	}
 }
 // System.Void PointCloudParticleExample::.ctor()
@@ -11418,7 +11616,7 @@ extern "C"  void UIBehavior__ctor_m3682521951 (UIBehavior_t1836955822 * __this, 
 		Vector3_t2243707580  L_0;
 		memset(&L_0, 0, sizeof(L_0));
 		Vector3__ctor_m2638739322(&L_0, (0.0f), (20.0f), (0.0f), /*hidden argument*/NULL);
-		__this->set_biggerButton_15(L_0);
+		__this->set_biggerButton_23(L_0);
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -11436,20 +11634,32 @@ extern "C"  void UIBehavior_Start_m3961636531 (UIBehavior_t1836955822 * __this, 
 		GameObject_t1756533147 * L_0 = __this->get_PickAxeParent_4();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_1 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_1 = __this->get_WoodParent_5();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_2 = __this->get_BrickParent_6();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_3 = __this->get_TorchParent_7();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_4 = __this->get_RandColorParent_8();
 		NullCheck(L_4);
 		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(1);
+		GameObject_t1756533147 * L_5 = __this->get_WaterParent_9();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_StalactiteParent_10();
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_TreeParent_11();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_SandParent_12();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(1);
 		return;
 	}
 }
@@ -11498,7 +11708,7 @@ IL_0011:
 			Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
 			V_2 = L_5;
 			float L_6 = (&V_2)->get_y_2();
-			if ((!(((float)L_6) > ((float)(80.0f)))))
+			if ((!(((float)L_6) > ((float)(90.0f)))))
 			{
 				goto IL_004c;
 			}
@@ -11510,7 +11720,7 @@ IL_0035:
 			Transform_t3275118058 * L_8 = L_7;
 			NullCheck(L_8);
 			Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
-			Vector3_t2243707580  L_10 = __this->get_biggerButton_15();
+			Vector3_t2243707580  L_10 = __this->get_biggerButton_23();
 			Vector3_t2243707580  L_11 = Vector3_op_Subtraction_m2407545601(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
 			NullCheck(L_8);
 			Transform_set_position_m2469242620(L_8, L_11, /*hidden argument*/NULL);
@@ -11570,18 +11780,30 @@ IL_006f:
 
 IL_0070:
 	{
-		GameObject_t1756533147 * L_17 = __this->get_item1_10();
+		GameObject_t1756533147 * L_17 = __this->get_item_wood_14();
 		NullCheck(L_17);
 		GameObject_SetActive_m2887581199(L_17, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_18 = __this->get_item2_11();
+		GameObject_t1756533147 * L_18 = __this->get_item_brick_15();
 		NullCheck(L_18);
 		GameObject_SetActive_m2887581199(L_18, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_19 = __this->get_item3_12();
+		GameObject_t1756533147 * L_19 = __this->get_item_torch_16();
 		NullCheck(L_19);
 		GameObject_SetActive_m2887581199(L_19, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_20 = __this->get_item4_13();
+		GameObject_t1756533147 * L_20 = __this->get_item_rand_17();
 		NullCheck(L_20);
 		GameObject_SetActive_m2887581199(L_20, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_21 = __this->get_item_water_18();
+		NullCheck(L_21);
+		GameObject_SetActive_m2887581199(L_21, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_22 = __this->get_item_stala_19();
+		NullCheck(L_22);
+		GameObject_SetActive_m2887581199(L_22, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_23 = __this->get_item_tree_20();
+		NullCheck(L_23);
+		GameObject_SetActive_m2887581199(L_23, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_24 = __this->get_item_sand_21();
+		NullCheck(L_24);
+		GameObject_SetActive_m2887581199(L_24, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -11598,52 +11820,64 @@ extern "C"  void UIBehavior_PickaxeButtonSelected_m1977985717 (UIBehavior_t18369
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral9326697, /*hidden argument*/NULL);
 		UIBehavior_ResetButtons_m1738521039(__this, /*hidden argument*/NULL);
-		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_14();
+		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_22();
 		if (!L_0)
 		{
-			goto IL_0089;
+			goto IL_00b9;
 		}
 	}
 	{
-		GameObject_t1756533147 * L_1 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_1 = __this->get_WoodParent_5();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_2 = __this->get_BrickParent_6();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_3 = __this->get_TorchParent_7();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_4 = __this->get_RandColorParent_8();
 		NullCheck(L_4);
 		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_5 = __this->get_Pickaxe_3();
-		Transform_t3275118058 * L_6 = L_5;
+		GameObject_t1756533147 * L_5 = __this->get_WaterParent_9();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_StalactiteParent_10();
 		NullCheck(L_6);
-		Vector3_t2243707580  L_7 = Transform_get_position_m1104419803(L_6, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_8 = __this->get_biggerButton_15();
-		Vector3_t2243707580  L_9 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		Transform_set_position_m2469242620(L_6, L_9, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_PickAxeParent_4();
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_TreeParent_11();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_8 = __this->get_SandParent_12();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_9 = __this->get_Pickaxe_3();
+		Transform_t3275118058 * L_10 = L_9;
 		NullCheck(L_10);
-		GameObject_SetActive_m2887581199(L_10, (bool)1, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(0);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(0);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_12(0);
-		goto IL_00a1;
+		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_12 = __this->get_biggerButton_23();
+		Vector3_t2243707580  L_13 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_11, L_12, /*hidden argument*/NULL);
+		NullCheck(L_10);
+		Transform_set_position_m2469242620(L_10, L_13, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_PickAxeParent_4();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)1, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(0);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(0);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_21(0);
+		goto IL_00d1;
 	}
 
-IL_0089:
+IL_00b9:
 	{
-		GameObject_t1756533147 * L_11 = __this->get_PickAxeParent_4();
-		NullCheck(L_11);
-		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(2);
+		GameObject_t1756533147 * L_15 = __this->get_PickAxeParent_4();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(2);
 	}
 
-IL_00a1:
+IL_00d1:
 	{
 		return;
 	}
@@ -11661,10 +11895,10 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral982033065, /*hidden argument*/NULL);
 		UIBehavior_ResetButtons_m1738521039(__this, /*hidden argument*/NULL);
-		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_14();
+		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_22();
 		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
-			goto IL_00b4;
+			goto IL_0114;
 		}
 	}
 	{
@@ -11672,238 +11906,602 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		Transform_t3275118058 * L_2 = L_1;
 		NullCheck(L_2);
 		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_4 = __this->get_biggerButton_15();
+		Vector3_t2243707580  L_4 = __this->get_biggerButton_23();
 		Vector3_t2243707580  L_5 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		Transform_set_position_m2469242620(L_2, L_5, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(1);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_12(1);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(1);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_21(1);
 		GameObject_t1756533147 * L_6 = __this->get_PickAxeParent_4();
 		NullCheck(L_6);
 		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		GameObject_t1756533147 * L_7 = __this->get_item_wood_14();
 		NullCheck(L_7);
 		GameObject_SetActive_m2887581199(L_7, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		GameObject_t1756533147 * L_8 = __this->get_item_brick_15();
 		NullCheck(L_8);
 		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		GameObject_t1756533147 * L_9 = __this->get_item_torch_16();
 		NullCheck(L_9);
 		GameObject_SetActive_m2887581199(L_9, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		GameObject_t1756533147 * L_10 = __this->get_item_rand_17();
 		NullCheck(L_10);
 		GameObject_SetActive_m2887581199(L_10, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_11 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_11 = __this->get_item_water_18();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_stala_19();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_tree_20();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_sand_21();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_WoodParent_5();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_BrickParent_6();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_17 = __this->get_TorchParent_7();
+		NullCheck(L_17);
+		GameObject_SetActive_m2887581199(L_17, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_18 = __this->get_RandColorParent_8();
+		NullCheck(L_18);
+		GameObject_SetActive_m2887581199(L_18, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_19 = __this->get_WaterParent_9();
+		NullCheck(L_19);
+		GameObject_SetActive_m2887581199(L_19, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_20 = __this->get_StalactiteParent_10();
+		NullCheck(L_20);
+		GameObject_SetActive_m2887581199(L_20, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_21 = __this->get_TreeParent_11();
+		NullCheck(L_21);
+		GameObject_SetActive_m2887581199(L_21, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_22 = __this->get_SandParent_12();
+		NullCheck(L_22);
+		GameObject_SetActive_m2887581199(L_22, (bool)0, /*hidden argument*/NULL);
+		goto IL_0120;
+	}
+
+IL_0114:
+	{
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(2);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(2);
+	}
+
+IL_0120:
+	{
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::WoodButtonSelected()
+extern "C"  void UIBehavior_WoodButtonSelected_m3159001403 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_WoodButtonSelected_m3159001403_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(3);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(3);
+		GameObject_t1756533147 * L_8 = __this->get_WoodParent_5();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
 		NullCheck(L_11);
 		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_12 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
 		NullCheck(L_12);
 		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_13 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
 		NullCheck(L_13);
 		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_14 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
 		NullCheck(L_14);
 		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
-		goto IL_00c0;
-	}
-
-IL_00b4:
-	{
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(2);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(2);
-	}
-
-IL_00c0:
-	{
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void UnityEngine.XR.iOS.UIBehavior::Block1ButtonSelected()
-extern "C"  void UIBehavior_Block1ButtonSelected_m1667972602 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+// System.Void UnityEngine.XR.iOS.UIBehavior::BrickButtonSelected()
+extern "C"  void UIBehavior_BrickButtonSelected_m219890625 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (UIBehavior_Block1ButtonSelected_m1667972602_MetadataUsageId);
+		il2cpp_codegen_initialize_method (UIBehavior_BrickButtonSelected_m219890625_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(3);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(3);
-		GameObject_t1756533147 * L_4 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
 		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_5 = __this->get_Block1Parent_5();
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
 		NullCheck(L_5);
-		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
 		NullCheck(L_6);
-		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
 		NullCheck(L_7);
 		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(4);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(4);
+		GameObject_t1756533147 * L_8 = __this->get_BrickParent_6();
 		NullCheck(L_8);
-		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
 		NullCheck(L_9);
 		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
 		NullCheck(L_10);
 		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void UnityEngine.XR.iOS.UIBehavior::Block2ButtonSelected()
-extern "C"  void UIBehavior_Block2ButtonSelected_m3055615739 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+// System.Void UnityEngine.XR.iOS.UIBehavior::TorchButtonSelected()
+extern "C"  void UIBehavior_TorchButtonSelected_m15403372 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (UIBehavior_Block2ButtonSelected_m3055615739_MetadataUsageId);
+		il2cpp_codegen_initialize_method (UIBehavior_TorchButtonSelected_m15403372_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(4);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(4);
-		GameObject_t1756533147 * L_4 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
 		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_5 = __this->get_Block2Parent_6();
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
 		NullCheck(L_5);
-		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
 		NullCheck(L_6);
-		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
 		NullCheck(L_7);
 		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(5);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(5);
+		GameObject_t1756533147 * L_8 = __this->get_TorchParent_7();
 		NullCheck(L_8);
-		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
 		NullCheck(L_9);
 		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
 		NullCheck(L_10);
 		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void UnityEngine.XR.iOS.UIBehavior::Block3ButtonSelected()
-extern "C"  void UIBehavior_Block3ButtonSelected_m3482058876 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+// System.Void UnityEngine.XR.iOS.UIBehavior::RandColorButtonSelected()
+extern "C"  void UIBehavior_RandColorButtonSelected_m2117408904 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (UIBehavior_Block3ButtonSelected_m3482058876_MetadataUsageId);
+		il2cpp_codegen_initialize_method (UIBehavior_RandColorButtonSelected_m2117408904_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(5);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(5);
-		GameObject_t1756533147 * L_4 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
 		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_5 = __this->get_Block3Parent_7();
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
 		NullCheck(L_5);
-		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
 		NullCheck(L_6);
-		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
 		NullCheck(L_7);
 		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(6);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(6);
+		GameObject_t1756533147 * L_8 = __this->get_RandColorParent_8();
 		NullCheck(L_8);
-		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
 		NullCheck(L_9);
 		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
 		NullCheck(L_10);
 		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void UnityEngine.XR.iOS.UIBehavior::Block4ButtonSelected()
-extern "C"  void UIBehavior_Block4ButtonSelected_m2804056181 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+// System.Void UnityEngine.XR.iOS.UIBehavior::WaterButtonSelected()
+extern "C"  void UIBehavior_WaterButtonSelected_m3584439321 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (UIBehavior_Block4ButtonSelected_m2804056181_MetadataUsageId);
+		il2cpp_codegen_initialize_method (UIBehavior_WaterButtonSelected_m3584439321_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		GameObject_t1756533147 * L_0 = __this->get_Block1Parent_5();
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
 		NullCheck(L_0);
 		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_1 = __this->get_Block2Parent_6();
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
 		NullCheck(L_1);
 		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_2 = __this->get_Block3Parent_7();
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
 		NullCheck(L_2);
 		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_3 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
 		NullCheck(L_3);
 		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
-		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_14(6);
-		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_11(6);
-		GameObject_t1756533147 * L_4 = __this->get_Block4Parent_8();
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
 		NullCheck(L_4);
-		GameObject_SetActive_m2887581199(L_4, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_5 = __this->get_Block4Parent_8();
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
 		NullCheck(L_5);
-		ParticleSystem_t3394631041 * L_6 = GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749(L_5, /*hidden argument*/GameObject_GetComponent_TisParticleSystem_t3394631041_m1329366749_MethodInfo_var);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
 		NullCheck(L_6);
-		ParticleSystem_set_enableEmission_m1222323446(L_6, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = __this->get_item1_10();
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
 		NullCheck(L_7);
 		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = __this->get_item2_11();
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(7);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(7);
+		GameObject_t1756533147 * L_8 = __this->get_WaterParent_9();
 		NullCheck(L_8);
-		GameObject_SetActive_m2887581199(L_8, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_9 = __this->get_item3_12();
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
 		NullCheck(L_9);
 		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_10 = __this->get_item4_13();
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
 		NullCheck(L_10);
 		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::StalactiteButtonSelected()
+extern "C"  void UIBehavior_StalactiteButtonSelected_m2475937376 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_StalactiteButtonSelected_m2475937376_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(8);
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(8);
+		GameObject_t1756533147 * L_8 = __this->get_StalactiteParent_10();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::TreeButtonSelected()
+extern "C"  void UIBehavior_TreeButtonSelected_m3273234026 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_TreeButtonSelected_m3273234026_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(((int32_t)9));
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(((int32_t)9));
+		GameObject_t1756533147 * L_8 = __this->get_TreeParent_11();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::SandButtonSelected()
+extern "C"  void UIBehavior_SandButtonSelected_m508511696 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_SandButtonSelected_m508511696_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1756533147 * L_0 = __this->get_WoodParent_5();
+		NullCheck(L_0);
+		GameObject_SetActive_m2887581199(L_0, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_1 = __this->get_BrickParent_6();
+		NullCheck(L_1);
+		GameObject_SetActive_m2887581199(L_1, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_2 = __this->get_TorchParent_7();
+		NullCheck(L_2);
+		GameObject_SetActive_m2887581199(L_2, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = __this->get_RandColorParent_8();
+		NullCheck(L_3);
+		GameObject_SetActive_m2887581199(L_3, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = __this->get_WaterParent_9();
+		NullCheck(L_4);
+		GameObject_SetActive_m2887581199(L_4, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = __this->get_StalactiteParent_10();
+		NullCheck(L_5);
+		GameObject_SetActive_m2887581199(L_5, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = __this->get_TreeParent_11();
+		NullCheck(L_6);
+		GameObject_SetActive_m2887581199(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = __this->get_SandParent_12();
+		NullCheck(L_7);
+		GameObject_SetActive_m2887581199(L_7, (bool)0, /*hidden argument*/NULL);
+		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(((int32_t)10));
+		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(((int32_t)10));
+		GameObject_t1756533147 * L_8 = __this->get_SandParent_12();
+		NullCheck(L_8);
+		GameObject_SetActive_m2887581199(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_9 = __this->get_item_wood_14();
+		NullCheck(L_9);
+		GameObject_SetActive_m2887581199(L_9, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = __this->get_item_brick_15();
+		NullCheck(L_10);
+		GameObject_SetActive_m2887581199(L_10, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_11 = __this->get_item_torch_16();
+		NullCheck(L_11);
+		GameObject_SetActive_m2887581199(L_11, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_12 = __this->get_item_rand_17();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_water_18();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_stala_19();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_tree_20();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_sand_21();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }

@@ -68,6 +68,8 @@
 #include "UnityEngine_UnityEngine_AudioClip_PCMSetPositionCal421863554.h"
 #include "UnityEngine_UnityEngine_AudioSettings3144015719.h"
 #include "UnityEngine_UnityEngine_AudioSettings_AudioConfigu3743753033.h"
+#include "UnityEngine_UnityEngine_AudioSource1135106623.h"
+#include "mscorlib_System_UInt642909196914.h"
 #include "UnityEngine_UnityEngine_Behaviour955675639.h"
 #include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "UnityEngine_UnityEngine_Bounds3033363703.h"
@@ -187,7 +189,6 @@
 #include "UnityEngine_UnityEngine_Experimental_Director_Scri4067966717.h"
 #include "UnityEngine_UnityEngine_Experimental_Rendering_Rend984453155.h"
 #include "UnityEngine_UnityEngine_Experimental_Rendering_Script4271526.h"
-#include "UnityEngine_UnityEngine_FilterMode10814199.h"
 
 // AOT.MonoPInvokeCallbackAttribute
 struct MonoPInvokeCallbackAttribute_t2934651840;
@@ -267,6 +268,8 @@ struct PCMReaderCallback_t3007145346;
 struct PCMSetPositionCallback_t421863554;
 // UnityEngine.AudioSettings/AudioConfigurationChangeHandler
 struct AudioConfigurationChangeHandler_t3743753033;
+// UnityEngine.AudioSource
+struct AudioSource_t1135106623;
 // UnityEngine.Behaviour
 struct Behaviour_t955675639;
 // UnityEngine.Component
@@ -1465,6 +1468,8 @@ extern "C"  void PCMReaderCallback_Invoke_m3610389815 (PCMReaderCallback_t300714
 extern "C"  void PCMSetPositionCallback_Invoke_m651987035 (PCMSetPositionCallback_t421863554 * __this, int32_t ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AudioSettings/AudioConfigurationChangeHandler::Invoke(System.Boolean)
 extern "C"  void AudioConfigurationChangeHandler_Invoke_m635374412 (AudioConfigurationChangeHandler_t3743753033 * __this, bool ___deviceWasChanged0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AudioSource::Play(System.UInt64)
+extern "C"  void AudioSource_Play_m889724421 (AudioSource_t1135106623 * __this, uint64_t ___delay0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Component::.ctor()
 extern "C"  void Component__ctor_m205306948 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
@@ -4635,6 +4640,26 @@ extern "C"  Il2CppObject * AudioConfigurationChangeHandler_BeginInvoke_m24186705
 extern "C"  void AudioConfigurationChangeHandler_EndInvoke_m2237100787 (AudioConfigurationChangeHandler_t3743753033 * __this, Il2CppObject * ___result0, const MethodInfo* method)
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+// System.Void UnityEngine.AudioSource::Play(System.UInt64)
+extern "C"  void AudioSource_Play_m889724421 (AudioSource_t1135106623 * __this, uint64_t ___delay0, const MethodInfo* method)
+{
+	typedef void (*AudioSource_Play_m889724421_ftn) (AudioSource_t1135106623 *, uint64_t);
+	static AudioSource_Play_m889724421_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_Play_m889724421_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::Play(System.UInt64)");
+	_il2cpp_icall_func(__this, ___delay0);
+}
+// System.Void UnityEngine.AudioSource::Play()
+extern "C"  void AudioSource_Play_m353744792 (AudioSource_t1135106623 * __this, const MethodInfo* method)
+{
+	uint64_t V_0 = 0;
+	{
+		V_0 = (((int64_t)((int64_t)0)));
+		uint64_t L_0 = V_0;
+		AudioSource_Play_m889724421(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
 }
 // System.Void UnityEngine.Behaviour::.ctor()
 extern "C"  void Behaviour__ctor_m2699265412 (Behaviour_t955675639 * __this, const MethodInfo* method)

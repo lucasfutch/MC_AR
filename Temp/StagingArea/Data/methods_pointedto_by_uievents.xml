@@ -1,12 +1,16 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="UnityEngine.XR.iOS.UIBehavior">
-			<method name="Block3ButtonSelected"/>
-			<method name="Block2ButtonSelected"/>
-			<method name="Block1ButtonSelected"/>
+			<method name="TorchButtonSelected"/>
+			<method name="BrickButtonSelected"/>
+			<method name="TreeButtonSelected"/>
+			<method name="WaterButtonSelected"/>
+			<method name="WoodButtonSelected"/>
+			<method name="SandButtonSelected"/>
+			<method name="StalactiteButtonSelected"/>
 			<method name="BlockButtonSelected"/>
 			<method name="PickaxeButtonSelected"/>
-			<method name="Block4ButtonSelected"/>
+			<method name="RandColorButtonSelected"/>
 		</type>
 	</assembly>
 </linker>

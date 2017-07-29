@@ -395,27 +395,39 @@ extern const int32_t g_FieldOffsetTable1748[1] =
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1749 = { sizeof (U24ArrayTypeU3D12_t1568637717)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D12_t1568637717 ), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1750 = { sizeof (U3CModuleU3E_t3783534220), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1751 = { sizeof (UIBehavior_t1836955822), -1, sizeof(UIBehavior_t1836955822_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1751[14] = 
+extern const int32_t g_FieldOffsetTable1751[22] = 
 {
 	UIBehavior_t1836955822::get_offset_of_Block_2(),
 	UIBehavior_t1836955822::get_offset_of_Pickaxe_3(),
 	UIBehavior_t1836955822::get_offset_of_PickAxeParent_4(),
-	UIBehavior_t1836955822::get_offset_of_Block1Parent_5(),
-	UIBehavior_t1836955822::get_offset_of_Block2Parent_6(),
-	UIBehavior_t1836955822::get_offset_of_Block3Parent_7(),
-	UIBehavior_t1836955822::get_offset_of_Block4Parent_8(),
-	UIBehavior_t1836955822::get_offset_of_destroyBlockScript_9(),
-	UIBehavior_t1836955822::get_offset_of_item1_10(),
-	UIBehavior_t1836955822::get_offset_of_item2_11(),
-	UIBehavior_t1836955822::get_offset_of_item3_12(),
-	UIBehavior_t1836955822::get_offset_of_item4_13(),
-	UIBehavior_t1836955822_StaticFields::get_offset_of_currentSelected_14(),
-	UIBehavior_t1836955822::get_offset_of_biggerButton_15(),
+	UIBehavior_t1836955822::get_offset_of_WoodParent_5(),
+	UIBehavior_t1836955822::get_offset_of_BrickParent_6(),
+	UIBehavior_t1836955822::get_offset_of_TorchParent_7(),
+	UIBehavior_t1836955822::get_offset_of_RandColorParent_8(),
+	UIBehavior_t1836955822::get_offset_of_WaterParent_9(),
+	UIBehavior_t1836955822::get_offset_of_StalactiteParent_10(),
+	UIBehavior_t1836955822::get_offset_of_TreeParent_11(),
+	UIBehavior_t1836955822::get_offset_of_SandParent_12(),
+	UIBehavior_t1836955822::get_offset_of_destroyBlockScript_13(),
+	UIBehavior_t1836955822::get_offset_of_item_wood_14(),
+	UIBehavior_t1836955822::get_offset_of_item_brick_15(),
+	UIBehavior_t1836955822::get_offset_of_item_torch_16(),
+	UIBehavior_t1836955822::get_offset_of_item_rand_17(),
+	UIBehavior_t1836955822::get_offset_of_item_water_18(),
+	UIBehavior_t1836955822::get_offset_of_item_stala_19(),
+	UIBehavior_t1836955822::get_offset_of_item_tree_20(),
+	UIBehavior_t1836955822::get_offset_of_item_sand_21(),
+	UIBehavior_t1836955822_StaticFields::get_offset_of_currentSelected_22(),
+	UIBehavior_t1836955822::get_offset_of_biggerButton_23(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1752 = { sizeof (Selected_t3137343744)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1752[8] = 
+extern const int32_t g_FieldOffsetTable1752[12] = 
 {
 	Selected_t3137343744::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
 	0,
 	0,
 	0,
@@ -426,29 +438,43 @@ extern const int32_t g_FieldOffsetTable1752[8] =
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1753 = { sizeof (destroyBlock_t3412050513), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1754 = { sizeof (placeBox_t3405830008), -1, sizeof(placeBox_t3405830008_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1754[16] = 
+extern const int32_t g_FieldOffsetTable1754[26] = 
 {
 	placeBox_t3405830008::get_offset_of_m_HitTransform_2(),
-	placeBox_t3405830008::get_offset_of_boxPrefab_3(),
-	placeBox_t3405830008::get_offset_of_block1Prefab_4(),
-	placeBox_t3405830008::get_offset_of_block2Prefab_5(),
-	placeBox_t3405830008::get_offset_of_block3Prefab_6(),
-	placeBox_t3405830008::get_offset_of_createHeight_7(),
-	placeBox_t3405830008::get_offset_of_boxGO_8(),
-	placeBox_t3405830008::get_offset_of_animator_9(),
-	placeBox_t3405830008::get_offset_of_props_10(),
-	placeBox_t3405830008_StaticFields::get_offset_of_currentSelectedOG_11(),
-	placeBox_t3405830008_StaticFields::get_offset_of_currentSelectionIsABlock_12(),
-	placeBox_t3405830008::get_offset_of_originalVec_13(),
-	placeBox_t3405830008::get_offset_of_timeToAnimate_14(),
-	placeBox_t3405830008::get_offset_of_timeElapsed_15(),
-	placeBox_t3405830008::get_offset_of_animationCheck_16(),
-	placeBox_t3405830008::get_offset_of_animationStarted_17(),
+	placeBox_t3405830008::get_offset_of_randColorPrefab_3(),
+	placeBox_t3405830008::get_offset_of_woodPrefab_4(),
+	placeBox_t3405830008::get_offset_of_brickPrefab_5(),
+	placeBox_t3405830008::get_offset_of_torchPrefab_6(),
+	placeBox_t3405830008::get_offset_of_waterPrefab_7(),
+	placeBox_t3405830008::get_offset_of_stalactitePrefab_8(),
+	placeBox_t3405830008::get_offset_of_treePrefab_9(),
+	placeBox_t3405830008::get_offset_of_sandPrefab_10(),
+	placeBox_t3405830008::get_offset_of_explosion_11(),
+	placeBox_t3405830008::get_offset_of_PickAxeSound_12(),
+	placeBox_t3405830008::get_offset_of_placeObjectSound_13(),
+	placeBox_t3405830008::get_offset_of_createHeight_14(),
+	placeBox_t3405830008::get_offset_of_audioPlace_15(),
+	placeBox_t3405830008::get_offset_of_audioDestroy_16(),
+	placeBox_t3405830008::get_offset_of_boxGO_17(),
+	placeBox_t3405830008::get_offset_of_animator_18(),
+	placeBox_t3405830008::get_offset_of_props_19(),
+	placeBox_t3405830008_StaticFields::get_offset_of_currentSelectedOG_20(),
+	placeBox_t3405830008_StaticFields::get_offset_of_currentSelectionIsABlock_21(),
+	placeBox_t3405830008::get_offset_of_originalVec_22(),
+	placeBox_t3405830008::get_offset_of_timeToAnimate_23(),
+	placeBox_t3405830008::get_offset_of_timeElapsed_24(),
+	placeBox_t3405830008::get_offset_of_animationCheck_25(),
+	placeBox_t3405830008::get_offset_of_animationStarted_26(),
+	placeBox_t3405830008::get_offset_of_isCeiling_27(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1755 = { sizeof (Selected_t3327221688)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1755[8] = 
+extern const int32_t g_FieldOffsetTable1755[12] = 
 {
 	Selected_t3327221688::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
 	0,
 	0,
 	0,

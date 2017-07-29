@@ -10,21 +10,26 @@ namespace UnityEngine.XR.iOS
 	public class UIBehavior : MonoBehaviour {
 
 		public Transform Block, Pickaxe;
-		public GameObject PickAxeParent, Block1Parent, Block2Parent, Block3Parent, Block4Parent;
+		public GameObject PickAxeParent, WoodParent, BrickParent, TorchParent, RandColorParent, WaterParent, StalactiteParent, TreeParent, SandParent;
 		public destroyBlock destroyBlockScript;
-		public GameObject item1, item2, item3, item4;
+		public GameObject item_wood, item_brick, item_torch, item_rand, item_water, item_stala, item_tree, item_sand;
 
-		public enum Selected {Pickaxe, Block, Null, Block1, Block2, Block3, Block4};
+		public enum Selected {Pickaxe, Block, Null, Wood, Brick, Torch, RandColor, Water, Stalactite, Tree, Sand};
 		public static Selected currentSelected; 
 
 		private Vector3 biggerButton = new Vector3 (0, 20f, 0);
 
 		void Start () {
 			PickAxeParent.SetActive (false);
-			Block1Parent.SetActive (false);
-			Block2Parent.SetActive (false);
-			Block3Parent.SetActive (false);
-			Block4Parent.SetActive (false);
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
+
 			currentSelected = Selected.Null;
 			placeBox.currentSelectedOG = placeBox.Selected.Block;
 		}
@@ -32,15 +37,19 @@ namespace UnityEngine.XR.iOS
 		void ResetButtons(){
 
 			foreach (Transform child in transform) {
-				if (child.position.y > 80.0f) {
+				if (child.position.y > 90.0f) {
 					child.position -= biggerButton;
 				}
 			}
 
-			item1.SetActive (false);
-			item2.SetActive (false);
-			item3.SetActive (false);
-			item4.SetActive (false);
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
 		}
 			
 		public void PickaxeButtonSelected() {
@@ -49,10 +58,14 @@ namespace UnityEngine.XR.iOS
 			ResetButtons ();
 
 			if (currentSelected != Selected.Pickaxe) {
-				Block1Parent.SetActive (false);
-				Block2Parent.SetActive (false);
-				Block3Parent.SetActive (false);
-				Block4Parent.SetActive (false);
+				WoodParent.SetActive (false);
+				BrickParent.SetActive (false);
+				TorchParent.SetActive (false);
+				RandColorParent.SetActive (false);
+				WaterParent.SetActive (false);
+				StalactiteParent.SetActive (false);
+				TreeParent.SetActive (false);
+				SandParent.SetActive (false);
 
 				Pickaxe.position += biggerButton;
 				PickAxeParent.SetActive (true);
@@ -79,15 +92,23 @@ namespace UnityEngine.XR.iOS
 				placeBox.currentSelectionIsABlock = placeBox.Selected.Block;
 				PickAxeParent.SetActive (false);
 
-				item1.SetActive (true);
-				item2.SetActive (true);
-				item3.SetActive (true);
-				item4.SetActive (true);
+				item_wood.SetActive (true);
+				item_brick.SetActive (true);
+				item_torch.SetActive (true);
+				item_rand.SetActive (true);
+				item_water.SetActive (true);
+				item_stala.SetActive (true);
+				item_tree.SetActive (true);
+				item_sand.SetActive (true);
 
-				Block1Parent.SetActive (false);
-				Block2Parent.SetActive (false);
-				Block3Parent.SetActive (false);
-				Block4Parent.SetActive (false);
+				WoodParent.SetActive (false);
+				BrickParent.SetActive (false);
+				TorchParent.SetActive (false);
+				RandColorParent.SetActive (false);
+				WaterParent.SetActive (false);
+				StalactiteParent.SetActive (false);
+				TreeParent.SetActive (false);
+				SandParent.SetActive (false);
 
 			} else {
 				currentSelected = Selected.Null;
@@ -97,82 +118,214 @@ namespace UnityEngine.XR.iOS
 		}
 
 
-		public void Block1ButtonSelected() { // Wood
+		public void WoodButtonSelected() { // Wood
 
-			Block1Parent.SetActive (false);
-			Block2Parent.SetActive (false);
-			Block3Parent.SetActive (false);
-			Block4Parent.SetActive (false);
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
 
-			currentSelected = Selected.Block1;
-			placeBox.currentSelectedOG = placeBox.Selected.Block1;
-			Block1Parent.SetActive (true);
-			Block1Parent.GetComponent<ParticleSystem> ().enableEmission = false;
+			currentSelected = Selected.Wood;
+			placeBox.currentSelectedOG = placeBox.Selected.Wood;
+			WoodParent.SetActive (true);
+			//WoodParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
-			item1.SetActive (false);
-			item2.SetActive (false);
-			item3.SetActive (false);
-			item4.SetActive (false);
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
 	
 
 		}
 
-		public void Block2ButtonSelected() { // Brick
+		public void BrickButtonSelected() { // Brick
 
-			Block1Parent.SetActive (false);
-			Block2Parent.SetActive (false);
-			Block3Parent.SetActive (false);
-			Block4Parent.SetActive (false);
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
 
-			currentSelected = Selected.Block2;
-			placeBox.currentSelectedOG = placeBox.Selected.Block2;
-			Block2Parent.SetActive (true);
-			Block2Parent.GetComponent<ParticleSystem> ().enableEmission = false;
+			currentSelected = Selected.Brick;
+			placeBox.currentSelectedOG = placeBox.Selected.Brick;
+			BrickParent.SetActive (true);
+			//BrickParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
-			item1.SetActive (false);
-			item2.SetActive (false);
-			item3.SetActive (false);
-			item4.SetActive (false);
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
 
 	
 		}
 
-		public void Block3ButtonSelected() { // Torch
+		public void TorchButtonSelected() { // Torch
 			
-			Block1Parent.SetActive (false);
-			Block2Parent.SetActive (false);
-			Block3Parent.SetActive (false);
-			Block4Parent.SetActive (false);
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
 
-			currentSelected = Selected.Block3;
-			placeBox.currentSelectedOG = placeBox.Selected.Block3;
-			Block3Parent.SetActive (true);
-			Block3Parent.GetComponent<ParticleSystem> ().enableEmission = false;
+			currentSelected = Selected.Torch;
+			placeBox.currentSelectedOG = placeBox.Selected.Torch;
+			TorchParent.SetActive (true);
+			//Block3Parent.GetComponent<ParticleSystem> ().enableEmission = true;
 
-			item1.SetActive (false);
-			item2.SetActive (false);
-			item3.SetActive (false);
-			item4.SetActive (false);
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
 
 
 		}
 
-		public void Block4ButtonSelected() { // Colors
+		public void RandColorButtonSelected() { // Colors
 			
-			Block1Parent.SetActive (false);
-			Block2Parent.SetActive (false);
-			Block3Parent.SetActive (false);
-			Block4Parent.SetActive (false);
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
 
-			currentSelected = Selected.Block4;
-			placeBox.currentSelectedOG = placeBox.Selected.Block4;
-			Block4Parent.SetActive (true);
-			Block4Parent.GetComponent<ParticleSystem> ().enableEmission = false;
+			currentSelected = Selected.RandColor;
+			placeBox.currentSelectedOG = placeBox.Selected.RandColor;
+			RandColorParent.SetActive (true);
+			//RandColorParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
-			item1.SetActive (false);
-			item2.SetActive (false);
-			item3.SetActive (false);
-			item4.SetActive (false);
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
+		}
+
+		public void WaterButtonSelected() {
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
+
+			currentSelected = Selected.Water;
+			placeBox.currentSelectedOG = placeBox.Selected.Water;
+			WaterParent.SetActive (true);
+			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = false;
+
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
+		}
+
+		public void StalactiteButtonSelected() {
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
+
+			currentSelected = Selected.Stalactite;
+			placeBox.currentSelectedOG = placeBox.Selected.Stalactite;
+			StalactiteParent.SetActive (true);
+			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = true;
+
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
+		}
+
+		public void TreeButtonSelected() {
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
+
+			currentSelected = Selected.Tree;
+			placeBox.currentSelectedOG = placeBox.Selected.Tree;
+			TreeParent.SetActive (true);
+			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = true;
+
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
+		}
+
+		public void SandButtonSelected() {
+			WoodParent.SetActive (false);
+			BrickParent.SetActive (false);
+			TorchParent.SetActive (false);
+			RandColorParent.SetActive (false);
+			WaterParent.SetActive (false);
+			StalactiteParent.SetActive (false);
+			TreeParent.SetActive (false);
+			SandParent.SetActive (false);
+
+			currentSelected = Selected.Sand;
+			placeBox.currentSelectedOG = placeBox.Selected.Sand;
+			SandParent.SetActive (true);
+			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = false;
+
+			item_wood.SetActive (false);
+			item_brick.SetActive (false);
+			item_torch.SetActive (false);
+			item_rand.SetActive (false);
+			item_water.SetActive (false);
+			item_stala.SetActive (false);
+			item_tree.SetActive (false);
+			item_sand.SetActive (false);
 		}
 
 			

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f4110eafc929d481fbff6f5d4b5dca32
-timeCreated: 1501190432
+timeCreated: 1501280379
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -218,15 +218,15 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 177872500
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 177872387
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 177872384
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 177872389
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 177872384
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 177872387
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -447,15 +447,15 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 177872500
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 177872387
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 177872384
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 177872389
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 177872384
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 177872387
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -676,15 +676,15 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 177872500
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 177872387
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 177872384
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 177872389
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 177872384
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 177872387
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 

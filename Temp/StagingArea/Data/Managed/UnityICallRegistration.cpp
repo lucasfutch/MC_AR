@@ -108,6 +108,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.AsyncOperation
 
+	//Start Registrations for type : UnityEngine.AudioSource
+
+		//System.Void UnityEngine.AudioSource::Play(System.UInt64)
+		void Register_UnityEngine_AudioSource_Play();
+		Register_UnityEngine_AudioSource_Play();
+
+	//End Registrations for type : UnityEngine.AudioSource
+
 	//Start Registrations for type : UnityEngine.Behaviour
 
 		//System.Boolean UnityEngine.Behaviour::get_enabled()
@@ -1204,6 +1212,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.GUIUtility
 
+	//Start Registrations for type : UnityEngine.Gyroscope
+
+		//System.Void UnityEngine.Gyroscope::INTERNAL_CALL_attitude_Internal(System.Int32,UnityEngine.Quaternion&)
+		void Register_UnityEngine_Gyroscope_INTERNAL_CALL_attitude_Internal();
+		Register_UnityEngine_Gyroscope_INTERNAL_CALL_attitude_Internal();
+
+	//End Registrations for type : UnityEngine.Gyroscope
+
 	//Start Registrations for type : UnityEngine.Input
 
 		//System.Boolean UnityEngine.Input::GetButtonDown(System.String)
@@ -1233,6 +1249,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Input::get_touchCount()
 		void Register_UnityEngine_Input_get_touchCount();
 		Register_UnityEngine_Input_get_touchCount();
+
+		//System.Int32 UnityEngine.Input::mainGyroIndex_Internal()
+		void Register_UnityEngine_Input_mainGyroIndex_Internal();
+		Register_UnityEngine_Input_mainGyroIndex_Internal();
 
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();
@@ -1691,14 +1711,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_ParticleSystem_SetParticles();
 
 	//End Registrations for type : UnityEngine.ParticleSystem
-
-	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
-
-		//System.Void UnityEngine.ParticleSystem/EmissionModule::SetEnabled(UnityEngine.ParticleSystem,System.Boolean)
-		void Register_UnityEngine_ParticleSystem_EmissionModule_SetEnabled();
-		Register_UnityEngine_ParticleSystem_EmissionModule_SetEnabled();
-
-	//End Registrations for type : UnityEngine.ParticleSystem/EmissionModule
 
 	//Start Registrations for type : UnityEngine.Physics
 

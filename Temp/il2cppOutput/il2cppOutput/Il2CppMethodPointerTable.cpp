@@ -7900,6 +7900,8 @@ extern "C" void AudioConfigurationChangeHandler__ctor_m114228029 ();
 extern "C" void AudioConfigurationChangeHandler_Invoke_m635374412 ();
 extern "C" void AudioConfigurationChangeHandler_BeginInvoke_m2418670597 ();
 extern "C" void AudioConfigurationChangeHandler_EndInvoke_m2237100787 ();
+extern "C" void AudioSource_Play_m889724421 ();
+extern "C" void AudioSource_Play_m353744792 ();
 extern "C" void Behaviour__ctor_m2699265412 ();
 extern "C" void Behaviour_get_enabled_m4079055610 ();
 extern "C" void Behaviour_set_enabled_m1796096907 ();
@@ -8775,12 +8777,18 @@ extern "C" void GUIUtility_Internal_GetDefaultSkin_m2135852437 ();
 extern "C" void GUIUtility_Internal_ExitGUI_m2271097629 ();
 extern "C" void GUIUtility_Internal_GetGUIDepth_m1699616910 ();
 extern "C" void GUIUtility__cctor_m46116445 ();
+extern "C" void Gyroscope__ctor_m1250646805 ();
+extern "C" void Gyroscope_attitude_Internal_m1839122405 ();
+extern "C" void Gyroscope_INTERNAL_CALL_attitude_Internal_m2763981553 ();
+extern "C" void Gyroscope_get_attitude_m3665233473 ();
 extern "C" void HumanBone_get_boneName_m1281040133_AdjustorThunk ();
 extern "C" void HumanBone_set_boneName_m2410239828_AdjustorThunk ();
 extern "C" void HumanBone_get_humanName_m2091758568_AdjustorThunk ();
 extern "C" void HumanBone_set_humanName_m1385708911_AdjustorThunk ();
 extern "C" void IL2CPPStructAlignmentAttribute__ctor_m2555798229 ();
+extern "C" void Input_mainGyroIndex_Internal_m1868841043 ();
 extern "C" void Input_GetAxisRaw_m4133353720 ();
+extern "C" void Input_get_gyro_m4027090408 ();
 extern "C" void Input_GetButtonDown_m2792523731 ();
 extern "C" void Input_GetMouseButton_m464100923 ();
 extern "C" void Input_GetMouseButtonDown_m47917805 ();
@@ -9078,12 +9086,7 @@ extern "C" void Object_FindObjectOfType_m2330404063 ();
 extern "C" void Object_op_Equality_m3764089466 ();
 extern "C" void Object_op_Inequality_m2402264703 ();
 extern "C" void Object__cctor_m2991092887 ();
-extern "C" void ParticleSystem_set_enableEmission_m1222323446 ();
-extern "C" void ParticleSystem_get_emission_m3968992617 ();
 extern "C" void ParticleSystem_SetParticles_m3035584975 ();
-extern "C" void EmissionModule__ctor_m1076689768_AdjustorThunk ();
-extern "C" void EmissionModule_set_enabled_m4266189783_AdjustorThunk ();
-extern "C" void EmissionModule_SetEnabled_m1102718738 ();
 extern "C" void IteratorDelegate__ctor_m3692393942 ();
 extern "C" void IteratorDelegate_Invoke_m3389138368 ();
 extern "C" void IteratorDelegate_BeginInvoke_m1741046139 ();
@@ -11381,6 +11384,8 @@ extern "C" void placeBox_CreateBox_m3746128977 ();
 extern "C" void placeBox_Update_m3632811618 ();
 extern "C" void placeBox_GetHitFace_m2361387267 ();
 extern "C" void placeBox_getFaceVec_m3891390246 ();
+extern "C" void placeBox_GyroModifyCamera_m1259280059 ();
+extern "C" void placeBox_GyroToUnity_m2606940261 ();
 extern "C" void PointCloudParticleExample__ctor_m249742788 ();
 extern "C" void PointCloudParticleExample_Start_m1736319872 ();
 extern "C" void PointCloudParticleExample_ARFrameUpdated_m1855536526 ();
@@ -11485,10 +11490,14 @@ extern "C" void UIBehavior_Start_m3961636531 ();
 extern "C" void UIBehavior_ResetButtons_m1738521039 ();
 extern "C" void UIBehavior_PickaxeButtonSelected_m1977985717 ();
 extern "C" void UIBehavior_BlockButtonSelected_m35656853 ();
-extern "C" void UIBehavior_Block1ButtonSelected_m1667972602 ();
-extern "C" void UIBehavior_Block2ButtonSelected_m3055615739 ();
-extern "C" void UIBehavior_Block3ButtonSelected_m3482058876 ();
-extern "C" void UIBehavior_Block4ButtonSelected_m2804056181 ();
+extern "C" void UIBehavior_WoodButtonSelected_m3159001403 ();
+extern "C" void UIBehavior_BrickButtonSelected_m219890625 ();
+extern "C" void UIBehavior_TorchButtonSelected_m15403372 ();
+extern "C" void UIBehavior_RandColorButtonSelected_m2117408904 ();
+extern "C" void UIBehavior_WaterButtonSelected_m3584439321 ();
+extern "C" void UIBehavior_StalactiteButtonSelected_m2475937376 ();
+extern "C" void UIBehavior_TreeButtonSelected_m3273234026 ();
+extern "C" void UIBehavior_SandButtonSelected_m508511696 ();
 extern "C" void UnityARAmbient__ctor_m3700524047 ();
 extern "C" void UnityARAmbient_Start_m303369171 ();
 extern "C" void UnityARAmbient_Update_m2066148092 ();
@@ -11720,7 +11729,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11706] = 
+extern const Il2CppMethodPointer g_MethodPointers[11715] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -19608,6 +19617,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11706] =
 	AudioConfigurationChangeHandler_Invoke_m635374412,
 	AudioConfigurationChangeHandler_BeginInvoke_m2418670597,
 	AudioConfigurationChangeHandler_EndInvoke_m2237100787,
+	AudioSource_Play_m889724421,
+	AudioSource_Play_m353744792,
 	Behaviour__ctor_m2699265412,
 	Behaviour_get_enabled_m4079055610,
 	Behaviour_set_enabled_m1796096907,
@@ -20483,12 +20494,18 @@ extern const Il2CppMethodPointer g_MethodPointers[11706] =
 	GUIUtility_Internal_ExitGUI_m2271097629,
 	GUIUtility_Internal_GetGUIDepth_m1699616910,
 	GUIUtility__cctor_m46116445,
+	Gyroscope__ctor_m1250646805,
+	Gyroscope_attitude_Internal_m1839122405,
+	Gyroscope_INTERNAL_CALL_attitude_Internal_m2763981553,
+	Gyroscope_get_attitude_m3665233473,
 	HumanBone_get_boneName_m1281040133_AdjustorThunk,
 	HumanBone_set_boneName_m2410239828_AdjustorThunk,
 	HumanBone_get_humanName_m2091758568_AdjustorThunk,
 	HumanBone_set_humanName_m1385708911_AdjustorThunk,
 	IL2CPPStructAlignmentAttribute__ctor_m2555798229,
+	Input_mainGyroIndex_Internal_m1868841043,
 	Input_GetAxisRaw_m4133353720,
+	Input_get_gyro_m4027090408,
 	Input_GetButtonDown_m2792523731,
 	Input_GetMouseButton_m464100923,
 	Input_GetMouseButtonDown_m47917805,
@@ -20786,12 +20803,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11706] =
 	Object_op_Equality_m3764089466,
 	Object_op_Inequality_m2402264703,
 	Object__cctor_m2991092887,
-	ParticleSystem_set_enableEmission_m1222323446,
-	ParticleSystem_get_emission_m3968992617,
 	ParticleSystem_SetParticles_m3035584975,
-	EmissionModule__ctor_m1076689768_AdjustorThunk,
-	EmissionModule_set_enabled_m4266189783_AdjustorThunk,
-	EmissionModule_SetEnabled_m1102718738,
 	IteratorDelegate__ctor_m3692393942,
 	IteratorDelegate_Invoke_m3389138368,
 	IteratorDelegate_BeginInvoke_m1741046139,
@@ -23089,6 +23101,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11706] =
 	placeBox_Update_m3632811618,
 	placeBox_GetHitFace_m2361387267,
 	placeBox_getFaceVec_m3891390246,
+	placeBox_GyroModifyCamera_m1259280059,
+	placeBox_GyroToUnity_m2606940261,
 	PointCloudParticleExample__ctor_m249742788,
 	PointCloudParticleExample_Start_m1736319872,
 	PointCloudParticleExample_ARFrameUpdated_m1855536526,
@@ -23193,10 +23207,14 @@ extern const Il2CppMethodPointer g_MethodPointers[11706] =
 	UIBehavior_ResetButtons_m1738521039,
 	UIBehavior_PickaxeButtonSelected_m1977985717,
 	UIBehavior_BlockButtonSelected_m35656853,
-	UIBehavior_Block1ButtonSelected_m1667972602,
-	UIBehavior_Block2ButtonSelected_m3055615739,
-	UIBehavior_Block3ButtonSelected_m3482058876,
-	UIBehavior_Block4ButtonSelected_m2804056181,
+	UIBehavior_WoodButtonSelected_m3159001403,
+	UIBehavior_BrickButtonSelected_m219890625,
+	UIBehavior_TorchButtonSelected_m15403372,
+	UIBehavior_RandColorButtonSelected_m2117408904,
+	UIBehavior_WaterButtonSelected_m3584439321,
+	UIBehavior_StalactiteButtonSelected_m2475937376,
+	UIBehavior_TreeButtonSelected_m3273234026,
+	UIBehavior_SandButtonSelected_m508511696,
 	UnityARAmbient__ctor_m3700524047,
 	UnityARAmbient_Start_m303369171,
 	UnityARAmbient_Update_m2066148092,

@@ -7,8 +7,11 @@ using UnityEngine.EventSystems;
 public class placeBox : MonoBehaviour {
 
 	public Transform m_HitTransform;
-	public GameObject boxPrefab, block1Prefab, block2Prefab, block3Prefab;
+	public GameObject randColorPrefab, woodPrefab, brickPrefab, torchPrefab, waterPrefab, stalactitePrefab, treePrefab, sandPrefab, explosion;
+	public GameObject PickAxeSound, placeObjectSound;
 	public float createHeight;
+
+	private AudioSource audioPlace, audioDestroy;
 
 	private GameObject boxGO;
 
@@ -16,7 +19,7 @@ public class placeBox : MonoBehaviour {
 
 	private MaterialPropertyBlock props;
 
-	public enum Selected {Pickaxe, Block, Null, Block1, Block2, Block3, Block4};
+	public enum Selected {Pickaxe, Block, Null, Wood, Brick, Torch, RandColor, Water, Stalactite, Tree, Sand};
 	public static Selected currentSelectedOG;
 	public static Selected currentSelectionIsABlock;
 
@@ -26,6 +29,8 @@ public class placeBox : MonoBehaviour {
 	public float timeToAnimate;
 	private float timeElapsed;
 	private bool animationCheck, animationStarted;
+
+	private bool isCeiling;
 
 	public enum MCFace
 	{
@@ -38,7 +43,6 @@ public class placeBox : MonoBehaviour {
 		South
 	}
 		
-	// Use this for initialization
 	void Start () {
 		props = new MaterialPropertyBlock ();
 	}
@@ -59,21 +63,20 @@ public class placeBox : MonoBehaviour {
 
 	void CreateBox(Vector3 atPosition) {
 
-		if (currentSelectedOG == Selected.Block1) {
-			boxGO = Instantiate (block1Prefab, atPosition, Quaternion.identity);
-			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+		audioPlace = placeObjectSound.GetComponent<AudioSource>();
+		audioPlace.Play ();
 
-		} else if (currentSelectedOG == Selected.Block2) {
-			boxGO = Instantiate (block2Prefab, atPosition, Quaternion.identity);
-			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+		if (currentSelectedOG == Selected.Wood) {
+			boxGO = Instantiate (woodPrefab, atPosition, Quaternion.identity);
 
-		} else if (currentSelectedOG == Selected.Block3) {
-			boxGO = Instantiate (block3Prefab, atPosition, Quaternion.identity);
-			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+		} else if (currentSelectedOG == Selected.Brick) {
+			boxGO = Instantiate (brickPrefab, atPosition, Quaternion.identity);
 
-		} else if (currentSelectedOG == Selected.Block4) {
-			boxGO = Instantiate (boxPrefab, atPosition, Quaternion.identity);
-			boxGO.GetComponent<ParticleSystem> ().enableEmission = false;
+		} else if (currentSelectedOG == Selected.Torch) {
+			boxGO = Instantiate (torchPrefab, atPosition, Quaternion.identity);
+
+		} else if (currentSelectedOG == Selected.RandColor) {
+			boxGO = Instantiate (randColorPrefab, atPosition, Quaternion.identity);
 
 			float r = Random.Range (0.0f, 1.0f);
 			float g = Random.Range (0.0f, 1.0f);
@@ -83,12 +86,28 @@ public class placeBox : MonoBehaviour {
 
 			MeshRenderer renderer = boxGO.GetComponent<MeshRenderer> ();
 			renderer.SetPropertyBlock (props);
+		} else if (currentSelectedOG == Selected.Water) {
+			boxGO = Instantiate (waterPrefab, atPosition, Quaternion.identity);
+
+		} else if (currentSelectedOG == Selected.Stalactite) {
+			boxGO = Instantiate (stalactitePrefab, atPosition, Quaternion.identity);
+
+		} else if (currentSelectedOG == Selected.Tree) {
+			boxGO = Instantiate (treePrefab, atPosition, Quaternion.identity);
+
+		} else if (currentSelectedOG == Selected.Sand) {
+			boxGO = Instantiate (sandPrefab, atPosition, Quaternion.identity);
+
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
 
+		//GyroModifyCamera ();
+
+
+		// Used for animation playing
 		if (timeElapsed < timeToAnimate && animationStarted) {
 			timeElapsed += Time.deltaTime;
 		}
@@ -99,13 +118,12 @@ public class placeBox : MonoBehaviour {
 		}
 
 			
-
+		// Placing a block
 		if ((Input.touchCount == 1) && (currentSelectionIsABlock == Selected.Block))
 		{
 			var touch = Input.GetTouch(0);
 			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
 			{
-				////////////////////////
 				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
 				RaycastHit raycastHit;
 
@@ -116,6 +134,7 @@ public class placeBox : MonoBehaviour {
 					MCFace boxSideHit = GetHitFace (raycastHit);
 					Vector3 boxSideHitVec = getFaceVec (boxSideHit);
 					
+				// Check if pressing a previously placed block and adjust
 				if (raycastHit.collider.CompareTag ("placedBox")) {
 					Debug.Log ("Placing Box on top of another box");
 					float xPos = raycastHit.collider.gameObject.transform.position.x;
@@ -124,12 +143,12 @@ public class placeBox : MonoBehaviour {
 
 					originalVec = new Vector3 (xPos, yPos, zPos);
 
-					//Vector3 originalVec = new Vector3 (xPos, yPos + createHeight, zPos);
 					Vector3 boxPosition = originalVec + boxSideHitVec;
 					CreateBox (boxPosition);
 
-				} else {
-					/////////////////////////
+				}
+				// Did not touch a block but the plane
+				else {
 
 					var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
 					ARPoint point = new ARPoint {
@@ -143,14 +162,23 @@ public class placeBox : MonoBehaviour {
 						foreach (var hitResult in hitResults) {
 							Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
 							Debug.Log ("Placing a Box Normally");
+
+							if (currentSelectedOG == Selected.Stalactite) {
+								if (Input.gyro.attitude.x > 0.3) {
+									CreateBox (new Vector3 (position.x, position.y - createHeight*2, position.z));
+								}
+							}
+
 							CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
 							break;
 						}
 					}
-				}//
+				}
 			}
 		}
 
+
+		// Removal of blocks
 		if (Input.touchCount > 0 && currentSelectionIsABlock == Selected.Pickaxe)
 		{
 			var touch = Input.GetTouch(0);
@@ -162,13 +190,24 @@ public class placeBox : MonoBehaviour {
 				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
 				RaycastHit raycastHit;
 
+				// Touching a  box
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					Debug.Log ("Detected a Box");
 					if (raycastHit.collider.CompareTag ("placedBox")) {
-						Debug.Log ("Destroying Box");
+						
+						float xPos = raycastHit.collider.gameObject.transform.position.x;
+						float yPos = raycastHit.collider.gameObject.transform.position.y;
+						float zPos = raycastHit.collider.gameObject.transform.position.z;
+						originalVec = new Vector3 (xPos, yPos, zPos);
+
 						animationStarted = true;
 						animator.SetTrigger ("clickWindow");
-						raycastHit.collider.gameObject.GetComponent<ParticleSystem> ().enableEmission = true;
+
+						Instantiate (explosion, originalVec, Quaternion.identity);
+
+						audioDestroy = PickAxeSound.GetComponent<AudioSource>();
+						audioDestroy.Play ();
+
 						Destroy (raycastHit.collider.gameObject);
 
 					}
@@ -179,6 +218,7 @@ public class placeBox : MonoBehaviour {
 
 	}
 
+	// Check direction of touch
 	public MCFace GetHitFace(RaycastHit hit)
 	{
 		Vector3 incomingVec = hit.normal - Vector3.up;
@@ -216,6 +256,7 @@ public class placeBox : MonoBehaviour {
 		return MCFace.None;
 	}
 
+	// Direction Vectors
 	public Vector3 getFaceVec (MCFace side) 
 	{
 		switch (side) {
@@ -233,6 +274,16 @@ public class placeBox : MonoBehaviour {
 			return new Vector3(0, 0, -0.1f);
 		}
 		return new Vector3(0, 0, 0);
+	}
+
+	void GyroModifyCamera()
+	{
+		transform.rotation = GyroToUnity(Input.gyro.attitude);
+	}
+
+	private static Quaternion GyroToUnity(Quaternion q)
+	{
+		return new Quaternion(q.x, q.y, -q.z, -q.w);
 	}
 
 }

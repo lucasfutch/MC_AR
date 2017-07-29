@@ -147,10 +147,10 @@
 #include "UnityEngine_UnityEngine_Vector22243707579.h"
 #include "UnityEngine_UnityEngine_TouchPhase2458120420.h"
 #include "UnityEngine_UnityEngine_TouchType2732027771.h"
+#include "UnityEngine_UnityEngine_Quaternion4030073918.h"
 #include "UnityEngine_UnityEngine_Touch407273883.h"
 #include "UnityEngine_UnityEngine_IMECompositionMode1898275508.h"
 #include "UnityEngine_UnityEngine_LayerMask3188175821.h"
-#include "UnityEngine_UnityEngine_Quaternion4030073918.h"
 #include "UnityEngine_UnityEngine_Vector42243707581.h"
 #include "UnityEngine_UnityEngine_Bounds3033363703.h"
 #include "UnityEngine_UnityEngine_Mesh_InternalShaderChannel3331827198.h"
@@ -162,7 +162,6 @@
 #include "UnityEngine_UnityEngine_iOS_CalendarUnit4134400622.h"
 #include "UnityEngine_UnityEngine_iOS_CalendarIdentifier259698391.h"
 #include "UnityEngine_UnityEngine_SceneManagement_Scene1684909666.h"
-#include "UnityEngine_UnityEngine_ParticleSystem_EmissionMod2748003162.h"
 #include "UnityEngine_UnityEngine_Color32874517518.h"
 #include "UnityEngine_UnityEngine_RaycastHit87180320.h"
 #include "UnityEngine_UnityEngine_AnimatorStateInfo2577870592.h"
@@ -7158,6 +7157,27 @@ void* RuntimeInvoker_TouchType_t2732027771 (const MethodInfo* method, void* obj,
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
+void* RuntimeInvoker_Quaternion_t4030073918_Int32_t2071877448 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Quaternion_t4030073918  (*Func)(void* obj, int32_t p1, const MethodInfo* method);
+	Quaternion_t4030073918  ret = ((Func)method->methodPointer)(obj, *((int32_t*)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_Void_t1841601450_Int32_t2071877448_QuaternionU26_t4187826802 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, int32_t p1, Quaternion_t4030073918 * p2, const MethodInfo* method);
+	((Func)method->methodPointer)(obj, *((int32_t*)args[0]), (Quaternion_t4030073918 *)args[1], method);
+	return NULL;
+}
+
+void* RuntimeInvoker_Quaternion_t4030073918 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Quaternion_t4030073918  (*Func)(void* obj, const MethodInfo* method);
+	Quaternion_t4030073918  ret = ((Func)method->methodPointer)(obj, method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
 void* RuntimeInvoker_Vector3_t2243707580 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef Vector3_t2243707580  (*Func)(void* obj, const MethodInfo* method);
@@ -7324,13 +7344,6 @@ void* RuntimeInvoker_Void_t1841601450_Vector3U26_t425862308_QuaternionU26_t41878
 	typedef void (*Func)(void* obj, Vector3_t2243707580 * p1, Quaternion_t4030073918 * p2, const MethodInfo* method);
 	((Func)method->methodPointer)(obj, (Vector3_t2243707580 *)args[0], (Quaternion_t4030073918 *)args[1], method);
 	return NULL;
-}
-
-void* RuntimeInvoker_Quaternion_t4030073918 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef Quaternion_t4030073918  (*Func)(void* obj, const MethodInfo* method);
-	Quaternion_t4030073918  ret = ((Func)method->methodPointer)(obj, method);
-	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
 void* RuntimeInvoker_Quaternion_t4030073918_Quaternion_t4030073918_Quaternion_t4030073918 (const MethodInfo* method, void* obj, void** args)
@@ -7772,13 +7785,6 @@ void* RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Single_t2076509932_Singl
 	typedef void (*Func)(void* obj, int32_t p1, float p2, float p3, const MethodInfo* method);
 	((Func)method->methodPointer)(obj, *((int32_t*)args[0]), *((float*)args[1]), *((float*)args[2]), method);
 	return NULL;
-}
-
-void* RuntimeInvoker_EmissionModule_t2748003162 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef EmissionModule_t2748003162  (*Func)(void* obj, const MethodInfo* method);
-	EmissionModule_t2748003162  ret = ((Func)method->methodPointer)(obj, method);
-	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
 void* RuntimeInvoker_Void_t1841601450_Color32_t874517518 (const MethodInfo* method, void* obj, void** args)
@@ -13619,7 +13625,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t2986189219 (const MethodInfo* meth
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1777] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1778] = 
 {
 	RuntimeInvoker_Void_t1841601450,
 	RuntimeInvoker_Boolean_t3825574718_Il2CppObject,
@@ -14475,6 +14481,9 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1777] =
 	RuntimeInvoker_Vector2_t2243707579,
 	RuntimeInvoker_TouchPhase_t2458120420,
 	RuntimeInvoker_TouchType_t2732027771,
+	RuntimeInvoker_Quaternion_t4030073918_Int32_t2071877448,
+	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_QuaternionU26_t4187826802,
+	RuntimeInvoker_Quaternion_t4030073918,
 	RuntimeInvoker_Vector3_t2243707580,
 	RuntimeInvoker_Void_t1841601450_Vector3U26_t425862308,
 	RuntimeInvoker_Void_t1841601450_Vector2U26_t3911752445,
@@ -14499,7 +14508,6 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1777] =
 	RuntimeInvoker_Quaternion_t4030073918_Single_t2076509932_Single_t2076509932_Single_t2076509932,
 	RuntimeInvoker_Quaternion_t4030073918_Vector3_t2243707580,
 	RuntimeInvoker_Void_t1841601450_Vector3U26_t425862308_QuaternionU26_t4187826802,
-	RuntimeInvoker_Quaternion_t4030073918,
 	RuntimeInvoker_Quaternion_t4030073918_Quaternion_t4030073918_Quaternion_t4030073918,
 	RuntimeInvoker_Vector3_t2243707580_Quaternion_t4030073918_Vector3_t2243707580,
 	RuntimeInvoker_Boolean_t3825574718_Quaternion_t4030073918_Quaternion_t4030073918,
@@ -14563,7 +14571,6 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1777] =
 	RuntimeInvoker_Void_t1841601450_QuaternionU26_t4187826802,
 	RuntimeInvoker_Matrix4x4_t2933234003,
 	RuntimeInvoker_Void_t1841601450_Int32_t2071877448_Single_t2076509932_Single_t2076509932,
-	RuntimeInvoker_EmissionModule_t2748003162,
 	RuntimeInvoker_Void_t1841601450_Color32_t874517518,
 	RuntimeInvoker_Boolean_t3825574718_Vector3_t2243707580_Vector3_t2243707580_Single_t2076509932_Int32_t2071877448,
 	RuntimeInvoker_Boolean_t3825574718_Vector3_t2243707580_Vector3_t2243707580_Single_t2076509932,

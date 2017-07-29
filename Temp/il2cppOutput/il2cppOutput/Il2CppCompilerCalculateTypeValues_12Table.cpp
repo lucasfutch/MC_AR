@@ -435,6 +435,10 @@ extern const int32_t g_FieldOffsetTable1272[14] =
 	Touch_t407273883::get_offset_of_m_AzimuthAngle_13() + static_cast<int32_t>(sizeof(Il2CppObject)),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1273 = { sizeof (Gyroscope_t1705362817), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1273[1] = 
+{
+	Gyroscope_t1705362817::get_offset_of_m_GyroIndex_0(),
+};
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1274 = { sizeof (Input_t1785128008), -1, sizeof(Input_t1785128008_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable1274[1] = 
 {
