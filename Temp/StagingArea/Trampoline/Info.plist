@@ -73,6 +73,6 @@
     <key>UnityCloudProjectID</key>
     <string>b416a0fe-614a-4d43-8983-62d44a8437e9</string>
     <key>UnityCrashSubmissionURL</key>
-    <string>https://perf-events.cloud.unity3d.com/symbolicate</string>
+    <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>
 </plist>

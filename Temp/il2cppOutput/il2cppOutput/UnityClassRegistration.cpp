@@ -116,10 +116,10 @@ class WindZone;
 namespace UI { class CanvasRenderer; } template <> void RegisterClass<UI::CanvasRenderer>();
 class Collider; template <> void RegisterClass<Collider>();
 class BoxCollider; template <> void RegisterClass<BoxCollider>();
-class CapsuleCollider; template <> void RegisterClass<CapsuleCollider>();
+class CapsuleCollider; 
 class CharacterController; 
 class MeshCollider; template <> void RegisterClass<MeshCollider>();
-class SphereCollider; 
+class SphereCollider; template <> void RegisterClass<SphereCollider>();
 class TerrainCollider; 
 class WheelCollider; 
 namespace Unity { class Joint; } 
@@ -393,8 +393,8 @@ RegisterBuiltinTypes();
 	RegisterClass<FlareLayer>();
 	//71. PhysicMaterial
 	RegisterClass<PhysicMaterial>();
-	//72. CapsuleCollider
-	RegisterClass<CapsuleCollider>();
+	//72. SphereCollider
+	RegisterClass<SphereCollider>();
 	//73. LightmapSettings
 	RegisterClass<LightmapSettings>();
 	//74. SubstanceArchive

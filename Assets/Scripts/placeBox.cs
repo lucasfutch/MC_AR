@@ -133,9 +133,13 @@ public class placeBox : MonoBehaviour {
 
 					MCFace boxSideHit = GetHitFace (raycastHit);
 					Vector3 boxSideHitVec = getFaceVec (boxSideHit);
+
+				if (raycastHit.collider.CompareTag ("planePrefab")) {
+					Debug.Log ("touched a plane");
+				}
 					
 				// Check if pressing a previously placed block and adjust
-				if (raycastHit.collider.CompareTag ("placedBox")) {
+				if (raycastHit.collider.CompareTag ("placedBox") && currentSelectedOG != Selected.Stalactite) {
 					Debug.Log ("Placing Box on top of another box");
 					float xPos = raycastHit.collider.gameObject.transform.position.x;
 					float yPos = raycastHit.collider.gameObject.transform.position.y;
@@ -144,11 +148,13 @@ public class placeBox : MonoBehaviour {
 					originalVec = new Vector3 (xPos, yPos, zPos);
 
 					Vector3 boxPosition = originalVec + boxSideHitVec;
+
 					CreateBox (boxPosition);
 
 				}
-				// Did not touch a block but the plane
+				// Did not touch a block but the plane 
 				else {
+					Debug.Log ("Did not touch a block but the plane");
 
 					var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
 					ARPoint point = new ARPoint {
@@ -163,13 +169,27 @@ public class placeBox : MonoBehaviour {
 							Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
 							Debug.Log ("Placing a Box Normally");
 
+							//Place a Stalactite
 							if (currentSelectedOG == Selected.Stalactite) {
-								if (Input.gyro.attitude.x > 0.3) {
-									CreateBox (new Vector3 (position.x, position.y - createHeight*2, position.z));
-								}
-							}
+								if (raycastHit.collider.CompareTag ("planePrefab")) {
+									float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+									Debug.Log (raycast.direction.y);
+									Debug.Log(raycastHit.collider.gameObject.transform.up);
+									Debug.Log (angle);
 
-							CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
+									if (raycast.direction.y > 0.1f) {
+										Debug.Log ("Placing a Stalactite");
+										CreateBox (new Vector3 (position.x, position.y - (createHeight + 0.45f), position.z));
+									}
+										
+								}
+
+
+								
+							} else {
+								Debug.Log("not placing a stalactite");
+								CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
+							}
 							break;
 						}
 					}

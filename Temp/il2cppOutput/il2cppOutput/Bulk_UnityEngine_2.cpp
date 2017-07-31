@@ -722,6 +722,7 @@ extern const uint32_t Vector3_get_Item_m3616014016_MetadataUsageId;
 extern const uint32_t Vector3_set_Item_m499708011_MetadataUsageId;
 extern Il2CppClass* Vector3_t2243707580_il2cpp_TypeInfo_var;
 extern const uint32_t Vector3_Equals_m2692262876_MetadataUsageId;
+extern const uint32_t Vector3_Angle_m2552334978_MetadataUsageId;
 extern const uint32_t Vector3_Distance_m1859670022_MetadataUsageId;
 extern const uint32_t Vector3_Magnitude_m1349200714_MetadataUsageId;
 extern const uint32_t Vector3_get_magnitude_m860342598_MetadataUsageId;
@@ -1980,10 +1981,12 @@ extern "C"  void Transform_INTERNAL_get_localPosition_m94028171 (Transform_t3275
 extern "C"  void Transform_INTERNAL_set_localPosition_m432504087 (Transform_t3275118058 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
 extern "C"  Quaternion_t4030073918  Transform_get_rotation_m1033555130 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
-extern "C"  Vector3_t2243707580  Vector3_get_forward_m1201659139 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
+extern "C"  Vector3_t2243707580  Vector3_get_up_m2725403797 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
 extern "C"  Vector3_t2243707580  Quaternion_op_Multiply_m1483423721 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___rotation0, Vector3_t2243707580  ___point1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
+extern "C"  Vector3_t2243707580  Vector3_get_forward_m1201659139 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_get_rotation(UnityEngine.Quaternion&)
 extern "C"  void Transform_INTERNAL_get_rotation_m2427701365 (Transform_t3275118058 * __this, Quaternion_t4030073918 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_set_rotation(UnityEngine.Quaternion&)
@@ -2102,6 +2105,10 @@ extern "C"  float Vector3_Magnitude_m1349200714 (Il2CppObject * __this /* static
 extern "C"  Vector3_t2243707580  Vector3_Normalize_m2140428981 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
 extern "C"  Vector3_t2243707580  Vector3_get_normalized_m936072361 (Vector3_t2243707580 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Vector3::Dot(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C"  float Vector3_Dot_m3161182818 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___lhs0, Vector3_t2243707580  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+extern "C"  float Mathf_Clamp_m2354025655 (Il2CppObject * __this /* static, unused */, float ___value0, float ___min1, float ___max2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Vector3::get_sqrMagnitude()
 extern "C"  float Vector3_get_sqrMagnitude_m1814096310 (Vector3_t2243707580 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Min(System.Single,System.Single)
@@ -12154,6 +12161,25 @@ extern "C"  void Transform_INTERNAL_set_localPosition_m432504087 (Transform_t327
 	_il2cpp_icall_func = (Transform_INTERNAL_set_localPosition_m432504087_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::INTERNAL_set_localPosition(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___value0);
 }
+// UnityEngine.Vector3 UnityEngine.Transform::get_up()
+extern "C"  Vector3_t2243707580  Transform_get_up_m1603627763 (Transform_t3275118058 * __this, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Quaternion_t4030073918  L_0 = Transform_get_rotation_m1033555130(__this, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_1 = Vector3_get_up_m2725403797(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_2 = Quaternion_op_Multiply_m1483423721(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0017;
+	}
+
+IL_0017:
+	{
+		Vector3_t2243707580  L_3 = V_0;
+		return L_3;
+	}
+}
 // UnityEngine.Vector3 UnityEngine.Transform::get_forward()
 extern "C"  Vector3_t2243707580  Transform_get_forward_m1833488937 (Transform_t3275118058 * __this, const MethodInfo* method)
 {
@@ -13914,6 +13940,33 @@ IL_0036:
 	{
 		float L_6 = V_0;
 		return L_6;
+	}
+}
+// System.Single UnityEngine.Vector3::Angle(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C"  float Vector3_Angle_m2552334978 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  ___from0, Vector3_t2243707580  ___to1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Vector3_Angle_m2552334978_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		Vector3_t2243707580  L_0 = Vector3_get_normalized_m936072361((&___from0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_1 = Vector3_get_normalized_m936072361((&___to1), /*hidden argument*/NULL);
+		float L_2 = Vector3_Dot_m3161182818(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
+		float L_3 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_2, (-1.0f), (1.0f), /*hidden argument*/NULL);
+		float L_4 = acosf(L_3);
+		V_0 = ((float)((float)L_4*(float)(57.29578f)));
+		goto IL_0034;
+	}
+
+IL_0034:
+	{
+		float L_5 = V_0;
+		return L_5;
 	}
 }
 // System.Single UnityEngine.Vector3::Distance(UnityEngine.Vector3,UnityEngine.Vector3)

@@ -16008,6 +16008,23 @@ IL_000f:
 		return L_2;
 	}
 }
+// System.Single UnityEngine.Mathf::Acos(System.Single)
+extern "C"  float Mathf_Acos_m3800958570 (Il2CppObject * __this /* static, unused */, float ___f0, const MethodInfo* method)
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___f0;
+		double L_1 = acos((((double)((double)L_0))));
+		V_0 = (((float)((float)L_1)));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		float L_2 = V_0;
+		return L_2;
+	}
+}
 // System.Single UnityEngine.Mathf::Sqrt(System.Single)
 extern "C"  float Mathf_Sqrt_m2213915910 (Il2CppObject * __this /* static, unused */, float ___f0, const MethodInfo* method)
 {

@@ -38741,6 +38741,11 @@ extern "C"  double Math_Cos_m43596019 (Il2CppObject * __this /* static, unused *
 {
 	return cos(___d0);
 }
+// System.Double System.Math::Acos(System.Double)
+extern "C"  double Math_Acos_m2218287828 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
+{
+	return acos(___d0);
+}
 // System.Double System.Math::Log(System.Double)
 extern "C"  double Math_Log_m3371716878 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method)
 {

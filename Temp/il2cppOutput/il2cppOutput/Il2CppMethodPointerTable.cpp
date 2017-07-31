@@ -2618,6 +2618,7 @@ extern "C" void Math_Round_m565516458 ();
 extern "C" void Math_Round_m2632426160 ();
 extern "C" void Math_Sin_m2320256962 ();
 extern "C" void Math_Cos_m43596019 ();
+extern "C" void Math_Acos_m2218287828 ();
 extern "C" void Math_Log_m3371716878 ();
 extern "C" void Math_Pow_m3099781906 ();
 extern "C" void Math_Sqrt_m932242488 ();
@@ -8919,6 +8920,7 @@ extern "C" void MaterialPropertyBlock_SetColor_m1647596275 ();
 extern "C" void MaterialPropertyBlock_SetColor_m2158714668 ();
 extern "C" void Mathf_Sin_m831310046 ();
 extern "C" void Mathf_Cos_m238853451 ();
+extern "C" void Mathf_Acos_m3800958570 ();
 extern "C" void Mathf_Sqrt_m2213915910 ();
 extern "C" void Mathf_Abs_m1942863256 ();
 extern "C" void Mathf_Min_m1648492575 ();
@@ -9624,6 +9626,7 @@ extern "C" void Transform_get_localPosition_m2533925116 ();
 extern "C" void Transform_set_localPosition_m1026930133 ();
 extern "C" void Transform_INTERNAL_get_localPosition_m94028171 ();
 extern "C" void Transform_INTERNAL_set_localPosition_m432504087 ();
+extern "C" void Transform_get_up_m1603627763 ();
 extern "C" void Transform_get_forward_m1833488937 ();
 extern "C" void Transform_get_rotation_m1033555130 ();
 extern "C" void Transform_set_rotation_m3411284563 ();
@@ -9701,6 +9704,7 @@ extern "C" void Vector3_Equals_m2692262876_AdjustorThunk ();
 extern "C" void Vector3_Normalize_m2140428981 ();
 extern "C" void Vector3_get_normalized_m936072361_AdjustorThunk ();
 extern "C" void Vector3_Dot_m3161182818 ();
+extern "C" void Vector3_Angle_m2552334978 ();
 extern "C" void Vector3_Distance_m1859670022 ();
 extern "C" void Vector3_Magnitude_m1349200714 ();
 extern "C" void Vector3_get_magnitude_m860342598_AdjustorThunk ();
@@ -11729,7 +11733,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11715] = 
+extern const Il2CppMethodPointer g_MethodPointers[11719] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -14335,6 +14339,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11715] =
 	Math_Round_m2632426160,
 	Math_Sin_m2320256962,
 	Math_Cos_m43596019,
+	Math_Acos_m2218287828,
 	Math_Log_m3371716878,
 	Math_Pow_m3099781906,
 	Math_Sqrt_m932242488,
@@ -20636,6 +20641,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11715] =
 	MaterialPropertyBlock_SetColor_m2158714668,
 	Mathf_Sin_m831310046,
 	Mathf_Cos_m238853451,
+	Mathf_Acos_m3800958570,
 	Mathf_Sqrt_m2213915910,
 	Mathf_Abs_m1942863256,
 	Mathf_Min_m1648492575,
@@ -21341,6 +21347,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11715] =
 	Transform_set_localPosition_m1026930133,
 	Transform_INTERNAL_get_localPosition_m94028171,
 	Transform_INTERNAL_set_localPosition_m432504087,
+	Transform_get_up_m1603627763,
 	Transform_get_forward_m1833488937,
 	Transform_get_rotation_m1033555130,
 	Transform_set_rotation_m3411284563,
@@ -21418,6 +21425,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11715] =
 	Vector3_Normalize_m2140428981,
 	Vector3_get_normalized_m936072361_AdjustorThunk,
 	Vector3_Dot_m3161182818,
+	Vector3_Angle_m2552334978,
 	Vector3_Distance_m1859670022,
 	Vector3_Magnitude_m1349200714,
 	Vector3_get_magnitude_m860342598_AdjustorThunk,
