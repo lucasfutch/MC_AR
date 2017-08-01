@@ -395,7 +395,7 @@ extern const int32_t g_FieldOffsetTable1748[1] =
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1749 = { sizeof (U24ArrayTypeU3D12_t1568637717)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D12_t1568637717 ), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1750 = { sizeof (U3CModuleU3E_t3783534220), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1751 = { sizeof (UIBehavior_t1836955822), -1, sizeof(UIBehavior_t1836955822_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1751[22] = 
+extern const int32_t g_FieldOffsetTable1751[24] = 
 {
 	UIBehavior_t1836955822::get_offset_of_Block_2(),
 	UIBehavior_t1836955822::get_offset_of_Pickaxe_3(),
@@ -419,6 +419,8 @@ extern const int32_t g_FieldOffsetTable1751[22] =
 	UIBehavior_t1836955822::get_offset_of_item_sand_21(),
 	UIBehavior_t1836955822_StaticFields::get_offset_of_currentSelected_22(),
 	UIBehavior_t1836955822::get_offset_of_biggerButton_23(),
+	UIBehavior_t1836955822::get_offset_of_blockButtonHasBeenMoved_24(),
+	UIBehavior_t1836955822::get_offset_of_pickaxeButtonHasBeenMoved_25(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1752 = { sizeof (Selected_t3137343744)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
 extern const int32_t g_FieldOffsetTable1752[12] = 

@@ -428,8 +428,6 @@ struct serializableUnityARPlaneAnchor_t2771464920;
 struct ByteU5BU5D_t3397334013;
 // UnityEngine.XR.iOS.UIBehavior
 struct UIBehavior_t1836955822;
-// System.Collections.IEnumerator
-struct IEnumerator_t1466026749;
 // UnityEngine.XR.iOS.UnityARAmbient
 struct UnityARAmbient_t680084560;
 // UnityEngine.Light
@@ -809,10 +807,6 @@ extern Il2CppCodeGenString* _stringLiteral1397226215;
 extern const uint32_t ConnectToEditor_EditorConnected_m2345533564_MetadataUsageId;
 extern Il2CppClass* UIBehavior_t1836955822_il2cpp_TypeInfo_var;
 extern const uint32_t UIBehavior_Start_m3961636531_MetadataUsageId;
-extern Il2CppClass* IEnumerator_t1466026749_il2cpp_TypeInfo_var;
-extern Il2CppClass* Transform_t3275118058_il2cpp_TypeInfo_var;
-extern Il2CppClass* IDisposable_t2427283555_il2cpp_TypeInfo_var;
-extern const uint32_t UIBehavior_ResetButtons_m1738521039_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral9326697;
 extern const uint32_t UIBehavior_PickaxeButtonSelected_m1977985717_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral982033065;
@@ -2307,8 +2301,6 @@ extern "C"  void ConnectToEditor_SendToEditor_m798148974 (ConnectToEditor_t19971
 extern "C"  bool PlayerConnection_get_isConnected_m2774691707 (PlayerConnection_t3517219175 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Networking.PlayerConnection.PlayerConnection::Send(System.Guid,System.Byte[])
 extern "C"  void PlayerConnection_Send_m331902946 (PlayerConnection_t3517219175 * __this, Guid_t  p0, ByteU5BU5D_t3397334013* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Collections.IEnumerator UnityEngine.Transform::GetEnumerator()
-extern "C"  Il2CppObject * Transform_GetEnumerator_m3479720613 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.UIBehavior::ResetButtons()
 extern "C"  void UIBehavior_ResetButtons_m1738521039 (UIBehavior_t1836955822 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Light>()
@@ -11757,144 +11749,71 @@ extern "C"  void UIBehavior_Start_m3961636531 (UIBehavior_t1836955822 * __this, 
 // System.Void UnityEngine.XR.iOS.UIBehavior::ResetButtons()
 extern "C"  void UIBehavior_ResetButtons_m1738521039 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (UIBehavior_ResetButtons_m1738521039_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
+		bool L_0 = __this->get_blockButtonHasBeenMoved_24();
+		if (!L_0)
+		{
+			goto IL_002e;
+		}
 	}
-	Transform_t3275118058 * V_0 = NULL;
-	Il2CppObject * V_1 = NULL;
-	Vector3_t2243707580  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	Il2CppObject * V_3 = NULL;
-	Exception_t1927440687 * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t1927440687 * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	int32_t __leave_target = 0;
-	NO_UNUSED_WARNING (__leave_target);
 	{
-		Transform_t3275118058 * L_0 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		NullCheck(L_0);
-		Il2CppObject * L_1 = Transform_GetEnumerator_m3479720613(L_0, /*hidden argument*/NULL);
-		V_1 = L_1;
+		Transform_t3275118058 * L_1 = __this->get_Block_2();
+		Transform_t3275118058 * L_2 = L_1;
+		NullCheck(L_2);
+		Vector3_t2243707580  L_3 = Transform_get_position_m1104419803(L_2, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_4 = __this->get_biggerButton_23();
+		Vector3_t2243707580  L_5 = Vector3_op_Subtraction_m2407545601(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		Transform_set_position_m2469242620(L_2, L_5, /*hidden argument*/NULL);
+		__this->set_blockButtonHasBeenMoved_24((bool)0);
 	}
 
-IL_000c:
-	try
-	{ // begin try (depth: 1)
-		{
-			goto IL_004c;
-		}
-
-IL_0011:
-		{
-			Il2CppObject * L_2 = V_1;
-			NullCheck(L_2);
-			Il2CppObject * L_3 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_2);
-			V_0 = ((Transform_t3275118058 *)CastclassClass(L_3, Transform_t3275118058_il2cpp_TypeInfo_var));
-			Transform_t3275118058 * L_4 = V_0;
-			NullCheck(L_4);
-			Vector3_t2243707580  L_5 = Transform_get_position_m1104419803(L_4, /*hidden argument*/NULL);
-			V_2 = L_5;
-			float L_6 = (&V_2)->get_y_2();
-			if ((!(((float)L_6) > ((float)(90.0f)))))
-			{
-				goto IL_004c;
-			}
-		}
-
-IL_0035:
-		{
-			Transform_t3275118058 * L_7 = V_0;
-			Transform_t3275118058 * L_8 = L_7;
-			NullCheck(L_8);
-			Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
-			Vector3_t2243707580  L_10 = __this->get_biggerButton_23();
-			Vector3_t2243707580  L_11 = Vector3_op_Subtraction_m2407545601(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
-			NullCheck(L_8);
-			Transform_set_position_m2469242620(L_8, L_11, /*hidden argument*/NULL);
-		}
-
-IL_004c:
-		{
-			Il2CppObject * L_12 = V_1;
-			NullCheck(L_12);
-			bool L_13 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_12);
-			if (L_13)
-			{
-				goto IL_0011;
-			}
-		}
-
-IL_0057:
-		{
-			IL2CPP_LEAVE(0x70, FINALLY_005c);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
+IL_002e:
 	{
-		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_005c;
+		bool L_6 = __this->get_pickaxeButtonHasBeenMoved_25();
+		if (!L_6)
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		Transform_t3275118058 * L_7 = __this->get_Pickaxe_3();
+		Transform_t3275118058 * L_8 = L_7;
+		NullCheck(L_8);
+		Vector3_t2243707580  L_9 = Transform_get_position_m1104419803(L_8, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_10 = __this->get_biggerButton_23();
+		Vector3_t2243707580  L_11 = Vector3_op_Subtraction_m2407545601(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		Transform_set_position_m2469242620(L_8, L_11, /*hidden argument*/NULL);
+		__this->set_pickaxeButtonHasBeenMoved_25((bool)0);
 	}
 
-FINALLY_005c:
-	{ // begin finally (depth: 1)
-		{
-			Il2CppObject * L_14 = V_1;
-			Il2CppObject * L_15 = ((Il2CppObject *)IsInst(L_14, IDisposable_t2427283555_il2cpp_TypeInfo_var));
-			V_3 = L_15;
-			if (!L_15)
-			{
-				goto IL_006f;
-			}
-		}
-
-IL_0069:
-		{
-			Il2CppObject * L_16 = V_3;
-			NullCheck(L_16);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t2427283555_il2cpp_TypeInfo_var, L_16);
-		}
-
-IL_006f:
-		{
-			IL2CPP_END_FINALLY(92)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(92)
+IL_005c:
 	{
-		IL2CPP_JUMP_TBL(0x70, IL_0070)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
-	}
-
-IL_0070:
-	{
-		GameObject_t1756533147 * L_17 = __this->get_item_wood_14();
+		GameObject_t1756533147 * L_12 = __this->get_item_wood_14();
+		NullCheck(L_12);
+		GameObject_SetActive_m2887581199(L_12, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_13 = __this->get_item_brick_15();
+		NullCheck(L_13);
+		GameObject_SetActive_m2887581199(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_14 = __this->get_item_torch_16();
+		NullCheck(L_14);
+		GameObject_SetActive_m2887581199(L_14, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_15 = __this->get_item_rand_17();
+		NullCheck(L_15);
+		GameObject_SetActive_m2887581199(L_15, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_16 = __this->get_item_water_18();
+		NullCheck(L_16);
+		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_17 = __this->get_item_stala_19();
 		NullCheck(L_17);
 		GameObject_SetActive_m2887581199(L_17, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_18 = __this->get_item_brick_15();
+		GameObject_t1756533147 * L_18 = __this->get_item_tree_20();
 		NullCheck(L_18);
 		GameObject_SetActive_m2887581199(L_18, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_19 = __this->get_item_torch_16();
+		GameObject_t1756533147 * L_19 = __this->get_item_sand_21();
 		NullCheck(L_19);
 		GameObject_SetActive_m2887581199(L_19, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_20 = __this->get_item_rand_17();
-		NullCheck(L_20);
-		GameObject_SetActive_m2887581199(L_20, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_21 = __this->get_item_water_18();
-		NullCheck(L_21);
-		GameObject_SetActive_m2887581199(L_21, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_22 = __this->get_item_stala_19();
-		NullCheck(L_22);
-		GameObject_SetActive_m2887581199(L_22, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_23 = __this->get_item_tree_20();
-		NullCheck(L_23);
-		GameObject_SetActive_m2887581199(L_23, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_24 = __this->get_item_sand_21();
-		NullCheck(L_24);
-		GameObject_SetActive_m2887581199(L_24, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -11914,7 +11833,7 @@ extern "C"  void UIBehavior_PickaxeButtonSelected_m1977985717 (UIBehavior_t18369
 		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_22();
 		if (!L_0)
 		{
-			goto IL_00b9;
+			goto IL_00c0;
 		}
 	}
 	{
@@ -11950,16 +11869,17 @@ extern "C"  void UIBehavior_PickaxeButtonSelected_m1977985717 (UIBehavior_t18369
 		Vector3_t2243707580  L_13 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_11, L_12, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		Transform_set_position_m2469242620(L_10, L_13, /*hidden argument*/NULL);
+		__this->set_pickaxeButtonHasBeenMoved_25((bool)1);
 		GameObject_t1756533147 * L_14 = __this->get_PickAxeParent_4();
 		NullCheck(L_14);
 		GameObject_SetActive_m2887581199(L_14, (bool)1, /*hidden argument*/NULL);
 		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(0);
 		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(0);
 		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_21(0);
-		goto IL_00d1;
+		goto IL_00d8;
 	}
 
-IL_00b9:
+IL_00c0:
 	{
 		GameObject_t1756533147 * L_15 = __this->get_PickAxeParent_4();
 		NullCheck(L_15);
@@ -11968,7 +11888,7 @@ IL_00b9:
 		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(2);
 	}
 
-IL_00d1:
+IL_00d8:
 	{
 		return;
 	}
@@ -11989,7 +11909,7 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		int32_t L_0 = ((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->get_currentSelected_22();
 		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
-			goto IL_0114;
+			goto IL_011b;
 		}
 	}
 	{
@@ -12001,6 +11921,7 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		Vector3_t2243707580  L_5 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		Transform_set_position_m2469242620(L_2, L_5, /*hidden argument*/NULL);
+		__this->set_blockButtonHasBeenMoved_24((bool)1);
 		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(1);
 		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectionIsABlock_21(1);
 		GameObject_t1756533147 * L_6 = __this->get_PickAxeParent_4();
@@ -12054,16 +11975,16 @@ extern "C"  void UIBehavior_BlockButtonSelected_m35656853 (UIBehavior_t183695582
 		GameObject_t1756533147 * L_22 = __this->get_SandParent_12();
 		NullCheck(L_22);
 		GameObject_SetActive_m2887581199(L_22, (bool)0, /*hidden argument*/NULL);
-		goto IL_0120;
+		goto IL_0127;
 	}
 
-IL_0114:
+IL_011b:
 	{
 		((UIBehavior_t1836955822_StaticFields*)UIBehavior_t1836955822_il2cpp_TypeInfo_var->static_fields)->set_currentSelected_22(2);
 		((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->set_currentSelectedOG_20(2);
 	}
 
-IL_0120:
+IL_0127:
 	{
 		return;
 	}

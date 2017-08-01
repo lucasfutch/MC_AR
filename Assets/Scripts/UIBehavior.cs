@@ -18,6 +18,8 @@ namespace UnityEngine.XR.iOS
 		public static Selected currentSelected; 
 
 		private Vector3 biggerButton = new Vector3 (0, 20f, 0);
+		private bool blockButtonHasBeenMoved = false;
+		private bool pickaxeButtonHasBeenMoved = false;
 
 		void Start () {
 			PickAxeParent.SetActive (false);
@@ -33,13 +35,17 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Null;
 			placeBox.currentSelectedOG = placeBox.Selected.Block;
 		}
-		//0.4187499
+
 		void ResetButtons(){
 
-			foreach (Transform child in transform) {
-				if (child.position.y > 90.0f) {
-					child.position -= biggerButton;
-				}
+			if (blockButtonHasBeenMoved) {
+				Block.position -= biggerButton;
+				blockButtonHasBeenMoved = false;
+			}
+			
+			if (pickaxeButtonHasBeenMoved) {
+				Pickaxe.position -= biggerButton;
+				pickaxeButtonHasBeenMoved = false;
 			}
 
 			item_wood.SetActive (false);
@@ -57,6 +63,8 @@ namespace UnityEngine.XR.iOS
 
 			ResetButtons ();
 
+			//pickaxeButtonHasBeenMoved = true;
+
 			if (currentSelected != Selected.Pickaxe) {
 				WoodParent.SetActive (false);
 				BrickParent.SetActive (false);
@@ -68,6 +76,8 @@ namespace UnityEngine.XR.iOS
 				SandParent.SetActive (false);
 
 				Pickaxe.position += biggerButton;
+				pickaxeButtonHasBeenMoved = true;
+
 				PickAxeParent.SetActive (true);
 				currentSelected = Selected.Pickaxe;
 				placeBox.currentSelectedOG = placeBox.Selected.Pickaxe;
@@ -85,9 +95,11 @@ namespace UnityEngine.XR.iOS
 
 			ResetButtons ();
 
+			//blockButtonHasBeenMoved = true;
 
 			if (currentSelected != Selected.Block) {
 				Block.position += biggerButton;
+				blockButtonHasBeenMoved = true;
 				currentSelected = Selected.Block;
 				placeBox.currentSelectionIsABlock = placeBox.Selected.Block;
 				PickAxeParent.SetActive (false);

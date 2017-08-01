@@ -76,6 +76,10 @@ public:
 	GameObject_t1756533147 * ___item_sand_21;
 	// UnityEngine.Vector3 UnityEngine.XR.iOS.UIBehavior::biggerButton
 	Vector3_t2243707580  ___biggerButton_23;
+	// System.Boolean UnityEngine.XR.iOS.UIBehavior::blockButtonHasBeenMoved
+	bool ___blockButtonHasBeenMoved_24;
+	// System.Boolean UnityEngine.XR.iOS.UIBehavior::pickaxeButtonHasBeenMoved
+	bool ___pickaxeButtonHasBeenMoved_25;
 
 public:
 	inline static int32_t get_offset_of_Block_2() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___Block_2)); }
@@ -264,6 +268,22 @@ public:
 	inline void set_biggerButton_23(Vector3_t2243707580  value)
 	{
 		___biggerButton_23 = value;
+	}
+
+	inline static int32_t get_offset_of_blockButtonHasBeenMoved_24() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___blockButtonHasBeenMoved_24)); }
+	inline bool get_blockButtonHasBeenMoved_24() const { return ___blockButtonHasBeenMoved_24; }
+	inline bool* get_address_of_blockButtonHasBeenMoved_24() { return &___blockButtonHasBeenMoved_24; }
+	inline void set_blockButtonHasBeenMoved_24(bool value)
+	{
+		___blockButtonHasBeenMoved_24 = value;
+	}
+
+	inline static int32_t get_offset_of_pickaxeButtonHasBeenMoved_25() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___pickaxeButtonHasBeenMoved_25)); }
+	inline bool get_pickaxeButtonHasBeenMoved_25() const { return ___pickaxeButtonHasBeenMoved_25; }
+	inline bool* get_address_of_pickaxeButtonHasBeenMoved_25() { return &___pickaxeButtonHasBeenMoved_25; }
+	inline void set_pickaxeButtonHasBeenMoved_25(bool value)
+	{
+		___pickaxeButtonHasBeenMoved_25 = value;
 	}
 };
 
