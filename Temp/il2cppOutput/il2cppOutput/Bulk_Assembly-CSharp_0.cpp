@@ -19,8 +19,13 @@
 #include "AssemblyU2DCSharp_U3CModuleU3E3783534214.h"
 #include "AssemblyU2DCSharp_U3CPrivateImplementationDetailsU1486305137.h"
 #include "AssemblyU2DCSharp_U3CPrivateImplementationDetailsU3762068664.h"
-#include "AssemblyU2DCSharp_AR3DOFCameraManager2152865733.h"
+#include "AssemblyU2DCSharp_AllBlockData171087180.h"
 #include "mscorlib_System_Void1841601450.h"
+#include "mscorlib_System_Object2689449295.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen824289147.h"
+#include "mscorlib_System_String2029220233.h"
+#include "AssemblyU2DCSharp_BlockData1455168015.h"
+#include "AssemblyU2DCSharp_AR3DOFCameraManager2152865733.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARKitSessionCo318899795.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
@@ -39,9 +44,7 @@
 #include "UnityEngine_UnityEngine_Transform3275118058.h"
 #include "AssemblyU2DCSharp_BallMaker2085518213.h"
 #include "UnityEngine_UnityEngine_MaterialPropertyBlock3303648957.h"
-#include "mscorlib_System_Object2689449295.h"
 #include "UnityEngine_UnityEngine_Color2020392075.h"
-#include "mscorlib_System_String2029220233.h"
 #include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngine_MeshRenderer1268241104.h"
 #include "UnityEngine_UnityEngine_Renderer257310565.h"
@@ -56,6 +59,8 @@
 #include "mscorlib_System_Double4078015681.h"
 #include "AssemblyU2DCSharp_BallMover754704982.h"
 #include "AssemblyU2DCSharp_Ballz4160380291.h"
+#include "AssemblyU2DCSharp_changeScene2085063124.h"
+#include "UnityEngine_UnityEngine_SceneManagement_LoadSceneM2981886439.h"
 #include "AssemblyU2DCSharp_ColorChangedEvent2990895397.h"
 #include "UnityEngine_UnityEngine_Events_UnityEvent_1_gen2058742090.h"
 #include "AssemblyU2DCSharp_ColorImage3157136356.h"
@@ -122,6 +127,15 @@
 #include "UnityEngine_UnityEngine_Animator69676727.h"
 #include "UnityEngine_UnityEngine_Gyroscope1705362817.h"
 #include "AssemblyU2DCSharp_PointCloudParticleExample986756623.h"
+#include "AssemblyU2DCSharp_SaveLoad296492329.h"
+#include "mscorlib_System_RuntimeTypeHandle2330101084.h"
+#include "mscorlib_System_Type1303803226.h"
+#include "mscorlib_System_IO_Stream3255436806.h"
+#include "mscorlib_System_Runtime_Serialization_Formatters_B1866979105.h"
+#include "mscorlib_System_IO_FileStream1695958676.h"
+#include "mscorlib_System_IO_FileMode236403845.h"
+#include "mscorlib_System_Collections_Generic_List_1_Enumerat359018821.h"
+#include "mscorlib_System_Collections_Generic_List_1_Enumera1593300101.h"
 #include "AssemblyU2DCSharp_SVBoxSlider1173082351.h"
 #include "AssemblyU2DCSharp_UnityEngine_UI_BoxSlider1871650694.h"
 #include "AssemblyU2DCSharp_UnityEngine_UI_BoxSlider_BoxSlid1774115848.h"
@@ -184,7 +198,6 @@
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARAnchor1086564192.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g4220005149.h"
 #include "mscorlib_System_Collections_Generic_List_1_Enumera1209076693.h"
-#include "mscorlib_System_Collections_Generic_List_1_Enumera1593300101.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen1674347019.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_V2923064992.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityVideoPar2644681676.h"
@@ -211,21 +224,17 @@
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARSessio1333006279.h"
 #include "mscorlib_System_UInt322149682021.h"
 #include "mscorlib_System_AsyncCallback163412349.h"
-#include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARUtilit3608388148.h"
-#include "UnityEngine_UnityEngine_MeshFilter3026937449.h"
-#include "UnityEngine_UnityEngine_ScreenOrientation4019489636.h"
-#include "UnityEngine_UnityEngine_Rendering_RenderTargetIdent772440638.h"
-#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
-#include "UnityEngine_UnityEngine_Rendering_CameraEvent2007842675.h"
-#include "UnityEngine_UnityEngine_Rendering_CommandBuffer1204166949.h"
-#include "UnityEngine_UnityEngine_Resolution3693662728.h"
-#include "UnityEngine_UnityEngine_TextureFormat1386130234.h"
-#include "UnityEngine_UnityEngine_FilterMode10814199.h"
-#include "UnityEngine_UnityEngine_TextureWrapMode3683976566.h"
-#include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityRemoteVi1017728068.h"
-#include "mscorlib_System_Runtime_InteropServices_GCHandle3409268066.h"
-#include "mscorlib_System_Runtime_InteropServices_GCHandleTy1970708122.h"
 
+// AllBlockData
+struct AllBlockData_t171087180;
+// System.Object
+struct Il2CppObject;
+// System.Collections.Generic.List`1<BlockData>
+struct List_1_t824289147;
+// System.Collections.Generic.List`1<System.Object>
+struct List_1_t2058570427;
+// BlockData
+struct BlockData_t1455168015;
 // AR3DOFCameraManager
 struct AR3DOFCameraManager_t2152865733;
 // UnityEngine.MonoBehaviour
@@ -242,8 +251,6 @@ struct Component_t3819376471;
 struct GameObject_t1756533147;
 // UnityEngine.XR.iOS.UnityARVideo
 struct UnityARVideo_t2351297253;
-// System.Object
-struct Il2CppObject;
 // UnityEngine.Transform
 struct Transform_t3275118058;
 // BallMaker
@@ -262,6 +269,8 @@ struct List_1_t2644634157;
 struct BallMover_t754704982;
 // Ballz
 struct Ballz_t4160380291;
+// changeScene
+struct changeScene_t2085063124;
 // ColorChangedEvent
 struct ColorChangedEvent_t2990895397;
 // UnityEngine.Events.UnityEvent`1<UnityEngine.Color>
@@ -354,8 +363,6 @@ struct ParticleSystem_t3394631041;
 struct List_1_t1612828712;
 // System.Collections.Generic.List`1<UnityEngine.ParticleSystem>
 struct List_1_t2763752173;
-// System.Collections.Generic.List`1<System.Object>
-struct List_1_t2058570427;
 // UnityEngine.ParticleSystem/Particle[]
 struct ParticleU5BU5D_t574222242;
 // placeBox
@@ -368,6 +375,18 @@ struct Animator_t69676727;
 struct Gyroscope_t1705362817;
 // PointCloudParticleExample
 struct PointCloudParticleExample_t986756623;
+// SaveLoad
+struct SaveLoad_t296492329;
+// System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+struct BinaryFormatter_t1866979105;
+// System.IO.FileStream
+struct FileStream_t1695958676;
+// System.Type
+struct Type_t;
+// UnityEngine.Object[]
+struct ObjectU5BU5D_t4217747464;
+// System.IO.Stream
+struct Stream_t3255436806;
 // SVBoxSlider
 struct SVBoxSlider_t1173082351;
 // UnityEngine.UI.BoxSlider
@@ -502,14 +521,14 @@ struct IAsyncResult_t1999651008;
 struct AsyncCallback_t163412349;
 // UnityEngine.XR.iOS.ARUserAnchor
 struct ARUserAnchor_t4064312267;
-// UnityEngine.XR.iOS.UnityARUtility
-struct UnityARUtility_t3608388148;
-// UnityEngine.MeshFilter
-struct MeshFilter_t3026937449;
-// UnityEngine.Rendering.CommandBuffer
-struct CommandBuffer_t1204166949;
-// UnityEngine.XR.iOS.UnityRemoteVideo
-struct UnityRemoteVideo_t1017728068;
+extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
+extern Il2CppClass* List_1_t824289147_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1__ctor_m4170528206_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2845362886;
+extern const uint32_t AllBlockData__ctor_m3883475195_MetadataUsageId;
+extern const MethodInfo* List_1_Add_m3751720618_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1522221286;
+extern const uint32_t AllBlockData_AllBlockDataAdd_m2842992583_MetadataUsageId;
 extern Il2CppClass* UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var;
 extern Il2CppClass* ARKitSessionConfiguration_t318899795_il2cpp_TypeInfo_var;
 extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
@@ -537,6 +556,10 @@ extern const uint32_t BallMover_CreateMoveBall_m3920384562_MetadataUsageId;
 extern const uint32_t BallMover_Update_m4283885088_MetadataUsageId;
 extern Il2CppClass* Mathf_t2336485820_il2cpp_TypeInfo_var;
 extern const uint32_t Ballz_Update_m893334799_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2360283349;
+extern const uint32_t BlockData__ctor_m699718940_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2602497250;
+extern const uint32_t BlockData__ctor_m2459572829_MetadataUsageId;
 extern const MethodInfo* UnityEvent_1__ctor_m117795578_MethodInfo_var;
 extern const uint32_t ColorChangedEvent__ctor_m3710136698_MetadataUsageId;
 extern Il2CppClass* UnityAction_1_t3386977826_il2cpp_TypeInfo_var;
@@ -602,7 +625,6 @@ extern Il2CppClass* Texture2D_t3542995729_il2cpp_TypeInfo_var;
 extern Il2CppClass* Color32U5BU5D_t30278651_il2cpp_TypeInfo_var;
 extern const uint32_t ColorSliderImage_RegenerateTexture_m1461909699_MetadataUsageId;
 extern Il2CppClass* EventSystem_t3466835263_il2cpp_TypeInfo_var;
-extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2103682082;
 extern Il2CppCodeGenString* _stringLiteral439316528;
 extern Il2CppCodeGenString* _stringLiteral1945171491;
@@ -698,6 +720,34 @@ extern const uint32_t placeBox_GyroModifyCamera_m1259280059_MetadataUsageId;
 extern const MethodInfo* PointCloudParticleExample_ARFrameUpdated_m1855536526_MethodInfo_var;
 extern const uint32_t PointCloudParticleExample_Start_m1736319872_MetadataUsageId;
 extern const uint32_t PointCloudParticleExample_Update_m633725559_MetadataUsageId;
+extern Il2CppClass* SaveLoad_t296492329_il2cpp_TypeInfo_var;
+extern const uint32_t SaveLoad_Awake_m1003036745_MetadataUsageId;
+extern const Il2CppType* GameObject_t1756533147_0_0_0_var;
+extern Il2CppClass* BinaryFormatter_t1866979105_il2cpp_TypeInfo_var;
+extern Il2CppClass* AllBlockData_t171087180_il2cpp_TypeInfo_var;
+extern Il2CppClass* Type_t_il2cpp_TypeInfo_var;
+extern Il2CppClass* GameObjectU5BU5D_t3057952154_il2cpp_TypeInfo_var;
+extern Il2CppClass* BlockData_t1455168015_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1445039419;
+extern Il2CppCodeGenString* _stringLiteral2162825340;
+extern Il2CppCodeGenString* _stringLiteral508355589;
+extern Il2CppCodeGenString* _stringLiteral3921309842;
+extern const uint32_t SaveLoad_Save_m3782038213_MetadataUsageId;
+extern const MethodInfo* List_1_GetEnumerator_m29010857_MethodInfo_var;
+extern const MethodInfo* Enumerator_get_Current_m3142390213_MethodInfo_var;
+extern const MethodInfo* Enumerator_MoveNext_m2720478717_MethodInfo_var;
+extern const MethodInfo* Enumerator_Dispose_m2082726351_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2954294047;
+extern Il2CppCodeGenString* _stringLiteral4179080109;
+extern Il2CppCodeGenString* _stringLiteral800183144;
+extern Il2CppCodeGenString* _stringLiteral3848937323;
+extern Il2CppCodeGenString* _stringLiteral2695981156;
+extern Il2CppCodeGenString* _stringLiteral724763573;
+extern Il2CppCodeGenString* _stringLiteral2014322759;
+extern Il2CppCodeGenString* _stringLiteral3635623585;
+extern Il2CppCodeGenString* _stringLiteral3460976712;
+extern Il2CppCodeGenString* _stringLiteral4166804854;
+extern const uint32_t SaveLoad_Load_m1025530042_MetadataUsageId;
 extern const uint32_t SVBoxSlider_get_rectTransform_m3427717911_MetadataUsageId;
 extern const MethodInfo* Component_GetComponent_TisBoxSlider_t1871650694_m3168588160_MethodInfo_var;
 extern const uint32_t SVBoxSlider_Awake_m1174811035_MetadataUsageId;
@@ -1010,30 +1060,6 @@ extern const uint32_t UnityARUserAnchorComponent_AnchorRemoved_m235983866_Metada
 extern const uint32_t UnityARUserAnchorComponent_OnDestroy_m342456075_MetadataUsageId;
 extern const uint32_t UnityARUserAnchorData_get_identifierStr_m1809997573_MetadataUsageId;
 extern const uint32_t UnityARUserAnchorData_UnityARUserAnchorDataFromGameObject_m2731461661_MetadataUsageId;
-extern const uint32_t UnityARUtility_InitializePlanePrefab_m991798235_MetadataUsageId;
-extern Il2CppClass* GameObject_t1756533147_il2cpp_TypeInfo_var;
-extern const MethodInfo* Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var;
-extern const uint32_t UnityARUtility_CreatePlaneInScene_m25502715_MetadataUsageId;
-extern const MethodInfo* GameObject_GetComponentInChildren_TisMeshFilter_t3026937449_m2178217683_MethodInfo_var;
-extern const uint32_t UnityARUtility_UpdatePlaneWithAnchorTransform_m3977317096_MetadataUsageId;
-extern const MethodInfo* UnityARVideo_UpdateFrame_m1963979139_MethodInfo_var;
-extern const uint32_t UnityARVideo_Start_m3167459156_MetadataUsageId;
-extern Il2CppClass* CommandBuffer_t1204166949_il2cpp_TypeInfo_var;
-extern const uint32_t UnityARVideo_InitializeCommandBuffer_m2276285637_MetadataUsageId;
-extern const uint32_t UnityARVideo_OnDestroy_m1187748541_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral1152424733;
-extern Il2CppCodeGenString* _stringLiteral2391281062;
-extern Il2CppCodeGenString* _stringLiteral2946740916;
-extern Il2CppCodeGenString* _stringLiteral1387439463;
-extern Il2CppCodeGenString* _stringLiteral2454363760;
-extern const uint32_t UnityARVideo_OnPreRender_m598299706_MetadataUsageId;
-extern const MethodInfo* UnityRemoteVideo_UpdateCamera_m1788867220_MethodInfo_var;
-extern const uint32_t UnityRemoteVideo_Start_m3985553417_MetadataUsageId;
-extern const uint32_t UnityRemoteVideo_UpdateCamera_m1788867220_MetadataUsageId;
-extern Il2CppClass* ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var;
-extern const uint32_t UnityRemoteVideo_InitializeTextures_m574805820_MetadataUsageId;
-extern const uint32_t UnityRemoteVideo_OnDestroy_m529552904_MetadataUsageId;
-extern const uint32_t UnityRemoteVideo_OnPreRender_m3366678485_MetadataUsageId;
 
 // UnityEngine.GameObject[]
 struct GameObjectU5BU5D_t3057952154  : public Il2CppArray
@@ -1249,6 +1275,43 @@ public:
 	inline void SetAtUnchecked(il2cpp_array_size_t index, Vector3_t2243707580  value)
 	{
 		m_Items[index] = value;
+	}
+};
+// UnityEngine.Object[]
+struct ObjectU5BU5D_t4217747464  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Object_t1021602117 * m_Items[1];
+
+public:
+	inline Object_t1021602117 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Object_t1021602117 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Object_t1021602117 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Object_t1021602117 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Object_t1021602117 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Object_t1021602117 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
 	}
 };
 // System.Byte[]
@@ -1478,6 +1541,10 @@ extern "C" void ARUserAnchor_t4064312267_marshal_pinvoke(const ARUserAnchor_t406
 extern "C" void ARUserAnchor_t4064312267_marshal_pinvoke_back(const ARUserAnchor_t4064312267_marshaled_pinvoke& marshaled, ARUserAnchor_t4064312267& unmarshaled);
 extern "C" void ARUserAnchor_t4064312267_marshal_pinvoke_cleanup(ARUserAnchor_t4064312267_marshaled_pinvoke& marshaled);
 
+// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
+extern "C"  void List_1__ctor_m310736118_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
+extern "C"  void List_1_Add_m4157722533_gshared (List_1_t2058570427 * __this, Il2CppObject * p0, const MethodInfo* method);
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2812611596_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
 // !!0 UnityEngine.GameObject::AddComponent<System.Object>()
@@ -1532,12 +1599,8 @@ extern "C"  void UnityEvent_3__ctor_m3100550874_gshared (UnityEvent_3_t419706172
 extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m447919519_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::.ctor()
 extern "C"  void List_1__ctor_m347461442_gshared (List_1_t1612828712 * __this, const MethodInfo* method);
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
-extern "C"  void List_1__ctor_m310736118_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::Add(!0)
 extern "C"  void List_1_Add_m2338641291_gshared (List_1_t1612828712 * __this, Vector3_t2243707580  p0, const MethodInfo* method);
-// System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
-extern "C"  void List_1_Add_m4157722533_gshared (List_1_t2058570427 * __this, Il2CppObject * p0, const MethodInfo* method);
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Count()
 extern "C"  int32_t List_1_get_Count_m4027941115_gshared (List_1_t1612828712 * __this, const MethodInfo* method);
 // System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<UnityEngine.Vector3>::GetEnumerator()
@@ -1548,6 +1611,14 @@ extern "C"  Vector3_t2243707580  Enumerator_get_Current_m857008049_gshared (Enum
 extern "C"  bool Enumerator_MoveNext_m2007266881_gshared (Enumerator_t1147558386 * __this, const MethodInfo* method);
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::Dispose()
 extern "C"  void Enumerator_Dispose_m3215924523_gshared (Enumerator_t1147558386 * __this, const MethodInfo* method);
+// System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
+extern "C"  Enumerator_t1593300101  List_1_GetEnumerator_m2837081829_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// !0 System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
+extern "C"  Il2CppObject * Enumerator_get_Current_m2577424081_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
+// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
+extern "C"  bool Enumerator_MoveNext_m44995089_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
+extern "C"  void Enumerator_Dispose_m3736175406_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
 // System.Void UnityEngine.Events.UnityAction`2<System.Single,System.Single>::.ctor(System.Object,System.IntPtr)
 extern "C"  void UnityAction_2__ctor_m2891411084_gshared (UnityAction_2_t134459182 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method);
 // System.Void UnityEngine.Events.UnityEvent`2<System.Single,System.Single>::AddListener(UnityEngine.Events.UnityAction`2<!0,!1>)
@@ -1594,14 +1665,6 @@ extern "C"  Il2CppObject * Dictionary_2_get_Item_m4062719145_gshared (Dictionary
 extern "C"  bool Dictionary_2_Remove_m112127646_gshared (Dictionary_2_t2281509423 * __this, Il2CppObject * p0, const MethodInfo* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::set_Item(!0,!1)
 extern "C"  void Dictionary_2_set_Item_m1004257024_gshared (Dictionary_2_t2281509423 * __this, Il2CppObject * p0, Il2CppObject * p1, const MethodInfo* method);
-// System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
-extern "C"  Enumerator_t1593300101  List_1_GetEnumerator_m2837081829_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
-// !0 System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-extern "C"  Il2CppObject * Enumerator_get_Current_m2577424081_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
-// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-extern "C"  bool Enumerator_MoveNext_m44995089_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
-// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
-extern "C"  void Enumerator_Dispose_m3736175406_gshared (Enumerator_t1593300101 * __this, const MethodInfo* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::Clear()
 extern "C"  void Dictionary_2_Clear_m2325793156_gshared (Dictionary_2_t2281509423 * __this, const MethodInfo* method);
 // System.Collections.Generic.Dictionary`2/ValueCollection<!0,!1> System.Collections.Generic.Dictionary`2<System.Object,System.Object>::get_Values()
@@ -1614,9 +1677,15 @@ extern "C"  int32_t List_1_get_Count_m2375293942_gshared (List_1_t2058570427 * _
 extern "C"  void List_1__ctor_m3541722758_gshared (List_1_t2644634157 * __this, const MethodInfo* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.XR.iOS.ARHitTestResult>::Add(!0)
 extern "C"  void List_1_Add_m1439515290_gshared (List_1_t2644634157 * __this, ARHitTestResult_t3275513025  p0, const MethodInfo* method);
-// !!0 UnityEngine.GameObject::GetComponentInChildren<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponentInChildren_TisIl2CppObject_m327292296_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
 
+// System.Void System.Object::.ctor()
+extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Debug::Log(System.Object)
+extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Collections.Generic.List`1<BlockData>::.ctor()
+#define List_1__ctor_m4170528206(__this, method) ((  void (*) (List_1_t824289147 *, const MethodInfo*))List_1__ctor_m310736118_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<BlockData>::Add(!0)
+#define List_1_Add_m3751720618(__this, p0, method) ((  void (*) (List_1_t824289147 *, BlockData_t1455168015 *, const MethodInfo*))List_1_Add_m4157722533_gshared)(__this, p0, method)
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 extern "C"  void MonoBehaviour__ctor_m2464341955 (MonoBehaviour_t1158329972 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
@@ -1711,6 +1780,8 @@ extern "C"  Vector3_t2243707580  Transform_get_position_m1104419803 (Transform_t
 extern "C"  Vector3_t2243707580  Vector3_MoveTowards_m1358638081 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 extern "C"  void Transform_set_position_m2469242620 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.String,UnityEngine.SceneManagement.LoadSceneMode)
+extern "C"  void SceneManager_LoadScene_m1386820036 (Il2CppObject * __this /* static, unused */, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::.ctor()
 #define UnityEvent_1__ctor_m117795578(__this, method) ((  void (*) (UnityEvent_1_t2058742090 *, const MethodInfo*))UnityEvent_1__ctor_m117795578_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Image>()
@@ -1871,8 +1942,6 @@ extern "C"  bool EventSystem_IsPointerOverGameObject_m2415000115 (EventSystem_t3
 extern "C"  Ray_t2469606224  Camera_ScreenPointToRay_m614889538 (Camera_t189460977 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&)
 extern "C"  bool Physics_Raycast_m2736931691 (Il2CppObject * __this /* static, unused */, Ray_t2469606224  p0, RaycastHit_t87180320 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Debug::Log(System.Object)
-extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider UnityEngine.RaycastHit::get_collider()
 extern "C"  Collider_t3497673348 * RaycastHit_get_collider_m301198172 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Component::CompareTag(System.String)
@@ -2035,6 +2104,50 @@ extern "C"  Quaternion_t4030073918  placeBox_GyroToUnity_m2606940261 (Il2CppObje
 extern "C"  void Quaternion__ctor_m3196903881 (Quaternion_t4030073918 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Mathf::Min(System.Int32,System.Int32)
 extern "C"  int32_t Mathf_Min_m2906823867 (Il2CppObject * __this /* static, unused */, int32_t p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::.ctor()
+extern "C"  void BinaryFormatter__ctor_m4171832002 (BinaryFormatter_t1866979105 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Application::get_persistentDataPath()
+extern "C"  String_t* Application_get_persistentDataPath_m3129298355 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.IO.FileStream System.IO.File::Create(System.String)
+extern "C"  FileStream_t1695958676 * File_Create_m1378973685 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void AllBlockData::.ctor()
+extern "C"  void AllBlockData__ctor_m3883475195 (AllBlockData_t171087180 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+extern "C"  Type_t * Type_GetTypeFromHandle_m432505302 (Il2CppObject * __this /* static, unused */, RuntimeTypeHandle_t2330101084  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
+extern "C"  ObjectU5BU5D_t4217747464* Object_FindObjectsOfType_m2121813744 (Il2CppObject * __this /* static, unused */, Type_t * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.GameObject::CompareTag(System.String)
+extern "C"  bool GameObject_CompareTag_m2797152613 (GameObject_t1756533147 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.Object::get_name()
+extern "C"  String_t* Object_get_name_m2079638459 (Object_t1021602117 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void BlockData::.ctor(System.Single,System.Single,System.Single,System.String)
+extern "C"  void BlockData__ctor_m2459572829 (BlockData_t1455168015 * __this, float ___x0, float ___y1, float ___z2, String_t* ___newType3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Serialize(System.IO.Stream,System.Object)
+extern "C"  void BinaryFormatter_Serialize_m433301673 (BinaryFormatter_t1866979105 * __this, Stream_t3255436806 * p0, Il2CppObject * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileMode)
+extern "C"  FileStream_t1695958676 * File_Open_m1543461971 (Il2CppObject * __this /* static, unused */, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Object System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Deserialize(System.IO.Stream)
+extern "C"  Il2CppObject * BinaryFormatter_Deserialize_m2771853471 (BinaryFormatter_t1866979105 * __this, Stream_t3255436806 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<BlockData>::GetEnumerator()
+#define List_1_GetEnumerator_m29010857(__this, method) ((  Enumerator_t359018821  (*) (List_1_t824289147 *, const MethodInfo*))List_1_GetEnumerator_m2837081829_gshared)(__this, method)
+// !0 System.Collections.Generic.List`1/Enumerator<BlockData>::get_Current()
+#define Enumerator_get_Current_m3142390213(__this, method) ((  BlockData_t1455168015 * (*) (Enumerator_t359018821 *, const MethodInfo*))Enumerator_get_Current_m2577424081_gshared)(__this, method)
+// System.String BlockData::BlockDataGetName()
+extern "C"  String_t* BlockData_BlockDataGetName_m3649610435 (BlockData_t1455168015 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.String::op_Equality(System.String,System.String)
+extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 BlockData::BlockDataGet()
+extern "C"  Vector3_t2243707580  BlockData_BlockDataGet_m1766476579 (BlockData_t1455168015 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Concat(System.Object[])
+extern "C"  String_t* String_Concat_m3881798623 (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t3614634134* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object UnityEngine.Resources::Load(System.String)
+extern "C"  Object_t1021602117 * Resources_Load_m2041782325 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+extern "C"  Object_t1021602117 * Object_Instantiate_m938141395 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * p0, Vector3_t2243707580  p1, Quaternion_t4030073918  p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<BlockData>::MoveNext()
+#define Enumerator_MoveNext_m2720478717(__this, method) ((  bool (*) (Enumerator_t359018821 *, const MethodInfo*))Enumerator_MoveNext_m44995089_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1/Enumerator<BlockData>::Dispose()
+#define Enumerator_Dispose_m2082726351(__this, method) ((  void (*) (Enumerator_t359018821 *, const MethodInfo*))Enumerator_Dispose_m3736175406_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.BoxSlider>()
 #define Component_GetComponent_TisBoxSlider_t1871650694_m3168588160(__this, method) ((  BoxSlider_t1871650694 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // System.Void SVBoxSlider::RegenerateSVTexture()
@@ -2243,8 +2356,6 @@ extern "C"  bool ARKitWorldTackingSessionConfiguration_IsARKitWorldTrackingSessi
 extern "C"  bool ARKitWorldTackingSessionConfiguration_get_IsSupported_m2907500064 (ARKitWorldTackingSessionConfiguration_t1821734930 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.ARKitWorldTackingSessionConfiguration::set_IsSupported(System.Boolean)
 extern "C"  void ARKitWorldTackingSessionConfiguration_set_IsSupported_m1782028213 (ARKitWorldTackingSessionConfiguration_t1821734930 * __this, bool ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Object::.ctor()
-extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Guid::.ctor(System.String)
 extern "C"  void Guid__ctor_m2599802704 (Guid_t * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Networking.PlayerConnection.PlayerConnection UnityEngine.Networking.PlayerConnection.PlayerConnection::get_instance()
@@ -2543,87 +2654,50 @@ extern "C"  bool String_Equals_m2633592423 (String_t* __this, String_t* p0, cons
 extern "C"  void UnityARSessionNativeInterface_remove_ARUserAnchorUpdatedEvent_m2020955357 (Il2CppObject * __this /* static, unused */, ARUserAnchorUpdated_t1104644293 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::remove_ARUserAnchorRemovedEvent(UnityEngine.XR.iOS.UnityARSessionNativeInterface/ARUserAnchorRemoved)
 extern "C"  void UnityARSessionNativeInterface_remove_ARUserAnchorRemovedEvent_m2795200317 (Il2CppObject * __this /* static, unused */, ARUserAnchorRemoved_t1656212632 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0)
-#define Object_Instantiate_TisGameObject_t1756533147_m3664764861(__this /* static, unused */, p0, method) ((  GameObject_t1756533147 * (*) (Il2CppObject * /* static, unused */, GameObject_t1756533147 *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m447919519_gshared)(__this /* static, unused */, p0, method)
-// System.Void UnityEngine.GameObject::.ctor()
-extern "C"  void GameObject__ctor_m498247354 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Object::set_name(System.String)
-extern "C"  void Object_set_name_m4157836998 (Object_t1021602117 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// !!0 UnityEngine.GameObject::GetComponentInChildren<UnityEngine.MeshFilter>()
-#define GameObject_GetComponentInChildren_TisMeshFilter_t3026937449_m2178217683(__this, method) ((  MeshFilter_t3026937449 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponentInChildren_TisIl2CppObject_m327292296_gshared)(__this, method)
-// System.Void UnityEngine.Transform::set_localScale(UnityEngine.Vector3)
-extern "C"  void Transform_set_localScale_m2325460848 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rendering.CommandBuffer::.ctor()
-extern "C"  void CommandBuffer__ctor_m3893953450 (CommandBuffer_t1204166949 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Rendering.RenderTargetIdentifier UnityEngine.Rendering.RenderTargetIdentifier::op_Implicit(UnityEngine.Rendering.BuiltinRenderTextureType)
-extern "C"  RenderTargetIdentifier_t772440638  RenderTargetIdentifier_op_Implicit_m1621446097 (Il2CppObject * __this /* static, unused */, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Rendering.CommandBuffer::Blit(UnityEngine.Texture,UnityEngine.Rendering.RenderTargetIdentifier,UnityEngine.Material)
-extern "C"  void CommandBuffer_Blit_m4282817560 (CommandBuffer_t1204166949 * __this, Texture_t2243626319 * p0, RenderTargetIdentifier_t772440638  p1, Material_t193706927 * p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Camera::AddCommandBuffer(UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
-extern "C"  void Camera_AddCommandBuffer_m2569587168 (Camera_t189460977 * __this, int32_t p0, CommandBuffer_t1204166949 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Camera::RemoveCommandBuffer(UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
-extern "C"  void Camera_RemoveCommandBuffer_m2103408695 (Camera_t189460977 * __this, int32_t p0, CommandBuffer_t1204166949 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::remove_ARFrameUpdatedEvent(UnityEngine.XR.iOS.UnityARSessionNativeInterface/ARFrameUpdate)
-extern "C"  void UnityARSessionNativeInterface_remove_ARFrameUpdatedEvent_m109438993 (Il2CppObject * __this /* static, unused */, ARFrameUpdate_t496507918 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.XR.iOS.ARTextureHandles UnityEngine.XR.iOS.UnityARSessionNativeInterface::GetARVideoTextureHandles()
-extern "C"  ARTextureHandles_t3764914833  UnityARSessionNativeInterface_GetARVideoTextureHandles_m299127149 (UnityARSessionNativeInterface_t1130867170 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
-extern "C"  bool IntPtr_op_Equality_m1573482188 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.XR.iOS.UnityARVideo::InitializeCommandBuffer()
-extern "C"  void UnityARVideo_InitializeCommandBuffer_m2276285637 (UnityARVideo_t2351297253 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Resolution UnityEngine.Screen::get_currentResolution()
-extern "C"  Resolution_t3693662728  Screen_get_currentResolution_m2361090437 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Resolution::get_width()
-extern "C"  int32_t Resolution_get_width_m1438273472 (Resolution_t3693662728 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Resolution::get_height()
-extern "C"  int32_t Resolution_get_height_m882683003 (Resolution_t3693662728 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Texture2D UnityEngine.Texture2D::CreateExternalTexture(System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean,System.Boolean,System.IntPtr)
-extern "C"  Texture2D_t3542995729 * Texture2D_CreateExternalTexture_m3402112250 (Il2CppObject * __this /* static, unused */, int32_t p0, int32_t p1, int32_t p2, bool p3, bool p4, IntPtr_t p5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Texture::set_filterMode(UnityEngine.FilterMode)
-extern "C"  void Texture_set_filterMode_m3838996656 (Texture_t2243626319 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Texture::set_wrapMode(UnityEngine.TextureWrapMode)
-extern "C"  void Texture_set_wrapMode_m333956747 (Texture_t2243626319 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Texture2D::UpdateExternalTexture(System.IntPtr)
-extern "C"  void Texture2D_UpdateExternalTexture_m1701322565 (Texture2D_t3542995729 * __this, IntPtr_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Material::SetTexture(System.String,UnityEngine.Texture)
-extern "C"  void Material_SetTexture_m141095205 (Material_t193706927 * __this, String_t* p0, Texture_t2243626319 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_one()
-extern "C"  Vector3_t2243707580  Vector3_get_one_m627547232 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Material::SetMatrix(System.String,UnityEngine.Matrix4x4)
-extern "C"  void Material_SetMatrix_m1387972957 (Material_t193706927 * __this, String_t* p0, Matrix4x4_t2933234003  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Material::SetFloat(System.String,System.Single)
-extern "C"  void Material_SetFloat_m1926275467 (Material_t193706927 * __this, String_t* p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Material::SetInt(System.String,System.Int32)
-extern "C"  void Material_SetInt_m522302436 (Material_t193706927 * __this, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::InitializeTextures(UnityEngine.XR.iOS.UnityARCamera)
-extern "C"  void UnityRemoteVideo_InitializeTextures_m574805820 (UnityRemoteVideo_t1017728068 * __this, UnityARCamera_t4198559457  ___camera0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Runtime.InteropServices.GCHandle System.Runtime.InteropServices.GCHandle::Alloc(System.Object)
-extern "C"  GCHandle_t3409268066  GCHandle_Alloc_m3171748614 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Runtime.InteropServices.GCHandle::Free()
-extern "C"  void GCHandle_Free_m1639542352 (GCHandle_t3409268066 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Runtime.InteropServices.GCHandle System.Runtime.InteropServices.GCHandle::Alloc(System.Object,System.Runtime.InteropServices.GCHandleType)
-extern "C"  GCHandle_t3409268066  GCHandle_Alloc_m1063472408 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.IntPtr System.Runtime.InteropServices.GCHandle::AddrOfPinnedObject()
-extern "C"  IntPtr_t GCHandle_AddrOfPinnedObject_m3034420542 (GCHandle_t3409268066 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::ByteArrayForFrame(System.Int32,System.Byte[],System.Byte[])
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_ByteArrayForFrame_m1688879309 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, ByteU5BU5D_t3397334013* ___array01, ByteU5BU5D_t3397334013* ___array12, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::SetCapturePixelData(System.Boolean,System.IntPtr,System.IntPtr)
-extern "C"  void UnityARSessionNativeInterface_SetCapturePixelData_m399020628 (UnityARSessionNativeInterface_t1130867170 * __this, bool ___enable0, IntPtr_t ___pYByteArray1, IntPtr_t ___pUVByteArray2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::YByteArrayForFrame(System.Int32)
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_YByteArrayForFrame_m615035654 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.IntPtr UnityEngine.XR.iOS.UnityRemoteVideo::PinByteArray(System.Runtime.InteropServices.GCHandle&,System.Byte[])
-extern "C"  IntPtr_t UnityRemoteVideo_PinByteArray_m3031464785 (UnityRemoteVideo_t1017728068 * __this, GCHandle_t3409268066 * ___handle0, ByteU5BU5D_t3397334013* ___array1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::UVByteArrayForFrame(System.Int32)
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_UVByteArrayForFrame_m4002130838 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Guid UnityEngine.XR.iOS.ConnectionMessageIds::get_screenCaptureYMsgId()
-extern "C"  Guid_t  ConnectionMessageIds_get_screenCaptureYMsgId_m1152839391 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Guid UnityEngine.XR.iOS.ConnectionMessageIds::get_screenCaptureUVMsgId()
-extern "C"  Guid_t  ConnectionMessageIds_get_screenCaptureUVMsgId_m1094748305 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void AllBlockData::.ctor()
+extern "C"  void AllBlockData__ctor_m3883475195 (AllBlockData_t171087180 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AllBlockData__ctor_m3883475195_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t824289147 * V_0 = NULL;
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2845362886, /*hidden argument*/NULL);
+		List_1_t824289147 * L_0 = (List_1_t824289147 *)il2cpp_codegen_object_new(List_1_t824289147_il2cpp_TypeInfo_var);
+		List_1__ctor_m4170528206(L_0, /*hidden argument*/List_1__ctor_m4170528206_MethodInfo_var);
+		V_0 = L_0;
+		return;
+	}
+}
+// System.Void AllBlockData::AllBlockDataAdd(BlockData)
+extern "C"  void AllBlockData_AllBlockDataAdd_m2842992583 (AllBlockData_t171087180 * __this, BlockData_t1455168015 * ___block0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AllBlockData_AllBlockDataAdd_m2842992583_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1522221286, /*hidden argument*/NULL);
+		List_1_t824289147 * L_0 = __this->get_allBlocksLocation_0();
+		BlockData_t1455168015 * L_1 = ___block0;
+		NullCheck(L_0);
+		List_1_Add_m3751720618(L_0, L_1, /*hidden argument*/List_1_Add_m3751720618_MethodInfo_var);
+		return;
+	}
+}
 // System.Void AR3DOFCameraManager::.ctor()
 extern "C"  void AR3DOFCameraManager__ctor_m4206627728 (AR3DOFCameraManager_t2152865733 * __this, const MethodInfo* method)
 {
@@ -3434,6 +3508,84 @@ extern "C"  void Ballz_Update_m893334799 (Ballz_t4160380291 * __this, const Meth
 
 IL_0035:
 	{
+		return;
+	}
+}
+// System.Void BlockData::.ctor()
+extern "C"  void BlockData__ctor_m699718940 (BlockData_t1455168015 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BlockData__ctor_m699718940_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2360283349, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void BlockData::.ctor(System.Single,System.Single,System.Single,System.String)
+extern "C"  void BlockData__ctor_m2459572829 (BlockData_t1455168015 * __this, float ___x0, float ___y1, float ___z2, String_t* ___newType3, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BlockData__ctor_m2459572829_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2602497250, /*hidden argument*/NULL);
+		float L_0 = ___x0;
+		__this->set_locx_0(L_0);
+		float L_1 = ___y1;
+		__this->set_locy_1(L_1);
+		float L_2 = ___z2;
+		__this->set_locz_2(L_2);
+		String_t* L_3 = ___newType3;
+		__this->set_type_3(L_3);
+		return;
+	}
+}
+// UnityEngine.Vector3 BlockData::BlockDataGet()
+extern "C"  Vector3_t2243707580  BlockData_BlockDataGet_m1766476579 (BlockData_t1455168015 * __this, const MethodInfo* method)
+{
+	{
+		float L_0 = __this->get_locx_0();
+		float L_1 = __this->get_locy_1();
+		float L_2 = __this->get_locz_2();
+		Vector3_t2243707580  L_3;
+		memset(&L_3, 0, sizeof(L_3));
+		Vector3__ctor_m2638739322(&L_3, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return L_3;
+	}
+}
+// System.String BlockData::BlockDataGetName()
+extern "C"  String_t* BlockData_BlockDataGetName_m3649610435 (BlockData_t1455168015 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_type_3();
+		return L_0;
+	}
+}
+// System.Void changeScene::.ctor()
+extern "C"  void changeScene__ctor_m2573961399 (changeScene_t2085063124 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void changeScene::changeScenes(System.String)
+extern "C"  void changeScene_changeScenes_m752673420 (changeScene_t2085063124 * __this, String_t* ___sceneName0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___sceneName0;
+		SceneManager_LoadScene_m1386820036(NULL /*static, unused*/, L_0, 0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -8774,6 +8926,456 @@ IL_00f3:
 	}
 
 IL_00fa:
+	{
+		return;
+	}
+}
+// System.Void SaveLoad::.ctor()
+extern "C"  void SaveLoad__ctor_m371728588 (SaveLoad_t296492329 * __this, const MethodInfo* method)
+{
+	{
+		Vector3_t2243707580  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector3__ctor_m2638739322(&L_0, (0.0f), (1.0f), (0.0f), /*hidden argument*/NULL);
+		__this->set_bringUp_6(L_0);
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SaveLoad::Awake()
+extern "C"  void SaveLoad_Awake_m1003036745 (SaveLoad_t296492329 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SaveLoad_Awake_m1003036745_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		SaveLoad_t296492329 * L_0 = ((SaveLoad_t296492329_StaticFields*)SaveLoad_t296492329_il2cpp_TypeInfo_var->static_fields)->get_control_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_2 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m2330762974(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		((SaveLoad_t296492329_StaticFields*)SaveLoad_t296492329_il2cpp_TypeInfo_var->static_fields)->set_control_2(__this);
+		goto IL_0041;
+	}
+
+IL_0026:
+	{
+		SaveLoad_t296492329 * L_3 = ((SaveLoad_t296492329_StaticFields*)SaveLoad_t296492329_il2cpp_TypeInfo_var->static_fields)->get_control_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_4 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_3, __this, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_0041;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_5 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+	}
+
+IL_0041:
+	{
+		return;
+	}
+}
+// System.Void SaveLoad::Start()
+extern "C"  void SaveLoad_Start_m1026186324 (SaveLoad_t296492329 * __this, const MethodInfo* method)
+{
+	{
+		return;
+	}
+}
+// System.Void SaveLoad::Save()
+extern "C"  void SaveLoad_Save_m3782038213 (SaveLoad_t296492329 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SaveLoad_Save_m3782038213_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	BinaryFormatter_t1866979105 * V_0 = NULL;
+	FileStream_t1695958676 * V_1 = NULL;
+	AllBlockData_t171087180 * V_2 = NULL;
+	List_1_t824289147 * V_3 = NULL;
+	GameObjectU5BU5D_t3057952154* V_4 = NULL;
+	GameObject_t1756533147 * V_5 = NULL;
+	GameObjectU5BU5D_t3057952154* V_6 = NULL;
+	int32_t V_7 = 0;
+	Vector3_t2243707580  V_8;
+	memset(&V_8, 0, sizeof(V_8));
+	Vector3_t2243707580  V_9;
+	memset(&V_9, 0, sizeof(V_9));
+	Vector3_t2243707580  V_10;
+	memset(&V_10, 0, sizeof(V_10));
+	{
+		BinaryFormatter_t1866979105 * L_0 = (BinaryFormatter_t1866979105 *)il2cpp_codegen_object_new(BinaryFormatter_t1866979105_il2cpp_TypeInfo_var);
+		BinaryFormatter__ctor_m4171832002(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		String_t* L_1 = Application_get_persistentDataPath_m3129298355(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = String_Concat_m2596409543(NULL /*static, unused*/, L_1, _stringLiteral1445039419, /*hidden argument*/NULL);
+		FileStream_t1695958676 * L_3 = File_Create_m1378973685(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		V_1 = L_3;
+		AllBlockData_t171087180 * L_4 = (AllBlockData_t171087180 *)il2cpp_codegen_object_new(AllBlockData_t171087180_il2cpp_TypeInfo_var);
+		AllBlockData__ctor_m3883475195(L_4, /*hidden argument*/NULL);
+		V_2 = L_4;
+		List_1_t824289147 * L_5 = (List_1_t824289147 *)il2cpp_codegen_object_new(List_1_t824289147_il2cpp_TypeInfo_var);
+		List_1__ctor_m4170528206(L_5, /*hidden argument*/List_1__ctor_m4170528206_MethodInfo_var);
+		V_3 = L_5;
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_6 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(GameObject_t1756533147_0_0_0_var), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		ObjectU5BU5D_t4217747464* L_7 = Object_FindObjectsOfType_m2121813744(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
+		V_4 = ((GameObjectU5BU5D_t3057952154*)IsInst(L_7, GameObjectU5BU5D_t3057952154_il2cpp_TypeInfo_var));
+		GameObjectU5BU5D_t3057952154* L_8 = V_4;
+		V_6 = L_8;
+		V_7 = 0;
+		goto IL_00ee;
+	}
+
+IL_0049:
+	{
+		GameObjectU5BU5D_t3057952154* L_9 = V_6;
+		int32_t L_10 = V_7;
+		NullCheck(L_9);
+		int32_t L_11 = L_10;
+		GameObject_t1756533147 * L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
+		V_5 = L_12;
+		GameObject_t1756533147 * L_13 = V_5;
+		NullCheck(L_13);
+		bool L_14 = GameObject_CompareTag_m2797152613(L_13, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_14)
+		{
+			goto IL_00e8;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_15 = V_5;
+		NullCheck(L_15);
+		Transform_t3275118058 * L_16 = GameObject_get_transform_m909382139(L_15, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		Vector3_t2243707580  L_17 = Transform_get_position_m1104419803(L_16, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_18 = L_17;
+		Il2CppObject * L_19 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_18);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_20 = String_Concat_m56707527(NULL /*static, unused*/, _stringLiteral2162825340, L_19, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_20, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_21 = V_5;
+		NullCheck(L_21);
+		String_t* L_22 = Object_get_name_m2079638459(L_21, /*hidden argument*/NULL);
+		String_t* L_23 = String_Concat_m2596409543(NULL /*static, unused*/, _stringLiteral508355589, L_22, /*hidden argument*/NULL);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_23, /*hidden argument*/NULL);
+		List_1_t824289147 * L_24 = V_3;
+		GameObject_t1756533147 * L_25 = V_5;
+		NullCheck(L_25);
+		Transform_t3275118058 * L_26 = GameObject_get_transform_m909382139(L_25, /*hidden argument*/NULL);
+		NullCheck(L_26);
+		Vector3_t2243707580  L_27 = Transform_get_position_m1104419803(L_26, /*hidden argument*/NULL);
+		V_8 = L_27;
+		float L_28 = (&V_8)->get_x_1();
+		GameObject_t1756533147 * L_29 = V_5;
+		NullCheck(L_29);
+		Transform_t3275118058 * L_30 = GameObject_get_transform_m909382139(L_29, /*hidden argument*/NULL);
+		NullCheck(L_30);
+		Vector3_t2243707580  L_31 = Transform_get_position_m1104419803(L_30, /*hidden argument*/NULL);
+		V_9 = L_31;
+		float L_32 = (&V_9)->get_y_2();
+		GameObject_t1756533147 * L_33 = V_5;
+		NullCheck(L_33);
+		Transform_t3275118058 * L_34 = GameObject_get_transform_m909382139(L_33, /*hidden argument*/NULL);
+		NullCheck(L_34);
+		Vector3_t2243707580  L_35 = Transform_get_position_m1104419803(L_34, /*hidden argument*/NULL);
+		V_10 = L_35;
+		float L_36 = (&V_10)->get_z_3();
+		GameObject_t1756533147 * L_37 = V_5;
+		NullCheck(L_37);
+		String_t* L_38 = Object_get_name_m2079638459(L_37, /*hidden argument*/NULL);
+		BlockData_t1455168015 * L_39 = (BlockData_t1455168015 *)il2cpp_codegen_object_new(BlockData_t1455168015_il2cpp_TypeInfo_var);
+		BlockData__ctor_m2459572829(L_39, L_28, L_32, L_36, L_38, /*hidden argument*/NULL);
+		NullCheck(L_24);
+		List_1_Add_m3751720618(L_24, L_39, /*hidden argument*/List_1_Add_m3751720618_MethodInfo_var);
+	}
+
+IL_00e8:
+	{
+		int32_t L_40 = V_7;
+		V_7 = ((int32_t)((int32_t)L_40+(int32_t)1));
+	}
+
+IL_00ee:
+	{
+		int32_t L_41 = V_7;
+		GameObjectU5BU5D_t3057952154* L_42 = V_6;
+		NullCheck(L_42);
+		if ((((int32_t)L_41) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_42)->max_length)))))))
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		AllBlockData_t171087180 * L_43 = V_2;
+		List_1_t824289147 * L_44 = V_3;
+		NullCheck(L_43);
+		L_43->set_allBlocksLocation_0(L_44);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3921309842, /*hidden argument*/NULL);
+		BinaryFormatter_t1866979105 * L_45 = V_0;
+		FileStream_t1695958676 * L_46 = V_1;
+		AllBlockData_t171087180 * L_47 = V_2;
+		NullCheck(L_45);
+		BinaryFormatter_Serialize_m433301673(L_45, L_46, L_47, /*hidden argument*/NULL);
+		FileStream_t1695958676 * L_48 = V_1;
+		NullCheck(L_48);
+		VirtActionInvoker0::Invoke(12 /* System.Void System.IO.Stream::Close() */, L_48);
+		return;
+	}
+}
+// System.Void SaveLoad::Load()
+extern "C"  void SaveLoad_Load_m1025530042 (SaveLoad_t296492329 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SaveLoad_Load_m1025530042_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	BinaryFormatter_t1866979105 * V_0 = NULL;
+	FileStream_t1695958676 * V_1 = NULL;
+	AllBlockData_t171087180 * V_2 = NULL;
+	List_1_t824289147 * V_3 = NULL;
+	List_1_t824289147 * V_4 = NULL;
+	BlockData_t1455168015 * V_5 = NULL;
+	Enumerator_t359018821  V_6;
+	memset(&V_6, 0, sizeof(V_6));
+	String_t* V_7 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		BinaryFormatter_t1866979105 * L_0 = (BinaryFormatter_t1866979105 *)il2cpp_codegen_object_new(BinaryFormatter_t1866979105_il2cpp_TypeInfo_var);
+		BinaryFormatter__ctor_m4171832002(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		String_t* L_1 = Application_get_persistentDataPath_m3129298355(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = String_Concat_m2596409543(NULL /*static, unused*/, L_1, _stringLiteral1445039419, /*hidden argument*/NULL);
+		FileStream_t1695958676 * L_3 = File_Open_m1543461971(NULL /*static, unused*/, L_2, 3, /*hidden argument*/NULL);
+		V_1 = L_3;
+		BinaryFormatter_t1866979105 * L_4 = V_0;
+		FileStream_t1695958676 * L_5 = V_1;
+		NullCheck(L_4);
+		Il2CppObject * L_6 = BinaryFormatter_Deserialize_m2771853471(L_4, L_5, /*hidden argument*/NULL);
+		V_2 = ((AllBlockData_t171087180 *)CastclassClass(L_6, AllBlockData_t171087180_il2cpp_TypeInfo_var));
+		FileStream_t1695958676 * L_7 = V_1;
+		NullCheck(L_7);
+		VirtActionInvoker0::Invoke(12 /* System.Void System.IO.Stream::Close() */, L_7);
+		List_1_t824289147 * L_8 = (List_1_t824289147 *)il2cpp_codegen_object_new(List_1_t824289147_il2cpp_TypeInfo_var);
+		List_1__ctor_m4170528206(L_8, /*hidden argument*/List_1__ctor_m4170528206_MethodInfo_var);
+		V_3 = L_8;
+		List_1_t824289147 * L_9 = (List_1_t824289147 *)il2cpp_codegen_object_new(List_1_t824289147_il2cpp_TypeInfo_var);
+		List_1__ctor_m4170528206(L_9, /*hidden argument*/List_1__ctor_m4170528206_MethodInfo_var);
+		V_4 = L_9;
+		AllBlockData_t171087180 * L_10 = V_2;
+		NullCheck(L_10);
+		List_1_t824289147 * L_11 = L_10->get_allBlocksLocation_0();
+		V_3 = L_11;
+		List_1_t824289147 * L_12 = V_3;
+		NullCheck(L_12);
+		Enumerator_t359018821  L_13 = List_1_GetEnumerator_m29010857(L_12, /*hidden argument*/List_1_GetEnumerator_m29010857_MethodInfo_var);
+		V_6 = L_13;
+	}
+
+IL_004b:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_014b;
+		}
+
+IL_0050:
+		{
+			BlockData_t1455168015 * L_14 = Enumerator_get_Current_m3142390213((&V_6), /*hidden argument*/Enumerator_get_Current_m3142390213_MethodInfo_var);
+			V_5 = L_14;
+			BlockData_t1455168015 * L_15 = V_5;
+			NullCheck(L_15);
+			String_t* L_16 = BlockData_BlockDataGetName_m3649610435(L_15, /*hidden argument*/NULL);
+			V_7 = L_16;
+			String_t* L_17 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_18 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_17, _stringLiteral2954294047, /*hidden argument*/NULL);
+			if (L_18)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_0073:
+		{
+			String_t* L_19 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_20 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_19, _stringLiteral4179080109, /*hidden argument*/NULL);
+			if (L_20)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_0084:
+		{
+			String_t* L_21 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_22 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_21, _stringLiteral800183144, /*hidden argument*/NULL);
+			if (L_22)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_0095:
+		{
+			String_t* L_23 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_24 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_23, _stringLiteral3848937323, /*hidden argument*/NULL);
+			if (L_24)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_00a6:
+		{
+			String_t* L_25 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_26 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_25, _stringLiteral2695981156, /*hidden argument*/NULL);
+			if (L_26)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_00b7:
+		{
+			String_t* L_27 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_28 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_27, _stringLiteral724763573, /*hidden argument*/NULL);
+			if (L_28)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_00c8:
+		{
+			String_t* L_29 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_30 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_29, _stringLiteral2014322759, /*hidden argument*/NULL);
+			if (L_30)
+			{
+				goto IL_00ea;
+			}
+		}
+
+IL_00d9:
+		{
+			String_t* L_31 = V_7;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_32 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_31, _stringLiteral3635623585, /*hidden argument*/NULL);
+			if (!L_32)
+			{
+				goto IL_014b;
+			}
+		}
+
+IL_00ea:
+		{
+			ObjectU5BU5D_t3614634134* L_33 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)4));
+			NullCheck(L_33);
+			ArrayElementTypeCheck (L_33, _stringLiteral3460976712);
+			(L_33)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)_stringLiteral3460976712);
+			ObjectU5BU5D_t3614634134* L_34 = L_33;
+			BlockData_t1455168015 * L_35 = V_5;
+			NullCheck(L_35);
+			String_t* L_36 = BlockData_BlockDataGetName_m3649610435(L_35, /*hidden argument*/NULL);
+			NullCheck(L_34);
+			ArrayElementTypeCheck (L_34, L_36);
+			(L_34)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_36);
+			ObjectU5BU5D_t3614634134* L_37 = L_34;
+			NullCheck(L_37);
+			ArrayElementTypeCheck (L_37, _stringLiteral4166804854);
+			(L_37)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)_stringLiteral4166804854);
+			ObjectU5BU5D_t3614634134* L_38 = L_37;
+			BlockData_t1455168015 * L_39 = V_5;
+			NullCheck(L_39);
+			Vector3_t2243707580  L_40 = BlockData_BlockDataGet_m1766476579(L_39, /*hidden argument*/NULL);
+			Vector3_t2243707580  L_41 = L_40;
+			Il2CppObject * L_42 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_41);
+			NullCheck(L_38);
+			ArrayElementTypeCheck (L_38, L_42);
+			(L_38)->SetAt(static_cast<il2cpp_array_size_t>(3), (Il2CppObject *)L_42);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_43 = String_Concat_m3881798623(NULL /*static, unused*/, L_38, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+			Debug_Log_m920475918(NULL /*static, unused*/, L_43, /*hidden argument*/NULL);
+			BlockData_t1455168015 * L_44 = V_5;
+			NullCheck(L_44);
+			String_t* L_45 = BlockData_BlockDataGetName_m3649610435(L_44, /*hidden argument*/NULL);
+			Object_t1021602117 * L_46 = Resources_Load_m2041782325(NULL /*static, unused*/, L_45, /*hidden argument*/NULL);
+			BlockData_t1455168015 * L_47 = V_5;
+			NullCheck(L_47);
+			Vector3_t2243707580  L_48 = BlockData_BlockDataGet_m1766476579(L_47, /*hidden argument*/NULL);
+			Vector3_t2243707580  L_49 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_48, (100.0f), /*hidden argument*/NULL);
+			Quaternion_t4030073918  L_50 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+			Object_Instantiate_m938141395(NULL /*static, unused*/, L_46, L_49, L_50, /*hidden argument*/NULL);
+		}
+
+IL_014b:
+		{
+			bool L_51 = Enumerator_MoveNext_m2720478717((&V_6), /*hidden argument*/Enumerator_MoveNext_m2720478717_MethodInfo_var);
+			if (L_51)
+			{
+				goto IL_0050;
+			}
+		}
+
+IL_0157:
+		{
+			IL2CPP_LEAVE(0x16A, FINALLY_015c);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+		goto FINALLY_015c;
+	}
+
+FINALLY_015c:
+	{ // begin finally (depth: 1)
+		Enumerator_Dispose_m2082726351((&V_6), /*hidden argument*/Enumerator_Dispose_m2082726351_MethodInfo_var);
+		IL2CPP_END_FINALLY(348)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(348)
+	{
+		IL2CPP_JUMP_TBL(0x16A, IL_016a)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+	}
+
+IL_016a:
 	{
 		return;
 	}
@@ -17697,695 +18299,6 @@ extern "C"  UnityARUserAnchorData_t2645079618  UnityARUserAnchorData_UnityARUser
 		L_16->set_column3_3(L_17);
 		UnityARUserAnchorData_t2645079618  L_18 = V_1;
 		return L_18;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARUtility::.ctor()
-extern "C"  void UnityARUtility__ctor_m2045974871 (UnityARUtility_t3608388148 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARUtility::InitializePlanePrefab(UnityEngine.GameObject)
-extern "C"  void UnityARUtility_InitializePlanePrefab_m991798235 (Il2CppObject * __this /* static, unused */, GameObject_t1756533147 * ___go0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARUtility_InitializePlanePrefab_m991798235_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		GameObject_t1756533147 * L_0 = ___go0;
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARUtility_t3608388148_il2cpp_TypeInfo_var);
-		((UnityARUtility_t3608388148_StaticFields*)UnityARUtility_t3608388148_il2cpp_TypeInfo_var->static_fields)->set_planePrefab_2(L_0);
-		return;
-	}
-}
-// UnityEngine.GameObject UnityEngine.XR.iOS.UnityARUtility::CreatePlaneInScene(UnityEngine.XR.iOS.ARPlaneAnchor)
-extern "C"  GameObject_t1756533147 * UnityARUtility_CreatePlaneInScene_m25502715 (Il2CppObject * __this /* static, unused */, ARPlaneAnchor_t1439520888  ___arPlaneAnchor0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARUtility_CreatePlaneInScene_m25502715_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	GameObject_t1756533147 * V_0 = NULL;
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARUtility_t3608388148_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_0 = ((UnityARUtility_t3608388148_StaticFields*)UnityARUtility_t3608388148_il2cpp_TypeInfo_var->static_fields)->get_planePrefab_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0020;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARUtility_t3608388148_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_2 = ((UnityARUtility_t3608388148_StaticFields*)UnityARUtility_t3608388148_il2cpp_TypeInfo_var->static_fields)->get_planePrefab_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_3 = Object_Instantiate_TisGameObject_t1756533147_m3664764861(NULL /*static, unused*/, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var);
-		V_0 = L_3;
-		goto IL_0026;
-	}
-
-IL_0020:
-	{
-		GameObject_t1756533147 * L_4 = (GameObject_t1756533147 *)il2cpp_codegen_object_new(GameObject_t1756533147_il2cpp_TypeInfo_var);
-		GameObject__ctor_m498247354(L_4, /*hidden argument*/NULL);
-		V_0 = L_4;
-	}
-
-IL_0026:
-	{
-		GameObject_t1756533147 * L_5 = V_0;
-		String_t* L_6 = (&___arPlaneAnchor0)->get_identifier_0();
-		NullCheck(L_5);
-		Object_set_name_m4157836998(L_5, L_6, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_7 = V_0;
-		ARPlaneAnchor_t1439520888  L_8 = ___arPlaneAnchor0;
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARUtility_t3608388148_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_9 = UnityARUtility_UpdatePlaneWithAnchorTransform_m3977317096(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
-		return L_9;
-	}
-}
-// UnityEngine.GameObject UnityEngine.XR.iOS.UnityARUtility::UpdatePlaneWithAnchorTransform(UnityEngine.GameObject,UnityEngine.XR.iOS.ARPlaneAnchor)
-extern "C"  GameObject_t1756533147 * UnityARUtility_UpdatePlaneWithAnchorTransform_m3977317096 (Il2CppObject * __this /* static, unused */, GameObject_t1756533147 * ___plane0, ARPlaneAnchor_t1439520888  ___arPlaneAnchor1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARUtility_UpdatePlaneWithAnchorTransform_m3977317096_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	MeshFilter_t3026937449 * V_0 = NULL;
-	{
-		GameObject_t1756533147 * L_0 = ___plane0;
-		NullCheck(L_0);
-		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
-		Matrix4x4_t2933234003  L_2 = (&___arPlaneAnchor1)->get_transform_1();
-		Vector3_t2243707580  L_3 = UnityARMatrixOps_GetPosition_m110321593(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		Transform_set_position_m2469242620(L_1, L_3, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_4 = ___plane0;
-		NullCheck(L_4);
-		Transform_t3275118058 * L_5 = GameObject_get_transform_m909382139(L_4, /*hidden argument*/NULL);
-		Matrix4x4_t2933234003  L_6 = (&___arPlaneAnchor1)->get_transform_1();
-		Quaternion_t4030073918  L_7 = UnityARMatrixOps_GetRotation_m3161473972(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
-		NullCheck(L_5);
-		Transform_set_rotation_m3411284563(L_5, L_7, /*hidden argument*/NULL);
-		GameObject_t1756533147 * L_8 = ___plane0;
-		NullCheck(L_8);
-		MeshFilter_t3026937449 * L_9 = GameObject_GetComponentInChildren_TisMeshFilter_t3026937449_m2178217683(L_8, /*hidden argument*/GameObject_GetComponentInChildren_TisMeshFilter_t3026937449_m2178217683_MethodInfo_var);
-		V_0 = L_9;
-		MeshFilter_t3026937449 * L_10 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		bool L_11 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_10, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_11)
-		{
-			goto IL_00c6;
-		}
-	}
-	{
-		MeshFilter_t3026937449 * L_12 = V_0;
-		NullCheck(L_12);
-		GameObject_t1756533147 * L_13 = Component_get_gameObject_m3105766835(L_12, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Transform_t3275118058 * L_14 = GameObject_get_transform_m909382139(L_13, /*hidden argument*/NULL);
-		Vector3_t2243707580 * L_15 = (&___arPlaneAnchor1)->get_address_of_extent_4();
-		float L_16 = L_15->get_x_1();
-		Vector3_t2243707580 * L_17 = (&___arPlaneAnchor1)->get_address_of_extent_4();
-		float L_18 = L_17->get_y_2();
-		Vector3_t2243707580 * L_19 = (&___arPlaneAnchor1)->get_address_of_extent_4();
-		float L_20 = L_19->get_z_3();
-		Vector3_t2243707580  L_21;
-		memset(&L_21, 0, sizeof(L_21));
-		Vector3__ctor_m2638739322(&L_21, ((float)((float)L_16*(float)(0.1f))), ((float)((float)L_18*(float)(0.1f))), ((float)((float)L_20*(float)(0.1f))), /*hidden argument*/NULL);
-		NullCheck(L_14);
-		Transform_set_localScale_m2325460848(L_14, L_21, /*hidden argument*/NULL);
-		MeshFilter_t3026937449 * L_22 = V_0;
-		NullCheck(L_22);
-		GameObject_t1756533147 * L_23 = Component_get_gameObject_m3105766835(L_22, /*hidden argument*/NULL);
-		NullCheck(L_23);
-		Transform_t3275118058 * L_24 = GameObject_get_transform_m909382139(L_23, /*hidden argument*/NULL);
-		Vector3_t2243707580 * L_25 = (&___arPlaneAnchor1)->get_address_of_center_3();
-		float L_26 = L_25->get_x_1();
-		Vector3_t2243707580 * L_27 = (&___arPlaneAnchor1)->get_address_of_center_3();
-		float L_28 = L_27->get_y_2();
-		Vector3_t2243707580 * L_29 = (&___arPlaneAnchor1)->get_address_of_center_3();
-		float L_30 = L_29->get_z_3();
-		Vector3_t2243707580  L_31;
-		memset(&L_31, 0, sizeof(L_31));
-		Vector3__ctor_m2638739322(&L_31, L_26, L_28, ((-L_30)), /*hidden argument*/NULL);
-		NullCheck(L_24);
-		Transform_set_localPosition_m1026930133(L_24, L_31, /*hidden argument*/NULL);
-	}
-
-IL_00c6:
-	{
-		GameObject_t1756533147 * L_32 = ___plane0;
-		return L_32;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARUtility::.cctor()
-extern "C"  void UnityARUtility__cctor_m40081288 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::.ctor()
-extern "C"  void UnityARVideo__ctor_m4011238024 (UnityARVideo_t2351297253 * __this, const MethodInfo* method)
-{
-	{
-		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::Start()
-extern "C"  void UnityARVideo_Start_m3167459156 (UnityARVideo_t2351297253 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARVideo_Start_m3167459156_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		__this->set_fTexCoordScale_7((1.0f));
-		__this->set_screenOrientation_8(3);
-		IntPtr_t L_0;
-		L_0.set_m_value_0((void*)(void*)UnityARVideo_UpdateFrame_m1963979139_MethodInfo_var);
-		ARFrameUpdate_t496507918 * L_1 = (ARFrameUpdate_t496507918 *)il2cpp_codegen_object_new(ARFrameUpdate_t496507918_il2cpp_TypeInfo_var);
-		ARFrameUpdate__ctor_m3762766849(L_1, __this, L_0, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_add_ARFrameUpdatedEvent_m1736114240(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		__this->set_bCommandBufferInitialized_6((bool)0);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::UpdateFrame(UnityEngine.XR.iOS.UnityARCamera)
-extern "C"  void UnityARVideo_UpdateFrame_m1963979139 (UnityARVideo_t2351297253 * __this, UnityARCamera_t4198559457  ___cam0, const MethodInfo* method)
-{
-	{
-		UnityVideoParams_t2644681676 * L_0 = (&___cam0)->get_address_of_videoParams_4();
-		float L_1 = L_0->get_texCoordScale_3();
-		__this->set_fTexCoordScale_7(L_1);
-		UnityVideoParams_t2644681676 * L_2 = (&___cam0)->get_address_of_videoParams_4();
-		int32_t L_3 = L_2->get_screenOrientation_2();
-		__this->set_screenOrientation_8(L_3);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::InitializeCommandBuffer()
-extern "C"  void UnityARVideo_InitializeCommandBuffer_m2276285637 (UnityARVideo_t2351297253 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARVideo_InitializeCommandBuffer_m2276285637_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		CommandBuffer_t1204166949 * L_0 = (CommandBuffer_t1204166949 *)il2cpp_codegen_object_new(CommandBuffer_t1204166949_il2cpp_TypeInfo_var);
-		CommandBuffer__ctor_m3893953450(L_0, /*hidden argument*/NULL);
-		__this->set_m_VideoCommandBuffer_3(L_0);
-		CommandBuffer_t1204166949 * L_1 = __this->get_m_VideoCommandBuffer_3();
-		RenderTargetIdentifier_t772440638  L_2 = RenderTargetIdentifier_op_Implicit_m1621446097(NULL /*static, unused*/, 1, /*hidden argument*/NULL);
-		Material_t193706927 * L_3 = __this->get_m_ClearMaterial_2();
-		NullCheck(L_1);
-		CommandBuffer_Blit_m4282817560(L_1, (Texture_t2243626319 *)NULL, L_2, L_3, /*hidden argument*/NULL);
-		Camera_t189460977 * L_4 = Component_GetComponent_TisCamera_t189460977_m3276577584(__this, /*hidden argument*/Component_GetComponent_TisCamera_t189460977_m3276577584_MethodInfo_var);
-		CommandBuffer_t1204166949 * L_5 = __this->get_m_VideoCommandBuffer_3();
-		NullCheck(L_4);
-		Camera_AddCommandBuffer_m2569587168(L_4, ((int32_t)10), L_5, /*hidden argument*/NULL);
-		__this->set_bCommandBufferInitialized_6((bool)1);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::OnDestroy()
-extern "C"  void UnityARVideo_OnDestroy_m1187748541 (UnityARVideo_t2351297253 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARVideo_OnDestroy_m1187748541_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		Camera_t189460977 * L_0 = Component_GetComponent_TisCamera_t189460977_m3276577584(__this, /*hidden argument*/Component_GetComponent_TisCamera_t189460977_m3276577584_MethodInfo_var);
-		CommandBuffer_t1204166949 * L_1 = __this->get_m_VideoCommandBuffer_3();
-		NullCheck(L_0);
-		Camera_RemoveCommandBuffer_m2103408695(L_0, ((int32_t)10), L_1, /*hidden argument*/NULL);
-		IntPtr_t L_2;
-		L_2.set_m_value_0((void*)(void*)UnityARVideo_UpdateFrame_m1963979139_MethodInfo_var);
-		ARFrameUpdate_t496507918 * L_3 = (ARFrameUpdate_t496507918 *)il2cpp_codegen_object_new(ARFrameUpdate_t496507918_il2cpp_TypeInfo_var);
-		ARFrameUpdate__ctor_m3762766849(L_3, __this, L_2, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_remove_ARFrameUpdatedEvent_m109438993(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
-		__this->set_bCommandBufferInitialized_6((bool)0);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARVideo::OnPreRender()
-extern "C"  void UnityARVideo_OnPreRender_m598299706 (UnityARVideo_t2351297253 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARVideo_OnPreRender_m598299706_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	ARTextureHandles_t3764914833  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Resolution_t3693662728  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	int32_t V_2 = 0;
-	float V_3 = 0.0f;
-	Matrix4x4_t2933234003  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_t1130867170 * L_0 = UnityARSessionNativeInterface_GetARSessionNativeInterface_m2987304195(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_0);
-		ARTextureHandles_t3764914833  L_1 = UnityARSessionNativeInterface_GetARVideoTextureHandles_m299127149(L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		IntPtr_t L_2 = (&V_0)->get_textureY_0();
-		IntPtr_t L_3 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		bool L_4 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
-		if (L_4)
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		IntPtr_t L_5 = (&V_0)->get_textureCbCr_1();
-		IntPtr_t L_6 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		bool L_7 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_5, L_6, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0038;
-		}
-	}
-
-IL_0037:
-	{
-		return;
-	}
-
-IL_0038:
-	{
-		bool L_8 = __this->get_bCommandBufferInitialized_6();
-		if (L_8)
-		{
-			goto IL_0049;
-		}
-	}
-	{
-		UnityARVideo_InitializeCommandBuffer_m2276285637(__this, /*hidden argument*/NULL);
-	}
-
-IL_0049:
-	{
-		Resolution_t3693662728  L_9 = Screen_get_currentResolution_m2361090437(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_1 = L_9;
-		int32_t L_10 = Resolution_get_width_m1438273472((&V_1), /*hidden argument*/NULL);
-		int32_t L_11 = Resolution_get_height_m882683003((&V_1), /*hidden argument*/NULL);
-		IntPtr_t L_12 = (&V_0)->get_textureY_0();
-		Texture2D_t3542995729 * L_13 = Texture2D_CreateExternalTexture_m3402112250(NULL /*static, unused*/, L_10, L_11, ((int32_t)63), (bool)0, (bool)0, L_12, /*hidden argument*/NULL);
-		__this->set__videoTextureY_4(L_13);
-		Texture2D_t3542995729 * L_14 = __this->get__videoTextureY_4();
-		NullCheck(L_14);
-		Texture_set_filterMode_m3838996656(L_14, 1, /*hidden argument*/NULL);
-		Texture2D_t3542995729 * L_15 = __this->get__videoTextureY_4();
-		NullCheck(L_15);
-		Texture_set_wrapMode_m333956747(L_15, 0, /*hidden argument*/NULL);
-		Texture2D_t3542995729 * L_16 = __this->get__videoTextureY_4();
-		IntPtr_t L_17 = (&V_0)->get_textureY_0();
-		NullCheck(L_16);
-		Texture2D_UpdateExternalTexture_m1701322565(L_16, L_17, /*hidden argument*/NULL);
-		int32_t L_18 = Resolution_get_width_m1438273472((&V_1), /*hidden argument*/NULL);
-		int32_t L_19 = Resolution_get_height_m882683003((&V_1), /*hidden argument*/NULL);
-		IntPtr_t L_20 = (&V_0)->get_textureCbCr_1();
-		Texture2D_t3542995729 * L_21 = Texture2D_CreateExternalTexture_m3402112250(NULL /*static, unused*/, L_18, L_19, ((int32_t)62), (bool)0, (bool)0, L_20, /*hidden argument*/NULL);
-		__this->set__videoTextureCbCr_5(L_21);
-		Texture2D_t3542995729 * L_22 = __this->get__videoTextureCbCr_5();
-		NullCheck(L_22);
-		Texture_set_filterMode_m3838996656(L_22, 1, /*hidden argument*/NULL);
-		Texture2D_t3542995729 * L_23 = __this->get__videoTextureCbCr_5();
-		NullCheck(L_23);
-		Texture_set_wrapMode_m333956747(L_23, 0, /*hidden argument*/NULL);
-		Texture2D_t3542995729 * L_24 = __this->get__videoTextureCbCr_5();
-		IntPtr_t L_25 = (&V_0)->get_textureCbCr_1();
-		NullCheck(L_24);
-		Texture2D_UpdateExternalTexture_m1701322565(L_24, L_25, /*hidden argument*/NULL);
-		Material_t193706927 * L_26 = __this->get_m_ClearMaterial_2();
-		Texture2D_t3542995729 * L_27 = __this->get__videoTextureY_4();
-		NullCheck(L_26);
-		Material_SetTexture_m141095205(L_26, _stringLiteral1152424733, L_27, /*hidden argument*/NULL);
-		Material_t193706927 * L_28 = __this->get_m_ClearMaterial_2();
-		Texture2D_t3542995729 * L_29 = __this->get__videoTextureCbCr_5();
-		NullCheck(L_28);
-		Material_SetTexture_m141095205(L_28, _stringLiteral2391281062, L_29, /*hidden argument*/NULL);
-		V_2 = 0;
-		V_3 = (0.0f);
-		int32_t L_30 = __this->get_screenOrientation_8();
-		if ((!(((uint32_t)L_30) == ((uint32_t)1))))
-		{
-			goto IL_0138;
-		}
-	}
-	{
-		V_3 = (-90.0f);
-		V_2 = 1;
-		goto IL_0163;
-	}
-
-IL_0138:
-	{
-		int32_t L_31 = __this->get_screenOrientation_8();
-		if ((!(((uint32_t)L_31) == ((uint32_t)2))))
-		{
-			goto IL_0151;
-		}
-	}
-	{
-		V_3 = (90.0f);
-		V_2 = 1;
-		goto IL_0163;
-	}
-
-IL_0151:
-	{
-		int32_t L_32 = __this->get_screenOrientation_8();
-		if ((!(((uint32_t)L_32) == ((uint32_t)4))))
-		{
-			goto IL_0163;
-		}
-	}
-	{
-		V_3 = (-180.0f);
-	}
-
-IL_0163:
-	{
-		Vector3_t2243707580  L_33 = Vector3_get_zero_m1527993324(NULL /*static, unused*/, /*hidden argument*/NULL);
-		float L_34 = V_3;
-		Quaternion_t4030073918  L_35 = Quaternion_Euler_m2887458175(NULL /*static, unused*/, (0.0f), (0.0f), L_34, /*hidden argument*/NULL);
-		Vector3_t2243707580  L_36 = Vector3_get_one_m627547232(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Matrix4x4_t2933234003  L_37 = Matrix4x4_TRS_m1913765359(NULL /*static, unused*/, L_33, L_35, L_36, /*hidden argument*/NULL);
-		V_4 = L_37;
-		Material_t193706927 * L_38 = __this->get_m_ClearMaterial_2();
-		Matrix4x4_t2933234003  L_39 = V_4;
-		NullCheck(L_38);
-		Material_SetMatrix_m1387972957(L_38, _stringLiteral2946740916, L_39, /*hidden argument*/NULL);
-		Material_t193706927 * L_40 = __this->get_m_ClearMaterial_2();
-		float L_41 = __this->get_fTexCoordScale_7();
-		NullCheck(L_40);
-		Material_SetFloat_m1926275467(L_40, _stringLiteral1387439463, L_41, /*hidden argument*/NULL);
-		Material_t193706927 * L_42 = __this->get_m_ClearMaterial_2();
-		int32_t L_43 = V_2;
-		NullCheck(L_42);
-		Material_SetInt_m522302436(L_42, _stringLiteral2454363760, L_43, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::.ctor()
-extern "C"  void UnityRemoteVideo__ctor_m1717728617 (UnityRemoteVideo_t1017728068 * __this, const MethodInfo* method)
-{
-	{
-		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::Start()
-extern "C"  void UnityRemoteVideo_Start_m3985553417 (UnityRemoteVideo_t1017728068 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityRemoteVideo_Start_m3985553417_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_t1130867170 * L_0 = UnityARSessionNativeInterface_GetARSessionNativeInterface_m2987304195(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_m_Session_3(L_0);
-		IntPtr_t L_1;
-		L_1.set_m_value_0((void*)(void*)UnityRemoteVideo_UpdateCamera_m1788867220_MethodInfo_var);
-		ARFrameUpdate_t496507918 * L_2 = (ARFrameUpdate_t496507918 *)il2cpp_codegen_object_new(ARFrameUpdate_t496507918_il2cpp_TypeInfo_var);
-		ARFrameUpdate__ctor_m3762766849(L_2, __this, L_1, /*hidden argument*/NULL);
-		UnityARSessionNativeInterface_add_ARFrameUpdatedEvent_m1736114240(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
-		__this->set_currentFrameIndex_5(0);
-		__this->set_bTexturesInitialized_4((bool)0);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::UpdateCamera(UnityEngine.XR.iOS.UnityARCamera)
-extern "C"  void UnityRemoteVideo_UpdateCamera_m1788867220 (UnityRemoteVideo_t1017728068 * __this, UnityARCamera_t4198559457  ___camera0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityRemoteVideo_UpdateCamera_m1788867220_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		bool L_0 = __this->get_bTexturesInitialized_4();
-		if (L_0)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		UnityARCamera_t4198559457  L_1 = ___camera0;
-		UnityRemoteVideo_InitializeTextures_m574805820(__this, L_1, /*hidden argument*/NULL);
-	}
-
-IL_0012:
-	{
-		IntPtr_t L_2;
-		L_2.set_m_value_0((void*)(void*)UnityRemoteVideo_UpdateCamera_m1788867220_MethodInfo_var);
-		ARFrameUpdate_t496507918 * L_3 = (ARFrameUpdate_t496507918 *)il2cpp_codegen_object_new(ARFrameUpdate_t496507918_il2cpp_TypeInfo_var);
-		ARFrameUpdate__ctor_m3762766849(L_3, __this, L_2, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_remove_ARFrameUpdatedEvent_m109438993(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::InitializeTextures(UnityEngine.XR.iOS.UnityARCamera)
-extern "C"  void UnityRemoteVideo_InitializeTextures_m574805820 (UnityRemoteVideo_t1017728068 * __this, UnityARCamera_t4198559457  ___camera0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityRemoteVideo_InitializeTextures_m574805820_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	{
-		UnityVideoParams_t2644681676 * L_0 = (&___camera0)->get_address_of_videoParams_4();
-		int32_t L_1 = L_0->get_yWidth_0();
-		UnityVideoParams_t2644681676 * L_2 = (&___camera0)->get_address_of_videoParams_4();
-		int32_t L_3 = L_2->get_yHeight_1();
-		V_0 = ((int32_t)((int32_t)L_1*(int32_t)L_3));
-		UnityVideoParams_t2644681676 * L_4 = (&___camera0)->get_address_of_videoParams_4();
-		int32_t L_5 = L_4->get_yWidth_0();
-		UnityVideoParams_t2644681676 * L_6 = (&___camera0)->get_address_of_videoParams_4();
-		int32_t L_7 = L_6->get_yHeight_1();
-		V_1 = ((int32_t)((int32_t)((int32_t)((int32_t)L_5*(int32_t)L_7))/(int32_t)2));
-		int32_t L_8 = V_0;
-		__this->set_m_textureYBytes_6(((ByteU5BU5D_t3397334013*)SZArrayNew(ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var, (uint32_t)L_8)));
-		int32_t L_9 = V_1;
-		__this->set_m_textureUVBytes_7(((ByteU5BU5D_t3397334013*)SZArrayNew(ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var, (uint32_t)L_9)));
-		int32_t L_10 = V_0;
-		__this->set_m_textureYBytes2_8(((ByteU5BU5D_t3397334013*)SZArrayNew(ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var, (uint32_t)L_10)));
-		int32_t L_11 = V_1;
-		__this->set_m_textureUVBytes2_9(((ByteU5BU5D_t3397334013*)SZArrayNew(ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var, (uint32_t)L_11)));
-		ByteU5BU5D_t3397334013* L_12 = __this->get_m_textureYBytes_6();
-		GCHandle_t3409268066  L_13 = GCHandle_Alloc_m3171748614(NULL /*static, unused*/, (Il2CppObject *)(Il2CppObject *)L_12, /*hidden argument*/NULL);
-		__this->set_m_pinnedYArray_10(L_13);
-		ByteU5BU5D_t3397334013* L_14 = __this->get_m_textureUVBytes_7();
-		GCHandle_t3409268066  L_15 = GCHandle_Alloc_m3171748614(NULL /*static, unused*/, (Il2CppObject *)(Il2CppObject *)L_14, /*hidden argument*/NULL);
-		__this->set_m_pinnedUVArray_11(L_15);
-		__this->set_bTexturesInitialized_4((bool)1);
-		return;
-	}
-}
-// System.IntPtr UnityEngine.XR.iOS.UnityRemoteVideo::PinByteArray(System.Runtime.InteropServices.GCHandle&,System.Byte[])
-extern "C"  IntPtr_t UnityRemoteVideo_PinByteArray_m3031464785 (UnityRemoteVideo_t1017728068 * __this, GCHandle_t3409268066 * ___handle0, ByteU5BU5D_t3397334013* ___array1, const MethodInfo* method)
-{
-	{
-		GCHandle_t3409268066 * L_0 = ___handle0;
-		GCHandle_Free_m1639542352(L_0, /*hidden argument*/NULL);
-		GCHandle_t3409268066 * L_1 = ___handle0;
-		ByteU5BU5D_t3397334013* L_2 = ___array1;
-		GCHandle_t3409268066  L_3 = GCHandle_Alloc_m1063472408(NULL /*static, unused*/, (Il2CppObject *)(Il2CppObject *)L_2, 3, /*hidden argument*/NULL);
-		(*(GCHandle_t3409268066 *)L_1) = L_3;
-		GCHandle_t3409268066 * L_4 = ___handle0;
-		IntPtr_t L_5 = GCHandle_AddrOfPinnedObject_m3034420542(L_4, /*hidden argument*/NULL);
-		return L_5;
-	}
-}
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::ByteArrayForFrame(System.Int32,System.Byte[],System.Byte[])
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_ByteArrayForFrame_m1688879309 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, ByteU5BU5D_t3397334013* ___array01, ByteU5BU5D_t3397334013* ___array12, const MethodInfo* method)
-{
-	ByteU5BU5D_t3397334013* G_B3_0 = NULL;
-	{
-		int32_t L_0 = ___frame0;
-		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
-		{
-			goto IL_000d;
-		}
-	}
-	{
-		ByteU5BU5D_t3397334013* L_1 = ___array12;
-		G_B3_0 = L_1;
-		goto IL_000e;
-	}
-
-IL_000d:
-	{
-		ByteU5BU5D_t3397334013* L_2 = ___array01;
-		G_B3_0 = L_2;
-	}
-
-IL_000e:
-	{
-		return G_B3_0;
-	}
-}
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::YByteArrayForFrame(System.Int32)
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_YByteArrayForFrame_m615035654 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, const MethodInfo* method)
-{
-	{
-		int32_t L_0 = ___frame0;
-		ByteU5BU5D_t3397334013* L_1 = __this->get_m_textureYBytes_6();
-		ByteU5BU5D_t3397334013* L_2 = __this->get_m_textureYBytes2_8();
-		ByteU5BU5D_t3397334013* L_3 = UnityRemoteVideo_ByteArrayForFrame_m1688879309(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return L_3;
-	}
-}
-// System.Byte[] UnityEngine.XR.iOS.UnityRemoteVideo::UVByteArrayForFrame(System.Int32)
-extern "C"  ByteU5BU5D_t3397334013* UnityRemoteVideo_UVByteArrayForFrame_m4002130838 (UnityRemoteVideo_t1017728068 * __this, int32_t ___frame0, const MethodInfo* method)
-{
-	{
-		int32_t L_0 = ___frame0;
-		ByteU5BU5D_t3397334013* L_1 = __this->get_m_textureUVBytes_7();
-		ByteU5BU5D_t3397334013* L_2 = __this->get_m_textureUVBytes2_9();
-		ByteU5BU5D_t3397334013* L_3 = UnityRemoteVideo_ByteArrayForFrame_m1688879309(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return L_3;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::OnDestroy()
-extern "C"  void UnityRemoteVideo_OnDestroy_m529552904 (UnityRemoteVideo_t1017728068 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityRemoteVideo_OnDestroy_m529552904_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		UnityARSessionNativeInterface_t1130867170 * L_0 = __this->get_m_Session_3();
-		IntPtr_t L_1 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		IntPtr_t L_2 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		NullCheck(L_0);
-		UnityARSessionNativeInterface_SetCapturePixelData_m399020628(L_0, (bool)0, L_1, L_2, /*hidden argument*/NULL);
-		GCHandle_t3409268066 * L_3 = __this->get_address_of_m_pinnedYArray_10();
-		GCHandle_Free_m1639542352(L_3, /*hidden argument*/NULL);
-		GCHandle_t3409268066 * L_4 = __this->get_address_of_m_pinnedUVArray_11();
-		GCHandle_Free_m1639542352(L_4, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityRemoteVideo::OnPreRender()
-extern "C"  void UnityRemoteVideo_OnPreRender_m3366678485 (UnityRemoteVideo_t1017728068 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityRemoteVideo_OnPreRender_m3366678485_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	ARTextureHandles_t3764914833  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	Resolution_t3693662728  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		UnityARSessionNativeInterface_t1130867170 * L_0 = __this->get_m_Session_3();
-		NullCheck(L_0);
-		ARTextureHandles_t3764914833  L_1 = UnityARSessionNativeInterface_GetARVideoTextureHandles_m299127149(L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		IntPtr_t L_2 = (&V_0)->get_textureY_0();
-		IntPtr_t L_3 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		bool L_4 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
-		if (L_4)
-		{
-			goto IL_0038;
-		}
-	}
-	{
-		IntPtr_t L_5 = (&V_0)->get_textureCbCr_1();
-		IntPtr_t L_6 = ((IntPtr_t_StaticFields*)IntPtr_t_il2cpp_TypeInfo_var->static_fields)->get_Zero_1();
-		bool L_7 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_5, L_6, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_0039;
-		}
-	}
-
-IL_0038:
-	{
-		return;
-	}
-
-IL_0039:
-	{
-		bool L_8 = __this->get_bTexturesInitialized_4();
-		if (L_8)
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		return;
-	}
-
-IL_0045:
-	{
-		int32_t L_9 = __this->get_currentFrameIndex_5();
-		__this->set_currentFrameIndex_5(((int32_t)((int32_t)((int32_t)((int32_t)L_9+(int32_t)1))%(int32_t)2)));
-		Resolution_t3693662728  L_10 = Screen_get_currentResolution_m2361090437(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_1 = L_10;
-		UnityARSessionNativeInterface_t1130867170 * L_11 = __this->get_m_Session_3();
-		GCHandle_t3409268066 * L_12 = __this->get_address_of_m_pinnedYArray_10();
-		int32_t L_13 = __this->get_currentFrameIndex_5();
-		ByteU5BU5D_t3397334013* L_14 = UnityRemoteVideo_YByteArrayForFrame_m615035654(__this, L_13, /*hidden argument*/NULL);
-		IntPtr_t L_15 = UnityRemoteVideo_PinByteArray_m3031464785(__this, L_12, L_14, /*hidden argument*/NULL);
-		GCHandle_t3409268066 * L_16 = __this->get_address_of_m_pinnedUVArray_11();
-		int32_t L_17 = __this->get_currentFrameIndex_5();
-		ByteU5BU5D_t3397334013* L_18 = UnityRemoteVideo_UVByteArrayForFrame_m4002130838(__this, L_17, /*hidden argument*/NULL);
-		IntPtr_t L_19 = UnityRemoteVideo_PinByteArray_m3031464785(__this, L_16, L_18, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		UnityARSessionNativeInterface_SetCapturePixelData_m399020628(L_11, (bool)1, L_15, L_19, /*hidden argument*/NULL);
-		ConnectToEditor_t1997139904 * L_20 = __this->get_connectToEditor_2();
-		Guid_t  L_21 = ConnectionMessageIds_get_screenCaptureYMsgId_m1152839391(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_22 = __this->get_currentFrameIndex_5();
-		ByteU5BU5D_t3397334013* L_23 = UnityRemoteVideo_YByteArrayForFrame_m615035654(__this, ((int32_t)((int32_t)1-(int32_t)L_22)), /*hidden argument*/NULL);
-		NullCheck(L_20);
-		ConnectToEditor_SendToEditor_m798148974(L_20, L_21, L_23, /*hidden argument*/NULL);
-		ConnectToEditor_t1997139904 * L_24 = __this->get_connectToEditor_2();
-		Guid_t  L_25 = ConnectionMessageIds_get_screenCaptureUVMsgId_m1094748305(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_26 = __this->get_currentFrameIndex_5();
-		ByteU5BU5D_t3397334013* L_27 = UnityRemoteVideo_UVByteArrayForFrame_m4002130838(__this, ((int32_t)((int32_t)1-(int32_t)L_26)), /*hidden argument*/NULL);
-		NullCheck(L_24);
-		ConnectToEditor_SendToEditor_m798148974(L_24, L_25, L_27, /*hidden argument*/NULL);
-		return;
 	}
 }
 #ifdef __clang__

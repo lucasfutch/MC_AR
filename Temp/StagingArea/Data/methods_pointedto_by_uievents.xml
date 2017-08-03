@@ -12,5 +12,13 @@
 			<method name="PickaxeButtonSelected"/>
 			<method name="RandColorButtonSelected"/>
 		</type>
+		<type fullname="SaveLoad">
+			<method name="Save"/>
+			<method name="Load"/>
+		</type>
+		<type fullname="changeScene">
+			<method name="changeScenes"/>
+			<method name="changeScenes"/>
+		</type>
 	</assembly>
 </linker>

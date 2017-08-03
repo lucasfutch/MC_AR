@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MCTest.unity
     guid: 7b463f82357bc4f1cabe992d17374fbc
+  - enabled: 1
+    path: Assets/_Scenes/NewWorld.unity
+    guid: 478976400d91b41f7b6ab7194d11d00e

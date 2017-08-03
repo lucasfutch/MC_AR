@@ -99,11 +99,11 @@
 #include "mscorlib_System_IO_MonoIOStat1621921065.h"
 #include "mscorlib_System_IO_MonoIO2170088987.h"
 #include "mscorlib_System_IO_File1930543328.h"
-#include "mscorlib_System_UnauthorizedAccessException886535555.h"
-#include "mscorlib_System_IO_FileMode236403845.h"
 #include "mscorlib_System_IO_FileStream1695958676.h"
+#include "mscorlib_System_IO_FileMode236403845.h"
 #include "mscorlib_System_IO_FileAccess4282042064.h"
 #include "mscorlib_System_IO_FileShare3362491215.h"
+#include "mscorlib_System_UnauthorizedAccessException886535555.h"
 #include "mscorlib_System_IO_StreamReader2360341767.h"
 #include "mscorlib_System_IO_FileLoadException3198361301.h"
 #include "mscorlib_System_IO_FileNotFoundException4200667904.h"
@@ -306,10 +306,10 @@ struct DirectoryInfo_t1934446453;
 struct DirectoryNotFoundException_t373523477;
 // System.IO.FileSystemInfo
 struct FileSystemInfo_t2360991899;
-// System.UnauthorizedAccessException
-struct UnauthorizedAccessException_t886535555;
 // System.IO.FileStream
 struct FileStream_t1695958676;
+// System.UnauthorizedAccessException
+struct UnauthorizedAccessException_t886535555;
 // System.IO.StreamReader
 struct StreamReader_t2360341767;
 // System.IO.FileLoadException
@@ -951,12 +951,13 @@ extern Il2CppCodeGenString* _stringLiteral3863920272;
 extern const uint32_t DirectoryNotFoundException__ctor_m2242202556_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1686512608;
 extern const uint32_t EndOfStreamException__ctor_m2877696588_MetadataUsageId;
+extern Il2CppClass* FileStream_t1695958676_il2cpp_TypeInfo_var;
+extern const uint32_t File_Create_m3510380080_MetadataUsageId;
 extern Il2CppClass* UnauthorizedAccessException_t886535555_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3956726036;
 extern Il2CppCodeGenString* _stringLiteral1354801562;
 extern const uint32_t File_Delete_m2115477556_MetadataUsageId;
 extern const uint32_t File_Exists_m1685968367_MetadataUsageId;
-extern Il2CppClass* FileStream_t1695958676_il2cpp_TypeInfo_var;
 extern const uint32_t File_Open_m1543461971_MetadataUsageId;
 extern const uint32_t File_OpenRead_m132329087_MetadataUsageId;
 extern Il2CppClass* StreamReader_t2360341767_il2cpp_TypeInfo_var;
@@ -3048,6 +3049,10 @@ extern "C"  void DirectoryInfo__ctor_m3750996792 (DirectoryInfo_t1934446453 * __
 extern "C"  DirectoryInfo_t1934446453 * Directory_CreateDirectory_m3561886598 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.IO.IOException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C"  void IOException__ctor_m1047252325 (IOException_t2458421087 * __this, SerializationInfo_t228987430 * ___info0, StreamingContext_t1417235061  ___context1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.IO.FileStream System.IO.File::Create(System.String,System.Int32)
+extern "C"  FileStream_t1695958676 * File_Create_m3510380080 (Il2CppObject * __this /* static, unused */, String_t* ___path0, int32_t ___bufferSize1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)
+extern "C"  void FileStream__ctor_m2737324509 (FileStream_t1695958676 * __this, String_t* ___path0, int32_t ___mode1, int32_t ___access2, int32_t ___share3, int32_t ___bufferSize4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.IO.Directory::Exists(System.String)
 extern "C"  bool Directory_Exists_m2663601042 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Locale::GetText(System.String,System.Object[])
@@ -21921,6 +21926,32 @@ extern "C"  void EndOfStreamException__ctor_m4268387737 (EndOfStreamException_t1
 		return;
 	}
 }
+// System.IO.FileStream System.IO.File::Create(System.String)
+extern "C"  FileStream_t1695958676 * File_Create_m1378973685 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___path0;
+		FileStream_t1695958676 * L_1 = File_Create_m3510380080(NULL /*static, unused*/, L_0, ((int32_t)8192), /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.IO.FileStream System.IO.File::Create(System.String,System.Int32)
+extern "C"  FileStream_t1695958676 * File_Create_m3510380080 (Il2CppObject * __this /* static, unused */, String_t* ___path0, int32_t ___bufferSize1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (File_Create_m3510380080_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___path0;
+		int32_t L_1 = ___bufferSize1;
+		FileStream_t1695958676 * L_2 = (FileStream_t1695958676 *)il2cpp_codegen_object_new(FileStream_t1695958676_il2cpp_TypeInfo_var);
+		FileStream__ctor_m2737324509(L_2, L_0, 2, 3, 0, L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
 // System.Void System.IO.File::Delete(System.String)
 extern "C"  void File_Delete_m2115477556 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method)
 {
@@ -22786,6 +22817,19 @@ extern "C"  void FileStream__ctor_m3699774824 (FileStream_t1695958676 * __this, 
 		int32_t L_2 = ___access2;
 		int32_t L_3 = ___share3;
 		FileStream__ctor_m3815606687(__this, L_0, L_1, L_2, L_3, ((int32_t)8192), (bool)0, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)
+extern "C"  void FileStream__ctor_m2737324509 (FileStream_t1695958676 * __this, String_t* ___path0, int32_t ___mode1, int32_t ___access2, int32_t ___share3, int32_t ___bufferSize4, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___path0;
+		int32_t L_1 = ___mode1;
+		int32_t L_2 = ___access2;
+		int32_t L_3 = ___share3;
+		int32_t L_4 = ___bufferSize4;
+		FileStream__ctor_m3815606687(__this, L_0, L_1, L_2, L_3, L_4, (bool)0, 0, /*hidden argument*/NULL);
 		return;
 	}
 }

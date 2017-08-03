@@ -1,6 +1,8 @@
 <linker>
 <assembly fullname="Assembly-CSharp">
+<type fullname="SaveLoad" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UIBehavior" preserve="all"/>
+<type fullname="changeScene" preserve="all"/>
 <type fullname="destroyBlock" preserve="all"/>
 <type fullname="placeBox" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.ConnectToEditor" preserve="all"/>

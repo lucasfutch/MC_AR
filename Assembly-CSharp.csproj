@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\SaveLoad.cs" />
      <Compile Include="Assets\Scripts\UIBehavior.cs" />
+     <Compile Include="Assets\Scripts\changeScene.cs" />
      <Compile Include="Assets\Scripts\destroyBlock.cs" />
      <Compile Include="Assets\Scripts\placeBox.cs" />
      <Compile Include="Assets\_Scenes\ARKit\ARKitRemote\ARKitRemoteConnection.cs" />
@@ -117,7 +119,6 @@
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\stone-805287.shader" />
      <None Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\brick-957823.shader" />
-     <None Include="Assets\read me.txt" />
      <None Include="Assets\Materials\Brick Substance\Documentation\Help.txt" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\brick-807728.shader" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\wood-938698.shader" />

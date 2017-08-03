@@ -2288,6 +2288,8 @@ extern "C" void DirectoryNotFoundException__ctor_m3713860966 ();
 extern "C" void DirectoryNotFoundException__ctor_m1117392681 ();
 extern "C" void EndOfStreamException__ctor_m2877696588 ();
 extern "C" void EndOfStreamException__ctor_m4268387737 ();
+extern "C" void File_Create_m1378973685 ();
+extern "C" void File_Create_m3510380080 ();
 extern "C" void File_Delete_m2115477556 ();
 extern "C" void File_Exists_m1685968367 ();
 extern "C" void File_Open_m1543461971 ();
@@ -2308,6 +2310,7 @@ extern "C" void FileNotFoundException_ToString_m614787994 ();
 extern "C" void FileStream__ctor_m3026076202 ();
 extern "C" void FileStream__ctor_m572813458 ();
 extern "C" void FileStream__ctor_m3699774824 ();
+extern "C" void FileStream__ctor_m2737324509 ();
 extern "C" void FileStream__ctor_m756268517 ();
 extern "C" void FileStream__ctor_m3815606687 ();
 extern "C" void FileStream_get_CanRead_m4148920720 ();
@@ -7855,6 +7858,7 @@ extern "C" void Application_CallLowMemory_m626389230 ();
 extern "C" void Application_get_isPlaying_m4091950718 ();
 extern "C" void Application_get_isEditor_m2474583393 ();
 extern "C" void Application_get_platform_m3989224144 ();
+extern "C" void Application_get_persistentDataPath_m3129298355 ();
 extern "C" void Application_set_targetFrameRate_m2941880625 ();
 extern "C" void Application_CallLogCallback_m3408386792 ();
 extern "C" void LogCallback__ctor_m898185969 ();
@@ -8475,6 +8479,7 @@ extern "C" void GameObject_get_activeSelf_m313590879 ();
 extern "C" void GameObject_get_activeInHierarchy_m4242915935 ();
 extern "C" void GameObject_get_tag_m1425941094 ();
 extern "C" void GameObject_set_tag_m717375123 ();
+extern "C" void GameObject_CompareTag_m2797152613 ();
 extern "C" void GameObject_SendMessage_m71956653 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m214735204 ();
 extern "C" void GameObject_AddComponent_m3757565614 ();
@@ -9300,11 +9305,14 @@ extern "C" void Resolution_get_height_m882683003_AdjustorThunk ();
 extern "C" void Resolution_ToString_m3711510886_AdjustorThunk ();
 extern "C" void ResourceRequest__ctor_m3340010930 ();
 extern "C" void ResourceRequest_get_asset_m3527928488 ();
+extern "C" void Resources_Load_m2041782325 ();
 extern "C" void Resources_Load_m243305716 ();
 extern "C" void Resources_GetBuiltinResource_m582410469 ();
 extern "C" void Scene_get_handle_m1555912301_AdjustorThunk ();
 extern "C" void Scene_GetHashCode_m3223653899_AdjustorThunk ();
 extern "C" void Scene_Equals_m3588907349_AdjustorThunk ();
+extern "C" void SceneManager_LoadScene_m1386820036 ();
+extern "C" void SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043 ();
 extern "C" void SceneManager_Internal_SceneLoaded_m4005732915 ();
 extern "C" void SceneManager_Internal_SceneUnloaded_m4108957131 ();
 extern "C" void SceneManager_Internal_ActiveSceneChanged_m1162592635 ();
@@ -11269,6 +11277,8 @@ extern "C" void VerticalLayoutGroup_CalculateLayoutInputHorizontal_m497637066 ()
 extern "C" void VerticalLayoutGroup_CalculateLayoutInputVertical_m3227111700 ();
 extern "C" void VerticalLayoutGroup_SetLayoutHorizontal_m2935499508 ();
 extern "C" void VerticalLayoutGroup_SetLayoutVertical_m1302409034 ();
+extern "C" void AllBlockData__ctor_m3883475195 ();
+extern "C" void AllBlockData_AllBlockDataAdd_m2842992583 ();
 extern "C" void AR3DOFCameraManager__ctor_m4206627728 ();
 extern "C" void AR3DOFCameraManager_Start_m1877506848 ();
 extern "C" void AR3DOFCameraManager_SetCamera_m1657987613 ();
@@ -11285,6 +11295,12 @@ extern "C" void BallMover_Update_m4283885088 ();
 extern "C" void Ballz__ctor_m3360766676 ();
 extern "C" void Ballz_Start_m1959528648 ();
 extern "C" void Ballz_Update_m893334799 ();
+extern "C" void BlockData__ctor_m699718940 ();
+extern "C" void BlockData__ctor_m2459572829 ();
+extern "C" void BlockData_BlockDataGet_m1766476579 ();
+extern "C" void BlockData_BlockDataGetName_m3649610435 ();
+extern "C" void changeScene__ctor_m2573961399 ();
+extern "C" void changeScene_changeScenes_m752673420 ();
 extern "C" void ColorChangedEvent__ctor_m3710136698 ();
 extern "C" void ColorImage__ctor_m797732221 ();
 extern "C" void ColorImage_Awake_m1432153760 ();
@@ -11394,6 +11410,11 @@ extern "C" void PointCloudParticleExample__ctor_m249742788 ();
 extern "C" void PointCloudParticleExample_Start_m1736319872 ();
 extern "C" void PointCloudParticleExample_ARFrameUpdated_m1855536526 ();
 extern "C" void PointCloudParticleExample_Update_m633725559 ();
+extern "C" void SaveLoad__ctor_m371728588 ();
+extern "C" void SaveLoad_Awake_m1003036745 ();
+extern "C" void SaveLoad_Start_m1026186324 ();
+extern "C" void SaveLoad_Save_m3782038213 ();
+extern "C" void SaveLoad_Load_m1025530042 ();
 extern "C" void SVBoxSlider__ctor_m2623596066 ();
 extern "C" void SVBoxSlider_get_rectTransform_m3427717911 ();
 extern "C" void SVBoxSlider_Awake_m1174811035 ();
@@ -11733,7 +11754,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11719] = 
+extern const Il2CppMethodPointer g_MethodPointers[11740] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -14009,6 +14030,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	DirectoryNotFoundException__ctor_m1117392681,
 	EndOfStreamException__ctor_m2877696588,
 	EndOfStreamException__ctor_m4268387737,
+	File_Create_m1378973685,
+	File_Create_m3510380080,
 	File_Delete_m2115477556,
 	File_Exists_m1685968367,
 	File_Open_m1543461971,
@@ -14029,6 +14052,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	FileStream__ctor_m3026076202,
 	FileStream__ctor_m572813458,
 	FileStream__ctor_m3699774824,
+	FileStream__ctor_m2737324509,
 	FileStream__ctor_m756268517,
 	FileStream__ctor_m3815606687,
 	FileStream_get_CanRead_m4148920720,
@@ -19576,6 +19600,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	Application_get_isPlaying_m4091950718,
 	Application_get_isEditor_m2474583393,
 	Application_get_platform_m3989224144,
+	Application_get_persistentDataPath_m3129298355,
 	Application_set_targetFrameRate_m2941880625,
 	Application_CallLogCallback_m3408386792,
 	LogCallback__ctor_m898185969,
@@ -20196,6 +20221,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	GameObject_get_activeInHierarchy_m4242915935,
 	GameObject_get_tag_m1425941094,
 	GameObject_set_tag_m717375123,
+	GameObject_CompareTag_m2797152613,
 	GameObject_SendMessage_m71956653,
 	GameObject_Internal_AddComponentWithType_m214735204,
 	GameObject_AddComponent_m3757565614,
@@ -21021,11 +21047,14 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	Resolution_ToString_m3711510886_AdjustorThunk,
 	ResourceRequest__ctor_m3340010930,
 	ResourceRequest_get_asset_m3527928488,
+	Resources_Load_m2041782325,
 	Resources_Load_m243305716,
 	Resources_GetBuiltinResource_m582410469,
 	Scene_get_handle_m1555912301_AdjustorThunk,
 	Scene_GetHashCode_m3223653899_AdjustorThunk,
 	Scene_Equals_m3588907349_AdjustorThunk,
+	SceneManager_LoadScene_m1386820036,
+	SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043,
 	SceneManager_Internal_SceneLoaded_m4005732915,
 	SceneManager_Internal_SceneUnloaded_m4108957131,
 	SceneManager_Internal_ActiveSceneChanged_m1162592635,
@@ -22990,6 +23019,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	VerticalLayoutGroup_CalculateLayoutInputVertical_m3227111700,
 	VerticalLayoutGroup_SetLayoutHorizontal_m2935499508,
 	VerticalLayoutGroup_SetLayoutVertical_m1302409034,
+	AllBlockData__ctor_m3883475195,
+	AllBlockData_AllBlockDataAdd_m2842992583,
 	AR3DOFCameraManager__ctor_m4206627728,
 	AR3DOFCameraManager_Start_m1877506848,
 	AR3DOFCameraManager_SetCamera_m1657987613,
@@ -23006,6 +23037,12 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	Ballz__ctor_m3360766676,
 	Ballz_Start_m1959528648,
 	Ballz_Update_m893334799,
+	BlockData__ctor_m699718940,
+	BlockData__ctor_m2459572829,
+	BlockData_BlockDataGet_m1766476579,
+	BlockData_BlockDataGetName_m3649610435,
+	changeScene__ctor_m2573961399,
+	changeScene_changeScenes_m752673420,
 	ColorChangedEvent__ctor_m3710136698,
 	ColorImage__ctor_m797732221,
 	ColorImage_Awake_m1432153760,
@@ -23115,6 +23152,11 @@ extern const Il2CppMethodPointer g_MethodPointers[11719] =
 	PointCloudParticleExample_Start_m1736319872,
 	PointCloudParticleExample_ARFrameUpdated_m1855536526,
 	PointCloudParticleExample_Update_m633725559,
+	SaveLoad__ctor_m371728588,
+	SaveLoad_Awake_m1003036745,
+	SaveLoad_Start_m1026186324,
+	SaveLoad_Save_m3782038213,
+	SaveLoad_Load_m1025530042,
 	SVBoxSlider__ctor_m2623596066,
 	SVBoxSlider_get_rectTransform_m3427717911,
 	SVBoxSlider_Awake_m1174811035,

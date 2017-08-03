@@ -970,6 +970,9 @@ extern const Il2CppGenericInst GenInst_List_1_t1440998580_0_0_0 = { 1, GenInst_L
 extern const Il2CppType List_1_t573379950_0_0_0;
 static const Il2CppType* GenInst_List_1_t573379950_0_0_0_Types[] = { &List_1_t573379950_0_0_0 };
 extern const Il2CppGenericInst GenInst_List_1_t573379950_0_0_0 = { 1, GenInst_List_1_t573379950_0_0_0_Types };
+extern const Il2CppType BlockData_t1455168015_0_0_0;
+static const Il2CppType* GenInst_BlockData_t1455168015_0_0_0_Types[] = { &BlockData_t1455168015_0_0_0 };
+extern const Il2CppGenericInst GenInst_BlockData_t1455168015_0_0_0 = { 1, GenInst_BlockData_t1455168015_0_0_0_Types };
 extern const Il2CppType ARHitTestResult_t3275513025_0_0_0;
 static const Il2CppType* GenInst_ARHitTestResult_t3275513025_0_0_0_Types[] = { &ARHitTestResult_t3275513025_0_0_0 };
 extern const Il2CppGenericInst GenInst_ARHitTestResult_t3275513025_0_0_0 = { 1, GenInst_ARHitTestResult_t3275513025_0_0_0_Types };
@@ -1624,7 +1627,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_KeyValuePair_2_t38854645_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t38854645_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t38854645_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[565] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[566] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Int32_t2071877448_0_0_0,
@@ -1962,6 +1965,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[565] =
 	&GenInst_List_1_t1612828713_0_0_0,
 	&GenInst_List_1_t1440998580_0_0_0,
 	&GenInst_List_1_t573379950_0_0_0,
+	&GenInst_BlockData_t1455168015_0_0_0,
 	&GenInst_ARHitTestResult_t3275513025_0_0_0,
 	&GenInst_Single_t2076509932_0_0_0_Single_t2076509932_0_0_0_Single_t2076509932_0_0_0,
 	&GenInst_Single_t2076509932_0_0_0_Single_t2076509932_0_0_0,
