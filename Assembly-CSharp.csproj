@@ -112,6 +112,7 @@
      <Compile Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Utility\UnityARMatrixOps.cs" />
      <Compile Include="Assets\_Scenes\ARKit\Plugins\iOS\UnityARKit\Utility\UnityARUtility.cs" />
      <Compile Include="Assets\_Scenes\ARKit\UnityARAmbient.cs" />
+     <Compile Include="Assets\moveCamera.cs" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\wood-877000.shader" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\patch-924648.shader" />
      <None Include="Assets\Materials\HighQualityBricks&amp;Walls\Shaders\brick-957827.shader" />

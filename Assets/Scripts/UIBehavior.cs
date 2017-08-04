@@ -63,8 +63,6 @@ namespace UnityEngine.XR.iOS
 
 			ResetButtons ();
 
-			//pickaxeButtonHasBeenMoved = true;
-
 			if (currentSelected != Selected.Pickaxe) {
 				WoodParent.SetActive (false);
 				BrickParent.SetActive (false);
@@ -94,8 +92,6 @@ namespace UnityEngine.XR.iOS
 			Debug.Log ("Changing to Select Block");
 
 			ResetButtons ();
-
-			//blockButtonHasBeenMoved = true;
 
 			if (currentSelected != Selected.Block) {
 				Block.position += biggerButton;
@@ -130,7 +126,7 @@ namespace UnityEngine.XR.iOS
 		}
 
 
-		public void WoodButtonSelected() { // Wood
+		public void WoodButtonSelected() {
 
 			WoodParent.SetActive (false);
 			BrickParent.SetActive (false);
@@ -144,7 +140,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Wood;
 			placeBox.currentSelectedOG = placeBox.Selected.Wood;
 			WoodParent.SetActive (true);
-			//WoodParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -154,11 +149,9 @@ namespace UnityEngine.XR.iOS
 			item_stala.SetActive (false);
 			item_tree.SetActive (false);
 			item_sand.SetActive (false);
-	
-
 		}
 
-		public void BrickButtonSelected() { // Brick
+		public void BrickButtonSelected() { 
 
 			WoodParent.SetActive (false);
 			BrickParent.SetActive (false);
@@ -172,7 +165,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Brick;
 			placeBox.currentSelectedOG = placeBox.Selected.Brick;
 			BrickParent.SetActive (true);
-			//BrickParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -182,11 +174,9 @@ namespace UnityEngine.XR.iOS
 			item_stala.SetActive (false);
 			item_tree.SetActive (false);
 			item_sand.SetActive (false);
-
-	
 		}
 
-		public void TorchButtonSelected() { // Torch
+		public void TorchButtonSelected() { 
 			
 			WoodParent.SetActive (false);
 			BrickParent.SetActive (false);
@@ -200,7 +190,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Torch;
 			placeBox.currentSelectedOG = placeBox.Selected.Torch;
 			TorchParent.SetActive (true);
-			//Block3Parent.GetComponent<ParticleSystem> ().enableEmission = true;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -228,7 +217,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.RandColor;
 			placeBox.currentSelectedOG = placeBox.Selected.RandColor;
 			RandColorParent.SetActive (true);
-			//RandColorParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -253,7 +241,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Water;
 			placeBox.currentSelectedOG = placeBox.Selected.Water;
 			WaterParent.SetActive (true);
-			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -278,7 +265,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Stalactite;
 			placeBox.currentSelectedOG = placeBox.Selected.Stalactite;
 			StalactiteParent.SetActive (true);
-			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = true;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -303,7 +289,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Tree;
 			placeBox.currentSelectedOG = placeBox.Selected.Tree;
 			TreeParent.SetActive (true);
-			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = true;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);
@@ -328,7 +313,6 @@ namespace UnityEngine.XR.iOS
 			currentSelected = Selected.Sand;
 			placeBox.currentSelectedOG = placeBox.Selected.Sand;
 			SandParent.SetActive (true);
-			//WaterParent.GetComponent<ParticleSystem> ().enableEmission = false;
 
 			item_wood.SetActive (false);
 			item_brick.SetActive (false);

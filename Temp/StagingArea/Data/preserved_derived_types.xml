@@ -36,6 +36,7 @@
 <type fullname="UnityEngine.XR.iOS.UnityARVideo" preserve="all"/>
 <type fullname="UnityPointCloudExample" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
+<type fullname="moveCamera" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>

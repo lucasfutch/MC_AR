@@ -6980,9 +6980,6 @@ extern const Il2CppType Stack_1_t1661108104_0_0_0 = { &Stack_1_t1661108104_Gener
 Il2CppGenericClass UnityAction_1_t1939965701_GenericClass = { 1519, { &GenInst_List_1_t573379950_0_0_0, NULL }, NULL };
 extern const Il2CppType UnityAction_1_t1939965701_0_0_0 = { &UnityAction_1_t1939965701_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
-Il2CppGenericClass InternalEnumerator_1_t2615285409_GenericClass = { 41, { &GenInst_GameObject_t1756533147_0_0_0, NULL }, NULL };
-extern const Il2CppType InternalEnumerator_1_t2615285409_0_0_0 = { &InternalEnumerator_1_t2615285409_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
 extern const Il2CppGenericInst GenInst_BlockData_t1455168015_0_0_0;
 Il2CppGenericClass List_1_t824289147_GenericClass = { 172, { &GenInst_BlockData_t1455168015_0_0_0, NULL }, NULL };
 extern const Il2CppType List_1_t824289147_0_0_0 = { &List_1_t824289147_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -7014,6 +7011,9 @@ extern const Il2CppType Enumerator_t359018821_0_0_0 = { &Enumerator_t359018821_G
 
 Il2CppGenericClass Comparison_1_t2716906866_GenericClass = { 895, { &GenInst_BlockData_t1455168015_0_0_0, NULL }, NULL };
 extern const Il2CppType Comparison_1_t2716906866_0_0_0 = { &Comparison_1_t2716906866_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass InternalEnumerator_1_t2615285409_GenericClass = { 41, { &GenInst_GameObject_t1756533147_0_0_0, NULL }, NULL };
+extern const Il2CppType InternalEnumerator_1_t2615285409_0_0_0 = { &InternalEnumerator_1_t2615285409_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
 extern const Il2CppGenericInst GenInst_ARHitTestResult_t3275513025_0_0_0;
 Il2CppGenericClass List_1_t2644634157_GenericClass = { 172, { &GenInst_ARHitTestResult_t3275513025_0_0_0, NULL }, NULL };
@@ -14689,11 +14689,6 @@ extern const Il2CppType U3CModuleU3E_t3783534220_1_0_0 = { (void*)1750, 0, IL2CP
 
 extern const Il2CppType SaveLoad_t296492329_0_0_0 = { (void*)1751, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType SaveLoad_t296492329_1_0_0 = { (void*)1751, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-extern const Il2CppType SaveLoad_t296492329_0_0_22 = { (void*)1751, 22, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-
-extern const Il2CppType GameObject_t1756533147_0_0_0;
-extern const Il2CppType GameObjectU5BU5D_t3057952154_0_0_6 = { (void*)&GameObject_t1756533147_0_0_0, 6, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const Il2CppType GameObjectU5BU5D_t3057952154_0_0_0 = { (void*)&GameObject_t1756533147_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const Il2CppType AllBlockData_t171087180_0_0_0 = { (void*)1753, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType AllBlockData_t171087180_1_0_0 = { (void*)1753, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -14847,6 +14842,10 @@ extern const Il2CppType ColorLabel_t1884607337_1_0_0 = { (void*)1781, 0, IL2CPP_
 
 extern const Il2CppType ColorPresets_t4120623669_0_0_0 = { (void*)1783, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType ColorPresets_t4120623669_1_0_0 = { (void*)1783, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const Il2CppType GameObject_t1756533147_0_0_0;
+extern const Il2CppType GameObjectU5BU5D_t3057952154_0_0_6 = { (void*)&GameObject_t1756533147_0_0_0, 6, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
+extern const Il2CppType GameObjectU5BU5D_t3057952154_0_0_0 = { (void*)&GameObject_t1756533147_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const Il2CppType ColorSlider_t2729134766_0_0_0 = { (void*)1784, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType ColorSlider_t2729134766_1_0_0 = { (void*)1784, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -15072,12 +15071,15 @@ extern const Il2CppType UnityARUtility_t3608388148_1_0_0 = { (void*)1857, 0, IL2
 extern const Il2CppType UnityARAmbient_t680084560_0_0_0 = { (void*)1858, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType UnityARAmbient_t680084560_1_0_0 = { (void*)1858, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
-extern const Il2CppType U3CPrivateImplementationDetailsU3E_t1486305142_0_0_0 = { (void*)1859, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType U3CPrivateImplementationDetailsU3E_t1486305142_1_0_0 = { (void*)1859, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const Il2CppType moveCamera_t3157790334_0_0_0 = { (void*)1859, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType moveCamera_t3157790334_1_0_0 = { (void*)1859, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
-extern const Il2CppType U24ArrayTypeU3D24_t762068664_0_0_307 = { (void*)1860, 307, IL2CPP_TYPE_VALUETYPE, 0, 0, 0 };
-extern const Il2CppType U24ArrayTypeU3D24_t762068664_0_0_0 = { (void*)1860, 0, IL2CPP_TYPE_VALUETYPE, 0, 0, 0 };
-extern const Il2CppType U24ArrayTypeU3D24_t762068664_1_0_0 = { (void*)1860, 0, IL2CPP_TYPE_VALUETYPE, 0, 1, 0 };
+extern const Il2CppType U3CPrivateImplementationDetailsU3E_t1486305142_0_0_0 = { (void*)1860, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType U3CPrivateImplementationDetailsU3E_t1486305142_1_0_0 = { (void*)1860, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const Il2CppType U24ArrayTypeU3D24_t762068664_0_0_307 = { (void*)1861, 307, IL2CPP_TYPE_VALUETYPE, 0, 0, 0 };
+extern const Il2CppType U24ArrayTypeU3D24_t762068664_0_0_0 = { (void*)1861, 0, IL2CPP_TYPE_VALUETYPE, 0, 0, 0 };
+extern const Il2CppType U24ArrayTypeU3D24_t762068664_1_0_0 = { (void*)1861, 0, IL2CPP_TYPE_VALUETYPE, 0, 1, 0 };
 
 Il2CppGenericClass IComparer_1_t1676750663_GenericClass = { 167, { &GenInst_DefaultComparer_t3074655092_gp_0_0_0_0, NULL }, NULL };
 extern const Il2CppType IComparer_1_t1676750663_0_0_0 = { &IComparer_1_t1676750663_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -15132,7 +15134,7 @@ extern const Il2CppType ITrackingHandlerU5BU5D_t194660197_0_0_0 = { (void*)&ITra
 
 extern const Il2CppType ARHitTestResultType_t3616749745_0_0_0;
 extern const Il2CppType ARHitTestResultTypeU5BU5D_t1303085420_0_0_0 = { (void*)&ARHitTestResultType_t3616749745_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const Il2CppType* const  g_Il2CppTypeTable[8001] = 
+extern const Il2CppType* const  g_Il2CppTypeTable[8002] = 
 {
 	&IEnumerator_1_t164973122_0_0_0,
 	&Il2CppObject_0_0_0,
@@ -17161,7 +17163,6 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&ObjectPool_1_t3414753397_0_0_0,
 	&Stack_1_t1661108104_0_0_0,
 	&UnityAction_1_t1939965701_0_0_0,
-	&InternalEnumerator_1_t2615285409_0_0_0,
 	&List_1_t824289147_0_0_0,
 	&BlockData_t1455168015_0_0_0,
 	&IEnumerable_1_t1747295060_0_0_0,
@@ -17172,6 +17173,7 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&Predicate_1_t4193105426_0_0_0,
 	&Enumerator_t359018821_0_0_0,
 	&Comparison_1_t2716906866_0_0_0,
+	&InternalEnumerator_1_t2615285409_0_0_0,
 	&List_1_t2644634157_0_0_0,
 	&ARHitTestResult_t3275513025_0_0_0,
 	&ICollection_1_t4227588330_0_0_0,
@@ -22744,8 +22746,7 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&U3CModuleU3E_t3783534220_1_0_0,
 	&SaveLoad_t296492329_0_0_0,
 	&SaveLoad_t296492329_1_0_0,
-	&SaveLoad_t296492329_0_0_22,
-	&GameObjectU5BU5D_t3057952154_0_0_6,
+	&MaterialPropertyBlock_t3303648957_0_0_1,
 	&BlockData_t1455168015_1_0_0,
 	&AllBlockData_t171087180_0_0_0,
 	&AllBlockData_t171087180_1_0_0,
@@ -22768,7 +22769,6 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&MCFace_t2283549208_0_0_0,
 	&AudioSource_t1135106623_0_0_1,
 	&Animator_t69676727_0_0_6,
-	&MaterialPropertyBlock_t3303648957_0_0_1,
 	&Selected_t3327221688_0_0_22,
 	&Selected_t3327221688_0_0_0,
 	&Selected_t3327221688_1_0_0,
@@ -22848,6 +22848,7 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&HSVChangedEvent_t1170297569_0_0_6,
 	&ColorPresets_t4120623669_0_0_0,
 	&ColorPresets_t4120623669_1_0_0,
+	&GameObjectU5BU5D_t3057952154_0_0_6,
 	&Image_t2042527209_0_0_6,
 	&ColorSlider_t2729134766_0_0_0,
 	&ColorSlider_t2729134766_1_0_0,
@@ -23062,6 +23063,8 @@ extern const Il2CppType* const  g_Il2CppTypeTable[8001] =
 	&UnityARAmbient_t680084560_0_0_0,
 	&UnityARAmbient_t680084560_1_0_0,
 	&Light_t494725636_0_0_1,
+	&moveCamera_t3157790334_0_0_0,
+	&moveCamera_t3157790334_1_0_0,
 	&U3CPrivateImplementationDetailsU3E_t1486305142_0_0_0,
 	&U3CPrivateImplementationDetailsU3E_t1486305142_1_0_0,
 	&U24ArrayTypeU3D24_t762068664_0_0_307,

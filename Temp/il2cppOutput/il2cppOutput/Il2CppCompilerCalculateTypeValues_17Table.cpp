@@ -395,13 +395,21 @@ extern const int32_t g_FieldOffsetTable1748[1] =
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1749 = { sizeof (U24ArrayTypeU3D12_t1568637717)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D12_t1568637717 ), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1750 = { sizeof (U3CModuleU3E_t3783534220), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1751 = { sizeof (SaveLoad_t296492329), -1, sizeof(SaveLoad_t296492329_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1751[5] = 
+extern const int32_t g_FieldOffsetTable1751[13] = 
 {
-	SaveLoad_t296492329_StaticFields::get_offset_of_control_2(),
-	SaveLoad_t296492329::get_offset_of_allBlocksLength_3(),
-	SaveLoad_t296492329::get_offset_of_allBlocks_4(),
-	SaveLoad_t296492329::get_offset_of_location_5(),
-	SaveLoad_t296492329::get_offset_of_bringUp_6(),
+	SaveLoad_t296492329::get_offset_of_randColorPrefab_2(),
+	SaveLoad_t296492329::get_offset_of_woodPrefab_3(),
+	SaveLoad_t296492329::get_offset_of_brickPrefab_4(),
+	SaveLoad_t296492329::get_offset_of_torchPrefab_5(),
+	SaveLoad_t296492329::get_offset_of_waterPrefab_6(),
+	SaveLoad_t296492329::get_offset_of_stalactitePrefab_7(),
+	SaveLoad_t296492329::get_offset_of_treePrefab_8(),
+	SaveLoad_t296492329::get_offset_of_sandPrefab_9(),
+	SaveLoad_t296492329::get_offset_of_boxGO_10(),
+	SaveLoad_t296492329::get_offset_of_props_11(),
+	SaveLoad_t296492329::get_offset_of_blockName_12(),
+	SaveLoad_t296492329::get_offset_of_blockPosition_13(),
+	SaveLoad_t296492329_StaticFields::get_offset_of_U3CU3Ef__switchU24map0_14(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1752 = { sizeof (BlockData_t1455168015), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1752[4] = 

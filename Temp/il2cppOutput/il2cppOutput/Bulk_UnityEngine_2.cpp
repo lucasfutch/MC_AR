@@ -41,7 +41,6 @@
 #include "UnityEngine_UnityEngine_AsyncOperation3814632279.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
 #include "UnityEngine_UnityEngine_Resources339470017.h"
-#include "mscorlib_System_RuntimeTypeHandle2330101084.h"
 #include "UnityEngine_UnityEngine_Rigidbody4233889191.h"
 #include "UnityEngine_UnityEngine_Rigidbody2D502193897.h"
 #include "UnityEngine_UnityEngine_RuntimeAnimatorController670468573.h"
@@ -426,9 +425,6 @@ extern Il2CppClass* RenderTargetIdentifier_t772440638_il2cpp_TypeInfo_var;
 extern const uint32_t RenderTargetIdentifier_Equals_m2332523144_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral16809271;
 extern const uint32_t Resolution_ToString_m3711510886_MetadataUsageId;
-extern const Il2CppType* Object_t1021602117_0_0_0_var;
-extern Il2CppClass* Type_t_il2cpp_TypeInfo_var;
-extern const uint32_t Resources_Load_m2041782325_MetadataUsageId;
 extern Il2CppClass* Scene_t1684909666_il2cpp_TypeInfo_var;
 extern const uint32_t Scene_Equals_m3588907349_MetadataUsageId;
 extern Il2CppClass* SceneManager_t90660965_il2cpp_TypeInfo_var;
@@ -1481,8 +1477,6 @@ extern "C"  String_t* Resolution_ToString_m3711510886 (Resolution_t3693662728 * 
 extern "C"  void AsyncOperation__ctor_m2914860946 (AsyncOperation_t3814632279 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object UnityEngine.Resources::Load(System.String,System.Type)
 extern "C"  Object_t1021602117 * Resources_Load_m243305716 (Il2CppObject * __this /* static, unused */, String_t* ___path0, Type_t * ___systemTypeInstance1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
-extern "C"  Type_t * Type_GetTypeFromHandle_m432505302 (Il2CppObject * __this /* static, unused */, RuntimeTypeHandle_t2330101084  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.SceneManagement.Scene::get_handle()
 extern "C"  int32_t Scene_get_handle_m1555912301 (Scene_t1684909666 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.SceneManagement.Scene::GetHashCode()
@@ -1989,10 +1983,12 @@ extern "C"  void Transform_INTERNAL_get_localPosition_m94028171 (Transform_t3275
 extern "C"  void Transform_INTERNAL_set_localPosition_m432504087 (Transform_t3275118058 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
 extern "C"  Quaternion_t4030073918  Transform_get_rotation_m1033555130 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
-extern "C"  Vector3_t2243707580  Vector3_get_up_m2725403797 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_right()
+extern "C"  Vector3_t2243707580  Vector3_get_right_m1884123822 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
 extern "C"  Vector3_t2243707580  Quaternion_op_Multiply_m1483423721 (Il2CppObject * __this /* static, unused */, Quaternion_t4030073918  ___rotation0, Vector3_t2243707580  ___point1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
+extern "C"  Vector3_t2243707580  Vector3_get_up_m2725403797 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
 extern "C"  Vector3_t2243707580  Vector3_get_forward_m1201659139 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_get_rotation(UnityEngine.Quaternion&)
@@ -2677,31 +2673,6 @@ extern "C"  Object_t1021602117 * ResourceRequest_get_asset_m3527928488 (Resource
 	}
 
 IL_0018:
-	{
-		Object_t1021602117 * L_3 = V_0;
-		return L_3;
-	}
-}
-// UnityEngine.Object UnityEngine.Resources::Load(System.String)
-extern "C"  Object_t1021602117 * Resources_Load_m2041782325 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Resources_Load_m2041782325_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Object_t1021602117 * V_0 = NULL;
-	{
-		String_t* L_0 = ___path0;
-		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		Type_t * L_1 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Object_t1021602117_0_0_0_var), /*hidden argument*/NULL);
-		Object_t1021602117 * L_2 = Resources_Load_m243305716(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_0017;
-	}
-
-IL_0017:
 	{
 		Object_t1021602117 * L_3 = V_0;
 		return L_3;
@@ -12244,6 +12215,25 @@ extern "C"  void Transform_INTERNAL_set_localPosition_m432504087 (Transform_t327
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Transform_INTERNAL_set_localPosition_m432504087_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::INTERNAL_set_localPosition(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___value0);
+}
+// UnityEngine.Vector3 UnityEngine.Transform::get_right()
+extern "C"  Vector3_t2243707580  Transform_get_right_m440863970 (Transform_t3275118058 * __this, const MethodInfo* method)
+{
+	Vector3_t2243707580  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Quaternion_t4030073918  L_0 = Transform_get_rotation_m1033555130(__this, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_1 = Vector3_get_right_m1884123822(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_2 = Quaternion_op_Multiply_m1483423721(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_0017;
+	}
+
+IL_0017:
+	{
+		Vector3_t2243707580  L_3 = V_0;
+		return L_3;
+	}
 }
 // UnityEngine.Vector3 UnityEngine.Transform::get_up()
 extern "C"  Vector3_t2243707580  Transform_get_up_m1603627763 (Transform_t3275118058 * __this, const MethodInfo* method)

@@ -16,29 +16,32 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARUserAn2645079618.h"
+#include "mscorlib_System_String2029220233.h"
+#include "mscorlib_System_IntPtr2504060609.h"
+#include "UnityEngine_UnityEngine_GameObject1756533147.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "UnityEngine_UnityEngine_Quaternion4030073918.h"
+#include "UnityEngine_UnityEngine_Matrix4x42933234003.h"
+#include "UnityEngine_UnityEngine_Vector42243707581.h"
+#include "UnityEngine_UnityEngine_Transform3275118058.h"
+#include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARMatrix4100931615.h"
+#include "mscorlib_System_Int322071877448.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARUtilit3608388148.h"
 #include "mscorlib_System_Void1841601450.h"
 #include "mscorlib_System_Object2689449295.h"
-#include "UnityEngine_UnityEngine_GameObject1756533147.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPlaneAnchor1439520888.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
-#include "mscorlib_System_String2029220233.h"
 #include "mscorlib_System_Boolean3825574718.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
-#include "UnityEngine_UnityEngine_Matrix4x42933234003.h"
-#include "UnityEngine_UnityEngine_Quaternion4030073918.h"
 #include "UnityEngine_UnityEngine_MeshFilter3026937449.h"
-#include "UnityEngine_UnityEngine_Transform3275118058.h"
 #include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "mscorlib_System_Single2076509932.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARVideo2351297253.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
-#include "mscorlib_System_IntPtr2504060609.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARSession496507918.h"
 #include "UnityEngine_UnityEngine_ScreenOrientation4019489636.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARCamera4198559457.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityVideoPar2644681676.h"
-#include "mscorlib_System_Int322071877448.h"
 #include "UnityEngine_UnityEngine_Rendering_RenderTargetIdent772440638.h"
 #include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
 #include "UnityEngine_UnityEngine_Texture2243626319.h"
@@ -62,7 +65,6 @@
 #include "AssemblyU2DCSharp_UnityPointCloudExample3196264220.h"
 #include "mscorlib_System_UInt322149682021.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen1125654279.h"
-#include "UnityEngine_UnityEngine_Vector42243707581.h"
 #include "mscorlib_System_Int64909078037.h"
 #include "AssemblyU2DCSharp_Utils_ObjectSerializationExtensi2339960184.h"
 #include "mscorlib_System_IO_Stream3255436806.h"
@@ -73,24 +75,23 @@
 #include "AssemblyU2DCSharp_Utils_serializableUnityARMatrix41608204732.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARTrackingSta2048880995.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARTrackingSta4227173799.h"
-#include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARMatrix4100931615.h"
 #include "AssemblyU2DCSharp_Utils_SerializableVector44294681242.h"
 #include "AssemblyU2DCSharp_Utils_serializableUnityARPlaneAn2771464920.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPlaneAnchor2379298071.h"
 #include "mscorlib_System_Text_Encoding663144255.h"
 
+// System.String
+struct String_t;
+// UnityEngine.GameObject
+struct GameObject_t1756533147;
+// UnityEngine.Transform
+struct Transform_t3275118058;
 // UnityEngine.XR.iOS.UnityARUtility
 struct UnityARUtility_t3608388148;
 // System.Object
 struct Il2CppObject;
-// UnityEngine.GameObject
-struct GameObject_t1756533147;
 // UnityEngine.Object
 struct Object_t1021602117;
-// System.String
-struct String_t;
-// UnityEngine.Transform
-struct Transform_t3275118058;
 // UnityEngine.MeshFilter
 struct MeshFilter_t3026937449;
 // UnityEngine.Component
@@ -149,6 +150,10 @@ struct serializableUnityARPlaneAnchor_t2771464920;
 struct Encoding_t663144255;
 // System.Object[]
 struct ObjectU5BU5D_t3614634134;
+extern Il2CppClass* Marshal_t785896760_il2cpp_TypeInfo_var;
+extern const uint32_t UnityARUserAnchorData_get_identifierStr_m1809997573_MetadataUsageId;
+extern Il2CppClass* UnityARUserAnchorData_t2645079618_il2cpp_TypeInfo_var;
+extern const uint32_t UnityARUserAnchorData_UnityARUserAnchorDataFromGameObject_m2731461661_MetadataUsageId;
 extern Il2CppClass* UnityARUtility_t3608388148_il2cpp_TypeInfo_var;
 extern const uint32_t UnityARUtility_InitializePlanePrefab_m991798235_MetadataUsageId;
 extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
@@ -336,6 +341,22 @@ extern "C"  void List_1_Add_m4157722533_gshared (List_1_t2058570427 * __this, Il
 // !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 extern "C"  Il2CppObject * List_1_get_Item_m2062981835_gshared (List_1_t2058570427 * __this, int32_t p0, const MethodInfo* method);
 
+// System.String System.Runtime.InteropServices.Marshal::PtrToStringAuto(System.IntPtr)
+extern "C"  String_t* Marshal_PtrToStringAuto_m3496615756 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.XR.iOS.UnityARUserAnchorData::get_identifierStr()
+extern "C"  String_t* UnityARUserAnchorData_get_identifierStr_m1809997573 (UnityARUserAnchorData_t2645079618 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Transform UnityEngine.GameObject::get_transform()
+extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Transform::get_position()
+extern "C"  Vector3_t2243707580  Transform_get_position_m1104419803 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
+extern "C"  Quaternion_t4030073918  Transform_get_rotation_m1033555130 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Transform::get_localScale()
+extern "C"  Vector3_t2243707580  Transform_get_localScale_m3074381503 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::TRS(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3)
+extern "C"  Matrix4x4_t2933234003  Matrix4x4_TRS_m1913765359 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Quaternion_t4030073918  p1, Vector3_t2243707580  p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector4 UnityEngine.Matrix4x4::GetColumn(System.Int32)
+extern "C"  Vector4_t2243707581  Matrix4x4_GetColumn_m1367096730 (Matrix4x4_t2933234003 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Object::.ctor()
 extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
@@ -348,8 +369,6 @@ extern "C"  void GameObject__ctor_m498247354 (GameObject_t1756533147 * __this, c
 extern "C"  void Object_set_name_m4157836998 (Object_t1021602117 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.GameObject UnityEngine.XR.iOS.UnityARUtility::UpdatePlaneWithAnchorTransform(UnityEngine.GameObject,UnityEngine.XR.iOS.ARPlaneAnchor)
 extern "C"  GameObject_t1756533147 * UnityARUtility_UpdatePlaneWithAnchorTransform_m3977317096 (Il2CppObject * __this /* static, unused */, GameObject_t1756533147 * ___plane0, ARPlaneAnchor_t1439520888  ___arPlaneAnchor1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Transform UnityEngine.GameObject::get_transform()
-extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.XR.iOS.UnityARMatrixOps::GetPosition(UnityEngine.Matrix4x4)
 extern "C"  Vector3_t2243707580  UnityARMatrixOps_GetPosition_m110321593 (Il2CppObject * __this /* static, unused */, Matrix4x4_t2933234003  ___matrix0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
@@ -418,8 +437,6 @@ extern "C"  Vector3_t2243707580  Vector3_get_zero_m1527993324 (Il2CppObject * __
 extern "C"  Quaternion_t4030073918  Quaternion_Euler_m2887458175 (Il2CppObject * __this /* static, unused */, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_one()
 extern "C"  Vector3_t2243707580  Vector3_get_one_m627547232 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::TRS(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3)
-extern "C"  Matrix4x4_t2933234003  Matrix4x4_TRS_m1913765359 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Quaternion_t4030073918  p1, Vector3_t2243707580  p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Material::SetMatrix(System.String,UnityEngine.Matrix4x4)
 extern "C"  void Material_SetMatrix_m1387972957 (Material_t193706927 * __this, String_t* p0, Matrix4x4_t2933234003  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Material::SetFloat(System.String,System.Single)
@@ -496,8 +513,6 @@ extern "C"  void serializableUnityARMatrix4x4__ctor_m3056798804 (serializableUni
 extern "C"  Vector4_t2243707581  SerializableVector4_op_Implicit_m3701091973 (Il2CppObject * __this /* static, unused */, SerializableVector4_t4294681242 * ___rValue0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.UnityARMatrix4x4::.ctor(UnityEngine.Vector4,UnityEngine.Vector4,UnityEngine.Vector4,UnityEngine.Vector4)
 extern "C"  void UnityARMatrix4x4__ctor_m2255520762 (UnityARMatrix4x4_t100931615 * __this, Vector4_t2243707581  ___c00, Vector4_t2243707581  ___c11, Vector4_t2243707581  ___c22, Vector4_t2243707581  ___c33, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector4 UnityEngine.Matrix4x4::GetColumn(System.Int32)
-extern "C"  Vector4_t2243707581  Matrix4x4_GetColumn_m1367096730 (Matrix4x4_t2933234003 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Matrix4x4::SetColumn(System.Int32,UnityEngine.Vector4)
 extern "C"  void Matrix4x4_SetColumn_m3120649749 (Matrix4x4_t2933234003 * __this, int32_t p0, Vector4_t2243707581  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Utils.serializableUnityARMatrix4x4 Utils.serializableUnityARMatrix4x4::op_Implicit(UnityEngine.Matrix4x4)
@@ -519,6 +534,75 @@ extern "C"  void Vector4__ctor_m1222289168 (Vector4_t2243707581 * __this, float 
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.String UnityEngine.XR.iOS.UnityARUserAnchorData::get_identifierStr()
+extern "C"  String_t* UnityARUserAnchorData_get_identifierStr_m1809997573 (UnityARUserAnchorData_t2645079618 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityARUserAnchorData_get_identifierStr_m1809997573_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IntPtr_t L_0 = __this->get_ptrIdentifier_0();
+		IL2CPP_RUNTIME_CLASS_INIT(Marshal_t785896760_il2cpp_TypeInfo_var);
+		String_t* L_1 = Marshal_PtrToStringAuto_m3496615756(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+extern "C"  String_t* UnityARUserAnchorData_get_identifierStr_m1809997573_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	UnityARUserAnchorData_t2645079618 * _thisAdjusted = reinterpret_cast<UnityARUserAnchorData_t2645079618 *>(__this + 1);
+	return UnityARUserAnchorData_get_identifierStr_m1809997573(_thisAdjusted, method);
+}
+// UnityEngine.XR.iOS.UnityARUserAnchorData UnityEngine.XR.iOS.UnityARUserAnchorData::UnityARUserAnchorDataFromGameObject(UnityEngine.GameObject)
+extern "C"  UnityARUserAnchorData_t2645079618  UnityARUserAnchorData_UnityARUserAnchorDataFromGameObject_m2731461661 (Il2CppObject * __this /* static, unused */, GameObject_t1756533147 * ___go0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityARUserAnchorData_UnityARUserAnchorDataFromGameObject_m2731461661_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Matrix4x4_t2933234003  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	UnityARUserAnchorData_t2645079618  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		GameObject_t1756533147 * L_0 = ___go0;
+		NullCheck(L_0);
+		Transform_t3275118058 * L_1 = GameObject_get_transform_m909382139(L_0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		Vector3_t2243707580  L_2 = Transform_get_position_m1104419803(L_1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_3 = ___go0;
+		NullCheck(L_3);
+		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		Quaternion_t4030073918  L_5 = Transform_get_rotation_m1033555130(L_4, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_6 = ___go0;
+		NullCheck(L_6);
+		Transform_t3275118058 * L_7 = GameObject_get_transform_m909382139(L_6, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Vector3_t2243707580  L_8 = Transform_get_localScale_m3074381503(L_7, /*hidden argument*/NULL);
+		Matrix4x4_t2933234003  L_9 = Matrix4x4_TRS_m1913765359(NULL /*static, unused*/, L_2, L_5, L_8, /*hidden argument*/NULL);
+		V_0 = L_9;
+		Initobj (UnityARUserAnchorData_t2645079618_il2cpp_TypeInfo_var, (&V_1));
+		UnityARMatrix4x4_t100931615 * L_10 = (&V_1)->get_address_of_transform_1();
+		Vector4_t2243707581  L_11 = Matrix4x4_GetColumn_m1367096730((&V_0), 0, /*hidden argument*/NULL);
+		L_10->set_column0_0(L_11);
+		UnityARMatrix4x4_t100931615 * L_12 = (&V_1)->get_address_of_transform_1();
+		Vector4_t2243707581  L_13 = Matrix4x4_GetColumn_m1367096730((&V_0), 1, /*hidden argument*/NULL);
+		L_12->set_column1_1(L_13);
+		UnityARMatrix4x4_t100931615 * L_14 = (&V_1)->get_address_of_transform_1();
+		Vector4_t2243707581  L_15 = Matrix4x4_GetColumn_m1367096730((&V_0), 2, /*hidden argument*/NULL);
+		L_14->set_column2_2(L_15);
+		UnityARMatrix4x4_t100931615 * L_16 = (&V_1)->get_address_of_transform_1();
+		Vector4_t2243707581  L_17 = Matrix4x4_GetColumn_m1367096730((&V_0), 3, /*hidden argument*/NULL);
+		L_16->set_column3_3(L_17);
+		UnityARUserAnchorData_t2645079618  L_18 = V_1;
+		return L_18;
+	}
+}
 // System.Void UnityEngine.XR.iOS.UnityARUtility::.ctor()
 extern "C"  void UnityARUtility__ctor_m2045974871 (UnityARUtility_t3608388148 * __this, const MethodInfo* method)
 {

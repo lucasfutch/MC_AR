@@ -11,14 +11,34 @@
 			<method name="BlockButtonSelected"/>
 			<method name="PickaxeButtonSelected"/>
 			<method name="RandColorButtonSelected"/>
+			<method name="SandButtonSelected"/>
+			<method name="TorchButtonSelected"/>
+			<method name="RandColorButtonSelected"/>
+			<method name="TreeButtonSelected"/>
+			<method name="BlockButtonSelected"/>
+			<method name="PickaxeButtonSelected"/>
+			<method name="WoodButtonSelected"/>
+			<method name="WaterButtonSelected"/>
+			<method name="StalactiteButtonSelected"/>
+			<method name="BrickButtonSelected"/>
 		</type>
 		<type fullname="SaveLoad">
+			<method name="Save"/>
+			<method name="Load"/>
 			<method name="Save"/>
 			<method name="Load"/>
 		</type>
 		<type fullname="changeScene">
 			<method name="changeScenes"/>
 			<method name="changeScenes"/>
+		</type>
+		<type fullname="moveCamera">
+			<method name="MoveLeft"/>
+			<method name="MoveLeft"/>
+			<method name="MoveUp"/>
+			<method name="MoveDown"/>
+			<method name="MoveForward"/>
+			<method name="MoveBackward"/>
 		</type>
 	</assembly>
 </linker>

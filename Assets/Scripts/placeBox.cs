@@ -98,14 +98,13 @@ public class placeBox : MonoBehaviour {
 		} else if (currentSelectedOG == Selected.Sand) {
 			boxGO = Instantiate (sandPrefab, atPosition, Quaternion.identity);
 
+		} else {
+			Debug.Log ("Did not place a box");		
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		//GyroModifyCamera ();
-
 
 		// Used for animation playing
 		if (timeElapsed < timeToAnimate && animationStarted) {
@@ -116,7 +115,6 @@ public class placeBox : MonoBehaviour {
 			animator.ResetTrigger ("clickWindow");
 			timeElapsed = 0.0f;
 		}
-
 			
 		// Placing a block
 		if ((Input.touchCount == 1) && (currentSelectionIsABlock == Selected.Block))

@@ -9305,7 +9305,6 @@ extern "C" void Resolution_get_height_m882683003_AdjustorThunk ();
 extern "C" void Resolution_ToString_m3711510886_AdjustorThunk ();
 extern "C" void ResourceRequest__ctor_m3340010930 ();
 extern "C" void ResourceRequest_get_asset_m3527928488 ();
-extern "C" void Resources_Load_m2041782325 ();
 extern "C" void Resources_Load_m243305716 ();
 extern "C" void Resources_GetBuiltinResource_m582410469 ();
 extern "C" void Scene_get_handle_m1555912301_AdjustorThunk ();
@@ -9634,6 +9633,7 @@ extern "C" void Transform_get_localPosition_m2533925116 ();
 extern "C" void Transform_set_localPosition_m1026930133 ();
 extern "C" void Transform_INTERNAL_get_localPosition_m94028171 ();
 extern "C" void Transform_INTERNAL_set_localPosition_m432504087 ();
+extern "C" void Transform_get_right_m440863970 ();
 extern "C" void Transform_get_up_m1603627763 ();
 extern "C" void Transform_get_forward_m1833488937 ();
 extern "C" void Transform_get_rotation_m1033555130 ();
@@ -11390,6 +11390,15 @@ extern "C" void ModeSwitcher_Start_m3082032181 ();
 extern "C" void ModeSwitcher_Update_m4068949590 ();
 extern "C" void ModeSwitcher_EnableBallCreation_m2999743005 ();
 extern "C" void ModeSwitcher_OnGUI_m558458371 ();
+extern "C" void moveCamera__ctor_m3623116695 ();
+extern "C" void moveCamera_Start_m2502935819 ();
+extern "C" void moveCamera_Update_m2245000136 ();
+extern "C" void moveCamera_MoveUp_m1968642099 ();
+extern "C" void moveCamera_MoveDown_m699665504 ();
+extern "C" void moveCamera_MoveLeft_m3402740185 ();
+extern "C" void moveCamera_MoveRight_m684059640 ();
+extern "C" void moveCamera_MoveForward_m1922046453 ();
+extern "C" void moveCamera_MoveBackward_m2399202221 ();
 extern "C" void ParticlePainter__ctor_m3797515404 ();
 extern "C" void ParticlePainter_Start_m240231480 ();
 extern "C" void ParticlePainter_ARFrameUpdated_m3328436002 ();
@@ -11411,7 +11420,6 @@ extern "C" void PointCloudParticleExample_Start_m1736319872 ();
 extern "C" void PointCloudParticleExample_ARFrameUpdated_m1855536526 ();
 extern "C" void PointCloudParticleExample_Update_m633725559 ();
 extern "C" void SaveLoad__ctor_m371728588 ();
-extern "C" void SaveLoad_Awake_m1003036745 ();
 extern "C" void SaveLoad_Start_m1026186324 ();
 extern "C" void SaveLoad_Save_m3782038213 ();
 extern "C" void SaveLoad_Load_m1025530042 ();
@@ -11754,7 +11762,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11740] = 
+extern const Il2CppMethodPointer g_MethodPointers[11748] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -21047,7 +21055,6 @@ extern const Il2CppMethodPointer g_MethodPointers[11740] =
 	Resolution_ToString_m3711510886_AdjustorThunk,
 	ResourceRequest__ctor_m3340010930,
 	ResourceRequest_get_asset_m3527928488,
-	Resources_Load_m2041782325,
 	Resources_Load_m243305716,
 	Resources_GetBuiltinResource_m582410469,
 	Scene_get_handle_m1555912301_AdjustorThunk,
@@ -21376,6 +21383,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11740] =
 	Transform_set_localPosition_m1026930133,
 	Transform_INTERNAL_get_localPosition_m94028171,
 	Transform_INTERNAL_set_localPosition_m432504087,
+	Transform_get_right_m440863970,
 	Transform_get_up_m1603627763,
 	Transform_get_forward_m1833488937,
 	Transform_get_rotation_m1033555130,
@@ -23132,6 +23140,15 @@ extern const Il2CppMethodPointer g_MethodPointers[11740] =
 	ModeSwitcher_Update_m4068949590,
 	ModeSwitcher_EnableBallCreation_m2999743005,
 	ModeSwitcher_OnGUI_m558458371,
+	moveCamera__ctor_m3623116695,
+	moveCamera_Start_m2502935819,
+	moveCamera_Update_m2245000136,
+	moveCamera_MoveUp_m1968642099,
+	moveCamera_MoveDown_m699665504,
+	moveCamera_MoveLeft_m3402740185,
+	moveCamera_MoveRight_m684059640,
+	moveCamera_MoveForward_m1922046453,
+	moveCamera_MoveBackward_m2399202221,
 	ParticlePainter__ctor_m3797515404,
 	ParticlePainter_Start_m240231480,
 	ParticlePainter_ARFrameUpdated_m3328436002,
@@ -23153,7 +23170,6 @@ extern const Il2CppMethodPointer g_MethodPointers[11740] =
 	PointCloudParticleExample_ARFrameUpdated_m1855536526,
 	PointCloudParticleExample_Update_m633725559,
 	SaveLoad__ctor_m371728588,
-	SaveLoad_Awake_m1003036745,
 	SaveLoad_Start_m1026186324,
 	SaveLoad_Save_m3782038213,
 	SaveLoad_Load_m1025530042,

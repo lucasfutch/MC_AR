@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 65838591244766380}
   - component: {fileID: 54664371683393686}
   m_Layer: 0
-  m_Name: Torch_Fire 1
+  m_Name: Torch_Fire
   m_TagString: placedBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

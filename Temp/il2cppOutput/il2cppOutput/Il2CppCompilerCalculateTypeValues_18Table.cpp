@@ -74,6 +74,7 @@
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARMatrix4039665643.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARUtilit3608388148.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARAmbient680084560.h"
+#include "AssemblyU2DCSharp_moveCamera3157790334.h"
 #include "AssemblyU2DCSharp_U3CPrivateImplementationDetailsU1486305137.h"
 #include "AssemblyU2DCSharp_U3CPrivateImplementationDetailsU3762068664.h"
 
@@ -436,12 +437,21 @@ extern const int32_t g_FieldOffsetTable1858[2] =
 	UnityARAmbient_t680084560::get_offset_of_l_2(),
 	UnityARAmbient_t680084560::get_offset_of_m_Session_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1859 = { sizeof (U3CPrivateImplementationDetailsU3E_t1486305142), -1, sizeof(U3CPrivateImplementationDetailsU3E_t1486305142_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1859[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1859 = { sizeof (moveCamera_t3157790334), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1859[5] = 
+{
+	moveCamera_t3157790334::get_offset_of_camera_2(),
+	moveCamera_t3157790334::get_offset_of_lookSpeed_3(),
+	moveCamera_t3157790334::get_offset_of_moveSpeed_4(),
+	moveCamera_t3157790334::get_offset_of_rotationX_5(),
+	moveCamera_t3157790334::get_offset_of_rotationY_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1860 = { sizeof (U3CPrivateImplementationDetailsU3E_t1486305142), -1, sizeof(U3CPrivateImplementationDetailsU3E_t1486305142_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1860[1] = 
 {
 	U3CPrivateImplementationDetailsU3E_t1486305142_StaticFields::get_offset_of_U24fieldU2D8E7629AD5AF686202B8CB7C014505C432FFE31E6_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1860 = { sizeof (U24ArrayTypeU3D24_t762068664)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D24_t762068664 ), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1861 = { sizeof (U24ArrayTypeU3D24_t762068664)+ sizeof (Il2CppObject), sizeof(U24ArrayTypeU3D24_t762068664 ), 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
