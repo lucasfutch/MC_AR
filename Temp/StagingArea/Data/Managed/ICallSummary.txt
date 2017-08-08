@@ -35,6 +35,7 @@ UnityEngine.Camera::get_nearClipPlane
 UnityEngine.Camera::AddCommandBuffer
 UnityEngine.Camera::INTERNAL_CALL_ScreenPointToRay
 UnityEngine.Camera::INTERNAL_CALL_ScreenToViewportPoint
+UnityEngine.Camera::INTERNAL_CALL_ScreenToWorldPoint
 UnityEngine.Camera::INTERNAL_get_pixelRect
 UnityEngine.Camera::INTERNAL_set_projectionMatrix
 UnityEngine.Camera::RemoveCommandBuffer
@@ -278,6 +279,7 @@ UnityEngine.Input::get_mousePresent
 UnityEngine.Input::get_touchSupported
 UnityEngine.Input::get_touchCount
 UnityEngine.Input::mainGyroIndex_Internal
+UnityEngine.Input::GetAxis
 UnityEngine.Input::GetAxisRaw
 UnityEngine.Input::get_compositionString
 UnityEngine.Input::INTERNAL_CALL_GetTouch
@@ -388,6 +390,7 @@ UnityEngine.Physics::INTERNAL_CALL_RaycastAll
 UnityEngine.PlayerConnectionInternal::IsConnected
 UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
+UnityEngine.Quaternion::INTERNAL_CALL_AngleAxis
 UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad
 UnityEngine.Quaternion::INTERNAL_CALL_Inverse
 UnityEngine.Random::Range

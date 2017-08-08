@@ -1379,9 +1379,9 @@ extern "C"  Il2CppObject * ObjectSerializationExtension_Deserialize_TisIl2CppObj
 		il2cpp_codegen_initialize_method (ObjectSerializationExtension_Deserialize_TisIl2CppObject_m1078535403_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	MemoryStream_t743994179 * V_0 = NULL;
-	BinaryFormatter_t1866979105 * V_1 = NULL;
-	Il2CppObject * V_2 = NULL;
+	Il2CppObject * V_0 = NULL;
+	MemoryStream_t743994179 * V_1 = NULL;
+	BinaryFormatter_t1866979105 * V_2 = NULL;
 	Il2CppObject * V_3 = NULL;
 	Exception_t1927440687 * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
@@ -1390,84 +1390,98 @@ extern "C"  Il2CppObject * ObjectSerializationExtension_Deserialize_TisIl2CppObj
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
+		// if (byteArray == null)
 		ByteU5BU5D_t3397334013* L_0 = ___byteArray0;
 		if (L_0)
 		{
-			goto IL_000d;
+			goto IL_0014;
 		}
 	}
 	{
-		return ((Il2CppObject *)Castclass(NULL, IL2CPP_RGCTX_DATA(method->rgctx_data, 0)));
+		// return null;
+		V_0 = (Il2CppObject *)((Il2CppObject *)Castclass(NULL, IL2CPP_RGCTX_DATA(method->rgctx_data, 0)));
+		goto IL_0057;
 	}
 
-IL_000d:
+IL_0014:
 	{
+		// using (var memStream = new MemoryStream())
 		MemoryStream_t743994179 * L_1 = (MemoryStream_t743994179 *)il2cpp_codegen_object_new(MemoryStream_t743994179_il2cpp_TypeInfo_var);
 		MemoryStream__ctor_m1043059966(L_1, /*hidden argument*/NULL);
-		V_0 = (MemoryStream_t743994179 *)L_1;
+		V_1 = (MemoryStream_t743994179 *)L_1;
 	}
 
-IL_0013:
+IL_001a:
 	try
 	{ // begin try (depth: 1)
+		// var binForm = new BinaryFormatter();
 		BinaryFormatter_t1866979105 * L_2 = (BinaryFormatter_t1866979105 *)il2cpp_codegen_object_new(BinaryFormatter_t1866979105_il2cpp_TypeInfo_var);
 		BinaryFormatter__ctor_m4171832002(L_2, /*hidden argument*/NULL);
-		V_1 = (BinaryFormatter_t1866979105 *)L_2;
-		MemoryStream_t743994179 * L_3 = V_0;
+		V_2 = (BinaryFormatter_t1866979105 *)L_2;
+		// memStream.Write(byteArray, 0, byteArray.Length);
+		MemoryStream_t743994179 * L_3 = V_1;
 		ByteU5BU5D_t3397334013* L_4 = ___byteArray0;
 		ByteU5BU5D_t3397334013* L_5 = ___byteArray0;
 		NullCheck(L_5);
+		// memStream.Write(byteArray, 0, byteArray.Length);
 		NullCheck((Stream_t3255436806 *)L_3);
 		VirtActionInvoker3< ByteU5BU5D_t3397334013*, int32_t, int32_t >::Invoke(18 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, (Stream_t3255436806 *)L_3, (ByteU5BU5D_t3397334013*)L_4, (int32_t)0, (int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_5)->max_length)))));
-		MemoryStream_t743994179 * L_6 = V_0;
+		// memStream.Seek(0, SeekOrigin.Begin);
+		MemoryStream_t743994179 * L_6 = V_1;
+		// memStream.Seek(0, SeekOrigin.Begin);
 		NullCheck((Stream_t3255436806 *)L_6);
 		VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(16 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, (Stream_t3255436806 *)L_6, (int64_t)(((int64_t)((int64_t)0))), (int32_t)0);
-		BinaryFormatter_t1866979105 * L_7 = V_1;
-		MemoryStream_t743994179 * L_8 = V_0;
+		// var obj = (T)binForm.Deserialize(memStream);
+		BinaryFormatter_t1866979105 * L_7 = V_2;
+		MemoryStream_t743994179 * L_8 = V_1;
+		// var obj = (T)binForm.Deserialize(memStream);
 		NullCheck((BinaryFormatter_t1866979105 *)L_7);
 		Il2CppObject * L_9 = BinaryFormatter_Deserialize_m2771853471((BinaryFormatter_t1866979105 *)L_7, (Stream_t3255436806 *)L_8, /*hidden argument*/NULL);
-		V_2 = (Il2CppObject *)((Il2CppObject *)Castclass(L_9, IL2CPP_RGCTX_DATA(method->rgctx_data, 0)));
-		Il2CppObject * L_10 = V_2;
-		V_3 = (Il2CppObject *)L_10;
-		IL2CPP_LEAVE(0x4F, FINALLY_0042);
+		V_3 = (Il2CppObject *)((Il2CppObject *)Castclass(L_9, IL2CPP_RGCTX_DATA(method->rgctx_data, 0)));
+		// return obj;
+		Il2CppObject * L_10 = V_3;
+		V_0 = (Il2CppObject *)L_10;
+		IL2CPP_LEAVE(0x57, FINALLY_004a);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_0042;
+		goto FINALLY_004a;
 	}
 
-FINALLY_0042:
+FINALLY_004a:
 	{ // begin finally (depth: 1)
 		{
-			MemoryStream_t743994179 * L_11 = V_0;
+			MemoryStream_t743994179 * L_11 = V_1;
 			if (!L_11)
 			{
-				goto IL_004e;
+				goto IL_0056;
 			}
 		}
 
-IL_0048:
+IL_0050:
 		{
-			MemoryStream_t743994179 * L_12 = V_0;
+			MemoryStream_t743994179 * L_12 = V_1;
+			// using (var memStream = new MemoryStream())
 			NullCheck((Il2CppObject *)L_12);
 			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t2427283555_il2cpp_TypeInfo_var, (Il2CppObject *)L_12);
 		}
 
-IL_004e:
+IL_0056:
 		{
-			IL2CPP_END_FINALLY(66)
+			IL2CPP_END_FINALLY(74)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(66)
+	IL2CPP_CLEANUP(74)
 	{
-		IL2CPP_JUMP_TBL(0x4F, IL_004f)
+		IL2CPP_JUMP_TBL(0x57, IL_0057)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
 	}
 
-IL_004f:
+IL_0057:
 	{
-		Il2CppObject * L_13 = V_3;
+		// }
+		Il2CppObject * L_13 = V_0;
 		return L_13;
 	}
 }

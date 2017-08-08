@@ -67,15 +67,20 @@ public class placeBox : MonoBehaviour {
 		audioPlace.Play ();
 
 		if (currentSelectedOG == Selected.Wood) {
-			boxGO = Instantiate (woodPrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Wood Block");
+			Instantiate (woodPrefab, atPosition, Quaternion.identity);
+			//GameObject go = Instantiate(Resources.Load("Wood")) as GameObject;
 
 		} else if (currentSelectedOG == Selected.Brick) {
-			boxGO = Instantiate (brickPrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Brick Block");
+			Instantiate (brickPrefab, atPosition, Quaternion.identity);
 
 		} else if (currentSelectedOG == Selected.Torch) {
-			boxGO = Instantiate (torchPrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Torch Block");
+			Instantiate (torchPrefab, atPosition, Quaternion.identity);
 
 		} else if (currentSelectedOG == Selected.RandColor) {
+			Debug.Log ("Placing RandColor Block");
 			boxGO = Instantiate (randColorPrefab, atPosition, Quaternion.identity);
 
 			float r = Random.Range (0.0f, 1.0f);
@@ -87,16 +92,20 @@ public class placeBox : MonoBehaviour {
 			MeshRenderer renderer = boxGO.GetComponent<MeshRenderer> ();
 			renderer.SetPropertyBlock (props);
 		} else if (currentSelectedOG == Selected.Water) {
-			boxGO = Instantiate (waterPrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Water Block");
+			Instantiate (waterPrefab, atPosition, Quaternion.identity);
 
 		} else if (currentSelectedOG == Selected.Stalactite) {
-			boxGO = Instantiate (stalactitePrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Stalactite Block");
+			Instantiate (stalactitePrefab, atPosition, Quaternion.identity);
 
 		} else if (currentSelectedOG == Selected.Tree) {
-			boxGO = Instantiate (treePrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Tree Block");
+			Instantiate (treePrefab, atPosition, Quaternion.identity);
 
 		} else if (currentSelectedOG == Selected.Sand) {
-			boxGO = Instantiate (sandPrefab, atPosition, Quaternion.identity);
+			Debug.Log ("Placing Sand Block");
+			Instantiate (sandPrefab, atPosition, Quaternion.identity);
 
 		} else {
 			Debug.Log ("Did not place a box");		
@@ -117,7 +126,7 @@ public class placeBox : MonoBehaviour {
 		}
 			
 		// Placing a block
-		if ((Input.touchCount == 1) && (currentSelectionIsABlock == Selected.Block))
+		if ((Input.touchCount > 0) && (currentSelectionIsABlock == Selected.Block) && (m_HitTransform != null))
 		{
 			var touch = Input.GetTouch(0);
 			if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
@@ -126,7 +135,7 @@ public class placeBox : MonoBehaviour {
 				RaycastHit raycastHit;
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
-					Debug.Log ("Detected a Box");
+					Debug.Log ("Detected a Box in plaxebox");
 				}
 
 					MCFace boxSideHit = GetHitFace (raycastHit);
@@ -146,7 +155,6 @@ public class placeBox : MonoBehaviour {
 					originalVec = new Vector3 (xPos, yPos, zPos);
 
 					Vector3 boxPosition = originalVec + boxSideHitVec;
-
 					CreateBox (boxPosition);
 
 				}
@@ -165,16 +173,15 @@ public class placeBox : MonoBehaviour {
 					if (hitResults.Count > 0) {
 						foreach (var hitResult in hitResults) {
 							Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
-							Debug.Log ("Placing a Box Normally");
-
+							Debug.Log ("Placing a Box Normally at " + position);
 							//Place a Stalactite
 							if (currentSelectedOG == Selected.Stalactite) {
 								if (raycastHit.collider.CompareTag ("planePrefab")) {
 									float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-									Debug.Log (raycast.direction.y);
-									Debug.Log(raycastHit.collider.gameObject.transform.up);
-									Debug.Log (angle);
-
+//									Debug.Log (raycast.direction.y);
+//									Debug.Log(raycastHit.collider.gameObject.transform.up);
+//									Debug.Log (angle);
+//
 									if (raycast.direction.y > 0.1f) {
 										Debug.Log ("Placing a Stalactite");
 										CreateBox (new Vector3 (position.x, position.y - (createHeight + 0.45f), position.z));
@@ -186,6 +193,7 @@ public class placeBox : MonoBehaviour {
 								
 							} else {
 								Debug.Log("not placing a stalactite");
+
 								CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
 							}
 							break;
@@ -208,9 +216,10 @@ public class placeBox : MonoBehaviour {
 				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
 				RaycastHit raycastHit;
 
+				Debug.Log ("Im playing with the pickaxe");
 				// Touching a  box
 				if (Physics.Raycast (raycast, out raycastHit)) {
-					Debug.Log ("Detected a Box");
+					Debug.Log ("Detected a Box to delete");
 					if (raycastHit.collider.CompareTag ("placedBox")) {
 						
 						float xPos = raycastHit.collider.gameObject.transform.position.x;
@@ -294,14 +303,5 @@ public class placeBox : MonoBehaviour {
 		return new Vector3(0, 0, 0);
 	}
 
-	void GyroModifyCamera()
-	{
-		transform.rotation = GyroToUnity(Input.gyro.attitude);
-	}
-
-	private static Quaternion GyroToUnity(Quaternion q)
-	{
-		return new Quaternion(q.x, q.y, -q.z, -q.w);
-	}
 
 }

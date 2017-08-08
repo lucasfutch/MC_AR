@@ -18,8 +18,6 @@
 struct Transform_t3275118058;
 // UnityEngine.GameObject
 struct GameObject_t1756533147;
-// destroyBlock
-struct destroyBlock_t3412050513;
 
 
 
@@ -56,30 +54,28 @@ public:
 	GameObject_t1756533147 * ___TreeParent_11;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::SandParent
 	GameObject_t1756533147 * ___SandParent_12;
-	// destroyBlock UnityEngine.XR.iOS.UIBehavior::destroyBlockScript
-	destroyBlock_t3412050513 * ___destroyBlockScript_13;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_wood
-	GameObject_t1756533147 * ___item_wood_14;
+	GameObject_t1756533147 * ___item_wood_13;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_brick
-	GameObject_t1756533147 * ___item_brick_15;
+	GameObject_t1756533147 * ___item_brick_14;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_torch
-	GameObject_t1756533147 * ___item_torch_16;
+	GameObject_t1756533147 * ___item_torch_15;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_rand
-	GameObject_t1756533147 * ___item_rand_17;
+	GameObject_t1756533147 * ___item_rand_16;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_water
-	GameObject_t1756533147 * ___item_water_18;
+	GameObject_t1756533147 * ___item_water_17;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_stala
-	GameObject_t1756533147 * ___item_stala_19;
+	GameObject_t1756533147 * ___item_stala_18;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_tree
-	GameObject_t1756533147 * ___item_tree_20;
+	GameObject_t1756533147 * ___item_tree_19;
 	// UnityEngine.GameObject UnityEngine.XR.iOS.UIBehavior::item_sand
-	GameObject_t1756533147 * ___item_sand_21;
+	GameObject_t1756533147 * ___item_sand_20;
 	// UnityEngine.Vector3 UnityEngine.XR.iOS.UIBehavior::biggerButton
-	Vector3_t2243707580  ___biggerButton_23;
+	Vector3_t2243707580  ___biggerButton_22;
 	// System.Boolean UnityEngine.XR.iOS.UIBehavior::blockButtonHasBeenMoved
-	bool ___blockButtonHasBeenMoved_24;
+	bool ___blockButtonHasBeenMoved_23;
 	// System.Boolean UnityEngine.XR.iOS.UIBehavior::pickaxeButtonHasBeenMoved
-	bool ___pickaxeButtonHasBeenMoved_25;
+	bool ___pickaxeButtonHasBeenMoved_24;
 
 public:
 	inline static int32_t get_offset_of_Block_2() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___Block_2)); }
@@ -181,109 +177,100 @@ public:
 		Il2CppCodeGenWriteBarrier(&___SandParent_12, value);
 	}
 
-	inline static int32_t get_offset_of_destroyBlockScript_13() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___destroyBlockScript_13)); }
-	inline destroyBlock_t3412050513 * get_destroyBlockScript_13() const { return ___destroyBlockScript_13; }
-	inline destroyBlock_t3412050513 ** get_address_of_destroyBlockScript_13() { return &___destroyBlockScript_13; }
-	inline void set_destroyBlockScript_13(destroyBlock_t3412050513 * value)
+	inline static int32_t get_offset_of_item_wood_13() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_wood_13)); }
+	inline GameObject_t1756533147 * get_item_wood_13() const { return ___item_wood_13; }
+	inline GameObject_t1756533147 ** get_address_of_item_wood_13() { return &___item_wood_13; }
+	inline void set_item_wood_13(GameObject_t1756533147 * value)
 	{
-		___destroyBlockScript_13 = value;
-		Il2CppCodeGenWriteBarrier(&___destroyBlockScript_13, value);
+		___item_wood_13 = value;
+		Il2CppCodeGenWriteBarrier(&___item_wood_13, value);
 	}
 
-	inline static int32_t get_offset_of_item_wood_14() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_wood_14)); }
-	inline GameObject_t1756533147 * get_item_wood_14() const { return ___item_wood_14; }
-	inline GameObject_t1756533147 ** get_address_of_item_wood_14() { return &___item_wood_14; }
-	inline void set_item_wood_14(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_brick_14() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_brick_14)); }
+	inline GameObject_t1756533147 * get_item_brick_14() const { return ___item_brick_14; }
+	inline GameObject_t1756533147 ** get_address_of_item_brick_14() { return &___item_brick_14; }
+	inline void set_item_brick_14(GameObject_t1756533147 * value)
 	{
-		___item_wood_14 = value;
-		Il2CppCodeGenWriteBarrier(&___item_wood_14, value);
+		___item_brick_14 = value;
+		Il2CppCodeGenWriteBarrier(&___item_brick_14, value);
 	}
 
-	inline static int32_t get_offset_of_item_brick_15() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_brick_15)); }
-	inline GameObject_t1756533147 * get_item_brick_15() const { return ___item_brick_15; }
-	inline GameObject_t1756533147 ** get_address_of_item_brick_15() { return &___item_brick_15; }
-	inline void set_item_brick_15(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_torch_15() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_torch_15)); }
+	inline GameObject_t1756533147 * get_item_torch_15() const { return ___item_torch_15; }
+	inline GameObject_t1756533147 ** get_address_of_item_torch_15() { return &___item_torch_15; }
+	inline void set_item_torch_15(GameObject_t1756533147 * value)
 	{
-		___item_brick_15 = value;
-		Il2CppCodeGenWriteBarrier(&___item_brick_15, value);
+		___item_torch_15 = value;
+		Il2CppCodeGenWriteBarrier(&___item_torch_15, value);
 	}
 
-	inline static int32_t get_offset_of_item_torch_16() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_torch_16)); }
-	inline GameObject_t1756533147 * get_item_torch_16() const { return ___item_torch_16; }
-	inline GameObject_t1756533147 ** get_address_of_item_torch_16() { return &___item_torch_16; }
-	inline void set_item_torch_16(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_rand_16() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_rand_16)); }
+	inline GameObject_t1756533147 * get_item_rand_16() const { return ___item_rand_16; }
+	inline GameObject_t1756533147 ** get_address_of_item_rand_16() { return &___item_rand_16; }
+	inline void set_item_rand_16(GameObject_t1756533147 * value)
 	{
-		___item_torch_16 = value;
-		Il2CppCodeGenWriteBarrier(&___item_torch_16, value);
+		___item_rand_16 = value;
+		Il2CppCodeGenWriteBarrier(&___item_rand_16, value);
 	}
 
-	inline static int32_t get_offset_of_item_rand_17() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_rand_17)); }
-	inline GameObject_t1756533147 * get_item_rand_17() const { return ___item_rand_17; }
-	inline GameObject_t1756533147 ** get_address_of_item_rand_17() { return &___item_rand_17; }
-	inline void set_item_rand_17(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_water_17() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_water_17)); }
+	inline GameObject_t1756533147 * get_item_water_17() const { return ___item_water_17; }
+	inline GameObject_t1756533147 ** get_address_of_item_water_17() { return &___item_water_17; }
+	inline void set_item_water_17(GameObject_t1756533147 * value)
 	{
-		___item_rand_17 = value;
-		Il2CppCodeGenWriteBarrier(&___item_rand_17, value);
+		___item_water_17 = value;
+		Il2CppCodeGenWriteBarrier(&___item_water_17, value);
 	}
 
-	inline static int32_t get_offset_of_item_water_18() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_water_18)); }
-	inline GameObject_t1756533147 * get_item_water_18() const { return ___item_water_18; }
-	inline GameObject_t1756533147 ** get_address_of_item_water_18() { return &___item_water_18; }
-	inline void set_item_water_18(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_stala_18() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_stala_18)); }
+	inline GameObject_t1756533147 * get_item_stala_18() const { return ___item_stala_18; }
+	inline GameObject_t1756533147 ** get_address_of_item_stala_18() { return &___item_stala_18; }
+	inline void set_item_stala_18(GameObject_t1756533147 * value)
 	{
-		___item_water_18 = value;
-		Il2CppCodeGenWriteBarrier(&___item_water_18, value);
+		___item_stala_18 = value;
+		Il2CppCodeGenWriteBarrier(&___item_stala_18, value);
 	}
 
-	inline static int32_t get_offset_of_item_stala_19() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_stala_19)); }
-	inline GameObject_t1756533147 * get_item_stala_19() const { return ___item_stala_19; }
-	inline GameObject_t1756533147 ** get_address_of_item_stala_19() { return &___item_stala_19; }
-	inline void set_item_stala_19(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_tree_19() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_tree_19)); }
+	inline GameObject_t1756533147 * get_item_tree_19() const { return ___item_tree_19; }
+	inline GameObject_t1756533147 ** get_address_of_item_tree_19() { return &___item_tree_19; }
+	inline void set_item_tree_19(GameObject_t1756533147 * value)
 	{
-		___item_stala_19 = value;
-		Il2CppCodeGenWriteBarrier(&___item_stala_19, value);
+		___item_tree_19 = value;
+		Il2CppCodeGenWriteBarrier(&___item_tree_19, value);
 	}
 
-	inline static int32_t get_offset_of_item_tree_20() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_tree_20)); }
-	inline GameObject_t1756533147 * get_item_tree_20() const { return ___item_tree_20; }
-	inline GameObject_t1756533147 ** get_address_of_item_tree_20() { return &___item_tree_20; }
-	inline void set_item_tree_20(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_item_sand_20() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_sand_20)); }
+	inline GameObject_t1756533147 * get_item_sand_20() const { return ___item_sand_20; }
+	inline GameObject_t1756533147 ** get_address_of_item_sand_20() { return &___item_sand_20; }
+	inline void set_item_sand_20(GameObject_t1756533147 * value)
 	{
-		___item_tree_20 = value;
-		Il2CppCodeGenWriteBarrier(&___item_tree_20, value);
+		___item_sand_20 = value;
+		Il2CppCodeGenWriteBarrier(&___item_sand_20, value);
 	}
 
-	inline static int32_t get_offset_of_item_sand_21() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___item_sand_21)); }
-	inline GameObject_t1756533147 * get_item_sand_21() const { return ___item_sand_21; }
-	inline GameObject_t1756533147 ** get_address_of_item_sand_21() { return &___item_sand_21; }
-	inline void set_item_sand_21(GameObject_t1756533147 * value)
+	inline static int32_t get_offset_of_biggerButton_22() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___biggerButton_22)); }
+	inline Vector3_t2243707580  get_biggerButton_22() const { return ___biggerButton_22; }
+	inline Vector3_t2243707580 * get_address_of_biggerButton_22() { return &___biggerButton_22; }
+	inline void set_biggerButton_22(Vector3_t2243707580  value)
 	{
-		___item_sand_21 = value;
-		Il2CppCodeGenWriteBarrier(&___item_sand_21, value);
+		___biggerButton_22 = value;
 	}
 
-	inline static int32_t get_offset_of_biggerButton_23() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___biggerButton_23)); }
-	inline Vector3_t2243707580  get_biggerButton_23() const { return ___biggerButton_23; }
-	inline Vector3_t2243707580 * get_address_of_biggerButton_23() { return &___biggerButton_23; }
-	inline void set_biggerButton_23(Vector3_t2243707580  value)
+	inline static int32_t get_offset_of_blockButtonHasBeenMoved_23() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___blockButtonHasBeenMoved_23)); }
+	inline bool get_blockButtonHasBeenMoved_23() const { return ___blockButtonHasBeenMoved_23; }
+	inline bool* get_address_of_blockButtonHasBeenMoved_23() { return &___blockButtonHasBeenMoved_23; }
+	inline void set_blockButtonHasBeenMoved_23(bool value)
 	{
-		___biggerButton_23 = value;
+		___blockButtonHasBeenMoved_23 = value;
 	}
 
-	inline static int32_t get_offset_of_blockButtonHasBeenMoved_24() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___blockButtonHasBeenMoved_24)); }
-	inline bool get_blockButtonHasBeenMoved_24() const { return ___blockButtonHasBeenMoved_24; }
-	inline bool* get_address_of_blockButtonHasBeenMoved_24() { return &___blockButtonHasBeenMoved_24; }
-	inline void set_blockButtonHasBeenMoved_24(bool value)
+	inline static int32_t get_offset_of_pickaxeButtonHasBeenMoved_24() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___pickaxeButtonHasBeenMoved_24)); }
+	inline bool get_pickaxeButtonHasBeenMoved_24() const { return ___pickaxeButtonHasBeenMoved_24; }
+	inline bool* get_address_of_pickaxeButtonHasBeenMoved_24() { return &___pickaxeButtonHasBeenMoved_24; }
+	inline void set_pickaxeButtonHasBeenMoved_24(bool value)
 	{
-		___blockButtonHasBeenMoved_24 = value;
-	}
-
-	inline static int32_t get_offset_of_pickaxeButtonHasBeenMoved_25() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822, ___pickaxeButtonHasBeenMoved_25)); }
-	inline bool get_pickaxeButtonHasBeenMoved_25() const { return ___pickaxeButtonHasBeenMoved_25; }
-	inline bool* get_address_of_pickaxeButtonHasBeenMoved_25() { return &___pickaxeButtonHasBeenMoved_25; }
-	inline void set_pickaxeButtonHasBeenMoved_25(bool value)
-	{
-		___pickaxeButtonHasBeenMoved_25 = value;
+		___pickaxeButtonHasBeenMoved_24 = value;
 	}
 };
 
@@ -291,15 +278,15 @@ struct UIBehavior_t1836955822_StaticFields
 {
 public:
 	// UnityEngine.XR.iOS.UIBehavior/Selected UnityEngine.XR.iOS.UIBehavior::currentSelected
-	int32_t ___currentSelected_22;
+	int32_t ___currentSelected_21;
 
 public:
-	inline static int32_t get_offset_of_currentSelected_22() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822_StaticFields, ___currentSelected_22)); }
-	inline int32_t get_currentSelected_22() const { return ___currentSelected_22; }
-	inline int32_t* get_address_of_currentSelected_22() { return &___currentSelected_22; }
-	inline void set_currentSelected_22(int32_t value)
+	inline static int32_t get_offset_of_currentSelected_21() { return static_cast<int32_t>(offsetof(UIBehavior_t1836955822_StaticFields, ___currentSelected_21)); }
+	inline int32_t get_currentSelected_21() const { return ___currentSelected_21; }
+	inline int32_t* get_address_of_currentSelected_21() { return &___currentSelected_21; }
+	inline void set_currentSelected_21(int32_t value)
 	{
-		___currentSelected_22 = value;
+		___currentSelected_21 = value;
 	}
 };
 

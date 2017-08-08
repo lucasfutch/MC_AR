@@ -11,7 +11,6 @@ namespace UnityEngine.XR.iOS
 
 		public Transform Block, Pickaxe;
 		public GameObject PickAxeParent, WoodParent, BrickParent, TorchParent, RandColorParent, WaterParent, StalactiteParent, TreeParent, SandParent;
-		public destroyBlock destroyBlockScript;
 		public GameObject item_wood, item_brick, item_torch, item_rand, item_water, item_stala, item_tree, item_sand;
 
 		public enum Selected {Pickaxe, Block, Null, Wood, Brick, Torch, RandColor, Water, Stalactite, Tree, Sand};
@@ -34,6 +33,7 @@ namespace UnityEngine.XR.iOS
 
 			currentSelected = Selected.Null;
 			placeBox.currentSelectedOG = placeBox.Selected.Block;
+			placeBox.currentSelectionIsABlock = placeBox.Selected.Block;
 		}
 
 		void ResetButtons(){

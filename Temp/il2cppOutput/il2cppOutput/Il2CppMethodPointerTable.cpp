@@ -7939,6 +7939,8 @@ extern "C" void Camera_set_projectionMatrix_m2059836755 ();
 extern "C" void Camera_INTERNAL_set_projectionMatrix_m179473573 ();
 extern "C" void Camera_get_clearFlags_m1743144302 ();
 extern "C" void Camera_get_targetDisplay_m835278314 ();
+extern "C" void Camera_ScreenToWorldPoint_m929392728 ();
+extern "C" void Camera_INTERNAL_CALL_ScreenToWorldPoint_m196899300 ();
 extern "C" void Camera_ScreenToViewportPoint_m2666228286 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenToViewportPoint_m529506484 ();
 extern "C" void Camera_ScreenPointToRay_m614889538 ();
@@ -8793,6 +8795,7 @@ extern "C" void HumanBone_get_humanName_m2091758568_AdjustorThunk ();
 extern "C" void HumanBone_set_humanName_m1385708911_AdjustorThunk ();
 extern "C" void IL2CPPStructAlignmentAttribute__ctor_m2555798229 ();
 extern "C" void Input_mainGyroIndex_Internal_m1868841043 ();
+extern "C" void Input_GetAxis_m2098048324 ();
 extern "C" void Input_GetAxisRaw_m4133353720 ();
 extern "C" void Input_get_gyro_m4027090408 ();
 extern "C" void Input_GetButtonDown_m2792523731 ();
@@ -9145,6 +9148,8 @@ extern "C" void PlayerConnectionInternal_SendMessage_m3244053950 ();
 extern "C" void PreferBinarySerialization__ctor_m2043201510 ();
 extern "C" void PropertyAttribute__ctor_m3663555848 ();
 extern "C" void Quaternion__ctor_m3196903881_AdjustorThunk ();
+extern "C" void Quaternion_AngleAxis_m2806222563 ();
+extern "C" void Quaternion_INTERNAL_CALL_AngleAxis_m3310327005 ();
 extern "C" void Quaternion_Inverse_m3931399088 ();
 extern "C" void Quaternion_INTERNAL_CALL_Inverse_m1043108654 ();
 extern "C" void Quaternion_Euler_m2887458175 ();
@@ -9305,6 +9310,7 @@ extern "C" void Resolution_get_height_m882683003_AdjustorThunk ();
 extern "C" void Resolution_ToString_m3711510886_AdjustorThunk ();
 extern "C" void ResourceRequest__ctor_m3340010930 ();
 extern "C" void ResourceRequest_get_asset_m3527928488 ();
+extern "C" void Resources_Load_m2041782325 ();
 extern "C" void Resources_Load_m243305716 ();
 extern "C" void Resources_GetBuiltinResource_m582410469 ();
 extern "C" void Scene_get_handle_m1555912301_AdjustorThunk ();
@@ -9730,6 +9736,7 @@ extern "C" void Vector3_get_left_m2429378123 ();
 extern "C" void Vector3_get_right_m1884123822 ();
 extern "C" void Vector3_op_Addition_m3146764857 ();
 extern "C" void Vector3_op_Subtraction_m2407545601 ();
+extern "C" void Vector3_op_UnaryNegation_m3383802608 ();
 extern "C" void Vector3_op_Multiply_m1351554733 ();
 extern "C" void Vector3_op_Multiply_m3872631309 ();
 extern "C" void Vector3_op_Division_m3315615850 ();
@@ -11391,14 +11398,23 @@ extern "C" void ModeSwitcher_Update_m4068949590 ();
 extern "C" void ModeSwitcher_EnableBallCreation_m2999743005 ();
 extern "C" void ModeSwitcher_OnGUI_m558458371 ();
 extern "C" void moveCamera__ctor_m3623116695 ();
-extern "C" void moveCamera_Start_m2502935819 ();
 extern "C" void moveCamera_Update_m2245000136 ();
-extern "C" void moveCamera_MoveUp_m1968642099 ();
-extern "C" void moveCamera_MoveDown_m699665504 ();
-extern "C" void moveCamera_MoveLeft_m3402740185 ();
-extern "C" void moveCamera_MoveRight_m684059640 ();
-extern "C" void moveCamera_MoveForward_m1922046453 ();
-extern "C" void moveCamera_MoveBackward_m2399202221 ();
+extern "C" void moveCamera_MoveForward_pd_m1443358050 ();
+extern "C" void moveCamera_MoveForward_pu_m3620887831 ();
+extern "C" void moveCamera_MoveBackward_pd_m992908712 ();
+extern "C" void moveCamera_MoveBackward_pu_m992909335 ();
+extern "C" void moveCamera_MoveLeft_pd_m3562534920 ();
+extern "C" void moveCamera_MoveLeft_pu_m3562535415 ();
+extern "C" void moveCamera_MoveRight_pd_m1972026153 ();
+extern "C" void moveCamera_MoveRight_pu_m2462512468 ();
+extern "C" void moveCamera_LookLeft_pd_m1746313294 ();
+extern "C" void moveCamera_LookLeft_pu_m1746312861 ();
+extern "C" void moveCamera_LookRight_pd_m440561675 ();
+extern "C" void moveCamera_LookRight_pu_m931047990 ();
+extern "C" void moveCamera_LookUp_pd_m425673082 ();
+extern "C" void moveCamera_LookUp_pu_m425673515 ();
+extern "C" void moveCamera_LookDown_pd_m4187421749 ();
+extern "C" void moveCamera_LookDown_pu_m4187422182 ();
 extern "C" void ParticlePainter__ctor_m3797515404 ();
 extern "C" void ParticlePainter_Start_m240231480 ();
 extern "C" void ParticlePainter_ARFrameUpdated_m3328436002 ();
@@ -11413,8 +11429,14 @@ extern "C" void placeBox_CreateBox_m3746128977 ();
 extern "C" void placeBox_Update_m3632811618 ();
 extern "C" void placeBox_GetHitFace_m2361387267 ();
 extern "C" void placeBox_getFaceVec_m3891390246 ();
-extern "C" void placeBox_GyroModifyCamera_m1259280059 ();
-extern "C" void placeBox_GyroToUnity_m2606940261 ();
+extern "C" void placeBox1__ctor_m2700006294 ();
+extern "C" void placeBox1_Start_m872397646 ();
+extern "C" void placeBox1_CreateBox_m2404254564 ();
+extern "C" void placeBox1_Update_m2231419953 ();
+extern "C" void placeBox1_GetHitFace_m1186576727 ();
+extern "C" void placeBox1_getFaceVec_m4264960748 ();
+extern "C" void placeBox1_GyroModifyCamera_m3498079230 ();
+extern "C" void placeBox1_GyroToUnity_m4067157894 ();
 extern "C" void PointCloudParticleExample__ctor_m249742788 ();
 extern "C" void PointCloudParticleExample_Start_m1736319872 ();
 extern "C" void PointCloudParticleExample_ARFrameUpdated_m1855536526 ();
@@ -11531,6 +11553,19 @@ extern "C" void UIBehavior_WaterButtonSelected_m3584439321 ();
 extern "C" void UIBehavior_StalactiteButtonSelected_m2475937376 ();
 extern "C" void UIBehavior_TreeButtonSelected_m3273234026 ();
 extern "C" void UIBehavior_SandButtonSelected_m508511696 ();
+extern "C" void UIBehavior1__ctor_m1915981950 ();
+extern "C" void UIBehavior1_Start_m3074677986 ();
+extern "C" void UIBehavior1_ResetButtons_m60996512 ();
+extern "C" void UIBehavior1_PickaxeButtonSelected_m2485035736 ();
+extern "C" void UIBehavior1_BlockButtonSelected_m1870985770 ();
+extern "C" void UIBehavior1_WoodButtonSelected_m1441266876 ();
+extern "C" void UIBehavior1_BrickButtonSelected_m3185269038 ();
+extern "C" void UIBehavior1_TorchButtonSelected_m866773959 ();
+extern "C" void UIBehavior1_RandColorButtonSelected_m245000265 ();
+extern "C" void UIBehavior1_WaterButtonSelected_m2540942228 ();
+extern "C" void UIBehavior1_StalactiteButtonSelected_m25707521 ();
+extern "C" void UIBehavior1_TreeButtonSelected_m2283050271 ();
+extern "C" void UIBehavior1_SandButtonSelected_m3747405097 ();
 extern "C" void UnityARAmbient__ctor_m3700524047 ();
 extern "C" void UnityARAmbient_Start_m303369171 ();
 extern "C" void UnityARAmbient_Update_m2066148092 ();
@@ -11762,7 +11797,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11748] = 
+extern const Il2CppMethodPointer g_MethodPointers[11783] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -19689,6 +19724,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	Camera_INTERNAL_set_projectionMatrix_m179473573,
 	Camera_get_clearFlags_m1743144302,
 	Camera_get_targetDisplay_m835278314,
+	Camera_ScreenToWorldPoint_m929392728,
+	Camera_INTERNAL_CALL_ScreenToWorldPoint_m196899300,
 	Camera_ScreenToViewportPoint_m2666228286,
 	Camera_INTERNAL_CALL_ScreenToViewportPoint_m529506484,
 	Camera_ScreenPointToRay_m614889538,
@@ -20543,6 +20580,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	HumanBone_set_humanName_m1385708911_AdjustorThunk,
 	IL2CPPStructAlignmentAttribute__ctor_m2555798229,
 	Input_mainGyroIndex_Internal_m1868841043,
+	Input_GetAxis_m2098048324,
 	Input_GetAxisRaw_m4133353720,
 	Input_get_gyro_m4027090408,
 	Input_GetButtonDown_m2792523731,
@@ -20895,6 +20933,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	PreferBinarySerialization__ctor_m2043201510,
 	PropertyAttribute__ctor_m3663555848,
 	Quaternion__ctor_m3196903881_AdjustorThunk,
+	Quaternion_AngleAxis_m2806222563,
+	Quaternion_INTERNAL_CALL_AngleAxis_m3310327005,
 	Quaternion_Inverse_m3931399088,
 	Quaternion_INTERNAL_CALL_Inverse_m1043108654,
 	Quaternion_Euler_m2887458175,
@@ -21055,6 +21095,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	Resolution_ToString_m3711510886_AdjustorThunk,
 	ResourceRequest__ctor_m3340010930,
 	ResourceRequest_get_asset_m3527928488,
+	Resources_Load_m2041782325,
 	Resources_Load_m243305716,
 	Resources_GetBuiltinResource_m582410469,
 	Scene_get_handle_m1555912301_AdjustorThunk,
@@ -21480,6 +21521,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	Vector3_get_right_m1884123822,
 	Vector3_op_Addition_m3146764857,
 	Vector3_op_Subtraction_m2407545601,
+	Vector3_op_UnaryNegation_m3383802608,
 	Vector3_op_Multiply_m1351554733,
 	Vector3_op_Multiply_m3872631309,
 	Vector3_op_Division_m3315615850,
@@ -23141,14 +23183,23 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	ModeSwitcher_EnableBallCreation_m2999743005,
 	ModeSwitcher_OnGUI_m558458371,
 	moveCamera__ctor_m3623116695,
-	moveCamera_Start_m2502935819,
 	moveCamera_Update_m2245000136,
-	moveCamera_MoveUp_m1968642099,
-	moveCamera_MoveDown_m699665504,
-	moveCamera_MoveLeft_m3402740185,
-	moveCamera_MoveRight_m684059640,
-	moveCamera_MoveForward_m1922046453,
-	moveCamera_MoveBackward_m2399202221,
+	moveCamera_MoveForward_pd_m1443358050,
+	moveCamera_MoveForward_pu_m3620887831,
+	moveCamera_MoveBackward_pd_m992908712,
+	moveCamera_MoveBackward_pu_m992909335,
+	moveCamera_MoveLeft_pd_m3562534920,
+	moveCamera_MoveLeft_pu_m3562535415,
+	moveCamera_MoveRight_pd_m1972026153,
+	moveCamera_MoveRight_pu_m2462512468,
+	moveCamera_LookLeft_pd_m1746313294,
+	moveCamera_LookLeft_pu_m1746312861,
+	moveCamera_LookRight_pd_m440561675,
+	moveCamera_LookRight_pu_m931047990,
+	moveCamera_LookUp_pd_m425673082,
+	moveCamera_LookUp_pu_m425673515,
+	moveCamera_LookDown_pd_m4187421749,
+	moveCamera_LookDown_pu_m4187422182,
 	ParticlePainter__ctor_m3797515404,
 	ParticlePainter_Start_m240231480,
 	ParticlePainter_ARFrameUpdated_m3328436002,
@@ -23163,8 +23214,14 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	placeBox_Update_m3632811618,
 	placeBox_GetHitFace_m2361387267,
 	placeBox_getFaceVec_m3891390246,
-	placeBox_GyroModifyCamera_m1259280059,
-	placeBox_GyroToUnity_m2606940261,
+	placeBox1__ctor_m2700006294,
+	placeBox1_Start_m872397646,
+	placeBox1_CreateBox_m2404254564,
+	placeBox1_Update_m2231419953,
+	placeBox1_GetHitFace_m1186576727,
+	placeBox1_getFaceVec_m4264960748,
+	placeBox1_GyroModifyCamera_m3498079230,
+	placeBox1_GyroToUnity_m4067157894,
 	PointCloudParticleExample__ctor_m249742788,
 	PointCloudParticleExample_Start_m1736319872,
 	PointCloudParticleExample_ARFrameUpdated_m1855536526,
@@ -23281,6 +23338,19 @@ extern const Il2CppMethodPointer g_MethodPointers[11748] =
 	UIBehavior_StalactiteButtonSelected_m2475937376,
 	UIBehavior_TreeButtonSelected_m3273234026,
 	UIBehavior_SandButtonSelected_m508511696,
+	UIBehavior1__ctor_m1915981950,
+	UIBehavior1_Start_m3074677986,
+	UIBehavior1_ResetButtons_m60996512,
+	UIBehavior1_PickaxeButtonSelected_m2485035736,
+	UIBehavior1_BlockButtonSelected_m1870985770,
+	UIBehavior1_WoodButtonSelected_m1441266876,
+	UIBehavior1_BrickButtonSelected_m3185269038,
+	UIBehavior1_TorchButtonSelected_m866773959,
+	UIBehavior1_RandColorButtonSelected_m245000265,
+	UIBehavior1_WaterButtonSelected_m2540942228,
+	UIBehavior1_StalactiteButtonSelected_m25707521,
+	UIBehavior1_TreeButtonSelected_m2283050271,
+	UIBehavior1_SandButtonSelected_m3747405097,
 	UnityARAmbient__ctor_m3700524047,
 	UnityARAmbient_Start_m303369171,
 	UnityARAmbient_Update_m2066148092,

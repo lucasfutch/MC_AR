@@ -16,7 +16,7 @@ public class destroyBlock : MonoBehaviour {
 				RaycastHit raycastHit;
 						
 				if (Physics.Raycast (raycast, out raycastHit)) {
-					Debug.Log ("Detected a Box");
+					Debug.Log ("Detected a Box in destroyBlock script");
 					if (raycastHit.collider.CompareTag ("placedBox")) {
 						Debug.Log ("Destroying Box");
 						Destroy (raycastHit.collider.gameObject);

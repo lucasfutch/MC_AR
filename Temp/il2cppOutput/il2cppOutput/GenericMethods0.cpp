@@ -12159,104 +12159,149 @@ IL_003e:
 // System.Boolean UnityEngine.UI.BoxSlider::SetClass<System.Object>(T&,T)
 extern "C"  bool BoxSlider_SetClass_TisIl2CppObject_m1811500378_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject ** ___currentValue0, Il2CppObject * ___newValue1, const MethodInfo* method)
 {
+	bool V_0 = false;
 	{
+		// if ((currentValue == null && newValue == null) || (currentValue != null && currentValue.Equals(newValue)))
 		Il2CppObject ** L_0 = ___currentValue0;
 		if ((*(Il2CppObject **)L_0))
 		{
-			goto IL_001b;
+			goto IL_001c;
 		}
 	}
 	{
 		Il2CppObject * L_1 = ___newValue1;
 		if (!L_1)
 		{
-			goto IL_0042;
+			goto IL_0043;
 		}
 	}
 
-IL_001b:
+IL_001c:
 	{
 		Il2CppObject ** L_2 = ___currentValue0;
 		if (!(*(Il2CppObject **)L_2))
 		{
-			goto IL_0044;
+			goto IL_004a;
 		}
 	}
 	{
 		Il2CppObject ** L_3 = ___currentValue0;
 		Il2CppObject * L_4 = ___newValue1;
+		// if ((currentValue == null && newValue == null) || (currentValue != null && currentValue.Equals(newValue)))
 		NullCheck((Il2CppObject *)(*L_3));
 		bool L_5 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, (Il2CppObject *)(*L_3), (Il2CppObject *)L_4);
 		if (!L_5)
 		{
-			goto IL_0044;
+			goto IL_004a;
 		}
 	}
 
-IL_0042:
+IL_0043:
 	{
-		return (bool)0;
+		// return false;
+		V_0 = (bool)0;
+		goto IL_0058;
 	}
 
-IL_0044:
+IL_004a:
 	{
+		// currentValue = newValue;
 		Il2CppObject ** L_6 = ___currentValue0;
 		Il2CppObject * L_7 = ___newValue1;
 		(*(Il2CppObject **)L_6) = L_7;
 		Il2CppCodeGenWriteBarrier((Il2CppObject **)L_6, L_7);
-		return (bool)1;
+		// return true;
+		V_0 = (bool)1;
+		goto IL_0058;
+	}
+
+IL_0058:
+	{
+		// }
+		bool L_8 = V_0;
+		return L_8;
 	}
 }
 // System.Boolean UnityEngine.UI.BoxSlider::SetStruct<System.Boolean>(T&,T)
 extern "C"  bool BoxSlider_SetStruct_TisBoolean_t3825574718_m1967921404_gshared (Il2CppObject * __this /* static, unused */, bool* ___currentValue0, bool ___newValue1, const MethodInfo* method)
 {
+	bool V_0 = false;
 	{
+		// if (currentValue.Equals(newValue))
 		bool* L_0 = ___currentValue0;
 		bool L_1 = ___newValue1;
 		bool L_2 = L_1;
 		Il2CppObject * L_3 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_2);
+		// if (currentValue.Equals(newValue))
 		bool L_4 = Boolean_Equals_m2118901528((bool*)L_0, (Il2CppObject *)L_3, /*hidden argument*/NULL);
 		if (!L_4)
 		{
-			goto IL_0019;
+			goto IL_001f;
 		}
 	}
 	{
-		return (bool)0;
+		// return false;
+		V_0 = (bool)0;
+		goto IL_002d;
 	}
 
-IL_0019:
+IL_001f:
 	{
+		// currentValue = newValue;
 		bool* L_5 = ___currentValue0;
 		bool L_6 = ___newValue1;
 		(*(bool*)L_5) = L_6;
-		return (bool)1;
+		// return true;
+		V_0 = (bool)1;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		// }
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.BoxSlider::SetStruct<System.Single>(T&,T)
 extern "C"  bool BoxSlider_SetStruct_TisSingle_t2076509932_m2710312218_gshared (Il2CppObject * __this /* static, unused */, float* ___currentValue0, float ___newValue1, const MethodInfo* method)
 {
+	bool V_0 = false;
 	{
+		// if (currentValue.Equals(newValue))
 		float* L_0 = ___currentValue0;
 		float L_1 = ___newValue1;
 		float L_2 = L_1;
 		Il2CppObject * L_3 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_2);
+		// if (currentValue.Equals(newValue))
 		bool L_4 = Single_Equals_m3679433096((float*)L_0, (Il2CppObject *)L_3, /*hidden argument*/NULL);
 		if (!L_4)
 		{
-			goto IL_0019;
+			goto IL_001f;
 		}
 	}
 	{
-		return (bool)0;
+		// return false;
+		V_0 = (bool)0;
+		goto IL_002d;
 	}
 
-IL_0019:
+IL_001f:
 	{
+		// currentValue = newValue;
 		float* L_5 = ___currentValue0;
 		float L_6 = ___newValue1;
 		(*(float*)L_5) = L_6;
-		return (bool)1;
+		// return true;
+		V_0 = (bool)1;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		// }
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetClass<System.Object>(T&,T)

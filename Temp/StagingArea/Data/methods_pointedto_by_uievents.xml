@@ -11,16 +11,6 @@
 			<method name="BlockButtonSelected"/>
 			<method name="PickaxeButtonSelected"/>
 			<method name="RandColorButtonSelected"/>
-			<method name="SandButtonSelected"/>
-			<method name="TorchButtonSelected"/>
-			<method name="RandColorButtonSelected"/>
-			<method name="TreeButtonSelected"/>
-			<method name="BlockButtonSelected"/>
-			<method name="PickaxeButtonSelected"/>
-			<method name="WoodButtonSelected"/>
-			<method name="WaterButtonSelected"/>
-			<method name="StalactiteButtonSelected"/>
-			<method name="BrickButtonSelected"/>
 		</type>
 		<type fullname="SaveLoad">
 			<method name="Save"/>
@@ -32,13 +22,35 @@
 			<method name="changeScenes"/>
 			<method name="changeScenes"/>
 		</type>
+		<type fullname="UnityEngine.XR.iOS.UIBehavior1">
+			<method name="SandButtonSelected"/>
+			<method name="TorchButtonSelected"/>
+			<method name="RandColorButtonSelected"/>
+			<method name="TreeButtonSelected"/>
+			<method name="BlockButtonSelected"/>
+			<method name="PickaxeButtonSelected"/>
+			<method name="WoodButtonSelected"/>
+			<method name="WaterButtonSelected"/>
+			<method name="StalactiteButtonSelected"/>
+			<method name="BrickButtonSelected"/>
+		</type>
 		<type fullname="moveCamera">
-			<method name="MoveLeft"/>
-			<method name="MoveLeft"/>
-			<method name="MoveUp"/>
-			<method name="MoveDown"/>
-			<method name="MoveForward"/>
-			<method name="MoveBackward"/>
+			<method name="LookLeft_pd"/>
+			<method name="LookLeft_pu"/>
+			<method name="MoveLeft_pd"/>
+			<method name="MoveLeft_pu"/>
+			<method name="LookRight_pd"/>
+			<method name="LookRight_pu"/>
+			<method name="MoveForward_pd"/>
+			<method name="MoveForward_pu"/>
+			<method name="MoveBackward_pd"/>
+			<method name="MoveBackward_pu"/>
+			<method name="LookUp_pd"/>
+			<method name="LookUp_pu"/>
+			<method name="MoveRight_pd"/>
+			<method name="MoveRight_pu"/>
+			<method name="LookDown_pd"/>
+			<method name="LookDown_pu"/>
 		</type>
 	</assembly>
 </linker>

@@ -231,6 +231,7 @@
 #include "UnityEngine_UnityEngine_UIVertex1204258818.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPoint3436811567.h"
 #include "AssemblyU2DCSharp_placeBox_MCFace2283549208.h"
+#include "AssemblyU2DCSharp_placeBox1_MCFace3873190089.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARCamera4198559457.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_ARPlaneAnchor1439520888.h"
 #include "AssemblyU2DCSharp_UnityEngine_XR_iOS_UnityARMatrix4100931615.h"
@@ -7311,6 +7312,20 @@ void* RuntimeInvoker_Void_t1841601450_Single_t2076509932_Single_t2076509932_Sing
 	return NULL;
 }
 
+void* RuntimeInvoker_Quaternion_t4030073918_Single_t2076509932_Vector3_t2243707580 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Quaternion_t4030073918  (*Func)(void* obj, float p1, Vector3_t2243707580  p2, const MethodInfo* method);
+	Quaternion_t4030073918  ret = ((Func)method->methodPointer)(obj, *((float*)args[0]), *((Vector3_t2243707580 *)args[1]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_Void_t1841601450_Single_t2076509932_Vector3U26_t425862308_QuaternionU26_t4187826802 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, float p1, Vector3_t2243707580 * p2, Quaternion_t4030073918 * p3, const MethodInfo* method);
+	((Func)method->methodPointer)(obj, *((float*)args[0]), (Vector3_t2243707580 *)args[1], (Quaternion_t4030073918 *)args[2], method);
+	return NULL;
+}
+
 void* RuntimeInvoker_Quaternion_t4030073918_Quaternion_t4030073918 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef Quaternion_t4030073918  (*Func)(void* obj, Quaternion_t4030073918  p1, const MethodInfo* method);
@@ -10059,6 +10074,13 @@ void* RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448 (const MethodInfo* me
 {
 	typedef Vector3_t2243707580  (*Func)(void* obj, int32_t p1, const MethodInfo* method);
 	Vector3_t2243707580  ret = ((Func)method->methodPointer)(obj, *((int32_t*)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_MCFace_t3873190089_RaycastHit_t87180320 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef int32_t (*Func)(void* obj, RaycastHit_t87180320  p1, const MethodInfo* method);
+	int32_t ret = ((Func)method->methodPointer)(obj, *((RaycastHit_t87180320 *)args[0]), method);
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
@@ -13632,7 +13654,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t2986189219 (const MethodInfo* meth
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1779] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1782] = 
 {
 	RuntimeInvoker_Void_t1841601450,
 	RuntimeInvoker_Boolean_t3825574718_Il2CppObject,
@@ -14510,6 +14532,8 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1779] =
 	RuntimeInvoker_Vector3_t2243707580_Single_t2076509932_Vector3_t2243707580,
 	RuntimeInvoker_Boolean_t3825574718_Vector3_t2243707580_Vector3_t2243707580,
 	RuntimeInvoker_Void_t1841601450_Single_t2076509932_Single_t2076509932_Single_t2076509932_Single_t2076509932,
+	RuntimeInvoker_Quaternion_t4030073918_Single_t2076509932_Vector3_t2243707580,
+	RuntimeInvoker_Void_t1841601450_Single_t2076509932_Vector3U26_t425862308_QuaternionU26_t4187826802,
 	RuntimeInvoker_Quaternion_t4030073918_Quaternion_t4030073918,
 	RuntimeInvoker_Void_t1841601450_QuaternionU26_t4187826802_QuaternionU26_t4187826802,
 	RuntimeInvoker_Quaternion_t4030073918_Single_t2076509932_Single_t2076509932_Single_t2076509932,
@@ -14903,6 +14927,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1779] =
 	RuntimeInvoker_Boolean_t3825574718_ARPoint_t3436811567_Int64_t909078037_Il2CppObject,
 	RuntimeInvoker_MCFace_t2283549208_RaycastHit_t87180320,
 	RuntimeInvoker_Vector3_t2243707580_Int32_t2071877448,
+	RuntimeInvoker_MCFace_t3873190089_RaycastHit_t87180320,
 	RuntimeInvoker_Void_t1841601450_UnityARCamera_t4198559457,
 	RuntimeInvoker_Void_t1841601450_ARPlaneAnchor_t1439520888,
 	RuntimeInvoker_Il2CppObject_Vector4_t2243707581,

@@ -2,9 +2,12 @@
 <assembly fullname="Assembly-CSharp">
 <type fullname="SaveLoad" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UIBehavior" preserve="all"/>
+<type fullname="UnityEngine.XR.iOS.UIBehavior1" preserve="all"/>
 <type fullname="changeScene" preserve="all"/>
 <type fullname="destroyBlock" preserve="all"/>
+<type fullname="moveCamera" preserve="all"/>
 <type fullname="placeBox" preserve="all"/>
+<type fullname="placeBox1" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.ConnectToEditor" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityRemoteVideo" preserve="all"/>
 <type fullname="UnityARUserAnchorExample" preserve="all"/>
@@ -36,7 +39,6 @@
 <type fullname="UnityEngine.XR.iOS.UnityARVideo" preserve="all"/>
 <type fullname="UnityPointCloudExample" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
-<type fullname="moveCamera" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>
