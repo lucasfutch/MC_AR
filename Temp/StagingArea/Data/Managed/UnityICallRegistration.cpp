@@ -46,6 +46,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_persistentDataPath();
 		Register_UnityEngine_Application_get_persistentDataPath();
 
+		//System.Void UnityEngine.Application::CaptureScreenshot(System.String,System.Int32)
+		void Register_UnityEngine_Application_CaptureScreenshot();
+		Register_UnityEngine_Application_CaptureScreenshot();
+
 		//System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
 		void Register_UnityEngine_Application_set_targetFrameRate();
 		Register_UnityEngine_Application_set_targetFrameRate();
@@ -1265,10 +1269,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Input::mainGyroIndex_Internal()
 		void Register_UnityEngine_Input_mainGyroIndex_Internal();
 		Register_UnityEngine_Input_mainGyroIndex_Internal();
-
-		//System.Single UnityEngine.Input::GetAxis(System.String)
-		void Register_UnityEngine_Input_GetAxis();
-		Register_UnityEngine_Input_GetAxis();
 
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();

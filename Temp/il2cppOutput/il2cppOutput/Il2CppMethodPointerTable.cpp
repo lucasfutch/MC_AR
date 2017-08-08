@@ -7858,6 +7858,8 @@ extern "C" void Application_CallLowMemory_m626389230 ();
 extern "C" void Application_get_isPlaying_m4091950718 ();
 extern "C" void Application_get_isEditor_m2474583393 ();
 extern "C" void Application_get_platform_m3989224144 ();
+extern "C" void Application_CaptureScreenshot_m3594286264 ();
+extern "C" void Application_CaptureScreenshot_m988898989 ();
 extern "C" void Application_get_persistentDataPath_m3129298355 ();
 extern "C" void Application_set_targetFrameRate_m2941880625 ();
 extern "C" void Application_CallLogCallback_m3408386792 ();
@@ -8795,7 +8797,6 @@ extern "C" void HumanBone_get_humanName_m2091758568_AdjustorThunk ();
 extern "C" void HumanBone_set_humanName_m1385708911_AdjustorThunk ();
 extern "C" void IL2CPPStructAlignmentAttribute__ctor_m2555798229 ();
 extern "C" void Input_mainGyroIndex_Internal_m1868841043 ();
-extern "C" void Input_GetAxis_m2098048324 ();
 extern "C" void Input_GetAxisRaw_m4133353720 ();
 extern "C" void Input_get_gyro_m4027090408 ();
 extern "C" void Input_GetButtonDown_m2792523731 ();
@@ -11553,6 +11554,7 @@ extern "C" void UIBehavior_WaterButtonSelected_m3584439321 ();
 extern "C" void UIBehavior_StalactiteButtonSelected_m2475937376 ();
 extern "C" void UIBehavior_TreeButtonSelected_m3273234026 ();
 extern "C" void UIBehavior_SandButtonSelected_m508511696 ();
+extern "C" void UIBehavior_ScreenShot_m3242409499 ();
 extern "C" void UIBehavior1__ctor_m1915981950 ();
 extern "C" void UIBehavior1_Start_m3074677986 ();
 extern "C" void UIBehavior1_ResetButtons_m60996512 ();
@@ -11797,7 +11799,7 @@ extern "C" void SerializableVector4__ctor_m1161519484 ();
 extern "C" void SerializableVector4_ToString_m137239981 ();
 extern "C" void SerializableVector4_op_Implicit_m3701091973 ();
 extern "C" void SerializableVector4_op_Implicit_m2818398069 ();
-extern const Il2CppMethodPointer g_MethodPointers[11783] = 
+extern const Il2CppMethodPointer g_MethodPointers[11785] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -19643,6 +19645,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11783] =
 	Application_get_isPlaying_m4091950718,
 	Application_get_isEditor_m2474583393,
 	Application_get_platform_m3989224144,
+	Application_CaptureScreenshot_m3594286264,
+	Application_CaptureScreenshot_m988898989,
 	Application_get_persistentDataPath_m3129298355,
 	Application_set_targetFrameRate_m2941880625,
 	Application_CallLogCallback_m3408386792,
@@ -20580,7 +20584,6 @@ extern const Il2CppMethodPointer g_MethodPointers[11783] =
 	HumanBone_set_humanName_m1385708911_AdjustorThunk,
 	IL2CPPStructAlignmentAttribute__ctor_m2555798229,
 	Input_mainGyroIndex_Internal_m1868841043,
-	Input_GetAxis_m2098048324,
 	Input_GetAxisRaw_m4133353720,
 	Input_get_gyro_m4027090408,
 	Input_GetButtonDown_m2792523731,
@@ -23338,6 +23341,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11783] =
 	UIBehavior_StalactiteButtonSelected_m2475937376,
 	UIBehavior_TreeButtonSelected_m3273234026,
 	UIBehavior_SandButtonSelected_m508511696,
+	UIBehavior_ScreenShot_m3242409499,
 	UIBehavior1__ctor_m1915981950,
 	UIBehavior1_Start_m3074677986,
 	UIBehavior1_ResetButtons_m60996512,

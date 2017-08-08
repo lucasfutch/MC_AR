@@ -1,6 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="UnityEngine.XR.iOS.UIBehavior">
+			<method name="ScreenShot"/>
 			<method name="TorchButtonSelected"/>
 			<method name="BrickButtonSelected"/>
 			<method name="TreeButtonSelected"/>

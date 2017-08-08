@@ -7,6 +7,7 @@ UnityEngine.Animator::SetTriggerString
 UnityEngine.Application::get_isEditor
 UnityEngine.Application::get_isPlaying
 UnityEngine.Application::get_persistentDataPath
+UnityEngine.Application::CaptureScreenshot
 UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AssetBundleCreateRequest::DisableCompatibilityChecks
@@ -279,7 +280,6 @@ UnityEngine.Input::get_mousePresent
 UnityEngine.Input::get_touchSupported
 UnityEngine.Input::get_touchCount
 UnityEngine.Input::mainGyroIndex_Internal
-UnityEngine.Input::GetAxis
 UnityEngine.Input::GetAxisRaw
 UnityEngine.Input::get_compositionString
 UnityEngine.Input::INTERNAL_CALL_GetTouch

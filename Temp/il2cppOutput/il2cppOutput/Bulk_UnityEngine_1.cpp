@@ -14102,15 +14102,6 @@ extern "C"  int32_t Input_mainGyroIndex_Internal_m1868841043 (Il2CppObject * __t
 	_il2cpp_icall_func = (Input_mainGyroIndex_Internal_m1868841043_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::mainGyroIndex_Internal()");
 	return _il2cpp_icall_func();
 }
-// System.Single UnityEngine.Input::GetAxis(System.String)
-extern "C"  float Input_GetAxis_m2098048324 (Il2CppObject * __this /* static, unused */, String_t* ___axisName0, const MethodInfo* method)
-{
-	typedef float (*Input_GetAxis_m2098048324_ftn) (String_t*);
-	static Input_GetAxis_m2098048324_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Input_GetAxis_m2098048324_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetAxis(System.String)");
-	return _il2cpp_icall_func(___axisName0);
-}
 // System.Single UnityEngine.Input::GetAxisRaw(System.String)
 extern "C"  float Input_GetAxisRaw_m4133353720 (Il2CppObject * __this /* static, unused */, String_t* ___axisName0, const MethodInfo* method)
 {

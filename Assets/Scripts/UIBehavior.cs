@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
 
 
 namespace UnityEngine.XR.iOS
 {
+	
 
 	public class UIBehavior : MonoBehaviour {
+
+//		[DllImport ("__Internal")]
+//		private static extern float ScreenShotFunction();
+//
 
 		public Transform Block, Pickaxe;
 		public GameObject PickAxeParent, WoodParent, BrickParent, TorchParent, RandColorParent, WaterParent, StalactiteParent, TreeParent, SandParent;
@@ -322,6 +328,11 @@ namespace UnityEngine.XR.iOS
 			item_stala.SetActive (false);
 			item_tree.SetActive (false);
 			item_sand.SetActive (false);
+		}
+
+		public void ScreenShot() {
+			Application.CaptureScreenshot ("ScreenShot.png");
+			//ScreenShotFunction ();
 		}
 
 			

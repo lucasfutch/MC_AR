@@ -682,8 +682,6 @@ extern Il2CppClass* GUI_t4082743951_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3975373992;
 extern Il2CppCodeGenString* _stringLiteral1387279287;
 extern const uint32_t ModeSwitcher_OnGUI_m558458371_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral1307534077;
-extern Il2CppCodeGenString* _stringLiteral1307534078;
 extern const uint32_t moveCamera_Update_m2245000136_MetadataUsageId;
 extern Il2CppClass* ARFrameUpdate_t496507918_il2cpp_TypeInfo_var;
 extern Il2CppClass* List_1_t1612828712_il2cpp_TypeInfo_var;
@@ -923,6 +921,8 @@ extern const uint32_t UIBehavior_WaterButtonSelected_m3584439321_MetadataUsageId
 extern const uint32_t UIBehavior_StalactiteButtonSelected_m2475937376_MetadataUsageId;
 extern const uint32_t UIBehavior_TreeButtonSelected_m3273234026_MetadataUsageId;
 extern const uint32_t UIBehavior_SandButtonSelected_m508511696_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3587765563;
+extern const uint32_t UIBehavior_ScreenShot_m3242409499_MetadataUsageId;
 extern Il2CppClass* UIBehavior1_t736325497_il2cpp_TypeInfo_var;
 extern const uint32_t UIBehavior1_Start_m3074677986_MetadataUsageId;
 extern const uint32_t UIBehavior1_PickaxeButtonSelected_m2485035736_MetadataUsageId;
@@ -2076,8 +2076,6 @@ extern "C"  int32_t Screen_get_width_m41137238 (Il2CppObject * __this /* static,
 extern "C"  bool GUI_Button_m3054448581 (Il2CppObject * __this /* static, unused */, Rect_t3681755626  p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void ModeSwitcher::EnableBallCreation(System.Boolean)
 extern "C"  void ModeSwitcher_EnableBallCreation_m2999743005 (ModeSwitcher_t223874984 * __this, bool ___enable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Input::GetAxis(System.String)
-extern "C"  float Input_GetAxis_m2098048324 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
 extern "C"  float Mathf_Clamp_m2354025655 (Il2CppObject * __this /* static, unused */, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::get_forward()
@@ -2500,6 +2498,8 @@ extern "C"  bool PlayerConnection_get_isConnected_m2774691707 (PlayerConnection_
 extern "C"  void PlayerConnection_Send_m331902946 (PlayerConnection_t3517219175 * __this, Guid_t  p0, ByteU5BU5D_t3397334013* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.UIBehavior::ResetButtons()
 extern "C"  void UIBehavior_ResetButtons_m1738521039 (UIBehavior_t1836955822 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Application::CaptureScreenshot(System.String)
+extern "C"  void Application_CaptureScreenshot_m988898989 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.XR.iOS.UIBehavior1::ResetButtons()
 extern "C"  void UIBehavior1_ResetButtons_m60996512 (UIBehavior1_t736325497 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Light>()
@@ -8429,8 +8429,8 @@ IL_0068:
 extern "C"  void moveCamera__ctor_m3623116695 (moveCamera_t3157790334 * __this, const MethodInfo* method)
 {
 	{
-		// private float lookSpeed = 0.1f;
-		__this->set_lookSpeed_2((0.1f));
+		// private float lookSpeed = 0.01f;
+		__this->set_lookSpeed_2((0.01f));
 		// private float moveSpeed = 5.0f;
 		__this->set_moveSpeed_3((5.0f));
 		// private float rotationX = 0.0f;
@@ -8451,304 +8451,295 @@ extern "C"  void moveCamera_Update_m2245000136 (moveCamera_t3157790334 * __this,
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// rotationX += Input.GetAxis ("Mouse X") * lookSpeed;
+		// rotationX += 1 * lookSpeed;
 		float L_0 = __this->get_rotationX_4();
-		// rotationX += Input.GetAxis ("Mouse X") * lookSpeed;
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		float L_1 = Input_GetAxis_m2098048324(NULL /*static, unused*/, _stringLiteral1307534077, /*hidden argument*/NULL);
-		float L_2 = __this->get_lookSpeed_2();
-		__this->set_rotationX_4(((float)((float)L_0+(float)((float)((float)L_1*(float)L_2)))));
-		// rotationY += Input.GetAxis ("Mouse Y") * lookSpeed;
-		float L_3 = __this->get_rotationY_5();
-		// rotationY += Input.GetAxis ("Mouse Y") * lookSpeed;
-		float L_4 = Input_GetAxis_m2098048324(NULL /*static, unused*/, _stringLiteral1307534078, /*hidden argument*/NULL);
-		float L_5 = __this->get_lookSpeed_2();
-		__this->set_rotationY_5(((float)((float)L_3+(float)((float)((float)L_4*(float)L_5)))));
+		float L_1 = __this->get_lookSpeed_2();
+		__this->set_rotationX_4(((float)((float)L_0+(float)((float)((float)(1.0f)*(float)L_1)))));
 		// rotationY = Mathf.Clamp (rotationY, -90, 90);
-		float L_6 = __this->get_rotationY_5();
+		float L_2 = __this->get_rotationY_5();
 		// rotationY = Mathf.Clamp (rotationY, -90, 90);
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_7 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_6, (-90.0f), (90.0f), /*hidden argument*/NULL);
-		__this->set_rotationY_5(L_7);
+		float L_3 = Mathf_Clamp_m2354025655(NULL /*static, unused*/, L_2, (-90.0f), (90.0f), /*hidden argument*/NULL);
+		__this->set_rotationY_5(L_3);
 		// if (upBool) {
-		bool L_8 = __this->get_upBool_6();
-		if (!L_8)
+		bool L_4 = __this->get_upBool_6();
+		if (!L_4)
 		{
-			goto IL_009b;
+			goto IL_0078;
 		}
 	}
 	{
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_9 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_10 = L_9;
+		Transform_t3275118058 * L_5 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_6 = L_5;
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_10);
-		Vector3_t2243707580  L_11 = Transform_get_position_m1104419803(L_10, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		Vector3_t2243707580  L_7 = Transform_get_position_m1104419803(L_6, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_12 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_8 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_12);
-		Vector3_t2243707580  L_13 = Transform_get_forward_m1833488937(L_12, /*hidden argument*/NULL);
-		float L_14 = __this->get_moveSpeed_3();
+		NullCheck(L_8);
+		Vector3_t2243707580  L_9 = Transform_get_forward_m1833488937(L_8, /*hidden argument*/NULL);
+		float L_10 = __this->get_moveSpeed_3();
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_15 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_13, L_14, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_11 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		float L_16 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_12 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_17 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_15, L_16, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_13 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_11, L_12, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_18 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_11, L_17, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_14 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_7, L_13, /*hidden argument*/NULL);
 		// transform.position += transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_10);
-		Transform_set_position_m2469242620(L_10, L_18, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		Transform_set_position_m2469242620(L_6, L_14, /*hidden argument*/NULL);
 	}
 
-IL_009b:
+IL_0078:
 	{
 		// if (downBool) {
-		bool L_19 = __this->get_downBool_7();
-		if (!L_19)
+		bool L_15 = __this->get_downBool_7();
+		if (!L_15)
 		{
-			goto IL_00e3;
+			goto IL_00c0;
 		}
 	}
 	{
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_20 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_21 = L_20;
+		Transform_t3275118058 * L_16 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_17 = L_16;
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_21);
-		Vector3_t2243707580  L_22 = Transform_get_position_m1104419803(L_21, /*hidden argument*/NULL);
+		NullCheck(L_17);
+		Vector3_t2243707580  L_18 = Transform_get_position_m1104419803(L_17, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_23 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_19 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_23);
-		Vector3_t2243707580  L_24 = Transform_get_forward_m1833488937(L_23, /*hidden argument*/NULL);
+		NullCheck(L_19);
+		Vector3_t2243707580  L_20 = Transform_get_forward_m1833488937(L_19, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_25 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
-		float L_26 = __this->get_moveSpeed_3();
+		Vector3_t2243707580  L_21 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_20, /*hidden argument*/NULL);
+		float L_22 = __this->get_moveSpeed_3();
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_27 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_25, L_26, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_23 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		float L_28 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_24 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_29 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_27, L_28, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_25 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_30 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_22, L_29, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_26 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_18, L_25, /*hidden argument*/NULL);
 		// transform.position += -transform.forward * moveSpeed * Time.deltaTime;
-		NullCheck(L_21);
-		Transform_set_position_m2469242620(L_21, L_30, /*hidden argument*/NULL);
+		NullCheck(L_17);
+		Transform_set_position_m2469242620(L_17, L_26, /*hidden argument*/NULL);
 	}
 
-IL_00e3:
+IL_00c0:
 	{
 		// if (leftmoveBool) {
-		bool L_31 = __this->get_leftmoveBool_12();
-		if (!L_31)
+		bool L_27 = __this->get_leftmoveBool_12();
+		if (!L_27)
 		{
-			goto IL_012b;
+			goto IL_0108;
 		}
 	}
 	{
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_32 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_33 = L_32;
+		Transform_t3275118058 * L_28 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_29 = L_28;
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_33);
-		Vector3_t2243707580  L_34 = Transform_get_position_m1104419803(L_33, /*hidden argument*/NULL);
+		NullCheck(L_29);
+		Vector3_t2243707580  L_30 = Transform_get_position_m1104419803(L_29, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_35 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_31 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_35);
-		Vector3_t2243707580  L_36 = Transform_get_right_m440863970(L_35, /*hidden argument*/NULL);
+		NullCheck(L_31);
+		Vector3_t2243707580  L_32 = Transform_get_right_m440863970(L_31, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_37 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_36, /*hidden argument*/NULL);
-		float L_38 = __this->get_moveSpeed_3();
+		Vector3_t2243707580  L_33 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_32, /*hidden argument*/NULL);
+		float L_34 = __this->get_moveSpeed_3();
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_39 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_37, L_38, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_35 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_33, L_34, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		float L_40 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_36 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_41 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_37 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_35, L_36, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_42 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_34, L_41, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_38 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_30, L_37, /*hidden argument*/NULL);
 		// transform.position += -transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_33);
-		Transform_set_position_m2469242620(L_33, L_42, /*hidden argument*/NULL);
+		NullCheck(L_29);
+		Transform_set_position_m2469242620(L_29, L_38, /*hidden argument*/NULL);
 	}
 
-IL_012b:
+IL_0108:
 	{
 		// if (rightmoveBool) {
-		bool L_43 = __this->get_rightmoveBool_13();
-		if (!L_43)
+		bool L_39 = __this->get_rightmoveBool_13();
+		if (!L_39)
 		{
-			goto IL_016e;
+			goto IL_014b;
 		}
 	}
 	{
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_44 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_45 = L_44;
+		Transform_t3275118058 * L_40 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_41 = L_40;
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_45);
-		Vector3_t2243707580  L_46 = Transform_get_position_m1104419803(L_45, /*hidden argument*/NULL);
+		NullCheck(L_41);
+		Vector3_t2243707580  L_42 = Transform_get_position_m1104419803(L_41, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_47 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_43 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_47);
-		Vector3_t2243707580  L_48 = Transform_get_right_m440863970(L_47, /*hidden argument*/NULL);
-		float L_49 = __this->get_moveSpeed_3();
+		NullCheck(L_43);
+		Vector3_t2243707580  L_44 = Transform_get_right_m440863970(L_43, /*hidden argument*/NULL);
+		float L_45 = __this->get_moveSpeed_3();
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_50 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_48, L_49, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_46 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_44, L_45, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		float L_51 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_47 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_52 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_50, L_51, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_48 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_46, L_47, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_53 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_46, L_52, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_49 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_42, L_48, /*hidden argument*/NULL);
 		// transform.position += transform.right * moveSpeed * Time.deltaTime;
-		NullCheck(L_45);
-		Transform_set_position_m2469242620(L_45, L_53, /*hidden argument*/NULL);
+		NullCheck(L_41);
+		Transform_set_position_m2469242620(L_41, L_49, /*hidden argument*/NULL);
 	}
 
-IL_016e:
+IL_014b:
 	{
 		// if (leftBool) {
-		bool L_54 = __this->get_leftBool_8();
-		if (!L_54)
+		bool L_50 = __this->get_leftBool_8();
+		if (!L_50)
 		{
-			goto IL_01a1;
+			goto IL_017f;
 		}
 	}
 	{
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		Transform_t3275118058 * L_55 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_56 = L_55;
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		NullCheck(L_56);
-		Quaternion_t4030073918  L_57 = Transform_get_localRotation_m4001487205(L_56, /*hidden argument*/NULL);
-		float L_58 = __this->get_rotationX_4();
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		Vector3_t2243707580  L_59 = Vector3_get_up_m2725403797(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		Quaternion_t4030073918  L_60 = Quaternion_AngleAxis_m2806222563(NULL /*static, unused*/, L_58, L_59, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		Quaternion_t4030073918  L_61 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_57, L_60, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
-		NullCheck(L_56);
-		Transform_set_localRotation_m2055111962(L_56, L_61, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		Transform_t3275118058 * L_51 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_52 = L_51;
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		NullCheck(L_52);
+		Quaternion_t4030073918  L_53 = Transform_get_localRotation_m4001487205(L_52, /*hidden argument*/NULL);
+		float L_54 = __this->get_rotationX_4();
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		Vector3_t2243707580  L_55 = Vector3_get_up_m2725403797(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		Quaternion_t4030073918  L_56 = Quaternion_AngleAxis_m2806222563(NULL /*static, unused*/, ((-L_54)), L_55, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		Quaternion_t4030073918  L_57 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_53, L_56, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
+		NullCheck(L_52);
+		Transform_set_localRotation_m2055111962(L_52, L_57, /*hidden argument*/NULL);
 	}
 
-IL_01a1:
+IL_017f:
 	{
 		// if (rightBool) {
-		bool L_62 = __this->get_rightBool_9();
-		if (!L_62)
+		bool L_58 = __this->get_rightBool_9();
+		if (!L_58)
 		{
-			goto IL_01d5;
+			goto IL_01b2;
 		}
 	}
 	{
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		Transform_t3275118058 * L_63 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_64 = L_63;
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		NullCheck(L_64);
-		Quaternion_t4030073918  L_65 = Transform_get_localRotation_m4001487205(L_64, /*hidden argument*/NULL);
-		float L_66 = __this->get_rotationX_4();
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		Vector3_t2243707580  L_67 = Vector3_get_up_m2725403797(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		Quaternion_t4030073918  L_68 = Quaternion_AngleAxis_m2806222563(NULL /*static, unused*/, ((-L_66)), L_67, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		Quaternion_t4030073918  L_69 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_65, L_68, /*hidden argument*/NULL);
-		// transform.localRotation *= Quaternion.AngleAxis (-rotationX, Vector3.up);
-		NullCheck(L_64);
-		Transform_set_localRotation_m2055111962(L_64, L_69, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		Transform_t3275118058 * L_59 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_60 = L_59;
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		NullCheck(L_60);
+		Quaternion_t4030073918  L_61 = Transform_get_localRotation_m4001487205(L_60, /*hidden argument*/NULL);
+		float L_62 = __this->get_rotationX_4();
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		Vector3_t2243707580  L_63 = Vector3_get_up_m2725403797(NULL /*static, unused*/, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		Quaternion_t4030073918  L_64 = Quaternion_AngleAxis_m2806222563(NULL /*static, unused*/, L_62, L_63, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		Quaternion_t4030073918  L_65 = Quaternion_op_Multiply_m2426727589(NULL /*static, unused*/, L_61, L_64, /*hidden argument*/NULL);
+		// transform.localRotation *= Quaternion.AngleAxis (rotationX, Vector3.up);
+		NullCheck(L_60);
+		Transform_set_localRotation_m2055111962(L_60, L_65, /*hidden argument*/NULL);
 	}
 
-IL_01d5:
+IL_01b2:
 	{
 		// if (forwardBool) {
-		bool L_70 = __this->get_forwardBool_10();
-		if (!L_70)
+		bool L_66 = __this->get_forwardBool_10();
+		if (!L_66)
 		{
-			goto IL_0218;
+			goto IL_01f5;
 		}
 	}
 	{
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_71 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_72 = L_71;
+		Transform_t3275118058 * L_67 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_68 = L_67;
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_72);
-		Vector3_t2243707580  L_73 = Transform_get_position_m1104419803(L_72, /*hidden argument*/NULL);
+		NullCheck(L_68);
+		Vector3_t2243707580  L_69 = Transform_get_position_m1104419803(L_68, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_74 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_70 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_74);
-		Vector3_t2243707580  L_75 = Transform_get_up_m1603627763(L_74, /*hidden argument*/NULL);
-		float L_76 = __this->get_moveSpeed_3();
+		NullCheck(L_70);
+		Vector3_t2243707580  L_71 = Transform_get_up_m1603627763(L_70, /*hidden argument*/NULL);
+		float L_72 = __this->get_moveSpeed_3();
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_77 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_75, L_76, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_73 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_71, L_72, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		float L_78 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_74 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_79 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_77, L_78, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_75 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_73, L_74, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_80 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_73, L_79, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_76 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_69, L_75, /*hidden argument*/NULL);
 		// transform.position += transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_72);
-		Transform_set_position_m2469242620(L_72, L_80, /*hidden argument*/NULL);
+		NullCheck(L_68);
+		Transform_set_position_m2469242620(L_68, L_76, /*hidden argument*/NULL);
 	}
 
-IL_0218:
+IL_01f5:
 	{
 		// if (backwardBool) {
-		bool L_81 = __this->get_backwardBool_11();
-		if (!L_81)
+		bool L_77 = __this->get_backwardBool_11();
+		if (!L_77)
 		{
-			goto IL_0260;
+			goto IL_023d;
 		}
 	}
 	{
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_82 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
-		Transform_t3275118058 * L_83 = L_82;
+		Transform_t3275118058 * L_78 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_79 = L_78;
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_83);
-		Vector3_t2243707580  L_84 = Transform_get_position_m1104419803(L_83, /*hidden argument*/NULL);
+		NullCheck(L_79);
+		Vector3_t2243707580  L_80 = Transform_get_position_m1104419803(L_79, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Transform_t3275118058 * L_85 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Transform_t3275118058 * L_81 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_85);
-		Vector3_t2243707580  L_86 = Transform_get_up_m1603627763(L_85, /*hidden argument*/NULL);
+		NullCheck(L_81);
+		Vector3_t2243707580  L_82 = Transform_get_up_m1603627763(L_81, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_87 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_86, /*hidden argument*/NULL);
-		float L_88 = __this->get_moveSpeed_3();
+		Vector3_t2243707580  L_83 = Vector3_op_UnaryNegation_m3383802608(NULL /*static, unused*/, L_82, /*hidden argument*/NULL);
+		float L_84 = __this->get_moveSpeed_3();
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_89 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_87, L_88, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_85 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_83, L_84, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		float L_90 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_86 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_91 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_89, L_90, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_87 = Vector3_op_Multiply_m1351554733(NULL /*static, unused*/, L_85, L_86, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		Vector3_t2243707580  L_92 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_84, L_91, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_88 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_80, L_87, /*hidden argument*/NULL);
 		// transform.position += -transform.up * moveSpeed * Time.deltaTime;
-		NullCheck(L_83);
-		Transform_set_position_m2469242620(L_83, L_92, /*hidden argument*/NULL);
+		NullCheck(L_79);
+		Transform_set_position_m2469242620(L_79, L_88, /*hidden argument*/NULL);
 	}
 
-IL_0260:
+IL_023d:
 	{
 		// }
 		return;
@@ -10002,14 +9993,14 @@ IL_0076:
 		int32_t L_9 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((((int32_t)L_9) <= ((int32_t)0)))
 		{
-			goto IL_03a1;
+			goto IL_0387;
 		}
 	}
 	{
 		int32_t L_10 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_21();
 		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
 		{
-			goto IL_03a1;
+			goto IL_0387;
 		}
 	}
 	{
@@ -10019,7 +10010,7 @@ IL_0076:
 		bool L_12 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_11, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
 		if (!L_12)
 		{
-			goto IL_03a1;
+			goto IL_0387;
 		}
 	}
 	{
@@ -10033,7 +10024,7 @@ IL_0076:
 		int32_t L_14 = Touch_get_phase_m196706494((&V_0), /*hidden argument*/NULL);
 		if (L_14)
 		{
-			goto IL_03a0;
+			goto IL_0386;
 		}
 	}
 	{
@@ -10045,7 +10036,7 @@ IL_0076:
 		bool L_16 = EventSystem_IsPointerOverGameObject_m2415000115(L_15, 0, /*hidden argument*/NULL);
 		if (L_16)
 		{
-			goto IL_03a0;
+			goto IL_0386;
 		}
 	}
 	{
@@ -10115,14 +10106,14 @@ IL_0125:
 		bool L_30 = Component_CompareTag_m3443292365(L_29, _stringLiteral439316528, /*hidden argument*/NULL);
 		if (!L_30)
 		{
-			goto IL_01fc;
+			goto IL_01e2;
 		}
 	}
 	{
 		int32_t L_31 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
 		if ((((int32_t)L_31) == ((int32_t)8)))
 		{
-			goto IL_01fc;
+			goto IL_01e2;
 		}
 	}
 	{
@@ -10190,323 +10181,312 @@ IL_0125:
 		// Vector3 boxPosition = originalVec + boxSideHitVec;
 		Vector3_t2243707580  L_53 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_51, L_52, /*hidden argument*/NULL);
 		V_11 = L_53;
-		// Instantiate (randColorPrefab, boxPosition + boxSideHitVec, Quaternion.identity);
-		GameObject_t1756533147 * L_54 = __this->get_randColorPrefab_3();
-		Vector3_t2243707580  L_55 = V_11;
-		Vector3_t2243707580  L_56 = V_4;
-		// Instantiate (randColorPrefab, boxPosition + boxSideHitVec, Quaternion.identity);
-		Vector3_t2243707580  L_57 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_55, L_56, /*hidden argument*/NULL);
-		// Instantiate (randColorPrefab, boxPosition + boxSideHitVec, Quaternion.identity);
-		Quaternion_t4030073918  L_58 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Instantiate (randColorPrefab, boxPosition + boxSideHitVec, Quaternion.identity);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_54, L_57, L_58, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
 		// CreateBox (boxPosition);
-		Vector3_t2243707580  L_59 = V_11;
+		Vector3_t2243707580  L_54 = V_11;
 		// CreateBox (boxPosition);
-		placeBox_CreateBox_m3746128977(__this, L_59, /*hidden argument*/NULL);
-		goto IL_039f;
+		placeBox_CreateBox_m3746128977(__this, L_54, /*hidden argument*/NULL);
+		goto IL_0385;
 	}
 
-IL_01fc:
+IL_01e2:
 	{
 		// Debug.Log ("Did not touch a block but the plane");
 		// Debug.Log ("Did not touch a block but the plane");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3932601629, /*hidden argument*/NULL);
 		// var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
-		Camera_t189460977 * L_60 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t189460977 * L_55 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
-		Vector2_t2243707579  L_61 = Touch_get_position_m2079703643((&V_0), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_56 = Touch_get_position_m2079703643((&V_0), /*hidden argument*/NULL);
 		// var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
-		Vector3_t2243707580  L_62 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_61, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_57 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_56, /*hidden argument*/NULL);
 		// var screenPosition = Camera.main.ScreenToViewportPoint (touch.position);
-		NullCheck(L_60);
-		Vector3_t2243707580  L_63 = Camera_ScreenToViewportPoint_m2666228286(L_60, L_62, /*hidden argument*/NULL);
-		V_12 = L_63;
+		NullCheck(L_55);
+		Vector3_t2243707580  L_58 = Camera_ScreenToViewportPoint_m2666228286(L_55, L_57, /*hidden argument*/NULL);
+		V_12 = L_58;
 		// ARPoint point = new ARPoint {
 		Initobj (ARPoint_t3436811567_il2cpp_TypeInfo_var, (&V_14));
 		// x = screenPosition.x,
-		float L_64 = (&V_12)->get_x_1();
-		(&V_14)->set_x_0((((double)((double)L_64))));
+		float L_59 = (&V_12)->get_x_1();
+		(&V_14)->set_x_0((((double)((double)L_59))));
 		// y = screenPosition.y
-		float L_65 = (&V_12)->get_y_2();
-		(&V_14)->set_y_1((((double)((double)L_65))));
-		ARPoint_t3436811567  L_66 = V_14;
-		V_13 = L_66;
+		float L_60 = (&V_12)->get_y_2();
+		(&V_14)->set_y_1((((double)((double)L_60))));
+		ARPoint_t3436811567  L_61 = V_14;
+		V_13 = L_61;
 		// List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point,
 		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
-		UnityARSessionNativeInterface_t1130867170 * L_67 = UnityARSessionNativeInterface_GetARSessionNativeInterface_m2987304195(NULL /*static, unused*/, /*hidden argument*/NULL);
-		ARPoint_t3436811567  L_68 = V_13;
+		UnityARSessionNativeInterface_t1130867170 * L_62 = UnityARSessionNativeInterface_GetARSessionNativeInterface_m2987304195(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ARPoint_t3436811567  L_63 = V_13;
 		// List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point,
-		NullCheck(L_67);
-		List_1_t2644634157 * L_69 = UnityARSessionNativeInterface_HitTest_m3162073804(L_67, L_68, (((int64_t)((int64_t)((int32_t)16)))), /*hidden argument*/NULL);
-		V_15 = L_69;
+		NullCheck(L_62);
+		List_1_t2644634157 * L_64 = UnityARSessionNativeInterface_HitTest_m3162073804(L_62, L_63, (((int64_t)((int64_t)((int32_t)16)))), /*hidden argument*/NULL);
+		V_15 = L_64;
 		// if (hitResults.Count > 0) {
-		List_1_t2644634157 * L_70 = V_15;
+		List_1_t2644634157 * L_65 = V_15;
 		// if (hitResults.Count > 0) {
-		NullCheck(L_70);
-		int32_t L_71 = List_1_get_Count_m323201712(L_70, /*hidden argument*/List_1_get_Count_m323201712_MethodInfo_var);
-		if ((((int32_t)L_71) <= ((int32_t)0)))
+		NullCheck(L_65);
+		int32_t L_66 = List_1_get_Count_m323201712(L_65, /*hidden argument*/List_1_get_Count_m323201712_MethodInfo_var);
+		if ((((int32_t)L_66) <= ((int32_t)0)))
 		{
-			goto IL_039e;
+			goto IL_0384;
 		}
 	}
 	{
 		// foreach (var hitResult in hitResults) {
-		List_1_t2644634157 * L_72 = V_15;
+		List_1_t2644634157 * L_67 = V_15;
 		// foreach (var hitResult in hitResults) {
-		NullCheck(L_72);
-		Enumerator_t2179363831  L_73 = List_1_GetEnumerator_m603904701(L_72, /*hidden argument*/List_1_GetEnumerator_m603904701_MethodInfo_var);
-		V_17 = L_73;
+		NullCheck(L_67);
+		Enumerator_t2179363831  L_68 = List_1_GetEnumerator_m603904701(L_67, /*hidden argument*/List_1_GetEnumerator_m603904701_MethodInfo_var);
+		V_17 = L_68;
 	}
 
-IL_0272:
+IL_0258:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_037e;
+			goto IL_0364;
 		}
 
-IL_0277:
+IL_025d:
 		{
 			// foreach (var hitResult in hitResults) {
 			// foreach (var hitResult in hitResults) {
-			ARHitTestResult_t3275513025  L_74 = Enumerator_get_Current_m3080821509((&V_17), /*hidden argument*/Enumerator_get_Current_m3080821509_MethodInfo_var);
-			V_16 = L_74;
+			ARHitTestResult_t3275513025  L_69 = Enumerator_get_Current_m3080821509((&V_17), /*hidden argument*/Enumerator_get_Current_m3080821509_MethodInfo_var);
+			V_16 = L_69;
 			// Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
-			Matrix4x4_t2933234003  L_75 = (&V_16)->get_worldTransform_3();
+			Matrix4x4_t2933234003  L_70 = (&V_16)->get_worldTransform_3();
 			// Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
-			Vector3_t2243707580  L_76 = UnityARMatrixOps_GetPosition_m110321593(NULL /*static, unused*/, L_75, /*hidden argument*/NULL);
-			V_18 = L_76;
+			Vector3_t2243707580  L_71 = UnityARMatrixOps_GetPosition_m110321593(NULL /*static, unused*/, L_70, /*hidden argument*/NULL);
+			V_18 = L_71;
 			// Debug.Log ("Placing a Box Normally at " + position);
-			Vector3_t2243707580  L_77 = V_18;
-			Vector3_t2243707580  L_78 = L_77;
-			Il2CppObject * L_79 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_78);
+			Vector3_t2243707580  L_72 = V_18;
+			Vector3_t2243707580  L_73 = L_72;
+			Il2CppObject * L_74 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_73);
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_80 = String_Concat_m56707527(NULL /*static, unused*/, _stringLiteral3018558517, L_79, /*hidden argument*/NULL);
+			String_t* L_75 = String_Concat_m56707527(NULL /*static, unused*/, _stringLiteral3018558517, L_74, /*hidden argument*/NULL);
 			// Debug.Log ("Placing a Box Normally at " + position);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-			Debug_Log_m920475918(NULL /*static, unused*/, L_80, /*hidden argument*/NULL);
+			Debug_Log_m920475918(NULL /*static, unused*/, L_75, /*hidden argument*/NULL);
 			// if (currentSelectedOG == Selected.Stalactite) {
-			int32_t L_81 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
-			if ((!(((uint32_t)L_81) == ((uint32_t)8))))
+			int32_t L_76 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_20();
+			if ((!(((uint32_t)L_76) == ((uint32_t)8))))
 			{
-				goto IL_0346;
+				goto IL_032c;
 			}
 		}
 
-IL_02b0:
+IL_0296:
 		{
 			// if (raycastHit.collider.CompareTag ("planePrefab")) {
 			// if (raycastHit.collider.CompareTag ("planePrefab")) {
-			Collider_t3497673348 * L_82 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
+			Collider_t3497673348 * L_77 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
 			// if (raycastHit.collider.CompareTag ("planePrefab")) {
+			NullCheck(L_77);
+			bool L_78 = Component_CompareTag_m3443292365(L_77, _stringLiteral3922057830, /*hidden argument*/NULL);
+			if (!L_78)
+			{
+				goto IL_0326;
+			}
+		}
+
+IL_02ad:
+		{
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			Vector3_t2243707580  L_79 = Ray_get_direction_m4059191533((&V_1), /*hidden argument*/NULL);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			Collider_t3497673348 * L_80 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			NullCheck(L_80);
+			GameObject_t1756533147 * L_81 = Component_get_gameObject_m3105766835(L_80, /*hidden argument*/NULL);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			NullCheck(L_81);
+			Transform_t3275118058 * L_82 = GameObject_get_transform_m909382139(L_81, /*hidden argument*/NULL);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
 			NullCheck(L_82);
-			bool L_83 = Component_CompareTag_m3443292365(L_82, _stringLiteral3922057830, /*hidden argument*/NULL);
-			if (!L_83)
+			Vector3_t2243707580  L_83 = Transform_get_up_m1603627763(L_82, /*hidden argument*/NULL);
+			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
+			float L_84 = Vector3_Angle_m2552334978(NULL /*static, unused*/, L_79, L_83, /*hidden argument*/NULL);
+			V_19 = L_84;
+			// if (raycast.direction.y > 0.1f) {
+			// if (raycast.direction.y > 0.1f) {
+			Vector3_t2243707580  L_85 = Ray_get_direction_m4059191533((&V_1), /*hidden argument*/NULL);
+			V_20 = L_85;
+			float L_86 = (&V_20)->get_y_2();
+			if ((!(((float)L_86) > ((float)(0.1f)))))
 			{
-				goto IL_0340;
+				goto IL_0325;
 			}
 		}
 
-IL_02c7:
-		{
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			Vector3_t2243707580  L_84 = Ray_get_direction_m4059191533((&V_1), /*hidden argument*/NULL);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			Collider_t3497673348 * L_85 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			NullCheck(L_85);
-			GameObject_t1756533147 * L_86 = Component_get_gameObject_m3105766835(L_85, /*hidden argument*/NULL);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			NullCheck(L_86);
-			Transform_t3275118058 * L_87 = GameObject_get_transform_m909382139(L_86, /*hidden argument*/NULL);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			NullCheck(L_87);
-			Vector3_t2243707580  L_88 = Transform_get_up_m1603627763(L_87, /*hidden argument*/NULL);
-			// float angle = Vector3.Angle(raycast.direction, raycastHit.collider.gameObject.transform.up);
-			float L_89 = Vector3_Angle_m2552334978(NULL /*static, unused*/, L_84, L_88, /*hidden argument*/NULL);
-			V_19 = L_89;
-			// if (raycast.direction.y > 0.1f) {
-			// if (raycast.direction.y > 0.1f) {
-			Vector3_t2243707580  L_90 = Ray_get_direction_m4059191533((&V_1), /*hidden argument*/NULL);
-			V_20 = L_90;
-			float L_91 = (&V_20)->get_y_2();
-			if ((!(((float)L_91) > ((float)(0.1f)))))
-			{
-				goto IL_033f;
-			}
-		}
-
-IL_0306:
+IL_02ec:
 		{
 			// Debug.Log ("Placing a Stalactite");
 			// Debug.Log ("Placing a Stalactite");
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 			Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral176940743, /*hidden argument*/NULL);
 			// CreateBox (new Vector3 (position.x, position.y - (createHeight + 0.45f), position.z));
-			float L_92 = (&V_18)->get_x_1();
-			float L_93 = (&V_18)->get_y_2();
-			float L_94 = __this->get_createHeight_14();
-			float L_95 = (&V_18)->get_z_3();
+			float L_87 = (&V_18)->get_x_1();
+			float L_88 = (&V_18)->get_y_2();
+			float L_89 = __this->get_createHeight_14();
+			float L_90 = (&V_18)->get_z_3();
 			// CreateBox (new Vector3 (position.x, position.y - (createHeight + 0.45f), position.z));
-			Vector3_t2243707580  L_96;
-			memset(&L_96, 0, sizeof(L_96));
-			Vector3__ctor_m2638739322(&L_96, L_92, ((float)((float)L_93-(float)((float)((float)L_94+(float)(0.45f))))), L_95, /*hidden argument*/NULL);
+			Vector3_t2243707580  L_91;
+			memset(&L_91, 0, sizeof(L_91));
+			Vector3__ctor_m2638739322(&L_91, L_87, ((float)((float)L_88-(float)((float)((float)L_89+(float)(0.45f))))), L_90, /*hidden argument*/NULL);
 			// CreateBox (new Vector3 (position.x, position.y - (createHeight + 0.45f), position.z));
-			placeBox_CreateBox_m3746128977(__this, L_96, /*hidden argument*/NULL);
+			placeBox_CreateBox_m3746128977(__this, L_91, /*hidden argument*/NULL);
 		}
 
-IL_033f:
+IL_0325:
 		{
 		}
 
-IL_0340:
+IL_0326:
 		{
-			goto IL_0379;
+			goto IL_035f;
 		}
 
-IL_0346:
+IL_032c:
 		{
 			// Debug.Log("not placing a stalactite");
 			// Debug.Log("not placing a stalactite");
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 			Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3461326270, /*hidden argument*/NULL);
 			// CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
-			float L_97 = (&V_18)->get_x_1();
-			float L_98 = (&V_18)->get_y_2();
-			float L_99 = __this->get_createHeight_14();
-			float L_100 = (&V_18)->get_z_3();
+			float L_92 = (&V_18)->get_x_1();
+			float L_93 = (&V_18)->get_y_2();
+			float L_94 = __this->get_createHeight_14();
+			float L_95 = (&V_18)->get_z_3();
 			// CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
-			Vector3_t2243707580  L_101;
-			memset(&L_101, 0, sizeof(L_101));
-			Vector3__ctor_m2638739322(&L_101, L_97, ((float)((float)L_98+(float)L_99)), L_100, /*hidden argument*/NULL);
+			Vector3_t2243707580  L_96;
+			memset(&L_96, 0, sizeof(L_96));
+			Vector3__ctor_m2638739322(&L_96, L_92, ((float)((float)L_93+(float)L_94)), L_95, /*hidden argument*/NULL);
 			// CreateBox (new Vector3 (position.x, position.y + createHeight, position.z));
-			placeBox_CreateBox_m3746128977(__this, L_101, /*hidden argument*/NULL);
+			placeBox_CreateBox_m3746128977(__this, L_96, /*hidden argument*/NULL);
 		}
 
-IL_0379:
+IL_035f:
 		{
 			// break;
-			goto IL_038a;
+			goto IL_0370;
 		}
 
-IL_037e:
+IL_0364:
 		{
 			// foreach (var hitResult in hitResults) {
-			bool L_102 = Enumerator_MoveNext_m3860421825((&V_17), /*hidden argument*/Enumerator_MoveNext_m3860421825_MethodInfo_var);
-			if (L_102)
+			bool L_97 = Enumerator_MoveNext_m3860421825((&V_17), /*hidden argument*/Enumerator_MoveNext_m3860421825_MethodInfo_var);
+			if (L_97)
 			{
-				goto IL_0277;
+				goto IL_025d;
 			}
 		}
 
-IL_038a:
+IL_0370:
 		{
-			IL2CPP_LEAVE(0x39D, FINALLY_038f);
+			IL2CPP_LEAVE(0x383, FINALLY_0375);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
-		goto FINALLY_038f;
+		goto FINALLY_0375;
 	}
 
-FINALLY_038f:
+FINALLY_0375:
 	{ // begin finally (depth: 1)
 		// foreach (var hitResult in hitResults) {
 		Enumerator_Dispose_m3109677227((&V_17), /*hidden argument*/Enumerator_Dispose_m3109677227_MethodInfo_var);
-		IL2CPP_END_FINALLY(911)
+		IL2CPP_END_FINALLY(885)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(911)
+	IL2CPP_CLEANUP(885)
 	{
-		IL2CPP_JUMP_TBL(0x39D, IL_039d)
+		IL2CPP_JUMP_TBL(0x383, IL_0383)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
 	}
 
-IL_039d:
+IL_0383:
 	{
 	}
 
-IL_039e:
+IL_0384:
 	{
 	}
 
-IL_039f:
+IL_0385:
 	{
 	}
 
-IL_03a0:
+IL_0386:
 	{
 	}
 
-IL_03a1:
+IL_0387:
 	{
 		// if (Input.touchCount > 0 && currentSelectionIsABlock == Selected.Pickaxe)
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		int32_t L_103 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_103) <= ((int32_t)0)))
+		int32_t L_98 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_98) <= ((int32_t)0)))
 		{
-			goto IL_0501;
+			goto IL_04e7;
 		}
 	}
 	{
-		int32_t L_104 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_21();
-		if (L_104)
+		int32_t L_99 = ((placeBox_t3405830008_StaticFields*)placeBox_t3405830008_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_21();
+		if (L_99)
 		{
-			goto IL_0501;
+			goto IL_04e7;
 		}
 	}
 	{
 		// var touch = Input.GetTouch(0);
 		// var touch = Input.GetTouch(0);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		Touch_t407273883  L_105 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
-		V_21 = L_105;
+		Touch_t407273883  L_100 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_21 = L_100;
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
-		int32_t L_106 = Touch_get_phase_m196706494((&V_21), /*hidden argument*/NULL);
-		if (L_106)
+		int32_t L_101 = Touch_get_phase_m196706494((&V_21), /*hidden argument*/NULL);
+		if (L_101)
 		{
-			goto IL_0500;
+			goto IL_04e6;
 		}
 	}
 	{
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
 		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t3466835263_il2cpp_TypeInfo_var);
-		EventSystem_t3466835263 * L_107 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
+		EventSystem_t3466835263 * L_102 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0))
-		NullCheck(L_107);
-		bool L_108 = EventSystem_IsPointerOverGameObject_m2415000115(L_107, 0, /*hidden argument*/NULL);
-		if (L_108)
+		NullCheck(L_102);
+		bool L_103 = EventSystem_IsPointerOverGameObject_m2415000115(L_102, 0, /*hidden argument*/NULL);
+		if (L_103)
 		{
-			goto IL_0500;
+			goto IL_04e6;
 		}
 	}
 	{
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Camera_t189460977 * L_109 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t189460977 * L_104 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Vector2_t2243707579  L_110 = Touch_get_position_m2079703643((&V_21), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_105 = Touch_get_position_m2079703643((&V_21), /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Vector3_t2243707580  L_111 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_110, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_106 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_105, /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		NullCheck(L_109);
-		Ray_t2469606224  L_112 = Camera_ScreenPointToRay_m614889538(L_109, L_111, /*hidden argument*/NULL);
-		V_22 = L_112;
+		NullCheck(L_104);
+		Ray_t2469606224  L_107 = Camera_ScreenPointToRay_m614889538(L_104, L_106, /*hidden argument*/NULL);
+		V_22 = L_107;
 		// Debug.Log ("Im playing with the pickaxe");
 		// Debug.Log ("Im playing with the pickaxe");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral38430798, /*hidden argument*/NULL);
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		Ray_t2469606224  L_113 = V_22;
+		Ray_t2469606224  L_108 = V_22;
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		bool L_114 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_113, (&V_23), /*hidden argument*/NULL);
-		if (!L_114)
+		bool L_109 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_108, (&V_23), /*hidden argument*/NULL);
+		if (!L_109)
 		{
-			goto IL_04ff;
+			goto IL_04e5;
 		}
 	}
 	{
@@ -10516,119 +10496,119 @@ IL_03a1:
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral626891786, /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
-		Collider_t3497673348 * L_115 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_110 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
-		NullCheck(L_115);
-		bool L_116 = Component_CompareTag_m3443292365(L_115, _stringLiteral439316528, /*hidden argument*/NULL);
-		if (!L_116)
+		NullCheck(L_110);
+		bool L_111 = Component_CompareTag_m3443292365(L_110, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_111)
 		{
-			goto IL_04fe;
+			goto IL_04e4;
 		}
 	}
 	{
 		// float xPos = raycastHit.collider.gameObject.transform.position.x;
 		// float xPos = raycastHit.collider.gameObject.transform.position.x;
-		Collider_t3497673348 * L_117 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_112 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
 		// float xPos = raycastHit.collider.gameObject.transform.position.x;
+		NullCheck(L_112);
+		GameObject_t1756533147 * L_113 = Component_get_gameObject_m3105766835(L_112, /*hidden argument*/NULL);
+		// float xPos = raycastHit.collider.gameObject.transform.position.x;
+		NullCheck(L_113);
+		Transform_t3275118058 * L_114 = GameObject_get_transform_m909382139(L_113, /*hidden argument*/NULL);
+		// float xPos = raycastHit.collider.gameObject.transform.position.x;
+		NullCheck(L_114);
+		Vector3_t2243707580  L_115 = Transform_get_position_m1104419803(L_114, /*hidden argument*/NULL);
+		V_25 = L_115;
+		float L_116 = (&V_25)->get_x_1();
+		V_24 = L_116;
+		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		Collider_t3497673348 * L_117 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
+		// float yPos = raycastHit.collider.gameObject.transform.position.y;
 		NullCheck(L_117);
 		GameObject_t1756533147 * L_118 = Component_get_gameObject_m3105766835(L_117, /*hidden argument*/NULL);
-		// float xPos = raycastHit.collider.gameObject.transform.position.x;
+		// float yPos = raycastHit.collider.gameObject.transform.position.y;
 		NullCheck(L_118);
 		Transform_t3275118058 * L_119 = GameObject_get_transform_m909382139(L_118, /*hidden argument*/NULL);
-		// float xPos = raycastHit.collider.gameObject.transform.position.x;
+		// float yPos = raycastHit.collider.gameObject.transform.position.y;
 		NullCheck(L_119);
 		Vector3_t2243707580  L_120 = Transform_get_position_m1104419803(L_119, /*hidden argument*/NULL);
-		V_25 = L_120;
-		float L_121 = (&V_25)->get_x_1();
-		V_24 = L_121;
-		// float yPos = raycastHit.collider.gameObject.transform.position.y;
-		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		V_27 = L_120;
+		float L_121 = (&V_27)->get_y_2();
+		V_26 = L_121;
+		// float zPos = raycastHit.collider.gameObject.transform.position.z;
+		// float zPos = raycastHit.collider.gameObject.transform.position.z;
 		Collider_t3497673348 * L_122 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
-		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		// float zPos = raycastHit.collider.gameObject.transform.position.z;
 		NullCheck(L_122);
 		GameObject_t1756533147 * L_123 = Component_get_gameObject_m3105766835(L_122, /*hidden argument*/NULL);
-		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		// float zPos = raycastHit.collider.gameObject.transform.position.z;
 		NullCheck(L_123);
 		Transform_t3275118058 * L_124 = GameObject_get_transform_m909382139(L_123, /*hidden argument*/NULL);
-		// float yPos = raycastHit.collider.gameObject.transform.position.y;
+		// float zPos = raycastHit.collider.gameObject.transform.position.z;
 		NullCheck(L_124);
 		Vector3_t2243707580  L_125 = Transform_get_position_m1104419803(L_124, /*hidden argument*/NULL);
-		V_27 = L_125;
-		float L_126 = (&V_27)->get_y_2();
-		V_26 = L_126;
-		// float zPos = raycastHit.collider.gameObject.transform.position.z;
-		// float zPos = raycastHit.collider.gameObject.transform.position.z;
-		Collider_t3497673348 * L_127 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
-		// float zPos = raycastHit.collider.gameObject.transform.position.z;
-		NullCheck(L_127);
-		GameObject_t1756533147 * L_128 = Component_get_gameObject_m3105766835(L_127, /*hidden argument*/NULL);
-		// float zPos = raycastHit.collider.gameObject.transform.position.z;
-		NullCheck(L_128);
-		Transform_t3275118058 * L_129 = GameObject_get_transform_m909382139(L_128, /*hidden argument*/NULL);
-		// float zPos = raycastHit.collider.gameObject.transform.position.z;
-		NullCheck(L_129);
-		Vector3_t2243707580  L_130 = Transform_get_position_m1104419803(L_129, /*hidden argument*/NULL);
-		V_29 = L_130;
-		float L_131 = (&V_29)->get_z_3();
-		V_28 = L_131;
+		V_29 = L_125;
+		float L_126 = (&V_29)->get_z_3();
+		V_28 = L_126;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		float L_132 = V_24;
-		float L_133 = V_26;
-		float L_134 = V_28;
+		float L_127 = V_24;
+		float L_128 = V_26;
+		float L_129 = V_28;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		Vector3_t2243707580  L_135;
-		memset(&L_135, 0, sizeof(L_135));
-		Vector3__ctor_m2638739322(&L_135, L_132, L_133, L_134, /*hidden argument*/NULL);
-		__this->set_originalVec_22(L_135);
+		Vector3_t2243707580  L_130;
+		memset(&L_130, 0, sizeof(L_130));
+		Vector3__ctor_m2638739322(&L_130, L_127, L_128, L_129, /*hidden argument*/NULL);
+		__this->set_originalVec_22(L_130);
 		// animationStarted = true;
 		__this->set_animationStarted_26((bool)1);
 		// animator.SetTrigger ("clickWindow");
-		Animator_t69676727 * L_136 = __this->get_animator_18();
+		Animator_t69676727 * L_131 = __this->get_animator_18();
 		// animator.SetTrigger ("clickWindow");
-		NullCheck(L_136);
-		Animator_SetTrigger_m3418492570(L_136, _stringLiteral474748842, /*hidden argument*/NULL);
+		NullCheck(L_131);
+		Animator_SetTrigger_m3418492570(L_131, _stringLiteral474748842, /*hidden argument*/NULL);
 		// Instantiate (explosion, originalVec, Quaternion.identity);
-		GameObject_t1756533147 * L_137 = __this->get_explosion_11();
-		Vector3_t2243707580  L_138 = __this->get_originalVec_22();
+		GameObject_t1756533147 * L_132 = __this->get_explosion_11();
+		Vector3_t2243707580  L_133 = __this->get_originalVec_22();
 		// Instantiate (explosion, originalVec, Quaternion.identity);
-		Quaternion_t4030073918  L_139 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_134 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// Instantiate (explosion, originalVec, Quaternion.identity);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_137, L_138, L_139, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_132, L_133, L_134, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
 		// audioDestroy = PickAxeSound.GetComponent<AudioSource>();
-		GameObject_t1756533147 * L_140 = __this->get_PickAxeSound_12();
+		GameObject_t1756533147 * L_135 = __this->get_PickAxeSound_12();
 		// audioDestroy = PickAxeSound.GetComponent<AudioSource>();
-		NullCheck(L_140);
-		AudioSource_t1135106623 * L_141 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_140, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
-		__this->set_audioDestroy_16(L_141);
+		NullCheck(L_135);
+		AudioSource_t1135106623 * L_136 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_135, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
+		__this->set_audioDestroy_16(L_136);
 		// audioDestroy.Play ();
-		AudioSource_t1135106623 * L_142 = __this->get_audioDestroy_16();
+		AudioSource_t1135106623 * L_137 = __this->get_audioDestroy_16();
 		// audioDestroy.Play ();
-		NullCheck(L_142);
-		AudioSource_Play_m353744792(L_142, /*hidden argument*/NULL);
+		NullCheck(L_137);
+		AudioSource_Play_m353744792(L_137, /*hidden argument*/NULL);
 		// Destroy (raycastHit.collider.gameObject);
 		// Destroy (raycastHit.collider.gameObject);
-		Collider_t3497673348 * L_143 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_138 = RaycastHit_get_collider_m301198172((&V_23), /*hidden argument*/NULL);
 		// Destroy (raycastHit.collider.gameObject);
-		NullCheck(L_143);
-		GameObject_t1756533147 * L_144 = Component_get_gameObject_m3105766835(L_143, /*hidden argument*/NULL);
+		NullCheck(L_138);
+		GameObject_t1756533147 * L_139 = Component_get_gameObject_m3105766835(L_138, /*hidden argument*/NULL);
 		// Destroy (raycastHit.collider.gameObject);
-		Object_Destroy_m4145850038(NULL /*static, unused*/, L_144, /*hidden argument*/NULL);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_139, /*hidden argument*/NULL);
 	}
 
-IL_04fe:
+IL_04e4:
 	{
 	}
 
-IL_04ff:
+IL_04e5:
 	{
 	}
 
-IL_0500:
+IL_04e6:
 	{
 	}
 
-IL_0501:
+IL_04e7:
 	{
 		// }
 		return;
@@ -11339,14 +11319,14 @@ IL_0076:
 		int32_t L_9 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((((int32_t)L_9) <= ((int32_t)0)))
 		{
-			goto IL_01cf;
+			goto IL_01da;
 		}
 	}
 	{
 		int32_t L_10 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_22();
 		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
 		{
-			goto IL_01cf;
+			goto IL_01da;
 		}
 	}
 	{
@@ -11364,7 +11344,7 @@ IL_0076:
 		int32_t L_12 = Touch_get_phase_m196706494((&V_0), /*hidden argument*/NULL);
 		if (L_12)
 		{
-			goto IL_01ce;
+			goto IL_01d9;
 		}
 	}
 	{
@@ -11376,7 +11356,7 @@ IL_0076:
 		bool L_14 = EventSystem_IsPointerOverGameObject_m2415000115(L_13, 0, /*hidden argument*/NULL);
 		if (L_14)
 		{
-			goto IL_01ce;
+			goto IL_01d9;
 		}
 	}
 	{
@@ -11400,13 +11380,20 @@ IL_0076:
 		NullCheck(L_19);
 		Vector3_t2243707580  L_22 = Camera_ScreenToWorldPoint_m929392728(L_19, L_21, /*hidden argument*/NULL);
 		V_3 = L_22;
+		// Debug.Log (touchPos);
+		Vector3_t2243707580  L_23 = V_3;
+		Vector3_t2243707580  L_24 = L_23;
+		Il2CppObject * L_25 = Box(Vector3_t2243707580_il2cpp_TypeInfo_var, &L_24);
+		// Debug.Log (touchPos);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_25, /*hidden argument*/NULL);
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		Ray_t2469606224  L_23 = V_1;
+		Ray_t2469606224  L_26 = V_1;
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		bool L_24 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_23, (&V_2), /*hidden argument*/NULL);
-		if (!L_24)
+		bool L_27 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_26, (&V_2), /*hidden argument*/NULL);
+		if (!L_27)
 		{
-			goto IL_012e;
+			goto IL_0139;
 		}
 	}
 	{
@@ -11415,53 +11402,53 @@ IL_0076:
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3030257970, /*hidden argument*/NULL);
 		// float xPos = touchPos.x;
-		float L_25 = (&V_3)->get_x_1();
-		V_4 = L_25;
+		float L_28 = (&V_3)->get_x_1();
+		V_4 = L_28;
 		// float yPos = touchPos.y;
-		float L_26 = (&V_3)->get_y_2();
-		V_5 = L_26;
+		float L_29 = (&V_3)->get_y_2();
+		V_5 = L_29;
 		// float zPos = touchPos.z;
-		float L_27 = (&V_3)->get_z_3();
-		V_6 = L_27;
+		float L_30 = (&V_3)->get_z_3();
+		V_6 = L_30;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		float L_28 = V_4;
-		float L_29 = V_5;
-		float L_30 = V_6;
+		float L_31 = V_4;
+		float L_32 = V_5;
+		float L_33 = V_6;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		Vector3_t2243707580  L_31;
-		memset(&L_31, 0, sizeof(L_31));
-		Vector3__ctor_m2638739322(&L_31, L_28, L_29, L_30, /*hidden argument*/NULL);
-		__this->set_originalVec_23(L_31);
+		Vector3_t2243707580  L_34;
+		memset(&L_34, 0, sizeof(L_34));
+		Vector3__ctor_m2638739322(&L_34, L_31, L_32, L_33, /*hidden argument*/NULL);
+		__this->set_originalVec_23(L_34);
 	}
 
-IL_012e:
+IL_0139:
 	{
 		// MCFace boxSideHit = GetHitFace (raycastHit);
-		RaycastHit_t87180320  L_32 = V_2;
+		RaycastHit_t87180320  L_35 = V_2;
 		// MCFace boxSideHit = GetHitFace (raycastHit);
-		int32_t L_33 = placeBox1_GetHitFace_m1186576727(__this, L_32, /*hidden argument*/NULL);
-		V_7 = L_33;
+		int32_t L_36 = placeBox1_GetHitFace_m1186576727(__this, L_35, /*hidden argument*/NULL);
+		V_7 = L_36;
 		// Vector3 boxSideHitVec = getFaceVec (boxSideHit);
-		int32_t L_34 = V_7;
+		int32_t L_37 = V_7;
 		// Vector3 boxSideHitVec = getFaceVec (boxSideHit);
-		Vector3_t2243707580  L_35 = placeBox1_getFaceVec_m4264960748(__this, L_34, /*hidden argument*/NULL);
-		V_8 = L_35;
+		Vector3_t2243707580  L_38 = placeBox1_getFaceVec_m4264960748(__this, L_37, /*hidden argument*/NULL);
+		V_8 = L_38;
 		// if (raycastHit.collider.CompareTag ("placedBox") && currentSelectedOG != Selected.Stalactite) {
 		// if (raycastHit.collider.CompareTag ("placedBox") && currentSelectedOG != Selected.Stalactite) {
-		Collider_t3497673348 * L_36 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_39 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("placedBox") && currentSelectedOG != Selected.Stalactite) {
-		NullCheck(L_36);
-		bool L_37 = Component_CompareTag_m3443292365(L_36, _stringLiteral439316528, /*hidden argument*/NULL);
-		if (!L_37)
+		NullCheck(L_39);
+		bool L_40 = Component_CompareTag_m3443292365(L_39, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_40)
 		{
-			goto IL_0185;
+			goto IL_0190;
 		}
 	}
 	{
-		int32_t L_38 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_21();
-		if ((((int32_t)L_38) == ((int32_t)8)))
+		int32_t L_41 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_21();
+		if ((((int32_t)L_41) == ((int32_t)8)))
 		{
-			goto IL_0185;
+			goto IL_0190;
 		}
 	}
 	{
@@ -11470,35 +11457,35 @@ IL_012e:
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3883458782, /*hidden argument*/NULL);
 		// Vector3 boxPosition = originalVec + boxSideHitVec;
-		Vector3_t2243707580  L_39 = __this->get_originalVec_23();
-		Vector3_t2243707580  L_40 = V_8;
+		Vector3_t2243707580  L_42 = __this->get_originalVec_23();
+		Vector3_t2243707580  L_43 = V_8;
 		// Vector3 boxPosition = originalVec + boxSideHitVec;
-		Vector3_t2243707580  L_41 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
-		V_9 = L_41;
+		Vector3_t2243707580  L_44 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_42, L_43, /*hidden argument*/NULL);
+		V_9 = L_44;
 		// CreateBox (boxPosition);
-		Vector3_t2243707580  L_42 = V_9;
+		Vector3_t2243707580  L_45 = V_9;
 		// CreateBox (boxPosition);
-		placeBox1_CreateBox_m2404254564(__this, L_42, /*hidden argument*/NULL);
+		placeBox1_CreateBox_m2404254564(__this, L_45, /*hidden argument*/NULL);
 	}
 
-IL_0185:
+IL_0190:
 	{
 		// if (raycastHit.collider.CompareTag ("planePrefab") && currentSelectedOG != Selected.Stalactite) { // Did not detect a block but the plane
 		// if (raycastHit.collider.CompareTag ("planePrefab") && currentSelectedOG != Selected.Stalactite) { // Did not detect a block but the plane
-		Collider_t3497673348 * L_43 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_46 = RaycastHit_get_collider_m301198172((&V_2), /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("planePrefab") && currentSelectedOG != Selected.Stalactite) { // Did not detect a block but the plane
-		NullCheck(L_43);
-		bool L_44 = Component_CompareTag_m3443292365(L_43, _stringLiteral3922057830, /*hidden argument*/NULL);
-		if (!L_44)
+		NullCheck(L_46);
+		bool L_47 = Component_CompareTag_m3443292365(L_46, _stringLiteral3922057830, /*hidden argument*/NULL);
+		if (!L_47)
 		{
-			goto IL_01cd;
+			goto IL_01d8;
 		}
 	}
 	{
-		int32_t L_45 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_21();
-		if ((((int32_t)L_45) == ((int32_t)8)))
+		int32_t L_48 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectedOG_21();
+		if ((((int32_t)L_48) == ((int32_t)8)))
 		{
-			goto IL_01cd;
+			goto IL_01d8;
 		}
 	}
 	{
@@ -11507,96 +11494,96 @@ IL_0185:
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3932601629, /*hidden argument*/NULL);
 		// Vector3 boxPosition = originalVec + createHeightVec;
-		Vector3_t2243707580  L_46 = __this->get_originalVec_23();
-		Vector3_t2243707580  L_47 = __this->get_createHeightVec_14();
+		Vector3_t2243707580  L_49 = __this->get_originalVec_23();
+		Vector3_t2243707580  L_50 = __this->get_createHeightVec_14();
 		// Vector3 boxPosition = originalVec + createHeightVec;
-		Vector3_t2243707580  L_48 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_46, L_47, /*hidden argument*/NULL);
-		V_10 = L_48;
+		Vector3_t2243707580  L_51 = Vector3_op_Addition_m3146764857(NULL /*static, unused*/, L_49, L_50, /*hidden argument*/NULL);
+		V_10 = L_51;
 		// CreateBox (boxPosition);
-		Vector3_t2243707580  L_49 = V_10;
+		Vector3_t2243707580  L_52 = V_10;
 		// CreateBox (boxPosition);
-		placeBox1_CreateBox_m2404254564(__this, L_49, /*hidden argument*/NULL);
+		placeBox1_CreateBox_m2404254564(__this, L_52, /*hidden argument*/NULL);
 	}
 
-IL_01cd:
+IL_01d8:
 	{
 	}
 
-IL_01ce:
+IL_01d9:
 	{
 	}
 
-IL_01cf:
+IL_01da:
 	{
 		// if (Input.touchCount > 0 && currentSelectionIsABlock == Selected.Pickaxe)
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		int32_t L_50 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_50) <= ((int32_t)0)))
+		int32_t L_53 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_53) <= ((int32_t)0)))
 		{
-			goto IL_02f5;
+			goto IL_0300;
 		}
 	}
 	{
-		int32_t L_51 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_22();
-		if (L_51)
+		int32_t L_54 = ((placeBox1_t1505429257_StaticFields*)placeBox1_t1505429257_il2cpp_TypeInfo_var->static_fields)->get_currentSelectionIsABlock_22();
+		if (L_54)
 		{
-			goto IL_02f5;
+			goto IL_0300;
 		}
 	}
 	{
 		// var touch = Input.GetTouch(0);
 		// var touch = Input.GetTouch(0);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
-		Touch_t407273883  L_52 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
-		V_11 = L_52;
+		Touch_t407273883  L_55 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_11 = L_55;
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0)) {
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0)) {
-		int32_t L_53 = Touch_get_phase_m196706494((&V_11), /*hidden argument*/NULL);
-		if (L_53)
+		int32_t L_56 = Touch_get_phase_m196706494((&V_11), /*hidden argument*/NULL);
+		if (L_56)
 		{
-			goto IL_02f4;
+			goto IL_02ff;
 		}
 	}
 	{
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0)) {
 		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t3466835263_il2cpp_TypeInfo_var);
-		EventSystem_t3466835263 * L_54 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
+		EventSystem_t3466835263 * L_57 = EventSystem_get_current_m319019811(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject (0)) {
-		NullCheck(L_54);
-		bool L_55 = EventSystem_IsPointerOverGameObject_m2415000115(L_54, 0, /*hidden argument*/NULL);
-		if (L_55)
+		NullCheck(L_57);
+		bool L_58 = EventSystem_IsPointerOverGameObject_m2415000115(L_57, 0, /*hidden argument*/NULL);
+		if (L_58)
 		{
-			goto IL_02f4;
+			goto IL_02ff;
 		}
 	}
 	{
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Camera_t189460977 * L_56 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t189460977 * L_59 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Vector2_t2243707579  L_57 = Touch_get_position_m2079703643((&V_11), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_60 = Touch_get_position_m2079703643((&V_11), /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		Vector3_t2243707580  L_58 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_57, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_61 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_60, /*hidden argument*/NULL);
 		// Ray raycast = Camera.main.ScreenPointToRay (touch.position);
-		NullCheck(L_56);
-		Ray_t2469606224  L_59 = Camera_ScreenPointToRay_m614889538(L_56, L_58, /*hidden argument*/NULL);
-		V_12 = L_59;
+		NullCheck(L_59);
+		Ray_t2469606224  L_62 = Camera_ScreenPointToRay_m614889538(L_59, L_61, /*hidden argument*/NULL);
+		V_12 = L_62;
 		// Vector3 touchPos = Camera.main.ScreenToWorldPoint (touch.position);
-		Camera_t189460977 * L_60 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t189460977 * L_63 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// Vector3 touchPos = Camera.main.ScreenToWorldPoint (touch.position);
-		Vector2_t2243707579  L_61 = Touch_get_position_m2079703643((&V_11), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_64 = Touch_get_position_m2079703643((&V_11), /*hidden argument*/NULL);
 		// Vector3 touchPos = Camera.main.ScreenToWorldPoint (touch.position);
-		Vector3_t2243707580  L_62 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_61, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_65 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_64, /*hidden argument*/NULL);
 		// Vector3 touchPos = Camera.main.ScreenToWorldPoint (touch.position);
-		NullCheck(L_60);
-		Vector3_t2243707580  L_63 = Camera_ScreenToWorldPoint_m929392728(L_60, L_62, /*hidden argument*/NULL);
-		V_14 = L_63;
+		NullCheck(L_63);
+		Vector3_t2243707580  L_66 = Camera_ScreenToWorldPoint_m929392728(L_63, L_65, /*hidden argument*/NULL);
+		V_14 = L_66;
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		Ray_t2469606224  L_64 = V_12;
+		Ray_t2469606224  L_67 = V_12;
 		// if (Physics.Raycast (raycast, out raycastHit)) {
-		bool L_65 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_64, (&V_13), /*hidden argument*/NULL);
-		if (!L_65)
+		bool L_68 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_67, (&V_13), /*hidden argument*/NULL);
+		if (!L_68)
 		{
-			goto IL_02f3;
+			goto IL_02fe;
 		}
 	}
 	{
@@ -11606,83 +11593,83 @@ IL_01cf:
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral4003893722, /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
-		Collider_t3497673348 * L_66 = RaycastHit_get_collider_m301198172((&V_13), /*hidden argument*/NULL);
+		Collider_t3497673348 * L_69 = RaycastHit_get_collider_m301198172((&V_13), /*hidden argument*/NULL);
 		// if (raycastHit.collider.CompareTag ("placedBox")) {
-		NullCheck(L_66);
-		bool L_67 = Component_CompareTag_m3443292365(L_66, _stringLiteral439316528, /*hidden argument*/NULL);
-		if (!L_67)
+		NullCheck(L_69);
+		bool L_70 = Component_CompareTag_m3443292365(L_69, _stringLiteral439316528, /*hidden argument*/NULL);
+		if (!L_70)
 		{
-			goto IL_02f2;
+			goto IL_02fd;
 		}
 	}
 	{
 		// float xPos = touchPos.x;
-		float L_68 = (&V_14)->get_x_1();
-		V_15 = L_68;
+		float L_71 = (&V_14)->get_x_1();
+		V_15 = L_71;
 		// float yPos = touchPos.y;
-		float L_69 = (&V_14)->get_y_2();
-		V_16 = L_69;
+		float L_72 = (&V_14)->get_y_2();
+		V_16 = L_72;
 		// float zPos = touchPos.z;
-		float L_70 = (&V_14)->get_z_3();
-		V_17 = L_70;
+		float L_73 = (&V_14)->get_z_3();
+		V_17 = L_73;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		float L_71 = V_15;
-		float L_72 = V_16;
-		float L_73 = V_17;
+		float L_74 = V_15;
+		float L_75 = V_16;
+		float L_76 = V_17;
 		// originalVec = new Vector3 (xPos, yPos, zPos);
-		Vector3_t2243707580  L_74;
-		memset(&L_74, 0, sizeof(L_74));
-		Vector3__ctor_m2638739322(&L_74, L_71, L_72, L_73, /*hidden argument*/NULL);
-		__this->set_originalVec_23(L_74);
+		Vector3_t2243707580  L_77;
+		memset(&L_77, 0, sizeof(L_77));
+		Vector3__ctor_m2638739322(&L_77, L_74, L_75, L_76, /*hidden argument*/NULL);
+		__this->set_originalVec_23(L_77);
 		// animationStarted = true;
 		__this->set_animationStarted_27((bool)1);
 		// animator.SetTrigger ("clickWindow");
-		Animator_t69676727 * L_75 = __this->get_animator_19();
+		Animator_t69676727 * L_78 = __this->get_animator_19();
 		// animator.SetTrigger ("clickWindow");
-		NullCheck(L_75);
-		Animator_SetTrigger_m3418492570(L_75, _stringLiteral474748842, /*hidden argument*/NULL);
+		NullCheck(L_78);
+		Animator_SetTrigger_m3418492570(L_78, _stringLiteral474748842, /*hidden argument*/NULL);
 		// Instantiate (explosion, originalVec, Quaternion.identity);
-		GameObject_t1756533147 * L_76 = __this->get_explosion_10();
-		Vector3_t2243707580  L_77 = __this->get_originalVec_23();
+		GameObject_t1756533147 * L_79 = __this->get_explosion_10();
+		Vector3_t2243707580  L_80 = __this->get_originalVec_23();
 		// Instantiate (explosion, originalVec, Quaternion.identity);
-		Quaternion_t4030073918  L_78 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Quaternion_t4030073918  L_81 = Quaternion_get_identity_m1561886418(NULL /*static, unused*/, /*hidden argument*/NULL);
 		// Instantiate (explosion, originalVec, Quaternion.identity);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_76, L_77, L_78, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
+		Object_Instantiate_TisGameObject_t1756533147_m3064851704(NULL /*static, unused*/, L_79, L_80, L_81, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3064851704_MethodInfo_var);
 		// audioDestroy = PickAxeSound.GetComponent<AudioSource>();
-		GameObject_t1756533147 * L_79 = __this->get_PickAxeSound_11();
+		GameObject_t1756533147 * L_82 = __this->get_PickAxeSound_11();
 		// audioDestroy = PickAxeSound.GetComponent<AudioSource>();
-		NullCheck(L_79);
-		AudioSource_t1135106623 * L_80 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_79, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
-		__this->set_audioDestroy_16(L_80);
-		// audioDestroy.Play ();
-		AudioSource_t1135106623 * L_81 = __this->get_audioDestroy_16();
-		// audioDestroy.Play ();
-		NullCheck(L_81);
-		AudioSource_Play_m353744792(L_81, /*hidden argument*/NULL);
-		// Destroy (raycastHit.collider.gameObject);
-		// Destroy (raycastHit.collider.gameObject);
-		Collider_t3497673348 * L_82 = RaycastHit_get_collider_m301198172((&V_13), /*hidden argument*/NULL);
-		// Destroy (raycastHit.collider.gameObject);
 		NullCheck(L_82);
-		GameObject_t1756533147 * L_83 = Component_get_gameObject_m3105766835(L_82, /*hidden argument*/NULL);
+		AudioSource_t1135106623 * L_83 = GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039(L_82, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t1135106623_m3309832039_MethodInfo_var);
+		__this->set_audioDestroy_16(L_83);
+		// audioDestroy.Play ();
+		AudioSource_t1135106623 * L_84 = __this->get_audioDestroy_16();
+		// audioDestroy.Play ();
+		NullCheck(L_84);
+		AudioSource_Play_m353744792(L_84, /*hidden argument*/NULL);
 		// Destroy (raycastHit.collider.gameObject);
-		Object_Destroy_m4145850038(NULL /*static, unused*/, L_83, /*hidden argument*/NULL);
+		// Destroy (raycastHit.collider.gameObject);
+		Collider_t3497673348 * L_85 = RaycastHit_get_collider_m301198172((&V_13), /*hidden argument*/NULL);
+		// Destroy (raycastHit.collider.gameObject);
+		NullCheck(L_85);
+		GameObject_t1756533147 * L_86 = Component_get_gameObject_m3105766835(L_85, /*hidden argument*/NULL);
+		// Destroy (raycastHit.collider.gameObject);
+		Object_Destroy_m4145850038(NULL /*static, unused*/, L_86, /*hidden argument*/NULL);
 	}
 
-IL_02f2:
+IL_02fd:
 	{
 	}
 
-IL_02f3:
+IL_02fe:
 	{
 	}
 
-IL_02f4:
+IL_02ff:
 	{
 	}
 
-IL_02f5:
+IL_0300:
 	{
 		// }
 		return;
@@ -17970,6 +17957,23 @@ extern "C"  void UIBehavior_SandButtonSelected_m508511696 (UIBehavior_t183695582
 		// item_sand.SetActive (false);
 		NullCheck(L_16);
 		GameObject_SetActive_m2887581199(L_16, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UIBehavior::ScreenShot()
+extern "C"  void UIBehavior_ScreenShot_m3242409499 (UIBehavior_t1836955822 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBehavior_ScreenShot_m3242409499_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Application.CaptureScreenshot ("ScreenShot.png");
+		// Application.CaptureScreenshot ("ScreenShot.png");
+		Application_CaptureScreenshot_m988898989(NULL /*static, unused*/, _stringLiteral3587765563, /*hidden argument*/NULL);
 		// }
 		return;
 	}

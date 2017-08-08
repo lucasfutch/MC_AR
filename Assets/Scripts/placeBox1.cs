@@ -137,6 +137,7 @@ public class placeBox1 : MonoBehaviour {
 				Ray raycast = Camera.main.ScreenPointToRay (touch.position);
 				RaycastHit raycastHit;
 				Vector3 touchPos = Camera.main.ScreenToWorldPoint (touch.position);
+				Debug.Log (touchPos);
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					Debug.Log ("Detected a Box in placebox1");

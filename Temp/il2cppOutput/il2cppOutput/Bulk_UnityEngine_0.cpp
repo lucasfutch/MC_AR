@@ -1434,6 +1434,8 @@ extern "C"  bool AnimatorTransitionInfo_get_entry_m1140118520 (AnimatorTransitio
 extern "C"  bool AnimatorTransitionInfo_get_exit_m3018502934 (AnimatorTransitionInfo_t2410896200 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Application/LowMemoryCallback::Invoke()
 extern "C"  void LowMemoryCallback_Invoke_m3371329310 (LowMemoryCallback_t642977590 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Application::CaptureScreenshot(System.String,System.Int32)
+extern "C"  void Application_CaptureScreenshot_m3594286264 (Il2CppObject * __this /* static, unused */, String_t* ___filename0, int32_t ___superSize1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Application/LogCallback::Invoke(System.String,System.String,UnityEngine.LogType)
 extern "C"  void LogCallback_Invoke_m3921378796 (LogCallback_t1867914413 * __this, String_t* ___condition0, String_t* ___stackTrace1, int32_t ___type2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AsyncOperation::.ctor()
@@ -3482,6 +3484,27 @@ extern "C"  int32_t Application_get_platform_m3989224144 (Il2CppObject * __this 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Application_get_platform_m3989224144_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_platform()");
 	return _il2cpp_icall_func();
+}
+// System.Void UnityEngine.Application::CaptureScreenshot(System.String,System.Int32)
+extern "C"  void Application_CaptureScreenshot_m3594286264 (Il2CppObject * __this /* static, unused */, String_t* ___filename0, int32_t ___superSize1, const MethodInfo* method)
+{
+	typedef void (*Application_CaptureScreenshot_m3594286264_ftn) (String_t*, int32_t);
+	static Application_CaptureScreenshot_m3594286264_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_CaptureScreenshot_m3594286264_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::CaptureScreenshot(System.String,System.Int32)");
+	_il2cpp_icall_func(___filename0, ___superSize1);
+}
+// System.Void UnityEngine.Application::CaptureScreenshot(System.String)
+extern "C"  void Application_CaptureScreenshot_m988898989 (Il2CppObject * __this /* static, unused */, String_t* ___filename0, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		V_0 = 0;
+		String_t* L_0 = ___filename0;
+		int32_t L_1 = V_0;
+		Application_CaptureScreenshot_m3594286264(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
 }
 // System.String UnityEngine.Application::get_persistentDataPath()
 extern "C"  String_t* Application_get_persistentDataPath_m3129298355 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
